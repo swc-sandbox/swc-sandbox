@@ -1,0 +1,1982 @@
+\documentclass[10pt,a4]{seminar} 
+\usepackage{amsthm,amsmath,amstext,amsfonts, amssymb} 
+\usepackage{times}
+\usepackage{semcolor}
+\usepackage{graphicx}
+\usepackage{multicol}
+
+\input{seminar.bug}
+\input{seminar.bg2}
+
+\pagestyle{empty}
+
+
+\newtheorem*{Theorem}{\bf {\red Theorem}} 
+\newtheorem*{Conjecture}{\bf {\red Conjecture}} 
+\newtheorem*{Proposition}{\bf {\red Proposition}} 
+\newtheorem*{Example}{\bf {\red Example}} 
+\newtheorem*{Remark}{\bf {\red Remark}} 
+\newtheorem*{Lemma}{\bf {\red Lemma}} 
+\newtheorem*{Corollary}{\bf {\red Corollary}} 
+
+\newtheorem*{Definition}{\bf {\red Definition}}
+\slideframe{none} 
+
+\input cyracc.def
+\newfam\cyrfam
+\font\tencyr=wncyr10
+\font\sevencyr=wncyr7
+\font\fivecyr=wncyr5
+\def\cyr{\fam\cyrfam\tencyr\cyracc}
+\textfont\cyrfam=\tencyr \scriptfont\cyrfam=\sevencyr% 
+\scriptscriptfont\cyrfam=\fivecyr
+
+\newfam\cyifam
+\font\tencyi=wncyi10
+\font\sevencyi=wncyi7
+\font\fivecyi=wncyi5
+\def\cyi{\fam\cyifam\tencyi\cyracc}
+\textfont\cyifam=\tencyi \scriptfont\cyifam=\sevencyi% 
+\scriptscriptfont\cyifam=\fivecyi
+
+
+\newcommand{\X}{\mbox{{\cyr X}}}
+
+
+\newcommand{\pphi}{\varphi}
+\renewcommand{\a}{{\mathfrak a}}
+\renewcommand{\b}{{\mathfrak b}}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Art}{Art}
+\newcommand{\Ima}{\mbox{\rm Im}}
+\renewcommand{\O}{{\cal O}}
+\renewcommand{\P}{{\mathbb P}}
+
+\renewcommand{\P}{{\mathbb P}}
+\newcommand{\leg}[2]{\mbox{$\left(\dfrac{#1}{#2}\right)$}}
+\newcommand{\ka}{\kappa} 
+\newcommand{\m}{\mu} 
+\newcommand{\n}{\nu} 
+\newcommand{\la}{\lambda} 
+\newcommand{\e}{\epsilon} 
+\newcommand{\lep}{\lambda_k^{\epsilon}} 
+\newcommand{\ve}{v^{\epsilon}} 
+\newcommand{\dk}{d_{2\kappa}} 
+\newcommand{\p}{{\mathfrak p}}
+\newcommand{\q}{{\mathfrak q}}
+\newcommand{\Z}{{\mathbb{Z}}} 
+\newcommand{\Q}{{\mathbb{Q}}}
+\newcommand{\R}{{\mathbb{R}}} 
+\newcommand{\C}{{\mathbb{C}}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\F}{{\mathbb{F}}} 
+\newcommand{\M}{{\mathcal{M}}}
+\newcommand{\G}{{\mathcal{G}}} 
+\newcommand{\Sm}{\mathbb{S}_m} 
+\newcommand{\Gmn}{{\mathcal{G}_{m,n}}}
+\newcommand{\Gmno}{{\mathcal{G}^{\circ}_{m,n}}}
+\newcommand{\Gqn}{{\mathcal{G}_{q,n}}}
+\newcommand{\Gmmn}{{\mathcal{G}_{m',n}}}
+\newcommand{\On}{{\operatorname{O}(n,\R )}}
+\newcommand{\Om}{{\operatorname{O}(m,\R )}}
+\newcommand{\Gln}{{\operatorname{GL}(n,\R )}}
+\newcommand{\Glm}{{\operatorname{GL}(m,\R)}}
+\newcommand{\Glk}{{\operatorname{GL}(k,\R)}}
+\newcommand{\Glq}{{\operatorname{GL}(q,\R)}}
+\newcommand{\Hmu}{\operatorname{H}_{m,n}^{2\mu}}
+\newcommand{\Harm}{\operatorname{Harm}}
+\newcommand{\HHarm}{\operatorname{Harm}_{m,n}^{\mu}}
+\newcommand{\ZZ}{{\mathcal{Z}^{m,q}}} 
+\newcommand{\mk}{m_{\kappa}}
+\newcommand{\s}{\sigma}
+\newcommand{\mmu}{m_{\mu}}
+\newcommand{\Pmue}{P_{\mu}^*}
+\newcommand{\Pnue}{P_{\nu}^*}
+\newcommand{\Pmuie}{P_{\mu_i}^*}
+\newcommand{\Pmuiie}{P_{\mu^i}^*}
+\newcommand{\Pk}{P_{\kappa}}
+\newcommand{\Qk}{Q_{\kappa}}
+\newcommand{\Pki}{P_{\kappa_i}}
+\newcommand{\Pmu}{P_{\mu}}
+\newcommand{\Hka}{\operatorname{H}_{m,n}^{2\kappa}}
+\newcommand{\Pnu}{P_{\nu}}
+\newcommand{\Ck}{C_{\kappa}}
+\newcommand{\Cki}{C_{\kappa_i}}
+\newcommand{\Ckii}{C_{\kappa^i}}
+\newcommand{\Cke}{C_{\kappa}^*}
+\newcommand{\Ckie}{C_{\kappa_i}^*}
+\newcommand{\Ckiie}{C_{\kappa^i}^*}
+\newcommand{\Cmu}{C_{\mu}}
+\newcommand{\Cnu}{C_{\nu}}
+\newcommand{\Cmue}{C_{\mu}^*}
+\newcommand{\PP}{{\mathbb{P}}}
+\newcommand{\D}{{\mathcal{D}}} 
+\newcommand{\T}{{\mathbb{T}}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\Sym}{\operatorname{Sym}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\depth}{\operatorname{depth}}
+\newcommand{\Stab}{\operatorname{Stab}}
+\newcommand{\Id}{\operatorname{Id}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\uy}{\underline{y}}
+\newcommand{\ux}{\underline{x}}
+\newcommand{\rk}{\operatorname{rank}}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\trace}{\operatorname{trace}}
+\newcommand{\card}{\operatorname{card}}
+\newcommand{\vol}{\operatorname{vol}}
+\newcommand{\pr}{\operatorname{pr}} 
+\DeclareMathOperator{\N}{{\cal N}}
+\newcommand{\al}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\renewcommand{\th}{\theta}
+\newcommand{\one}{{\bf 1}}
+\renewcommand{\atop}[2]{\genfrac{}{}{0pt}{}{#1}{#2}}
+\newcommand{\eproof}{\hfill $\fbox{}$ \\} 
+\newcommand{\ie}{{\sl i.e.\,}}
+\DeclareMathOperator{\lcm}{lcm}
+
+\def\prodp{\operatornamewithlimits{\prod\raise9pt\hbox{\kern-2pt\scriptsize$(p)$\kern-11pt}}}
+\def\sumpp{\operatornamewithlimits{\sum\raise9pt\hbox{\kern-2pt\scriptsize$(p)$\kern-11pt}}}
+\newcommand{\cote}[1]{\langle #1\rangle}
+\newcommand{\z}{\zeta}
+\newcommand{\om}{\omega}
+\newcommand{\bp}{\backslash p}
+\newcommand{\ctl}{\centerline} 
+\newcommand{\myblue}{\red}
+\newcommand{\myred}{\blue}
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\a}{{\mathfrak a}}
+\renewcommand{\b}{{\mathfrak b}}
+\DeclareMathOperator{\LG}{LG}
+\newcommand{\isom}{\simeq}
+
+\begin{document} 
+
+\begin{slide}
+
+\title{Explicit Methods for Solving Diophantine Equations}
+\author{Henri Cohen} 
+\date{} 
+\vskip 2.5truecm 
+\maketitle 
+
+\vskip 2.5truecm 
+
+\centerline{Laboratoire A2X}
+\centerline{Universit\'e Bordeaux 1} 
+
+\vskip 2.5truecm 
+\centerline{\myblue{Tucson, Arizona Winter School, 2006}}
+ 
+\end{slide}
+
+\begin{slide}
+\ctl{\large{}\myblue{\sc Examples (I)}}
+
+\medskip
+
+Diophantine equation: system of polynomial equations to be solved in
+{\red integers}, {\red rational numbers}, or other number rings.
+
+\smallskip
+
+{\red $\bullet$} {\bf Fermat's Last Theorem (FLT)}: in {\blue $\Z$},
+{\blue $x^n+y^n=z^n$} with {\blue $n\ge3$} implies {\blue $xyz=0$}.
+This gave the impetus for {\red algebraic number theory} by {\red
+  Kummer}, {\red Dirichlet}, \dots. Solved by these methods up to
+large values of {\blue $n$} (several million). Then {\red Faltings's}
+result on rational points on higher genus curves proved that for
+{\red fixed} {\blue $n$}, only finite number of (coprime) solutions.
+But finally completely solved using {\red elliptic curves}, {\red
+  modular forms}, and 
+{\red Galois representations} by {\red Ribet}, {\red Wiles}, and 
+{\red Taylor--Wiles}. The method of solution is more important than FLT itself.
+
+\end{slide}
+
+\begin{slide}
+\ctl{\large{}\myblue{\sc Examples (II)}}
+
+\medskip
+
+{\red $\bullet$} {\bf Catalan's conjecture}: if {\blue $m$} and {\blue
+  $n$} are at least {\blue $2$}, nonzero solutions of {\blue $x^m-y^n=1$} come
+  from {\blue $3^2-2^3=1$}. Until recently, same status as FLT:
+  attacks using algebraic number theory solved many cases. Then
+{\red Baker}-type methods were used by {\red Tijdeman} to show that
+  the total number of {\blue $(m,n,x,y)$} is finite. Finally
+  completely solved by {\red Mih\u{a}ilescu} in 2001, using {\bf only}
+  the theory of {\red cyclotomic fields}, but rather deep results
+({\red Thaine's theorem}), quite a surprise. Proof later simplified by
+  {\red Bilu} and {\red Lenstra}.
+
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Examples (III)}}
+
+\medskip
+
+{\red $\bullet$} {\bf The congruent number problem} ({\red
+  Diophantus}, 4th century A.D.). Find all integers {\blue $n$} equal
+  to the area of a {\red Pythagorean triangle}, i.e. with all sides
+  rational (example {\blue $(3,4,5)$} gives {\blue $n=6$}). Easy:
+  equivalent to the existence of {\red rational} solutions of
+{\blue $y^2=x^3-n^2x$} with {\blue $y\ne0$}. Again, three
+  stages. Until the 1970's, several hundred values solved. Then using
+the {\red Birch--Swinnerton Dyer conjecture (BSD)}, possible to determine
+{\red conjecturally} but {\red analytically} if {\blue $n$} congruent
+  or not. Final (but not ultimate) step: a theorem of {\red Tunnell}
+  in 1980 giving an immediate criterion for congruent numbers, using
+{\red modular forms of half-integral weight}, but still modulo a weak
+  form of BSD.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Tools (I)}}
+
+\medskip
+
+Almost as many methods to solve Diophantine equations as equations. Attempt at
+classification:
+
+{\red $\bullet$} {\bf Local methods:} the use of {\blue $p$}-adic fields, in an 
+elementary way (congruences modulo powers of {\blue $p$}), or less elementary 
+({\red Strassmann's} or {\red Weierstrass's} theorem, {\blue $p$}-adic power 
+series, {\red Herbrand's} and {\red Skolem's} method).
+
+\smallskip
+
+{\red $\bullet$} {\bf Factorization over {\blue $\Z$}}. Not a very powerful 
+method, but sometimes gives spectacular results ({\red Wendt's criterion} for 
+the first case of Fermat's last theorem, {\red Cassels's} results on 
+{\red Catalan's equation}).
+
+\end{slide}
+
+\begin{slide}
+\ctl{\large{}\myblue{\sc Tools (II)}}
+
+\medskip
+
+{\red $\bullet$} {\bf Factorization over number fields}, i.e., global methods.
+This was in fact the \emph{motivation} for the introduction of number fields 
+in order to attack {\red Fermat's last theorem (FLT)}. Even though very 
+classical, still one of the most powerful methods, with numerous applications 
+and successes.
+
+\smallskip
+
+{\red $\bullet$} {\bf Diophantine approximation methods.} This can come in
+many different guises, from the simplest such as {\red Runge's method},
+to much more sophisticated ones such as {\red Baker-type methods}.
+
+\smallskip
+
+{\red $\bullet$} {\bf Modular methods,} based on the work of {\red Ribet},
+{\red Wiles}, and {\red Taylor--Wiles}, whose first and foremost success is
+the complete solution of FLT, but which has had many applications to other
+problems.
+
+\end{slide}
+
+\begin{slide}
+\ctl{\large{}\myblue{\sc Tools (III)}}
+
+\medskip
+
+In addition, if the set of solutions has a well-understood {\red structure}, 
+in many cases one can {\red construct algorithmically} this set of solutions,
+and in particular {\red one} solution. Examples are:
+
+{\red $\bullet$} {\bf The Pell--Fermat equation} {\blue $x^2-Dy^2=\pm1$}, and
+more generally {\red norm equations} {\blue $\N_{K/\Q}(\al)=m$}, where the
+magical algorithm is based on {\red continued fractions} and {\red Shanks's
+infrastructure}.
+
+{\red $\bullet$} {\bf Elliptic curves of rank $1$} over {\blue $\Q$}, where
+the magical algorithm is based on the construction of {\red Heegner points},
+and in particular of the theory of {\red complex multiplication}.
+
+\end{slide}
+
+\begin{slide}
+\ctl{\large{}\myblue{\sc Introduction to Local Methods (I)}}
+
+\medskip
+
+Examples of naive use:
+
+{\red $\bullet$} {\bf The equation {\blue $x^2+y^2=3z^2$}.} Dividing by the
+square of the GCD, we may assume {\blue $x$} and {\blue $y$} coprime. Then
+{\blue $x^2$} and {\blue $y^2$} are congruent to {\blue $0$} or {\blue $1$}
+modulo {\blue $3$}, but not both {\blue $0$}, hence 
+{\blue $x^2+y^2\equiv1\pmod{3}$}, a contradiction.
+
+\smallskip
+
+{\red $\bullet$} {\bf FLT I for exponent 3}. This is the equation
+{\blue $x^3+y^3=z^3$} with {\blue $3\nmid xyz$}. We work {\red modulo}
+{\blue $3^2$}: since a cube is congruent to {\blue $0$} or {\blue $\pm1$} 
+modulo {\blue $9$}, if {\blue $3\nmid xy$} we have
+{\blue $x^3+y^3\equiv-2$}, {\blue $0$}, or {\blue $2$} modulo {\blue $9$},
+which is impossible if {\blue $3\nmid z$.}
+
+\end{slide}
+
+\begin{slide}
+\vspace*{-26pt}
+\ctl{\large{}\myblue{\sc Introduction to Local Methods (II)}}
+
+\medskip
+
+In general need properties of the field {\blue $\Q_p$} of
+{\red {\blue $p$}-adic numbers} and ring of integers {\blue $\Z_p$}.
+Reminder:
+
+\smallskip
+
+{\red $\bullet$} A {\red homogeneous} equation with integer coefficients 
+has a nontrivial solution modulo {\blue $p^n$} for all {\blue $n\ge0$} if and 
+only if it has a nontrivial solution in {\blue $\Z_p$} (or in {\blue $\Q_p$}
+by homogeneity).
+
+\smallskip
+
+{\red $\bullet$} There is a canonical integer-valued valuation {\blue
+  $v_p$} on {\blue $\Q_p^*$}: if {\blue $x\in\Q$} then {\blue
+  $v_p(x)$} is the unique integer such that {\blue $x/p^{v_p(x)}$} can
+  be written as a rational number with denominator and numerator not
+  divisible by {\blue $p$}. It is {\red ultrametric}: 
+{\blue $v_p(x+y)\ge\min(v_p(x),v_p(y))$}.
+
+\smallskip
+
+{\red $\bullet$} Elements of {\blue $\Q_p$} such that {\blue $v_p(x)\ge0$} are 
+{\red {\blue $p$}-adic integers}, they form a {\red local ring} {\blue $\Z_p$}
+with maximal ideal {\blue $p\Z_p$}. Invertible elements of {\blue $\Z_p$}, 
+called {\red {\blue $p$}-adic units}, are {\blue $x$} such that
+{\blue $v_p(x)=0$}. If {\blue $x\in\Q_p^*$}, canonical decomposition
+{\blue $x=p^{v_p(x)}y$} with {\blue $y$} a {\blue $p$}-adic unit.
+\end{slide}
+
+\begin{slide}
+\ctl{\large{}\myblue{\sc Introduction to Local Methods (III)}}
+
+\medskip
+
+{\red $\bullet$} If {\blue $a\in\Q$} is such that {\blue $v_p(a)\ge0$} and if 
+{\blue $v_p(x)\ge1$} then the power series {\blue $(1+x)^a$} converges. 
+If {\blue $v_p(a)<0$} the power series converges for 
+{\blue $v_p(x)\ge |v_p(a)|+1$} when {\blue $p\ge3$}, and
+{\blue $v_p(x)\ge |v_p(a)|+2$} when {\blue $p=2$}. It converges to its
+``expected'' value, for instance if {\blue $m\in\Z\setminus\{0\}$} then 
+{\blue $y=(1+x)^{1/m}$} satisfies {\blue $y^m=1+x$}.
+
+\smallskip
+
+{\red $\bullet$} {\red Hensel's lemma} (or {\red Newton's method}). Special case:
+if {\blue $f(X)\in\Q_p[X]$} and {\blue $\al\in\Q_p$} satisfies
+{\blue $v_p(f(\al))\ge1$} and {\blue $v_p(f'(\al))=0$}. There exists 
+{\blue $\al^*\in\Q_p$} such that {\blue $f(\al^*)=0$} and 
+{\blue $v_p(\al^*-\al)\ge1$}, and {\blue $\al^*$} easily computed by
+Newton's iteration.
+
+\smallskip
+
+Testing for {\red local solubility} is usually {\red easy} and
+{\red algorithmic}.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Local Methods: The Fermat Quartics (I)}}
+
+\medskip
+
+These are the equations {\blue $$x^4+y^4=cz^4\;,$$}
+where without loss of generality we may assume that {\blue $c\in\Z$} is not 
+divisible by a fourth power. Denote by {\blue $\CC$} the {\red projective 
+curve} {\blue $x^4+y^4=c$}.
+
+\smallskip
+
+Note that we will only give the {\red local solubility} results, but that
+the {\red global study} involves many methods ({\red factorization} in number 
+fields, {\red elliptic curves}), but is far from complete, although it
+can solve {\blue $c\le10000$}.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Local Methods: The Fermat Quartics (II)}}
+
+\medskip
+
+\begin{Proposition} The curve {\blue $\CC_c$} is everywhere locally soluble 
+(i.e., has points in {\blue $\R$} and in every {\blue $\Q_p$}) if and 
+only if {\blue $c>0$} and the following conditions are satisfied.
+\begin{enumerate}\item {\blue $c\equiv1$} or {\blue $2$} modulo {\blue $16$}.
+\item {\blue $p\mid c$}, {\blue $p\neq2$} implies {\blue $p\equiv1\pmod8$}.
+\item {\blue $c\not\equiv3$} or {\blue $4$} modulo {\blue $5$}.
+\item {\blue $c\not\equiv7$}, {\blue $8$}, or {\blue $11$} modulo {\blue $13$}.
+\item {\blue $c\not\equiv4$}, {\blue $5$}, {\blue $6$}, {\blue $9$}, 
+{\blue $13$}, {\blue $22$}, or {\blue $28$} modulo {\blue $29$}.
+\end{enumerate}\end{Proposition}
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Local Methods: The Fermat Quartics (III)}}
+
+\medskip
+
+{\bf Ingredients in proof}:
+
+{\red $\bullet$} A {\blue $2$}-adic unit {\blue $x$} is a fourth power in 
+{\blue $\Q_2$} if and only if {\blue $x\equiv1\pmod{16\Z_2}$} ({\red power
+series} expansion {\blue $(1+u)^{1/4}$}).
+
+\smallskip
+
+{\red $\bullet$} If {\blue $p\nmid 2c$} and {\blue $p\not\equiv1\pmod{8}$}
+then {\blue $c$} is a sum of two fourth powers in {\blue $\Q_p$} if and only
+if {\blue $\overline{c}$} is a sum of two fourth powers in {\blue $\F_p$}
+({\red Hensel's lemma}), and any such {\blue $\overline{c}$} is such a sum if
+{\blue $p\equiv3\pmod{4}$} ({\red pigeonhole principle}).
+
+\smallskip
+
+{\red $\bullet$} If {\blue $p\nmid2c$} and {\blue $p\ge37$} then
+{\blue $\overline{c}$} is a sum of two fourth powers (the {\red Weil bounds},
+here easily provable using {\red Jacobi sums}).
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Local Methods: Fermat's Last Theorem I (I)}}
+
+\medskip
+
+\begin{Proposition} The following three conditions are equivalent.
+\begin{enumerate}\item There exists three {\blue $p$}-adic units 
+{\blue $\al$}, {\blue $\be$}, and {\blue $\ga$} such that 
+{\blue $\al^p+\be^p=\ga^p$} (in other words FLT I is soluble 
+{\blue $p$}-adically).
+\item There exists three integers {\blue $a$}, {\blue $b$}, {\blue $c$} in 
+{\blue $\Z$} such that {\blue $p\nmid abc$} with 
+{\blue $a^p+b^p\equiv c^p\pmod{p^2}$}.
+\item There exists {\blue $a\in\Z$} such that {\blue $a$} is not congruent to 
+{\blue $0$} or {\blue $-1$} modulo {\blue $p$} with
+{\blue $(a+1)^p\equiv a^p+1\pmod{p^2}$}.
+\end{enumerate}\end{Proposition}
+
+Proof: Congruences modulo {\blue $p^3$} and Hensel's lemma.
+\end{slide}
+
+\begin{slide}
+\ctl{\large{}\myblue{\sc Local Methods: Fermat's Last Theorem I (II)}}
+
+\medskip
+
+\begin{Corollary} If for all {\blue $a\in\Z$} such that 
+{\blue $1\le a\le (p-1)/2$} we have 
+{\blue $(a+1)^p-a^p-1\not\equiv0\pmod{p^2}$}, the 
+first case of FLT is true for {\blue $p$}.\end{Corollary}
+
+\smallskip
+
+Note that using {\red Eisenstein reciprocity} (which is a more difficult
+{\red global} statement), can prove that {\blue $a=1$} is sufficient in
+the above, i.e., {\red Wieferich's criterion}: if 
+{\blue $2^{p-1}\not\equiv1\pmod{p^2}$} then FLT I is true for {\blue $p$}
+(only known exceptions {\blue $p=1093$} and {\blue $p=3511$}).
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Local Methods: Strassmann's Theorem (I)}}
+
+\medskip
+
+More sophisticated use of {\blue $p$}-adic numbers: {\blue $p$}-adic
+{\red analysis}.
+
+\begin{Theorem} If {\blue $f(X)=\sum_{n\ge0}f_nX^n$} with {\blue
+    $f_n\to0$} {\blue $p$}-adically, not identically {\blue $0$},
+    exist at most {\blue $N$} elements {\blue $x\in\Z_p$} such that
+{\blue $f(x)=0$}, where {\blue $N$} unique integer such that
+{\blue $|f_n|\le |f_N|$} for {\blue $n<N$}, and 
+{\blue $|f_n|<|f_N|$} for {\blue $n>N$}.\end{Theorem}
+
+Same theorem in {\red extensions} of {\blue $\Q_p$}. Easy proof by
+induction on {\blue $N$} using the {\red ultrametric inequality}.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Local Methods: Strassmann's Theorem (II)}}
+
+\medskip
+
+{\bf Example}: the equation {\blue $x^3+6y^3=1$} in {\blue $\Z$}.
+Set {\blue $\th=6^{1/3}$}, {\blue $K=\Q(\th)$}, {\blue
+  $\eps=3\th^2-6\th+1$} {\red fundamental unit} of {\blue $K$} of norm
+{\blue $1$}. {\red Dirichlet's unit theorem} implies 
+{\blue $x+y\th=\eps^k$} for {\blue $k\in\Z$}. If {\blue
+  $\al=\th^2-2\th$} then {\blue $\eps=1+3\al$}, and 
+{\blue $$(1+3\al)^k=\exp_3(k\log_3(1+3\al))$$} power series in {\blue
+  $k$} (not in {\blue $\al$}) which converges {\blue $3$}-adically.
+ Note {\blue $1$}, {\blue $\th$}, {\blue $\th^2$} linearly independent
+ over {\blue $\Q_3$} ({\blue $X^3+6$} irreducible in {\blue
+   $\Q_3[X]$}). Coefficient of {\blue $\th^2$} in 
+{\blue $\eps^k=x+y\th+0\th^2$} equal to {\blue $0$} gives equation in 
+{\blue $k$} to which can apply {\red Strassmann}, find {\blue $N=1$},
+hence {\blue $k=0$} only solution, so {\blue $(x,y)=(1,0)$}.
+
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Factorization over {\blue $\Z$}: Wendt's criterion (I)}}
+
+\medskip
+
+Can give spectacular results. Example: {\red Wendt's criterion} for
+{\bf FLT I}.
+
+\begin{Proposition} Let {\blue $p$} be an odd prime, {\blue $k\ge2$} an even
+  integer. Assume that {\blue $q=kp+1$} is a {\red prime} such that
+{\blue $q\nmid(k^k-1)R(X^k-1,(X+1)^k-1)$} ({\blue $R(P,Q)$} {\red resultant}
+of {\blue $P$} and {\blue $Q$}). Then FLT I is true, i.e., 
+{\blue $x^p+y^p+z^p=0$} implies {\blue $p\mid xyz$}.
+\end{Proposition}
+
+Proof: May assume relatively prime. Write 
+{\blue $$-x^p=y^p+z^p=(y+z)(y^{p-1}-y^{p-2}z+\cdots+z^{p-1})\;.$$}
+Observe factors {\red relatively prime} (otherwise {\blue $y$} and
+{\blue $z$} not relatively prime). Thus exists {\blue $a$} such that
+{\blue $y+z=a^p$} and {\blue $y^{p-1}-y^{p-2}z+\cdots+z^{p-1}=s^p$}.
+By symmetry {\blue $z+x=b^p$} and {\blue $x+y=c^p$}.
+
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Factorization over {\blue $\Z$}: Wendt's criterion (II)}}
+
+\medskip
+
+For {\blue $q=kp+1$}, equation implies
+{\blue $$x^{(q-1)/k}+y^{(q-1)/k}+z^{(q-1)/k}\equiv0\pmod{q}\;.$$}
+If {\blue $q\nmid xyz$}, implies that {\blue $u=(x/z)^p\bmod{q}$}
+satisfies {\blue $u^k-1\equiv0\pmod{q}$} and {\blue
+  $(u+1)^k\equiv0\pmod{q}$}, contradicting
+ {\blue $q\nmid R(X^k-1,(X+1)^k-1)$}. Thus {\blue $q\mid xyz$}, say
+{\blue $q\mid x$}, hence
+{\blue \begin{align*}0\equiv 2x&=(x+y)+(z+x)-(y+z)=c^p+b^p+(-a)^p\\
+&=c^{(q-1)/k}+b^{(q-1)/k}+(-a)^{(q-1)/k}\pmod{q}\;.\end{align*}}
+As above, {\blue $q\mid abc$}, and since {\blue $q\mid x$} and {\blue
+  $x$}, {\blue $y$}, and {\blue $z$} pairwise coprime, cannot have 
+{\blue $q\mid b^p=z+x$} or {\blue $q\mid c^p=x+y$}, so {\blue $q\mid
+  a$}. 
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Factorization over {\blue $\Z$}: Wendt's criterion (III)}}
+
+\medskip
+
+Thus {\blue $y\equiv -z\pmod{q}$}, hence
+{\blue $s^p\equiv py^{p-1}\pmod{q}$}. On the other hand 
+{\blue $y=(x+y)-x\equiv c^p\pmod{q}$}, so
+{\blue $$s^{(q-1)/k}=s^p\equiv p c^{((q-1)/k)(p-1)}\pmod{q}\;,$$}
+and since {\blue $q\nmid c$}, {\blue $p\equiv d^{(q-1)/k}\pmod{q}$} with 
+{\blue $d=s/c^{p-1}\bmod{q}$}. Since {\blue $a$}, {\blue $s$} coprime,
+we have {\blue $q\nmid s$}, so {\blue $q\nmid d$}, so 
+{\blue $p^k\equiv1\pmod{q}$}, and since {\blue $k$} even
+{\blue $$1=(-1)^k=(kp-q)^k\equiv k^kp^k\equiv k^k\pmod{q}\;,$$}
+contradicting the assumption {\blue $q\nmid k^k-1$}.
+
+
+\end{slide}
+
+\begin{slide}
+\ctl{\large{}\myblue{\sc Factorization over {\blue $\Z$}: Wendt's criterion (IV)}}
+
+\medskip
+
+Wendt's criterion (of course superseded by Wiles et al.) is very 
+{\red powerful} since heuristically there will {\bf always} exist a
+suitable {\blue $k$}, in fact quite small, and computer searches
+confirm this.
+
+\smallskip
+
+Corollary due to Sophie Germain:
+
+\begin{Corollary} If {\blue $p>2$} is prime and {\blue $2p+1$} is
+  prime then FLT I is true.\end{Corollary}
+
+Unknown whether there are infinitely many.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Factorization over {\blue $\Z$}: {\blue $y^2=x^3+t$}}}
+
+\medskip
+
+By using similar naive methods, can prove the following:
+
+{\red $\bullet$} If {\blue $a$} and {\blue $b$} are odd, if {\blue $3\nmid b$},
+and if {\blue $t=8a^3-b^2$} is squarefree, then {\blue $y^2=x^3+t$} has no
+{\bf integral} solution.
+
+The example {\blue $t=7=8\cdot1^3-1^2$} was a challenge posed by {\red Fermat}.
+
+\smallskip
+
+{\red $\bullet$} If {\blue $a$} is odd, {\blue $3\nmid b$}, and
+{\blue $t=a^3-4b^2$} is squarefree and such that {\blue $t\not\equiv1\pmod8$}.
+Then {\blue $y^2=x^3+t$} has no {\bf integral} solution.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Cassels's results on Catalan (I)}}
+
+\medskip
+
+Recall that Catalan's equation is {\blue $x^m-y^n=1$}, with 
+{\blue $\min(m,n)\ge2$}. Contrary to FLT, {\blue $m=2$} or {\blue $n=2$}
+must be included. Proof for {\blue $n=2$} (no nontrivial solution) due to
+{\red V.-A.~Lebesgue} in 1850 (not the Lebesgue integral), and involves
+{\red factoring over {\blue $\Z[i]$}}, not difficult. Proof for {\blue $m=2$}
+considerably more subtle (not really difficult) because there {\bf exist}
+the solutions {\blue $(\pm3)^2-2^3=1$}. Done by {\red Ko Chao} in
+the 1960's, and involves structure of the unit group of a real quadratic
+{\bf order}. 
+
+As for FLT, we are reduced to {\blue $x^p-y^q=1$} with {\blue $p$} and
+{\blue $q$} distinct odd primes, with symmetry map
+{\blue $(p,q,x,y)\mapsto(q,p,-y,-x)$}. Basic results on this found by Cassels.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Cassels's results on Catalan (II)}}
+
+\medskip
+
+Cassels's proof: factoring over {\blue $\Z$}, clever reasoning, and analytic
+method called {\red Runge's method}, a form of Diophantine approximation.
+As all such, boils down to {\blue $x\in\R$}, {\blue $|x|<1$}, and 
+{\blue $x\in\Z$} implies {\blue $x=0$}. 
+
+{\bf Exercise}: use this to find all integral solutions to
+{\blue $y^2=x^4+x^3+x^2+x+1$} (hint in the notes).
+
+\smallskip
+
+Need arithmetic lemma and two analytic ones.
+
+{\red $\bullet$} {\bf Arithmetic lemma}: Let {\blue $q$} prime, and
+set {\blue $w(j)=j+v_q(j!)$}. Then {\blue $q^{w(j)}\binom{p/q}{j}$} is
+an {\bf integer coprime to {\blue $q$}}, and {\blue $w(j)$} is 
+{\bf strictly increasing}.
+
+Proof: easy, although there is a slight subtlety (see notes).
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Cassels's results on Catalan (III)}}
+
+\medskip
+
+{\red $\bullet$} {\bf Analytic lemma I}: If {\blue $q>p>0$} (not necessarily
+integral) and {\blue $a\ge1$}, then {\blue $(a^q+1)^p<(a^p+1)^q$}, and if 
+{\blue $a>1$} then {\blue $(a^q-1)^p>(a^p-1)^q$}.
+
+Proof: easy undergraduate exercise.
+
+{\red $\bullet$} {\bf Analytic lemma II}: Assume {\blue $p>q$} integers,
+{\blue $q\ge3$}, {\blue $p\ge5$} as in Catalan. Set 
+{\blue $F(t)=((1+t)^p-t^p)^{1/q}$}, {\blue $m=\lfloor p/q\rfloor+1$}, and let 
+{\blue $F_m(t)$} the sum of the terms of degree at most equal to {\blue $m$} 
+in the Taylor series expansion of {\blue $F(t)$} around {\blue $t=0$}.
+For all {\blue $t\in\R$} such that {\blue $|t|\le1/2$} we have
+{\blue $$|F(t)-F_m(t)|\le\dfrac{|t|^{m+1}}{(1-|t|)^2}\;.$$}
+
+Proof: not easy undergraduate exercise (see notes).
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Cassels's results on Catalan (IV)}}
+
+\medskip
+
+Factorization over {\blue $\Z$}: {\blue $x^p-y^q=1$} gives
+{\blue $y^q=x^p-1=(x-1)r_p(x)$} with {\blue $r_p(x)=(x^p-1)/(x-1)$}.
+Factors not necessarily coprime but, expanding
+{\blue $r_p(x)=((x-1+1)^p-1)/(x-1)$} by the binomial theorem, easy to see that
+{\blue $p\mid(x-1)$} is equivalent to {\blue $p\mid r_p(x)$}, that if
+{\blue $d=\gcd(x-1,r_p(x))$} then {\blue $d=1$} or {\blue $d=p$},
+and that if {\blue $d=p>2$} then {\blue $r_p(x)\equiv p\pmod{p^2}$}, so that
+{\blue $v_p(r_p(x))=1$}. Since {\blue $y^q=(x-1)r_p(x)$}, condition
+{\blue $d=p$} is equivalent to {\blue $p\mid y$}. Cassels's main theorem
+says that this is {\bf always} true, i.e., we never have {\blue $d=1$}.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Cassels's results on Catalan (V)}}
+
+\medskip
+
+Proof of Cassels's result split into {\blue $p<q$} and {\blue $p>q$}. The
+first case is much easier:
+
+\begin{Proposition} If {\blue $x$} and {\blue $y$} are nonzero integers and 
+{\blue $p$} and {\blue $q$} odd primes such that {\blue $x^p-y^q=1$}, then 
+when {\blue $p<q$} we have {\blue $p\mid y$}.
+\end{Proposition}
+
+Proof: if not, {\blue $x-1$} and {\blue $r_p(x)$} are coprime, so both are
+{\blue $q$}th powers since product is. Write {\blue $x-1=a^q$}. Since
+{\blue $xy\ne0$}, {\blue $a\ne0$} and {\blue $a\ne-1$}, and
+{\blue $(a^q+1)^p-y^q=1$}. Set {\blue $f(z)=(a^q+1)^p-z^q-1$}, decreasing
+function of {\blue $z$}. If {\blue $a\ge1$} then
+{\blue $f(a^p)=(a^q+1)^p-a^{pq}-1>0$} (binomial theorem), and
+{\blue $f(a^p+1)=(a^q+1)^p-(a^p+1)^q-1<0$} by first analytic lemma. Since 
+{\blue $f$} strictly decreasing, the {\blue $y$} such that {\blue $f(y)=0$} is
+not an integer, absurd. 
+
+\end{slide}
+\begin{slide}
+\vspace*{-18pt}
+\ctl{\large{}\myblue{\sc Cassels's results on Catalan (VI)}}
+
+\medskip
+
+Similarly, if {\blue $a<0$}, we have {\blue $a\le-2$},
+and set {\blue $b=-a$}. Since {\blue $p$} and {\blue $q$} are odd 
+{\blue $f(a^p)=(a^q+1)^p-a^{pq}-1=-((b^q-1)^p-b^{pq}+1)>0$} (binomial 
+theorem), and
+{\blue $f(a^p+1)=(a^q+1)^p-(a^p+1)^q-1=-((b^q-1)^p-(b^p-1)^q+1)<0$} again by
+the first analytic lemma since $b>1$. Again absurd.
+
+\smallskip
+
+Crucial corollary, due to Hyyr\"o:
+
+\begin{Corollary} Same assumptions, in particular {\blue $p<q$}. Then
+{\blue $|y|\ge p^{q-1}+p$}.\end{Corollary}
+
+Proof: since {\blue $p\mid y$} and {\blue $v_p(r_p(x))=1$},
+can write {\blue $x-1=p^{q-1}a^p$}, {\blue $(x^p-1)/(x-1)=pv^q$}, 
+{\blue $y=pav$}. Set {\blue $P(X)=X^p-1-p(X-1)$}. Clearly 
+{\blue $(X-1)^2\mid P(X)$}, so {\blue $(x-1)\mid (x^p-1)/(x-1)-p=p(v^q-1)$},
+so {\blue $v^q\equiv1\pmod{p^{q-2}}$}. Since {\blue $q>p$}, 
+{\blue $\phi(p^{q-2})=p^{q-3}(p-1)$} coprime to {\blue $q$}, hence
+{\blue $v\equiv1\pmod{p^{q-2}}$}. It is easily seen that {\blue $v=1$} is
+impossible, so {\blue $v\ge p^{q-2}+1$}, so
+{\blue $|y|=pav\ge pv\ge p^{q-1}+p$}.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Cassels's results on Catalan (VII)}}
+
+\medskip
+
+Case {\blue $p>q$} more difficult.
+
+\begin{Proposition} If {\blue $x$} and {\blue $y$} are nonzero integers and 
+{\blue $p$} and {\blue $q$} odd primes such that {\blue $x^p-y^q=1$}, then 
+when {\blue $p>q$} we have {\blue $p\mid y$}.
+\end{Proposition}
+
+Proof: as in proof for {\blue $p<q$}, assume by contradiction 
+{\blue $p\nmid y$}, so {\blue $x-1=a^q$} hence {\blue $y^q=(a^q+1)^p-1$},
+so {\blue $y=a^pF(1/a^q)$} with {\blue $F$} as in analytic lemma II.
+Recall {\blue $m=\lfloor p/q\rfloor+1$}, and set 
+{\blue $z=a^{mq-p}y-a^{mq}F_m(1/a^q)$}, so that 
+{\blue $z=a^{mq}(F(1/a^q)-F_m(1/a^q))$}. By Taylor's theorem
+{\blue $t^mF_m(1/t)=\sum_{0\le j\le m}\binom{p/q}{j}t^{m-j}$}, and by 
+arithmetic lemma {\blue $D=q^{m+v_q(m!)}$} is a common denominator of
+all the {\blue $\binom{p/q}{j}$} for {\blue $0\le j\le m$}. Thus
+{\blue $Da^{mq}F_m(1/a^q)\in\Z$}, and since {\blue $mq\ge p$} we have
+{\blue $a^{mq-p}y\in\Z$}, so that {\blue $Dz\in\Z$}.
+
+\end{slide}
+\begin{slide}
+\vspace*{-18pt}
+\ctl{\large{}\myblue{\sc Cassels's results on Catalan (VIII)}}
+
+\medskip
+
+We now show {\blue $|Dz|<1$}. Applying analytic lemma II to 
+{\blue $t=1/a^q$} (satisfies {\blue $|t|\le1/2$} since {\blue $a\ne\pm1$}):
+{\blue $$|z|\le\dfrac{|a|^q}{(|a|^q-1)^2}\le\dfrac{1}{|a|^q-2}\le\dfrac{1}{|x|-3}\;.$$}
+By Hyyr\"o's Corollary (with {\blue $(p,q,x,y)$} replaced by 
+{\blue $(q,p,-y,-x)$}) we have {\blue $|x|\ge q^{p-1}+q\ge q^{p-1}+3$},
+so 
+{\blue $$|Dz|\le\dfrac{D}{|x|-3}\le q^{m+v_q(m!)-(p-1)}\;.$$}
+Since {\blue $v_q(m!)<m/(q-1)$} for {\blue $m\ge1$} and {\blue $m<p/q+1$},
+we have
+{\blue $$m+v_q(m!)-(p-1)<m\dfrac{q}{q-1}-(p-1)=\dfrac{3-(p-2)(q-2)}{q-1}\le0$$}
+since {\blue $q\ge3$} and {\blue $p\ge5$}, proving {\blue $|Dz|<1$}.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Cassels's results on Catalan (IX)}}
+
+\medskip
+
+Since {\blue $Dz\in\Z$}, we have {\blue $Dz=0$}. But
+{\blue $$Dz=Da^{mq-p}y-\sum_{0\le j\le m}D\binom{p/q}{j}a^{q(m-j)}\;,$$}
+and by the arithmetic lemma
+{\blue $$v_q\left(\binom{p/q}{j}\right)<v_q\left(\binom{p/q}{m}\right)=v_q(D)$$}
+for {\blue $0\le j\le m-1$}, hence again by the arithmetic lemma
+{\blue $$0=Dz\equiv D\binom{p/q}{m}\not\equiv0\pmod{q}\;,$$}
+absurd.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Cassels's results on Catalan (IX)}}
+
+\medskip
+
+Immediate but crucial corollary of Cassels's theorem:
+
+\begin{Corollary} If {\blue $x$} and {\blue $y$} are nonzero integers and 
+{\blue $p$} and {\blue $q$} odd primes such that {\blue $x^p-y^q=1$}, there
+exist nonzero integers {\blue $a$} and {\blue $b$}, and positive integers 
+{\blue $u$} and {\blue $v$} with {\blue $q\nmid u$} and {\blue $p\nmid v$}
+such that
+{\blue \begin{align*}x&=qbu,\ x-1=p^{q-1}a^q,\ \dfrac{x^p-1}{x-1}=pv^q,\\
+y&=pav,\ y+1=q^{p-1}b^p,\ \dfrac{y^q+1}{y+1}=qu^p\;.\end{align*}}
+\end{Corollary}
+
+Proof: easy exercise from the main theorem.
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Introduction to Number Fields (I)}}
+
+\medskip
+
+Apart from the methods studied above, this is the oldest and most used method
+in the subject, and as already mentioned the whole theory of number fields 
+arose from the study of Diophantine equations, in particular FLT. Reminder:
+
+\smallskip
+
+{\red $\bullet$} A {\bf number field} {\blue $K$} is a finite extension of 
+{\blue $\Q$}, equivalently {\blue $K=\Q(\al)$}, where {\blue $\al$} root of 
+a nonzero polynomial {\blue $A\in\Q[X]$}.
+
+\smallskip
+
+{\red $\bullet$} An {\bf algebraic integer} is a root of a {\bf monic} 
+polynomial with integer coefficients. The element {\blue $\al$} such that 
+{\blue $K=\Q(\al)$} can always be chosen such. The set of algebraic integers
+of {\blue $K$} forms a ring, denoted {\blue $\Z_K$}, containing 
+{\blue $\Z[\al]$} with finite index, when {\blue $\al$} chosen integral. It 
+is a free {\blue $\Z$}-module of rank {\blue $n=[K:\Q]$}, and a 
+{\blue $\Z$}-basis of {\blue $\Z_K$} is called an {\bf integral basis}.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Introduction to Number Fields (II)}}
+
+\medskip
+
+{\red $\bullet$} The ring {\blue $\Z_K$} is a {\bf Dedekind domain}. The
+essential consequence is that any fractional ideal can be decomposed uniquely
+into a power product of prime ideals. This is in fact the main motivation.
+Crucial fact: if {\blue $\Z[\al]\ne\Z_K$} then it is {\bf never} a Dedekind
+domain.
+
+\smallskip
+
+{\red $\bullet$} If {\blue $p$} is a prime, let 
+{\blue $p\Z_K=\prod_{1\le i\le g}\p_i^{e_i}$} be the prime power decomposition
+of {\blue $p\Z_K$}. The ideals {\blue $\p_i$} are the prime ideals 
+{\red ``above''} (in other words containing) {\blue $p$}, the {\blue $e_i$}
+are the {\red ramification indexes}, the field {\blue $\Z_K/\p_i$}
+is a finite field containing {\blue $\F_p=\Z/p\Z$} with degree denoted by 
+{\blue $f_i$}, and we have the important relation
+{\blue $\sum_{1\le i\le g}e_if_i=n=[K:\Q]$}.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Introduction to Number Fields (III)}}
+
+\medskip
+
+{\red $\bullet$} {\bf Class group} {\blue $Cl(K)$} defined as the quotient of 
+fractional ideals by principal ideals, {\bf finite} group with cardinality 
+denoted {\blue $h(K)$}.
+
+\smallskip
+
+{\red $\bullet$} {\bf Unit group} {\blue $U(K)$}, group of invertible elements
+of {\blue $\Z_K$}, or group of algebraic {\bf integers} of norm {\blue $\pm1$},
+is a {\bf finitely generated} abelian group of rank {\blue $r_1+r_2-1$}
+({\blue $r_1$} and {\blue $2r_2$} number of real and complex embeddings).
+Torsion subgroup finite equal to the group {\blue $\mu(K)$} of roots of unity
+in {\blue $K$}.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Introduction to Number Fields (IV)}}
+
+\medskip
+
+{\red $\bullet$} A {\bf quadratic field} is {\blue $\Q(\sqrt{t})$}, with
+{\blue $t$} squarefree integer different from {\blue $1$}. Its ring of 
+integers is either equal to {\blue $\Z[\sqrt{t}]=\{a+b\sqrt{t},\ a,b\in\Z\}$}
+when {\blue $t\equiv2$} or {\blue $3$} modulo {\blue $4$}, or 
+{\blue $(a+b\sqrt{t})/2$}, with {\blue $a$} and {\blue $b$} integers of same
+parity otherwise.
+
+\smallskip
+
+{\red $\bullet$} A {\bf cyclotomic field} is {\blue $K=\Q(\z)$}, with
+{\blue $\z$} primitive {\blue $m$}th root of unity. Main result: 
+the ring of integers of a cyclotomic field is {\blue $\Z[\z]$}, and no larger.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Fermat's last theorem I (FLT I) (I)}}
+
+\medskip
+
+Even though Wendt's criterion is probably always applicable, it is necessary
+also to study the {\red algebraic} method, because it also applies to FLT II,
+i.e., the case {\blue $p\mid xyz$}.
+
+\smallskip
+
+{\red Notation}: {\blue $\z=\z_p$} primitive {\blue $p$}th root of {\blue $1$},
+{\blue $K=\Q(\z)$}, {\blue $\Z_K=\Z[\z]$}, {\blue $\pi=1-\z$}, 
+{\blue $\p=\pi\Z_K$} unique prime ideal above {\blue $p$}, and such that
+{\blue $\p^{p-1}=p\Z_K$}.
+
+\smallskip
+
+At first, people thought that {\blue $\Z_K$} is always a unique factorization
+domain. Unfortunately, completely false: on the contrary, only a (known)
+finite list of {\blue $p$} are such.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Fermat's last theorem I (FLT I) (II)}}
+
+\medskip
+
+Anyway, let's assume first that {\blue $\Z_K=\Z[\z]$} is a UFD. We prove:
+
+\begin{Lemma} Assume that {\blue $\Z[\z]$} is a UFD. If {\blue $x^p+y^p=z^p$}
+with {\blue $p\nmid xyz$}, there exist {\blue $\al\in\Z[\z]$} and a unit 
+{\blue $u$} of {\blue $\Z[\z]$} such that {\blue $x+y\z=u\al^p$}.
+\end{Lemma}
+
+Proof: may assume {\blue $x$}, {\blue $y$}, {\blue $z$} pairwise coprime.
+Our equation can be {\red factored} over {\blue $\Z[\z]$} as
+{\blue $$(x+y)(x+y\z)\cdots(x+y\z^{p-1})=z^p\;.$$}
+Claim: the factors are pairwise coprime. If some {\blue $\om$} divides 
+{\blue $x+y\z^i$} and {\blue $x+y\z^j$} for {\blue $i\neq j$}, it divides also
+{\blue $y(\z^i-\z^j)$} and {\blue $x(\z^j-\z^i)$}, hence {\blue $\z^i-\z^j$}
+since {\blue $x$} and {\blue $y$} are coprime (in {\blue $\Z$} hence in
+{\blue $\Z[\z]$}). Since {\blue $(\z^i-\z^j)\mid p$} in {\blue $\Z[\z]$}, we 
+have {\blue $\om\mid p$}, and on the other hand 
+{\blue $\om\mid (x+y\z^i)\mid z$}. Since {\blue $p$} and {\blue $z$} are 
+coprime, {\blue $\om\mid1$}, in other words is a unit, proving the claim.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Fermat's last theorem I (FLT I) (III)}}
+
+\medskip
+
+Thus product of pairwise coprime elements in {\blue $\Z[\z]$} equal to a 
+{\blue $p$}th power, so up to multiplication by a unit, each one is, since 
+{\blue $\Z[\z]$} is a PID by assumption, proving the lemma.
+
+\smallskip
+
+Unfortunately, as mentioned, not very useful since condition too strict.
+This is where {\red ideals} play their magic. Denote by {\blue $h_p$} the
+{\red class number} of the cyclotomic field {\blue $K=\Q(\z_p)$}.
+Then:
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Fermat's last theorem I (FLT I) (IV)}}
+
+\medskip
+
+{\bf The above lemma is still valid if we only assume {\blue $p\nmid h_p$}.}
+
+\smallskip
+
+To see why, note that the proof of the lemma is valid verbatim if we replace
+``elements'' by ``ideals'': there is unique factorization in ideals, the
+coprimeness of the factors remain, and we deduce that each ideal
+{\blue $\a_i=(x+y\z^i)\Z_K$} is a {\blue $p$}th power of an ideal, say
+{\blue $\a_i=\b_i^p$}. Crucial ingredient: since the class number is finite,
+{\blue $\b_i^{h_p}$} is a {\red principal ideal}. Since {\blue $\b_i^p$} also
+is, and {\blue $pu+h_pv=1$} for some {\blue $u$}, {\blue $v$}, it follows that
+{\blue $\b_i$} itself is principal. If {\blue $\b_1=\al\Z_K$} then
+{\blue $\a_1=(x+y\z)\Z_K=\al^p\Z_K=\b_1^p$}, so {\blue $x+y\z=u\al^p$}
+for some unit {\blue $u$}, proving the lemma.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Fermat's last theorem I (FLT I) (V)}}
+
+\medskip
+
+{\red $\bullet$} The rest of the proof in case {\blue $p\nmid h_p$} is 
+specific and easy (see notes). It uses however an additional crucial
+ingredient, {\red Kronecker's theorem}: if {\blue $\al$} is an algebraic
+{\bf integer} such that all the conjugates of {\blue $\al$} in {\blue $\C$}
+have norm equal to {\blue $1$}, then it is a {\red root of unity}. 
+In particular, if {\blue $u$} is a unit of {\blue $\Z[\z]$}, then
+{\blue $\overline{u}/u$} is a root of unity.
+
+\smallskip
+
+{\red $\bullet$} A prime such that {\blue $p\nmid h_p$} is called a
+{\red regular prime}. Known that there are infinitely many {\bf irregular}
+primes, conjectured infinitely many regular with density 
+{\blue $e^{-1/2}=0.607\dots$}.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Fermat's last theorem I (FLT I) (VI)}}
+
+\medskip
+
+{\red $\bullet$} One of the crucial ingredients in the proof was
+{\blue $\b^{h_p}$} principal for all ideals {\blue $\b$}. We say that
+{\blue $h_p$} {\red annihilates} the class group {\blue $Cl(K)$}. However, 
+{\blue $K/\Q$} is a {\red Galois} extension (even {\red abelian}) with Galois 
+group {\blue $G\isom(\Z/p\Z)^*$}. The {\red group ring} {\blue $\Z[G]$} acts
+on {\blue $Cl(K)$}, and we can look for other elements of {\blue $\Z[G]$}
+which annihilate {\blue $Cl(K)$}. One such is given by the {\red Stickelberger
+element}, and more generally elements of the {\red Stickelberger ideal}.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Fermat's last theorem I (FLT I) (VII)}}
+
+\medskip
+
+This is used in a {\bf simple way} by Mih\u{a}ilescu for Catalan: if
+{\blue $x^p-y^q=1$} with {\blue $p$}, {\blue $q$} odd primes and 
+{\blue $xy\ne0$}, then {\red double Wieferich condition}:
+{\blue $$p^{q-1}\equiv1\pmod{q^2}\text{\quad and\quad}q^{p-1}\equiv1\pmod{p^2}\;.$$}
+Note no class number condition. Only seven such pairs known, but expect
+infinitely many.
+
+More sophisticated annihilator of {\blue $Cl(K)$} given by {\red Thaine's
+theorem}, used in an essential way by Mih\u{a}ilescu for the complete proof
+of Catalan, but also in different contexts such as the {\red Birch and
+Swinnerton-Dyer conjecture}.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc {\blue $y^2=x^3+t$} revisited}}
+
+\medskip
+
+Have already seen in special cases. Can factor in {\blue $\Q(\sqrt{t})$} or
+in {\blue $\Q(\root3\of{t})$}. Problem with {\bf units} which are not roots
+of unity. Sometimes can take care of that, but not always.
+{\blue $\Q(\root3\of{t})$} always has such units, so we do not use.
+{\blue $\Q(\sqrt{t})$} also does if {\blue $t>0$}, so we assume {\blue $t<0$}.
+Thus write {\blue $(y-\sqrt{t})(y+\sqrt{t})=x^3$} in {\bf imaginary}
+quadratic field {\blue $K=\Q(\sqrt{t})$}. If factors not coprime, much more
+messy. To have factors coprime need both {\bf {\blue $t$} squarefree} and
+{\blue $t\not\equiv1\pmod8$}. The first condition is not really essential,
+the second is. We then deduce that the ideal {\blue $(y-\sqrt{t})\Z_K$} is
+the cube of an ideal, and to conclude as in FLT I we absolutely need the
+condition {\blue $3\nmid |Cl(K)|$}. Under all these restrictions, easy to
+give complete solution (see notes). For {\bf specific} {\blue $t$}, must
+solve {\red Thue equations}.
+
+\end{slide}
+\begin{slide}
+\vspace*{-10pt}
+\ctl{\large{}\myblue{\sc The Super-Fermat equation {\blue $x^p+y^q=z^r$} (I)}}
+
+\medskip
+
+A whole course to itself! Most salient points:
+
+{\red $\bullet$} Must {\bf add} the condition {\blue $x$}, {\blue $y$},
+{\blue $z$} coprime because not homogeneous, otherwise usually easy to 
+construct infinitely many ``stupid'' (nontrivial) solutions. Example:
+{\blue $$55268479930183339474944^3+50779978334208^5=6530347008^7\;.$$}
+Set {\blue $\chi=1/p+1/q+1/r-1$}. Different behavior according to {\bf sign} 
+of {\blue $\chi$}:
+
+\smallskip
+
+{\red $\bullet$} If {\blue $\chi>0$} ({\red elliptic case}) {\bf complete and 
+disjoint parametrizations} of the (infinite) set of solutions ({\red
+Beukers}). 
+
+\smallskip
+
+{\red $\bullet$} If {\blue $\chi<0$}, only a {\bf finite} number of solutions
+({\red Darmon--Granville}, using {\red Faltings}). Only a few cases solved
+(rational points on curves of genus {\blue $g\ge1$}), and only ten cases
+known. Would need {\bf effective form} of Faltings.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc The Super-Fermat equation {\blue $x^p+y^q=z^r$} (II)}}
+
+\medskip
+
+Elliptic case corresponds up to permutation to {\blue $(p,q,r)=(2,2,r)$}
+({\red dihedral} case), {\blue $(p,q,r)=(2,3,3)$} ({\red tetrahedral} case),
+{\blue $(p,q,r)=(2,3,4)$} ({\red octahedral} case), and
+{\blue $(p,q,r)=(2,3,5)$} ({\red icosahedral} case), because they correspond
+to the finite subgroups of {\blue $PSL_2(\C)$}.
+
+\smallskip
+
+{\bf Two totally different methods} to treat the elliptic case. The
+first is again factoring over suitable number fields (never very large).
+The proofs are tedious and in the notes for some dihedral cases (very easy),
+and the octahedral case {\blue $(p,q,r)=(2,4,3)$}. In the latter we only
+use {\blue $\Z[i]$} by writing {\blue $x^2+y^4=z^3$} as 
+{\blue $(x+y^2i)(x-y^2i)=z^3$}. One obtains exactly {\bf four} disjoint
+homogeneous $2$-variable parametrizations of the coprime solutions. Existence 
+not surprising, their disjointness (i.e., any coprime solution is represented 
+by a single parametrization) more surprising.
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc The Super-Fermat equation {\blue $x^p+y^q=z^r$} (III)}}
+
+\medskip
+
+For completeness, they are the following:
+{\blue $$\begin{cases}
+x=4ts(s^2-3t^2)(s^4+6t^2s^2+81t^4)(3s^4+2t^2s^2+3t^4)&\\
+y=\pm(s^2+3t^2)(s^4-18t^2s^2+9t^4)&\\
+z=(s^4-2t^2s^2+9t^4)(s^4+30t^2s^2+9t^4)\;,&
+\end{cases}$$}
+with {\blue $s\not\equiv t\pmod2$} and {\blue $3\nmid s$}.
+{\blue $$\begin{cases}
+x=\pm(4s^4+3t^4)(16s^8-408t^4s^4+9t^8)&\\
+y=6ts(4s^4-3t^4)&\\
+z=16s^8+168t^4s^4+9t^8\;,&
+\end{cases}$$}
+with {\blue $t$} odd and {\blue $3\nmid s$}.
+\end{slide}
+\begin{slide}
+\vspace*{-14pt}
+\ctl{\large{}\myblue{\sc The Super-Fermat equation {\blue $x^p+y^q=z^r$} (IV)}}
+
+\medskip
+
+{\blue $$\begin{cases}
+x=\pm(s^4+12t^4)(s^8-408t^4s^4+144t^8)&\\
+y=6ts(s^4-12t^4)&\\
+z=s^8+168t^4s^4+144t^8\;,&
+\end{cases}$$}
+with {\blue $s$} odd and {\blue $3\nmid s$}.
+{\blue $$\begin{cases}
+x=\pm2(s^4+2ts^3+6t^2s^2+2t^3s+t^4)(23s^8-16ts^7-172t^2s^6-112t^3s^5&\\
+\phantom{=\pm2(}\kern90pt-22t^4s^4-112t^5s^3-172t^6s^2-16t^7s+23t^8)&\\
+y=3(s-t)(s+t)(s^4+8ts^3+6t^2s^2+8t^3s+t^4)&\\
+z=13s^8+16ts^7+28t^2s^6+112t^3s^5+238t^4s^4&\\
+\phantom{=\pm2(}\kern90pt+112t^5s^3+28t^6s^2+16t^7s+13t^8\;,&
+\end{cases}$$}
+with {\blue $s\not\equiv t\pmod2$} and {\blue $s\not\equiv t\pmod3$}.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc The Super-Fermat equation {\blue $x^p+y^q=z^r$} (V)}}
+
+\medskip
+The factoring method works in all elliptic cases {\bf except} in the
+icosahedral case {\blue $(p,q,r)=(2,3,5)$}. Here we must use a completely
+different tool (applicable also in the other elliptic cases), invented in
+this context by {\red F.~Klein}, but reinterpreted in modern terms by 
+{\red Grothendieck} and {\red Belyi}, the theory of {\red dessins d'enfants}.
+This is a term coined by Grothendieck to describe 
+{\red coverings} of {\blue $\P^1(\C)$} ramified in at most {\blue $3$}
+points. Using this, obtain in an {\bf algorithmic manner} complex polynomials
+{\blue $P$}, {\blue $Q$}, and {\blue $R$} (homogeneous in two variables) such 
+that (for instance) {\blue $P^2+Q^3=R^5$}. These polynomials can in fact be 
+chosen with coefficients in a {\bf number field}, and by making
+{\blue $PSL_2(\C)$} act on them and introducing a suitable {\red reduction
+theory}, can find all parametrizations. Program initiated by {\red F.~Beukers}
+and finished by his student {\red J.~Edwards} ({\blue $27$} disjoint 
+parametrizations).
+
+\end{slide}
+
+\begin{slide}
+\ctl{\large{}\myblue{\sc Introduction to Elliptic Curves (I)}}
+
+\medskip
+
+A very important set of Diophantine equations is the search for {\red rational
+points} (or sometimes {\red integral points}) on {\red curves}. Curves are
+best classified by their {\red genus}, related to the degree. Example:
+a {\red nonsingular plane curve} of degree {\blue $d$} has genus
+{\blue $g=(d-1)(d-2)/2$} (so {\blue $g=0$} for lines and conics, {\blue $g=1$}
+for plane cubics, {\blue $g=3$} for plane quartics). A {\red hyperelliptic
+curve} {\blue $y^2=f(x)$} where {\blue $f$} has degree {\blue $d$} and no
+multiple roots has genus {\blue $g=\lfloor (d-1)/2\rfloor$} (so
+{\blue $g=0$} for {\blue $d=1$} or {\blue $2$}, {\blue $g=1$} for
+{\blue $d=3$} or {\blue $4$}, {\blue $g=2$} for {\blue $d=5$} or {\blue $6$}.
+
+\smallskip
+
+An {\red elliptic curve} {\blue $E$} over some field {\blue $K$} is a curve
+of {\red genus {\blue $1$}}, together with a {\blue $K$}-rational point.
+\end{slide}
+\begin{slide}
+\vspace*{-23pt}
+\ctl{\large{}\myblue{\sc Introduction to Elliptic Curves (II)}}
+
+\medskip
+
+Study of elliptic curves important for many reasons: curves of genus zero
+very well understood (everything algorithmic). curves of genus {\blue $g\ge2$}
+very difficult to handle; in addition, elliptic curves have a
+{\bf very rich structure}, coming in particular from the fact that they
+have a natural {\bf group law}. Reminder on elliptic curves:
+
+\smallskip
+
+{\red $\bullet$} In practice, an elliptic curve can be given by {\red
+equations}. The simplest is as a simple {\red Weierstrass equation} 
+{\blue $y^2=x^3+ax^2+bx+c$}, or a generalized Weierstrass equation 
+{\blue $y^2+a_1xy+a_3y=x^3+a_2x^2+a_4x+a_6$} (canonical numbering), together 
+with the condition that the curve be nonsingular. More
+generally {\red nonsingular plane cubic} with rational point, 
+{\red hyperelliptic quartic} with square leading coefficient 
+{\blue $y^2=a^2x^4+bx^3+cx^2+dx+e$}, intersection of two quadrics,
+and so on. All these other realizations can algorithmically be transformed
+into Weierstrass form, so we will assume from now on that this is the case.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Introduction to Elliptic Curves (III)}}
+
+\medskip
+
+{\red $\bullet$} Set of projective points of an elliptic curve (if
+{\blue $y^2=x^3+ax^2+bx+c$}, affine points plus the point at infinity
+{\blue $\O=(0:1:0)$}) form an {\bf abelian group} under the secant and tangent
+method of Fermat (brief explanation: if {\blue $P$} and {\blue $Q$} are 
+distinct points on the curve, draw the line joining {\blue $P$} and 
+{\blue $Q$}; it meets the curve in a third point {\blue $R$}, and 
+{\blue $P+Q$} is the symmetrical point of {\blue $R$} with
+respect to the {\blue $x$}-axis. If {\blue $P=Q$}, do the same with the 
+tangent). {\bf Warning}: if equation of elliptic curve is not a plane cubic,
+the geometric construction of the group law must be modified.
+
+\smallskip
+
+{\red $\bullet$} If {\blue $K=\C$}, {\blue $E(\C)$} in canonical bijection 
+with a quotient {\blue $\C/\Lambda$}, where {\blue $\Lambda$} is a 
+{\bf lattice} of {\blue $\C$}, thanks to the {\red Weierstrass
+{\blue $\wp$} function} and its derivative.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Introduction to Elliptic Curves (IV)}}
+
+\medskip
+
+{\red $\bullet$} If {\blue $K=\F_q$}, important {\red Hasse bound}
+{\blue $|E(\F_q)-(q+1)|\le 2\sqrt{q}$}. Essential in particular in
+cryptography.
+
+\smallskip
+
+{\red $\bullet$} If {\blue $K=\Q_p$} (or a finite extension), we have a good 
+understanding of {\blue $E(\Q_p)$} thanks in particular to {\red Kodaira}, 
+{\red N\'eron}, and {\red Tate}.
+
+\smallskip
+
+{\red $\bullet$} And what if {\blue $K=\Q$} (or a number field)? Most
+interesting, and most difficult case. Deserves a theorem to itself.
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Introduction to Elliptic Curves (V)}}
+
+\medskip
+
+This is the theorem of {\red Mordell}, generalized by {\red Weil} to
+number fields and to Abelian varieties.
+
+\begin{Theorem} If {\blue $E$} is an elliptic curve over a number field
+{\blue $K$}, the group {\blue $E(K)$} is a {\bf finitely generated} abelian
+group (the Mordell--Weil group of {\blue $E$} over {\blue $K$}).\end{Theorem}
+
+Thus {\blue $E(K)\isom E(K)_{\text{tors}}\oplus\Z^r$}, with
+{\blue $E(K)_{\text{tors}}$} a finite group, and {\blue $r$} is called the 
+{\red rank} of {\blue $E(K)$}. {\blue $E(K)_{\text{tors}}$} is easily and
+algorithmically computable, and only a finite number of possibilities for it,
+known for instance for {\blue $K=\Q$} by a difficult theorem of {\red Mazur}. 
+
+{\bf One of the major unsolved problems on elliptic curves is to compute 
+algorithmically the rank {\blue $r$}, together with a system of generators}. 
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Introduction to Elliptic Curves (VI)}}
+
+\medskip
+
+Goal of the rest of the course: explain methods to compute {\blue $E(\Q)$},
+either rigorously, or heuristically. There is no general algorithm, but only 
+partial ones, which luckily work in ``most'' cases. Sample techniques:
+
+\smallskip
+
+{\red $\bullet$} {\bf {\blue $2$}-descent}, with or without a rational
+{\blue $2$}-torsion point
+
+\smallskip
+
+{\red $\bullet$} {\bf {\blue $3$}-descent} with rational torsion subgroup
+(more general descents possible, but for the moment not very practical, work
+in progress of a lot of people, some present here).
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Introduction to Elliptic Curves (VII)}}
+
+\medskip
+
+{\red $\bullet$} Use of {\bf {\blue $L$}-functions} to compute the rank,
+but not the generators.
+
+\smallskip
+
+{\red $\bullet$} The {\red Heegner point method}, one of the most beautiful
+and amazing aspects of this subject, important both in theory and in practice,
+applicable to {\bf rank {\blue $1$}} curves, which should form the vast 
+majority of curves of nonzero rank, the only ones where we must work.
+This is also the subject of the student project.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc {\blue $2$}-Descent without {\blue $2$}-torsion point (I)}}
+
+\medskip
+
+The general idea of {\red descent}, initiated by Fermat, is to map a
+(possibly large) point on a given curve (or more general variety) to 
+smaller points on other curves. Here {\red smaller} means that the number of
+{\red digits} is {\red divided} by some {\blue $k>1$}, so it is very efficient
+when applicable.
+
+The simplest is {\blue $2$}-descent on an elliptic curve when there exists a
+rational {\blue $2$}-torsion point (see text). We study the slightly more
+complicated case where such a point does not exist. In other words, let
+{\blue $y^2=x^3+ax+b$}, where we assume {\blue $a$} and {\blue $b$} in 
+{\blue $\Z$} and {\blue $x^3+ax+b=0$} without rational roots, hence irreducible
+over {\blue $\Q$}. Denote by {\blue $\th$} a root, and set {\blue $K=\Q(\th)$}.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc {\blue $2$}-Descent without {\blue $2$}-torsion point (II)}}
+
+\medskip
+
+Define the map {\blue $\al$} from {\blue $E(\Q)$} to {\blue $K^*/{K^*}^2$}
+by {\blue $\al(\O)=1$} and {\blue $\al((x,y))=x-\th$} modulo {\blue ${K^*}^2$}.
+Fundamental result, easy to prove using definition of group law by
+secant and tangent:
+
+\begin{Proposition} {\blue $\al$} is a {\red group homomorphism} whose
+kernel is equal to {\blue $2E(\Q)$}. In particular, it induces an
+{\red injective} homomorphism from {\blue $E(\Q)/2E(\Q)$} to 
+{\blue $K^*/{K^*}^2$}, and the rank {\blue $r$} of {\blue $E(\Q)$} is
+equal to {\blue $\dim_{\F_2}(\Ima(\al))$}.\end{Proposition}
+
+(Note that we assume no {\blue $2$}-torsion.)
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc {\blue $2$}-Descent without {\blue $2$}-torsion point (III)}}
+
+\medskip
+
+Thus describe {\blue $\Ima(\al)$}. For this need {\blue $T$}-{\red Selmer 
+group} of a {\bf number field} (not of the elliptic curve).
+
+{\red $\bullet$} {\blue $T$} finite set of prime ideals of {\blue $K$}.
+
+\smallskip
+
+{\red $\bullet$} {\blue $U_T(K)$} group of {\blue $T$}-units {\blue $u$}
+of {\blue $K$} ({\blue $v_{\p}(u)=0$} for {\blue $p\notin T$}).
+
+\smallskip
+
+{\red $\bullet$} {\blue $Cl_T(K)$} {\blue $T$}-class group, equal to
+{\blue $Cl(K)/<T>$} with evident notation.
+
+\smallskip
+
+{\red $\bullet$} A {\blue $T$}-{\red virtual square} {\blue $u\in K^*$} is 
+such that {\blue $2\mid v_{\p}(u)$} for all {\blue $\p\notin T$}.
+
+\smallskip
+
+{\red $\bullet$} The {\blue $T$}-{\red Selmer group} {\blue $S_T(K)$} is the
+quotient of the group of {\blue $T$}-virtual squares by the group 
+{\blue ${K^*}^2$} of nonzero squares.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc {\blue $2$}-Descent without {\blue $2$}-torsion point (IV)}}
+
+\medskip
+
+We have {\blue $S_T(K)\isom (U_T(K)/U_T(K)^2)\times Cl_T(K)[2]$}, so easily
+computable using a computer algebra system.
+
+Basic result linking {\blue $\Ima(\al)$} with {\blue $S_T(K)$} (not difficult):
+
+\begin{Proposition} Let {\blue $T$} be the set of prime ideals {\blue $\q$}
+such that {\blue $\q\mid 3\th^2+a$} and {\blue $q\mid [\Z_K:\Z[\th]]$},
+where {\blue $q$} prime number below {\blue $\q$}. Then {\blue $\Ima(\al)$}
+is equal to the group of {\blue $\overline{u}\in S_T(K)$} such that
+{\blue $\N_{K/\Q}(u)$} (for any lift {\blue $u$}) is a square in {\blue $\Q$} 
+and such that there {\red exists} a lift {\blue $u$} of the form 
+{\blue $x-\th$}.
+\end{Proposition}
+
+{\red $\bullet$} Sometimes {\blue $[\Z_K:\Z[\th]]=1$} so {\blue $T=\emptyset$}
+(but {\blue $S_T(K)$} may still be nontrivial).
+
+\smallskip
+
+{\red $\bullet$} The condition on the norm is algorithmic. Unfortunately 
+the existence of a lift {\blue $u$} of the form {\blue $x-\th$} is not
+(but luckily feasible in many cases).
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc {\blue $2$}-Descent without {\blue $2$}-torsion point (V)}}
+
+\medskip
+
+So let {\blue $G$} the group of {\blue $\overline{u}\in S_T(K)$} whose lifts
+have square norm. To determine if {\blue $\overline{u}$} has a lift
+{\blue $x-\th$}: write {\blue $u=u_2\th^2+u_1\th+u_0$} for any lift,
+{\blue $u_i\in\Q$}. All lifts are of the form {\blue $u\ga^2$} for
+{\blue $\ga=c_2\th^2+c_1\th+c_0$}, and
+{\blue $$u\ga^2=q_2(c_0,c_1,c_2)\th^2-q_1(c_0,c_1,c_2)\th+q_0(c_0,c_1,c_2)\;,$$}
+with {\blue $q_i$} {\red explicit quadratic forms}. Condition reads
+{\blue $q_2(c_0,c_1,c_2)=0$} and {\blue $q_1(c_0,c_1,c_2)=1$}. The first
+equation can be checked for solubility by {\red Hasse--Minkowski} 
+(local-global principle for quadratic form), and then {\red parametrized by 
+quadratic forms} in two variables (as super-Fermat equation). Replacing in
+second equation gives {\red quartic}, and dehomogenenizing gives
+a {\red hyperelliptic quartic equation} {\blue $y^2=Q(x)$}.
+
+\end{slide}
+\begin{slide}
+\vspace*{-11pt}
+\ctl{\large{}\myblue{\sc {\blue $2$}-Descent without {\blue $2$}-torsion point (VI)}}
+
+\medskip
+
+If not everywhere locally soluble, can again exclude {\blue $\overline{u}$}. 
+Otherwise search for solutions. If found, {\blue $\overline{u}\in\Ima(\al)$}, 
+if not we are stuck.
+
+\smallskip
+
+The group of {\blue $\overline{u}\in S_T(K)$} for which the corresponding 
+quartic is everywhere locally soluble is called the {\blue $2$}-Selmer group
+of the {\bf elliptic curve}, and is the smallest group containing
+{\blue $E(\Q)/2E(\Q)$} which can be determined algorithmically using
+{\blue $2$}-descent. It is denoted {\blue $S_2(E)$}. The quotient of
+{\blue $S_2(E)$} by the (a priori unknown) subgroup {\blue $E(\Q)/2E(\Q)$}
+is the {\bf obstruction} to {\blue $2$}-descent, and is equal to
+{\blue $\X(E)[2]$}, the part of the {\red Tate--Shafarevitch group} of 
+{\blue $E$} killed by {\blue $2$}.
+
+\smallskip
+
+{\blue $2$}-descent quite powerful, basis of {\red Cremona's}
+{\tt mwrank} program. If fails, can try a {\bf second descent} (solve
+the quartics), or a {\blue $3$}-descent or higher.
+
+\smallskip
+
+{\bf Exercise}: try your {\blue $2$}-descent skills for {\blue $y^2=x^3\pm16$}
+(both have rank {\blue $0$}).
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Example of {\blue $3$}-Descent (I)}}
+
+\medskip
+
+Not difficult but too long to explain, so we give an interesting example.
+
+\smallskip
+
+{\red Goal}: given nonzero integers {\blue $a$}, {\blue $b$}, and {\blue $c$},
+determine if there exists a nontrivial solution to {\blue $ax^3+by^3+cz^3=0$}.
+
+\smallskip
+
+As usual, easy to give condition for everywhere local solubility (see text).
+
+To go further, for any {\blue $n\in\Z_{\ge1}$} let {\blue $E_n$} be the
+elliptic curve {\blue $y^2=x^3+n^2$}. The point {\blue $T=(0,n)$} is torsion
+of order {\blue $3$}. We define a {\blue $3$}-descent map {\blue $\al$} from
+{\blue $E(\Q)$} to {\blue $\Q^*/{\Q^*}^3$} by setting {\blue $\al(\O)=1$}, 
+{\blue $\al(T)=4n^2$}, and otherwise {\blue $\al((x,y))=y-n$}, all modulo
+cubes. Easy direct check that {\blue $\al$} is a {\bf group homomorphism},
+kernel easy to compute (not needed here).
+
+Projective curve {\blue $\CC=\CC_{a,b,c}$} with equation 
+{\blue $ax^3+by^3+cz^3=0$} closely linked to curve {\blue $E=E_{4abc}$}
+as follows.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Example of {\blue $3$}-Descent (II)}}
+
+\medskip
+
+\begin{Proposition} Define {\blue $\phi(x,y,z)=(-4abcxyz,\ -4abc(by^3-cz^3),\ ax^3)$}.
+\begin{enumerate}\item The map {\blue $\phi$} sends {\blue $\CC(\Q)$} into 
+{\blue $E(\Q)$} (in projective coordinates).
+\item Let {\blue $G=\{(X,Y,Z)\}\in E(\Q)$} such that
+{\blue $c(Y-4abcZ)=bZ\la^3$} for some {\blue $\la\in\Q^*$}. Then
+{\blue $\Ima(\phi)=\phi(\CC(\Q))$} is equal to {\blue $G$} together with
+{\blue $\O$} if {\blue $c/b\in{\Q^*}^3$}, and {\blue $T$} if
+{\blue $b/a\in{\Q^*}^3$} (and immediate to give preimages).
+\item The set {\blue $\CC(\Q)$} is nonempty if and only if {\blue $b/c$}
+modulo cubes belongs to {\blue $\Ima(\al)\subset \Q^*/{\Q^*}^3$}.
+\end{enumerate}\end{Proposition}
+
+Proof: (1) and (2) are simple verifications. For (3), 
+{\blue $\CC(\Q)\ne\emptyset$} iff {\blue $\Ima(\phi)\ne\emptyset$}, hence
+iff either there exists {\blue $(X,Y,Z)\in E(\Q)$} and {\blue $\la\in\Q^*$}
+with {\blue $c(Y-4abcZ)=bZ\la^3$}, or if {\blue $c/b$} or {\blue $b/a$}
+are cubes. Note {\blue $\la=2cz/x$}. This easily implies that 
+{\blue $b/c\in\Ima(\al)$}.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Example of {\blue $3$}-Descent (III)}}
+
+\medskip
+
+Thus, to test solubility of {\blue $ax^3+by^3+cz^3=0$}, proceed as follows.
+First test everywhere local solubility (easy). Then compute 
+the Mordell--Weil group {\blue $E(\Q)$} using {\blue $2$-descent} and/or
+a software package like Cremona's {\tt mwrank} (of course may be difficult),
+also torsion subgroup (easy). If {\blue $(P_i)_{1\le i\le r}$} basis of
+free part, then classes modulo {\blue $3E(\Q)$} of {\blue $P_0=T$} and the
+{\blue $P_i$} form an {\blue $\F_3$}-basis of {\blue $E(\Q)/3E(\Q)$}.
+Then check if {\blue $b/c$} modulo cubes belongs to the group generated by
+the {\blue $(\al(P_i))_{0\le i\le r}$} in {\blue $\Q^*/{\Q^*}^3$}, simple
+linear algebra over {\blue $\F_3$}. Completely algorithmic, {\bf apart from}
+the MW computations.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Example of {\blue $3$}-Descent (IV)}}
+
+\medskip
+
+{\bf Examples}: 
+
+{\red $\bullet$} {\blue $x^3+55y^3+66z^3=0$}. Everywhere locally soluble, 
+cannot solve algebraically as far as I know. Use above method. Find torsion 
+subgroup of order {\blue $3$} generated by {\blue $P_0=T=(0,14520)$}. In a 
+fraction of a second, {\tt mwrank} (or {\blue $2$}-descent) says rank
+{\blue $1$} and a generator {\blue $P_1=(504,18408)$}. Then modulo cubes
+{\blue $\al(P_0)=2^2\cdot 3^2\cdot 5^2\cdot11$} and 
+{\blue $\al(P_1)=2\cdot3^2$}, while {\blue $b/c=2^2\cdot3^2\cdot5$}. Linear
+algebra immediately shows {\blue $b/c$} {\bf not} in group generated by
+{\blue $\al(P_0)$} and {\blue $\al(P_1)$}, so no solution.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Example of {\blue $3$}-Descent (V)}}
+
+\medskip
+
+{\red $\bullet$} Descent not always negative: {\blue $x^3+17y^3+41z^3=0$}.
+Torsion subgroup of order {\blue $3$} generated by {\blue $P_0=T=(0,2788)$}.
+Rank {\blue $1$} and generator 
+{\blue $P_1=(355278000385/2600388036, -426054577925356417/132604187507784)$}.
+Modulo cubes {\blue $\al(P_0)=17^2.41^2$}, {\blue $\al(P_1)=17^2$}, 
+and {\blue $b/c=17\cdot 41^2$}, so since {\blue $\al$} group homomorphism,
+{\blue $\al(P_0+P_1)=b/c$} modulo cubes.
+Find in projective coordinates
+{\blue $P_0+P_1=(X,Y,Z)=(5942391203335522320, 251765584367435734052, 3314947244332625)$}, compute {\blue $\la$} such that {\blue $c(Y-4abcZ)=bZ\la^3$}, find
+{\blue $\la=8363016/149105$}. Since {\blue $\la=2cz/x$}, find (up to
+projective scaling) {\blue $z=101988$}, {\blue $x=149105$}, hence
+{\blue $y=140161$}.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc The use of {\blue $L(E,s)$} (I)}}
+
+\medskip
+
+Extremely important method which at least determines whether or not
+{\blue $E$} has nontorsion points, without giving them.
+
+Definition of {\blue $L(E,s)$}. Assume {\bf minimal Weierstrass equation}
+over {\blue $\Q$}. If {\blue $E$} has {\red good reduction}
+at {\blue $p$}, define {\blue $a_p=p+1-|E(\F_p)|$} and {\blue $\chi(p)=1$}. 
+Otherwise define {\blue $\chi(p)=0$}, and {\blue $a_p=0$} if 
+{\bf triple point} ({\red additive reduction}), {\blue $a_p=1$} or 
+{\blue $a_p=-1$} if {\bf double point} with or without rational tangents 
+({\red split or nonsplit multiplicative reduction}). In fact
+{\blue $a_p=p+1-|E(\F_p)|$} still true. Then
+{\blue $$L(E,s)=\prod_p\dfrac{1}{1-a_pp^{-s}+\chi(p)p^{1-2s}}\;,$$}
+converges for {\blue $\Re(s)>3/2$} because of Hasse bound
+{\blue $|a_p|\le 2p^{1/2}$}.
+
+\end{slide}
+\begin{slide}
+\vspace*{-25pt}
+\ctl{\large{}\myblue{\sc The use of {\blue $L(E,s)$} (II)}}
+
+\medskip
+
+Most important theorem, due to {\red Wiles}, {\red Taylor--Wiles}, et al.:
+{\blue $L(E,s)$} extends to a holomorphic function to the whole complex
+plane, satisfying a functional equation 
+{\blue $$\Lambda(E,2-s)=\eps(E)\Lambda(E,s)\;,$$}
+with {\blue $\eps(E)=\pm1$} (the {\red root number}), and
+{\blue $\Lambda(E,s)=N^{s/2}(2\pi)^{-s}\Gamma(s)L(E,s)$}.
+Here {\blue $N$} is the {\red conductor}, divisible by all bad primes and
+easily computable by {\red Tate's algorithm}.
+
+Because of BSD, are interested in the value {\blue $L(E,1)$}. If
+{\blue $\eps(E)=-1$}, trivially {\blue $L(E,1)=0$}. Otherwise, {\bf automatic 
+consequence}, we have the {\bf exponentially convergent} (so
+{\bf easy to compute}) series
+{\blue $$L(E,1)=2\sum_{n\ge1}\dfrac{a_n}{n}e^{-2\pi n/\sqrt{N}}\;.$$}
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc The use of {\blue $L(E,s)$} (III)}}
+
+\medskip
+
+{\red \bf The Birch and Swinnerton-Dyer conjecture}: precise statement, but
+tells us in particular that there exist nontorsion points in {\blue $E(\Q)$}
+(i.e., {\blue $E(\Q)$} infinite) if and only if {\blue $L(E,1)=0$}.
+Unfortunately, except in the rank {\blue $1$} case ({\red Heegner point 
+method}) does not help us much in {\bf finding} the points. 
+
+What is known ({\red Rubin, Kolyvagin, etc...}): 
+
+{\red $\bullet$} If {\blue $L(E,1)\ne 0$} then no nontorsion points. 
+
+\smallskip
+
+{\red $\bullet$} If {\blue $L(E,1)=0$} but {\blue $L'(E,1)\ne0$} then 
+{\bf rank {\blue $1$}}, in particular exists nontorsion points, and can be
+found using Heegner points.
+
+\smallskip
+
+On the other hand, if {\blue $L(E,1)=L'(E,1)=0$}, {\bf nothing} known,
+although BSD conjecture says rank at least {\blue $2$}.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc The Heegner point method (I)}}
+
+\medskip
+
+This is a remarkable way to use {\blue $L(E,s)$} to {\bf find} a nontorsion
+rational point, works only when the rank is equal to {\blue $1$} (otherwise
+always gives a torsion point, even in rank {\blue $r\ge2$}).
+
+Tools: {\red complex multiplication} and the {\red modular parametrization}.
+For the algorithm, need to understand the theorems, but not the proofs. In 
+fact, {\bf conjectures} are sufficient since checking rational points is
+trivial.
+
+\smallskip
+
+{\red Setup}: {\blue $E$} elliptic curve over {\blue $\Q$} and
+{\blue $L(E,s)=\sum_{n\ge1}a_nn^{-s}$}.
+
+\end{slide}
+\begin{slide}
+\vspace*{-18pt}
+\ctl{\large{}\myblue{\sc The Heegner point method (II)}}
+
+\medskip
+
+{\bf Modular parametrization}: Wiles's theorem is equivalent to
+{\blue $f_E(\tau)=\sum_{n\ge1}a_nq^n$} ({\blue $q=\exp(2i\pi\tau)$}) is
+a {\red modular form} of weight {\blue $2$} on {\blue $\Gamma_0(N)$}.
+Equivalently still, {\blue $2i\pi f_E(\tau)d\tau$} is a {\bf holomorphic 
+differential}, {\red invariant} under {\blue $\Gamma_0(N)$} up to the
+{\red period lattice} of {\blue $f_E$}, i.e.,
+{\blue $$\phi(\tau)=2i\pi\int_{i\infty}^\tau f_E(z)\,dz=\sum_{n\ge1}\dfrac{a_n}{n}q^n$$}
+does not depend on chosen path, and defines map from 
+{\blue ${\cal H}/\Gamma_0(N)$} to {\blue $\C/\Lambda$}, easily 
+extended to map from closure {\blue $X_0(N)$} to {\blue $\C/\Lambda$}, where
+{\blue $\Lambda$} lattice generated by 
+{\blue $2i\pi\int_{i\infty}^\ga f_E(z)\,dz$}, with {\blue $\ga\in\Q$} a 
+{\red cusp}. {\bf Usually} (always happens in practice, if not can easily
+be dealt with) have {\blue $\Lambda\subset\Lambda_E$}, with
+{\blue $E(\C)=\C/\Lambda_E$}, so get a map from {\blue $X_0(N)$} to 
+{\blue $\C/\Lambda_E$}, and composing with the {\red Weierstrass 
+{\blue $\wp$} function}, get map {\blue $\pphi$} from {\blue $X_0(N)$} to 
+{\blue $E(\C)$}, the {\red modular parametrization}. Wiles: exists and unique
+up to sign.
+
+\end{slide}
+\begin{slide}
+\vspace*{-8pt}
+\ctl{\large{}\myblue{\sc The Heegner point method (III)}}
+
+\medskip
+
+{\bf Complex multiplication (CM)}: say {\blue $\tau$} is a {\red CM point}
+if {\blue $\tau\in{\cal H}$} is a root of quadratic equation 
+{\blue $AX^2+BX+C=0$} with {\blue $A$}, {\blue $B$}, {\blue $C$} integral
+with {\blue $B^2-4AC<0$}. Make this unique by requiring {\blue $\gcd(A,B,C)=1$}
+and {\blue $A>0$}, then set {\blue $\Delta(\tau)=B^2-4AC$}.
+
+\smallskip
+
+{\bf Basic result of CM} (in our context): if {\blue $\tau$} is a 
+{\bf suitable} CM point, then {\blue $\pphi(\tau)\in E(H)$} and not only 
+{\blue $\pphi(\tau)\in E(\C)$}, where {\blue $H$} is the {\red Hilbert class 
+field} of {\blue $K=\Q(\sqrt{D})$}. This is the {\bf magic} of CM: create 
+{\bf algebraic} numbers using {\bf analytic} functions ({\red Kronecker's 
+dream of youth}: do this for other number fields).
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc The Heegner point method (IV)}}
+
+\medskip
+
+Assume for simplicity {\blue $D=\Delta(\tau)$} {\red discriminant} of a
+quadratic field ({\red fundamental discriminant}).
+
+{\bf Definition}: Given {\blue $N$}, {\blue $\tau$} is a {\red Heegner point 
+of level {\blue $N$}} if it satisfies the equivalent conditions:
+
+{\red $\bullet$} {\blue $\Delta(N\tau)=\Delta(\tau)$}
+
+\smallskip
+
+{\red $\bullet$} {\blue $N\mid A$} and {\blue $\gcd(A/N,B,CN)=1$}
+
+\smallskip
+
+{\red $\bullet$} {\blue $N\mid A$} and {\blue $D\equiv B^2\pmod{4N}$}.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc The Heegner point method (V)}}
+
+\medskip
+
+{\bf Basic properties}: 
+
+{\red $\bullet$} Let {\blue $\tau$} Heegner point of level {\blue $N$}.
+If {\blue $\ga\in\Gamma_0(N)$} then {\blue $\ga(\tau)$},
+{\blue $W(\tau)=-1/(N\tau)$}, and more generally {\blue $W_Q(\tau)$} ({\red
+Atkin--Lehner operators}) are again Heegner points of level {\blue $N$}.
+
+\smallskip
+
+{\red $\bullet$} Recall natural correspondence between {\blue $SL_2(\Z)$}
+classes of {\red binary quadratic forms} and the {\red ideal class group}
+of corresponding quadratic field. This easily generalizes to
+{\blue $\Gamma_0(N)$}-equivalence as follows: natural correspondence between
+{\blue $\Gamma_0(N)$}-equivalence classes of Heegner points of discriminant 
+{\blue $D$} and level {\blue $N$} and the set of {\bf pairs}
+{\blue $(\beta,[\a])$}, with {\blue $[\a]$} ideal class, and 
+{\blue $\beta\in\Z/2N\Z$} such that {\blue $\beta^2\equiv D\pmod{4N}$}.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc The Heegner point method (VI)}}
+
+\medskip
+
+{\bf Main theorem of CM}:  Let {\blue $\tau=(\beta,[\al])$} Heegner point
+of discriminant {\blue $D$} (fundamental) and level {\blue $N$},
+{\blue $K=\Q(\sqrt{D})$}, {\blue $H$} Hilbert class field of {\blue $K$}
+(maximal unramified Abelian extension of {\blue $K$}, 
+{\blue $\Gal(H/K)\isom Cl(K)$} through the {\red Artin map} {\red $\Art$}). 
+Recall {\blue $\pphi$} modular parametrization from {\blue $X_0(N)$} to
+{\blue $E$}. Then:
+
+{\red $\bullet$} {\blue $\pphi(\tau)\in E(H)$} ({\red algebraicity})
+
+\smallskip
+
+{\red $\bullet$} If {\blue $[\b]\in Cl(K)$} then ({\red Shimura reciprocity}):
+{\blue $$\pphi((\be,[\a]))^{\Art([\b])}=\pphi((\be,[\a\b^{-1}]))$$}
+Also formula for {\blue $\pphi(W((\be,[\a])))$} and
+{\blue $\pphi(W_Q((\be,[\a])))$}.
+
+\smallskip
+
+{\red $\bullet$} {\blue $\pphi((-\be,[\a]^{-1}))=\overline{\pphi((\be,[\a]))}$}.
+
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc The Heegner point method (VII)}}
+
+\medskip
+
+{\bf Consequence}:  Can compute the trace of {\blue $\pphi(\tau)$} on the
+elliptic curve by
+{\blue $$P=\sum_{\sigma\in\Gal(H/K)}\pphi((\be,[\a]))^{\s}=\sum_{[\b]\in Cl(K)}\pphi((\be,[\a\b^{-1}]))=\sum_{[\b]\in Cl(K)}\pphi((\be,[\b]))\;,$$}
+the sum being computed with the {\bf group law} of {\blue $E$}. By Galois 
+theory we will have {\blue $P\in E(K)$}, so we have considerably reduced the 
+field of definition of the algebraic point on {\blue $E$}. In addition,
+easy result: 
+
+If {\blue $\eps(E)=-1$} (which is our case since rank {\blue $1$}), then in
+fact {\blue $P\in E(\Q)$}, which is what we want.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc The Heegner point method (VII)}}
+
+\medskip
+
+Thanks in particular to {\red Gross--Zagier} and {\red Kolyvagin}, know
+that {\blue $P$} is {\bf nontorsion} if and only if {\blue $r=1$} (already
+known) {\bf and} {\blue $L(E_D,1)\ne0$}, where {\blue $E_D$} is the
+{\red quadratic twist} of {\blue $E$} by {\blue $D$} (equation
+{\blue $Dy^2=x^3+ax+b$}).
+
+Point {\blue $P$} often {\bf large} multiple of generator, can reduce it
+considerably again by using Gross--Zagier. Get very nice algorithm.
+
+\smallskip
+
+{\bf Example}: congruent number problem for {\blue $n=157$}, curve
+{\blue $y^2=x^3-157^2x$}. Rank {\blue $1$}. Already reasonably large
+example. In a couple of minutes, find {\blue $P=(x,y)$} with
+numerator and denominator of {\blue $x$} having up to {\blue $36$}
+decimal digits.
+
+\smallskip
+
+For details on all of this, see student presentation.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Computation of integral points (I)}}
+
+\medskip
+
+Assume now that Mordell--Weil group {\blue $E(\Q)$} computed, say
+{\blue $(P_i)_{1\le i\le r}$} generators.
+
+\smallskip
+
+{\red Goal}: compute {\blue $E(\Z)$}, i.e., {\bf integral points}.
+Immediate warning: {\red depends on the chosen model}, contrary to
+{\blue $E(\Q)$}.
+
+If {\blue $P\in E(\Z)\subset E(\Q)$}, can write
+{\blue $P=T+\sum_{1\le i\le r}x_iP_i$} with {\blue $x_i\in\Z$} and
+{\blue $T$} a torsion point. Easy result is
+{\blue $|x|\ge c_1e^{c_2H^2}$}, with {\blue $H=\max_i|x_i|$} and
+{\blue $c_1$}, {\blue $c_2$} easily computable explicit constants.
+
+\smallskip
+
+Now use {\red elliptic logarithm} {\blue $\psi$} 
+({\blue $E(\C)\isom\C/\Lambda$}, and {\blue $\psi$} maps {\blue $P\in E(\C)$}
+to {\blue $z\in\C$} modulo {\blue $\Lambda$} such that 
+{\blue $(\wp(z),\wp'(z))=P$}).
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Computation of integral points (II)}}
+
+\medskip
+
+Consequence of above: easy to show that if {\blue $|x|\ge c_3$} explicit,
+then {\blue $|\psi(P)|\le c_5e^{-c_2H^2/2}$} (if we choose 
+{\blue $\psi(P)$} as small as possible.
+
+\smallskip
+
+On the other hand, thanks to a very important theorem of {\red S.~David}
+on {\red linear forms in elliptic logarithms}, generalizing Baker-type
+results to the elliptic case, can prove that we have an inequality
+for {\blue $\psi(P)$} in the other direction, which {\bf contradicts} the
+above for {\blue $H$} sufficiently large. Every constant {\bf explicit}.
+Thus get {\bf upper bound} for {\blue $H$}, and as usual in Baker-type
+estimates, very large. Typically find {\blue $H\le 10^{100}$}
+(recall {\blue $P=T+\sum_{1\le i\le r}x_iP_i$} and {\blue $H=\max_i|x_i|$}).
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Computation of integral points (II)}}
+
+\medskip
+
+In the above, essential that Baker bounds be {\bf explicit}, but {\bf not}
+essential that they be {\bf sharp} (e.g., {\blue $10^{80}$} or {\blue
+$10^{100}$} is just as good), because now we use the {\red magic} of the
+LLL algorithm: find small vectors in lattices, and this allows you either
+to find linear dependence relations between complex numbers, {\bf or} to
+show that if an approximate relation exists then coefficients are {\bf bounded}
+very effectively. Roughly obtain a {\bf logarithmic decrease} in the
+size of the upper bound.
+
+\end{slide}
+\begin{slide}
+\ctl{\large{}\myblue{\sc Computation of integral points (III)}}
+
+\medskip
+
+{\bf Example}: {\blue $y^2+y=x^3-7x+6$}, famous curve because elliptic curve
+with smallest conductor of rank {\blue $3$}, important in obtaining 
+effective lower bounds for the class number of imaginary quadratic fields
+({\red Goldfeld, Gross--Zagier}). Using David's bounds, find
+{\blue $H\le 10^{60}$}. Using LLL once, reduce this spectacularly to
+{\blue $H\le 51$}. Using LLL a second time, reduce this to
+{\blue $H\le 11$} (diminishing returns: another LLL gives {\blue $10$}, then
+no improvement). Now a direct search very easy (less than {\blue $10000$}
+trials), and find exactly {\blue $36$} integral points, a very large number.
+
+Phenomenon not completely understood: elliptic curve of high rank with respect
+to conductor have {\bf many} integral points.
+
+\end{slide}
+
+\end{document} 
+
+
+
+
+
+\end{document} 
+
+
+

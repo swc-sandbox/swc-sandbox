@@ -1,0 +1,246 @@
+\documentstyle[twoside,amssymb,amsmath,12pt]{article}
+\setlength{\textheight}{9in}
+\addtolength{\textwidth}{0.5in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\addtolength{\topmargin}{-.75in}
+\renewcommand{\thefootnote}{}
+\renewcommand{\baselinestretch}{1.0}
+
+\newcommand{\no}{\noindent}
+\def\C{{\Bbb C}}
+\def\H{{\Bbb H}}
+\def\N{{\Bbb N}}
+\def\Q{{\Bbb Q}}
+\def\R{{\Bbb R}}
+\def\P{{\Bbb P}}
+\def\Z{{\Bbb Z}}
+\def\A{{\Bbb A}}
+\def\G{{\Bbb G}}
+\def\e{{\varepsilon}}
+
+\newtheorem{prop}{Proposition}[section]
+\newtheorem{dfn}[prop]{Definition}
+\newtheorem{theo}[prop]{Theorem}
+\newtheorem{conj}[prop]{Conjecture}
+\newtheorem{rem}[prop]{Remark}
+\newtheorem{coro}[prop]{Corollary}
+\newtheorem{lem}[prop]{Lemma}
+\newtheorem{exam}[prop]{Example}
+\newtheorem{ques}[prop]{Question}
+\newtheorem{prob}[prop]{Problem}
+
+\title{\sc Cohomology, periods and the Hodge structure of 
+toric hypersurfaces \\
+{\small  (Course description) }} 
+
+\author{{\sc Victor V. Batyrev} \\
+\small  {\em Mathematisches Institut, Universit\"at T\"ubingen}   \\
+\small  {\em Auf der Morgenstelle 10,  72076  T\"ubingen, Germany}  \\
+\small  {\em e-mail: victor.batyrev@uni-tuebingen.de} \\
+ }
+
+
+\begin{document}
+
+\date{}
+
+\maketitle
+
+\begin{abstract}
+The aim of this course is to study the cohomology groups $H^*(Z_f)$
+of nondegenerate affine toric hypersurfaces $Z_f \subset ({\bf C}^*)^d$.
+Some properties of the cohomology  groups  
+can be described in terms of the 
+Newton polytope of the equation $f$. 
+We relate the  periods of $Z_f $ to the  GKZ-hypergeometric functions and 
+give applications in physics and number theory. 
+\end{abstract}
+
+
+
+%\thispagestyle{empty}
+\section{Introduction} 
+
+Let $M \cong {\bf Z}^d$ be a free abelian group of rank $d$. We 
+identify $M$ with the group of characters of the $d$-dimensional
+torus ${\bf T}_d \cong  ({\bf C}^*)^d$ 
+$${\bf T}_d = {\rm Spec}\, {\bf C}[M] \cong  
+{\rm Spec}\, {\bf C}[X_1^{\pm 1}, \ldots, X_d^{\pm 1}].$$
+Let $\Delta \subset M 
+\otimes {\bf R}$  be a $d$-dimensional convex polytope  such that 
+all vertices of $\Delta$ belong to 
+the lattice $M$. We choose a finite subset $A \subset  \Delta \cap M$
+which contains all vertices of $\Delta$ and   
+consider a Laurent polynomial
+\[ f= f(X_1, \ldots, X_d) = \sum_{ m \in A} a_m X^m, \]
+where $a_m$ $(m \in A)$ are sufficiently general complex
+numbers.  
+
+We will be interested in cohomology groups $H^i(Z_f, {\bf Z})$ 
+of the affine hypersurface $Z_f$ in 
+${\bf T}_d$ defined by the equation $f =0$. Since $Z_f$ is affine, 
+one has   $H^i(Z_f, {\bf Z}) =0$ for $i \geq d$. By the Lefschetz-type
+theorem, one obtains the isomorphisms
+\[ H^i(Z_f, {\bf Z}) \cong H^i({\bf T}_d, {\bf Z}) =  \Lambda^{i} M, 
+\;\; i < d-1. \]
+Therefore the groups  $H^{d-1}(Z_f, {\bf Z})$ and  $H^{d-1}(Z_f, {\bf C})$
+are the only interesting objects for our study. 
+
+The group  $H^{d-1}(Z_f, {\bf C})$ has a mixed Hodge structure which can 
+be characterized by Hodge-Deligne numbers \cite{DH}. On the other hand, 
+the periods, i.e., integrals of $(d-1)$-differential forms 
+on $Z_f$ over (d-1)-dimensional 
+cycles satisfy a system of differential equations of Picard-Fuchs type. 
+These differential equations are important for applications in physics 
+\cite{BS} and they  
+have $p$-adic analogs \cite{Dwork} which are related to the Zeta-function 
+of $Z_f$ over a finite field.
+
+
+
+\section{Course content} 
+
+$\;$
+
+1. The toric compactification of ${\bf C}^d$  with respect to a lattice 
+polytope $\Delta$. The nondegeneracy condition for hypersurfaces 
+$Z_f \subset {\bf C}^d$. The Euler number of $Z_f$. The number of critical
+points of $f$ in $ {\bf C}^d$. The Lefschetz-type theorem for $Z_f$. 
+
+
+2. De Rham cohomology of a nondegenerate hypersurface 
+$Z_f \subset {\bf C}^d$. Logarithmic de Rham complex. Principal 
+$A$-determinant
+of $f$ in the sense of Gelfand-Kapranov-Zelevin\-sky 
+\cite{GKZ2}. Jacobian ring $R_f$ and 
+its canonical  module \cite{B-duke}. 
+Cohomology with compact supports. Duality and 
+toric residues. Hodge-Deligne numbers of $Z_f$ \cite{BB1}. 
+
+
+3. Generalized hypergeometric differential system of  
+Gelfand-Kapranov-Zelevin\-sky \cite{GKZ1}. 
+The dimension of the solution space of 
+GKZ-system. Coherent triangulations of the Newton polytope and a basis 
+of the solution space. Generalized GKZ-hypergeometric functions as periods
+of hypersurfaces $Z_f$. 
+
+
+4. The secondary polytope ${\rm Sec}(\Delta)$ as the Newton polytope of the 
+pricipal $A$-determinant of $f$.  The asymptotics  of complex and real 
+hypersurfaces corresponding to vertices of  ${\rm Sec}(\Delta)$. The monodromy 
+of $1$-parameter familites. The 
+method of Viro and methods of tropical geometry \cite{Mikh}. 
+
+
+5. Applications in physics and number theory. 
+The toric mirror symmetry \cite{BA}. 
+Monomial-divisor mirror corespondence \cite{AGM}.
+The Seiberg duality. $P$-adic versions of $GKZ$-hypergeometric functions 
+and period. Affine toric Fermat-type hypersurfaces. 
+
+
+
+
+\section{Student project} 
+
+First interesting examples for study are families of affine 
+algebraic curves $Z_f \subset {\bf T}_2$ defined by a 
+$2$-dimensional polytope (polygone) $\Delta \subset M \otimes {\bf R}$. 
+If $n$ is the number of lattice points on the boundary of $\Delta$ 
+and $g$ is the number of interior lattice points in  $\Delta$, then 
+$Z_f$ can be seen as a Riemann surface $\overline{Z_f}$ 
+of genus $g$ minus $n$ points.
+Periods of $\overline{Z_f}$ are classical objects of algebraic geometry 
+\cite{clem}.
+
+
+
+\section{Prerequisites}
+
+It is recommended to have some background on algebraic geometry 
+(see e.g. the book of Griffiths and Harris \cite{GH}) and toric
+geometry (see e.g. the book of Fulton \cite{F}). 
+
+
+
+
+\begin{thebibliography}{99}
+\bibitem{AGM} P.S. Aspinwall,  B.R. Greene, and D.R. Morrison, .
+{\em The monomial-divisor mirror map}, 
+Int. Math. Res. Not., No.12, (1993),  319-337. 
+
+ \bibitem{B-duke} {V.V. Batyrev} {\em Variations of the mixed Hodge 
+structure of affine hypersurfaces in algebraic tori}.  
+Duke Math. J.  69  (1993),  no. 2, 349--409.
+
+\bibitem{BA} {V.V. Batyrev}, {\em Dual polyhedra and mirror symmetry for 
+Calabi-Yau hypersurfaces in toric varieties}, J. Algebraic Geom., 
+{\bf 3} (1994), 493-535. 
+
+
+
+\bibitem{BS}  {V.V. Batyrev} and D. van Straten, {\em 
+Generalized Hypergeometric Functions and Rational Curves on Calabi-Yau 
+complete intersections in Toric Varieties}, Commun. Math. Phys. 
+{\bf 168} (1995), 493-533. 
+
+
+
+\bibitem{BB1} {V.V. Batyrev, L.A. Borisov}, 
+{\em Mirror duality and string-theoretic Hodge numbers},  
+Invent. Math., {\bf 126} (1996), p. 183-203.
+
+
+\bibitem{clem} H. Clemens, {\em A scrapbook of complex curve theory}. 
+Second edition. Graduate Studies in Mathematics, 55. 
+AMS, Providence, RI, 2003.
+
+
+\bibitem{DH} 
+Danilov, V. I.; Khovanski, A. G. {\em 
+Newton polyhedra and an algorithm for calculating Hodge-Deligne numbers}, 
+Izv. Akad. Nauk SSSR Ser. Mat.  50  (1986),  no. 5, 925--945.
+
+\bibitem{Dwork} B. Dwork, {\em 
+Lectures on $p$-adic differential equations} 
+Grundlehren der Mathematischen Wissenschaften,  253. Springer-Verlag, 
+New York-Berlin, 1982
+
+
+\bibitem{F} W. Fulton, {\em Introduction to toric varieties}, 
+Annals of Mathematics Studies, 131. 
+The William H. Roever Lectures in Geometry. Princeton University Press, 
+Princeton, NJ, 1993.
+
+
+\bibitem{GKZ1} Gelfand, I. M.; Zelevinski, A. V.; Kapranov, M. M. 
+{\em Hypergeometric functions and toric varieties} 
+Funct. Anal. Appl.  23  (1989),  no. 2, 94--106
+
+\bibitem{GKZ2} Gelfand, I. M.; Zelevinski, A. V.; Kapranov, M. M. {\em 
+Discriminants, resultants, and multidimensional determinants}, 
+Mathematics: Theory \& Applications. Birkh\"auser Boston, Inc., 
+Boston, MA, 1994
+
+
+\bibitem{GH} Ph. Griffiths, J. Harris, {\em 
+Principles of algebraic geometry} John Wiley \& Sons, Inc., New York, 1994.
+
+\bibitem{Mikh} G. Mikhalkin, 
+{\em Decomposition into pairs-of-pants for complex algebraic 
+hypersurfaces}, math.GT/0205011, to appear in Topology.
+
+
+\bibitem{oka} M. Oka, {\em On the topology of full nondegenerate complete 
+intersection variety},   Nagoya Math. J.  121  (1991), 137--148.
+
+
+
+
+\end{thebibliography}
+
+\end{document}
+
+

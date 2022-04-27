@@ -1,0 +1,45 @@
+<html>
+
+<include src="/head.html.in" {'PAGE':'Streaming Video Hints'}>
+<body>
+<include src="/topbar.html.in" >
+<include src="/navcol.html.in"  {'nav_notes':'navsel'}>
+
+<div class="page">
+
+<H2>The Player</H2>
+<P>To use our streaming video, you will need the free Real Player, which is available for most platforms somewhere on the site <a href="http://www.realplayer.com" target="_blank">www.realplayer.com</a>.
+</P>
+
+<P>
+Video links labeled &#147;video&#148; (or &#147;audio&#148;) are standard streaming video (.rm) files and should need no further explanation.  The rest of this page discusses links labeled &#147;video&#148; (or &#147;audio with slides&#148;) which are our attempt to compensate for low video bandwidth by including synchronized pdf slides.
+</P>
+
+<H2>Streaming video</H2>
+<P>
+The video is divided into segments corresponding roughly to boards full of text.  A typical segment looks like this (except the text is clearer):</p>
+<center>
+<img src="/notes/ScreenShot2.jpg" alt="Segment Screen Shot" width="545" height="688">
+</center>
+<p>
+At the top is the video and at the bottom is a slide with a TeX version of what the speaker is writing on the board.  Clicking on the arrows at the top right or left jumps to the next or previous segment and clicking on &#147;Index&#148; brings you to an index slide (described below).  At the bottom right, the slide is labeled with the segment number and the time into the tape when the segment starts.
+</P>
+<P>
+The video starts with an index page that looks something like this:</P>
+<center>
+<img src="/notes/ScreenShot1.jpg" alt="Index Screen Shot" width="545" height="688">
+</center>
+<p>You can click to go to a particular segment or wait a while for the show to start at the beginning.</P>
+
+<H2>The Slides</H2>
+<P>
+The slides (what you see in the bottom part of the video window) are available as a separate pdf file for printing and study.  Using the index, you can go back to the segment corresponding to a particular slide to hear what the speaker says.
+</P>
+
+<H2>Improvements</H2>
+<P>
+We realize that the video quality is not very high, but we hope that the combination of the audio and slides will make these videos useful.  In future years, we expect to have a higher quality video source.  If you have other suggestions, please <a href="mailto:swcenter@math.arizona.edu">email us</a>.
+</p>
+</div>
+</BODY>
+</HTML>

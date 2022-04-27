@@ -1,0 +1,543 @@
+<html>
+  <include src="/head.html.in" {'PAGE':'Notes and Other Documents'}>
+  <body>
+    <include src="/topbar.html.in" >
+    <include src="/navcol.html.in"  {'nav_notes':'navsel'}>
+    <div class="page">
+      <h1 class="header">Lecture Notes by Author</H1> 
+      <UL>
+	<LI>
+	  Anderson, AWS 2000 course description: <A HREF="/aws/2000/00AndersonCD.html" >html</A>. 
+	</LI>
+	<LI>
+	  Anderson, &#147;Notes on fermionic Fock space for number theorists&#148; (snapshot at the time of the Winter School): <A HREF="/aws/2000/00AndersonN.dvi">dvi</A>, <A HREF="/aws/2000/00AndersonN.ps">ps</A>, <A HREF="/aws/2000/00AndersonN.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Anderson, AWS 2000 project description: <A HREF="/aws/2000/00AndersonPD.dvi">dvi</A>, <A HREF="/aws/2000/00AndersonPD.ps">ps</A>, <A HREF="/aws/2000/00AndersonPD.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Anderson, fragment of Maple code for calculating the tau functions appearing in his AWS 2000 lectures: <A HREF="/aws/2000/00AndersonMaple.txt" >text</A> 
+	</LI>
+	<LI>
+	  Anderson, <A HREF="http://www.math.umn.edu/%7Egwanders/" > web site</A> 
+	</LI>
+	<li>Anderson, &#147;Interpolation of numbers of Catalan type in a local field of positive characteristic&#148;: <a href="/dls/DLSAndersonCatLocRevShip.pdf">pdf</A></li>
+	<li>Anderson, &#147;A two-variable refinement of the Stark conjecture in the function field case&#148;: <a href="/dls/DLSAndersonTwoVarStarUltimate.pdf">pdf</A></li>
+	<li>Baker, AWS 2007: <a href="/aws/07/speakers/index.html#baker">Potential theory on Berkovich spaces</a></li>
+	<LI>
+	  Barbu, slides for AWS 1999 talk: <A HREF="/aws/1999/99Barbu.dvi">dvi,</A> <A HREF="/aws/1999/99Barbu.ps">ps,</A> <A HREF="/aws/1999/99Barbu.dvi">pdf</A> 
+	</LI>
+	<li>Batyrev, AWS 2004 course description: <a href="/aws/2004/04BatyrevCD.pdf">pdf</a>
+	</li>
+	<li>Batyrev, AWS 2004 course notes: <a href="/aws/2004/04BatyrevNotes.pdf">pdf</a>
+	</li>
+	<li>Bernstein, AWS 2006 course description: <a href="/aws/2006/06BernsteinCD.pdf">pdf</a>
+	</li>
+	<li>Bernstein, AWS 2006 course notes: <a href="/aws/2006/06BernsteinNotes.pdf">pdf</a>
+	</li>
+	<li>Bernstein, AWS 2006 project report: <a href="/aws/2006/06BernsteinPR.pdf">pdf</a>
+	</li>
+	<LI> Bernstein, AWS 2006 slides from lectures:
+	  <ul>
+	    <li>Lecture 1, <a href="/aws/2006/06BernsteinSlides1.pdf">pdf</a></li>
+	    <li>Lecture 2, <a href="/aws/2006/06BernsteinSlides2.pdf">pdf</a></li>
+	    <li>Lecture 3, <a href="/aws/2006/06BernsteinSlides3.pdf">pdf</a></li>
+	    <li>Lecture 4, <a href="/aws/2006/06BernsteinSlides4.pdf">pdf</a></li>
+	  </ul>
+	</LI>
+	<LI>
+	  Borisov, AWS 1998 abstract of contributed talk: <A HREF="/aws/1998/98ContribA.html" >html</A> 
+	</LI>
+	<LI>
+	  Buium, AWS 1998 course abstract: <A HREF="/aws/1998/98BuiumCA.html" >html</A> 
+	</LI>
+	<LI>
+	  Buium, AWS 1998 reading list: <A HREF="/aws/1998/98BuiumRL.html" >html</A> 
+	</LI>
+	<LI>
+	  Buium, AWS 1998 lecture notes: <A HREF="/aws/1998/98BuiumLN.dvi"> dvi</A>, <A HREF="/aws/1998/98BuiumLN.ps"> ps</A>, <A HREF="/aws/1998/98BuiumLN.pdf"> pdf</A> 
+	</LI>
+	<LI>
+	  Buzzard, AWS 2001 Lecture 1: <A HREF="/aws/2001/01BuzzardL1.dvi">dvi</A>, <A HREF="/aws/2001/01BuzzardL1.ps">ps</A>, <A HREF="/aws/2001/01BuzzardL1.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Buzzard, AWS 2001 Lecture 2: <A HREF="/aws/2001/01BuzzardL2.dvi">dvi</A>, <A HREF="/aws/2001/01BuzzardL2.ps">ps</A>, <A HREF="/aws/2001/01BuzzardL2.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Buzzard, AWS 2001 Lecture 3: <A HREF="/aws/2001/01BuzzardL3.dvi">dvi</A>, <A HREF="/aws/2001/01BuzzardL3.ps">ps</A>, <A HREF="/aws/2001/01BuzzardL3.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Buzzard, AWS 2001 Lecture 4: <A HREF="/aws/2001/01BuzzardL4.dvi">dvi</A>, <A HREF="/aws/2001/01BuzzardL4.ps">ps</A>, <A HREF="/aws/2001/01BuzzardL4.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Buzzard, AWS 2001 project description: <A HREF="/aws/2001/01BuzzardPD.dvi">dvi</A>, <A HREF="/aws/2001/01BuzzardPD.ps">ps</A>, <A HREF="/aws/2001/01BuzzardPD.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Buzzard, AWS 2001 students' write-up of their lecture: <A HREF="/aws/2001/01BuzzardPW.dvi">dvi</A>, <A HREF="/aws/2001/01BuzzardPW.ps">ps</A>, <A HREF="/aws/2001/01BuzzardPW.pdf">pdf</A> 
+	</LI>
+	<li>Candelas, AWS 2004 course description: <a href="/aws/2004/04CandelasCD.pdf">pdf</a>
+	</li>
+	<LI>
+	  Carlson, notes by Sharifi, &#147;An introduction to Hodge theory and its applications&#148;: <A HREF="/dls/DLSCarlson.dvi">dvi</A>, <A HREF="/dls/DLSCarlson.ps">ps</A>, <A HREF="/dls/DLSCarlson.pdf">pdf</A>
+	</LI>
+	<LI>
+	  Clozel, AWS 2001 project description: <A HREF="/aws/2001/01ClozelPD.html" >html</A> 
+	</LI>
+	<li>Cohen, AWS 2006 course description: <a href="/aws/2006/06CohenCD.pdf">pdf</a>
+	</li>
+	<li>Cohen, AWS 2006 course notes: <a href="/aws/2006/06CohenNotes.pdf">pdf</a>
+	</li>
+	<li>Cohen, AWS 2006, extract from a forthcoming book relevant to the course: <a href="/aws/2006/06CohenExtract.pdf">pdf</a>
+	</li>
+	<li>Cohen, AWS 2006, references for the book: <a href="/aws/2006/06CohenExtractRefs.pdf">pdf</a>
+	</li>
+	<li>Cohen, AWS 2006 lecture slides: <a href="/aws/2006/06CohenLectures.pdf">pdf</a>
+	</li>
+	<LI>
+	  Colliot-Th&eacute;l&egrave;ne, AWS 1999 project description: <A HREF="/aws/1999/99ColliotPD.dvi">dvi</A>, <A HREF="/aws/1999/99ColliotPD.ps">ps</A>, <A HREF="/aws/1999/99ColliotPD.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Colliot-Th&eacute;l&egrave;ne, &#147;Algebraic families of nonzero elements of Shafarevich-Tate groups&#148; (with Poonen): <A HREF="/aws/1999/99PoonenSha.pdf">pdf</A> 
+	</LI>
+	<LI>Colliot-Th&eacute;l&egrave;ne, AWS 1999 references: <A HREF="/aws/1999/99ColliotRefs.dvi">dvi</A>, <A HREF="/aws/1999/99ColliotRefs.ps">ps</A>, <A HREF="/aws/1999/99ColliotRefs.pdf">pdf</A> </LI>
+	<li>Conrad, AWS 2007: <a href="/aws/07/speakers/index.html#conrad">Several approaches to non-archimedean geometry</a></li>
+	<LI>
+	  Cremona, AWS 1999 project description: <A HREF="/aws/1999/99CremonaPD.html" >html</A> 
+	</LI>
+	<LI>
+	  Cremona, AWS 1999 reading list:<A HREF="/aws/1999/99CremonaR.html" >html</A> 
+	</LI>
+	<LI>
+	  Cremona, <A HREF="http://www.maths.nott.ac.uk/personal/jec/" >web site</A> 
+	</LI>
+	<LI>
+	  Cremona, (with Mazur), &#147;Visualizing elements in the Shafarevich-Tate group,&#148; (to appear in the Journal of Experimental Math): <A HREF="/aws/1999/99MazurCremonaV.dvi">dvi</A>, <A HREF="/aws/1999/99MazurCremonaV.ps">ps</A>, <A HREF="/aws/1999/99MazurCremonaV.pdf">pdf</A>) 
+	</LI>
+	<LI>
+	  Darmon, AWS 1998 course abstract: <A HREF="/aws/1998/98DarmonCA.html" >html</A> 
+	</LI>
+	<LI>
+	  Darmon, AWS 1998 reading list: <A HREF="/aws/1998/98DarmonRL.html" >html</A> 
+	</LI>
+	<LI>
+	  Darmon, AWS 1998, &#147;Rigid local systems, Hilbert modular forms, and Fermat&#146;s last theorem&#148;: <A HREF="/aws/1998/98Darmon.dvi">dvi</A>, <A HREF="/aws/1998/98Darmon.ps">ps</A>, <A HREF="/aws/1998/98Darmon.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Darmon, <A HREF="http://www.math.mcgill.ca/%7Edarmon" >web site</A> 
+	</LI>
+	<LI>
+	  deJong, AWS 2002 course and project description: <a href="/aws/2002/02deJongCD.html" target="_blank">html</a>
+	</LI>
+	<LI> deJong, AWS 2002 course notes:
+	  <ul>
+	    <li>Lecture 1 in <a href="/aws/2002/02deJongLN1.pdf">pdf</a></li>
+	    <li>Lecture 2 in <a href="/aws/2002/02deJongLN2.pdf">pdf</a></li>
+	    <li>Lecture 3 in <a href="/aws/2002/02deJongLN3.pdf">pdf</a></li>
+	    <li>Lecture 4 in <a href="/aws/2002/02deJongLN4.pdf">pdf</a></li>
+	  </ul>
+	</LI>
+	<li> deJong students, write up of deJong's project: <a href="/aws/2002/02deJongPN.dvi">dvi</a>, <a href="/aws/2002/02deJongPN.ps">ps</a>, <a href="/aws/2002/02deJongPN.pdf">pdf</a>.  The participants on the
+	  project were Jim Brown, Kirsten Eisentrager, Krzysztof Klosin, Jorge
+	  Pineiro, Mak Trifkovic, and Oliver Watson.  The write up was done by
+	  Jim, Kirsten, Krzysztof, Jorge, and Oliver.
+	</li>
+
+	<li>
+          Deligne, AWS 2002 course description: <A HREF="/aws/2002/02DeligneCD.dvi">dvi</A>, <A HREF="/aws/2002/02DeligneCD.ps">ps</A>, <A HREF="/aws/2002/02DeligneCD.pdf">pdf</A>
+	</li>
+	<li>
+          Deligne, AWS 2002 project description: <A HREF="/aws/2002/02DelignePD.dvi">dvi</A>, <A HREF="/aws/2002/02DelignePD.ps">ps</A>, <A HREF="/aws/2002/02DelignePD.pdf">pdf</A>
+	</li>
+	<LI>
+	  Deninger, May 2005 Distinguished Lecture Series on &#147;Arithmetic geometry and analysis on foliated spaces&#148;: <a href="/dls/DLSDeninger.pdf">pdf</A>
+	</LI>
+	<LI>
+	  Frankenhuysen, AWS 1998 abstract of contributed talk: <A HREF="/aws/1998/98ContribA.html" >html</A> 
+	</LI>
+	<LI>
+	  Frankenhuysen, &#147;The abc conjecture implies Roth's theorem and Mordell's conjecture&#148;: <A HREF="/aws/1998/98Frankenhuysen.dvi">dvi</A>, <A HREF="/aws/1998/98Frankenhuysen.ps">ps</A>, <A HREF="/aws/1998/98Frankenhuysen.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Goncharov, &#147;Multiple zeta-values, Galois groups, and geometry of modular varieties&#148;: <A HREF="http://front.math.ucdavis.edu/math.AG/0005069" >link</A> to ArXive
+	</LI>
+	<LI>
+	  Goncharov, &#147;Multiple polylogarithms and mixed Tate motives&#148;: <A HREF="http://front.math.ucdavis.edu/math.AG/0103059" >link</A> to ArXive
+	</LI>
+	<LI>
+	  Goncharov, &#147;The dihedral Lie algebras and Galois symmetries of [a fundamental group]&#148;: <A HREF="http://front.math.ucdavis.edu/math.AG/0009121" >link</A> to ArXive
+	</LI>
+	<li>Hain, AWS 2005 course description: <a href="/aws/2005/05HainCD.txt" target="_blank">text</a>
+	</li>
+	<li>Hain, AWS 2005 course notes: <a href="/aws/2005/05HainNotes.pdf">pdf</a>
+	</li>
+	<li>
+	  Hughes Hallet, &#147;Mathematics for the Reluctant&#148;: <a href="/aws/2002/02DHHHIV.ppt">ppt</a>
+	</li>
+	<li>
+	  Hughes Hallet, AWS 2002 PD component spreadsheet on medical testing and Bayes' theorem: <a href="/aws/2002/02DHHBayes.xls">xls</a>
+	</li>
+	<LI>
+	  Katz, &#147;L-functions and monodromy: four lectures on Weil II.&#148;: <A HREF="/aws/2000/00KatzN.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Katz, AWS 2000 project description: <A HREF="/aws/2000/00KatzPD.html" >html</A> 
+	</LI>
+	<LI>
+	  Kedlaya, Preliminary notes on Deligne's AWS 2002 lectures: <a href="/aws/2002/02DeligneKedlayaCN.pdf">pdf</a>
+	</LI>	
+
+	<li>Kedlaya, AWS 2007: <a href="/aws/07/speakers/index.html#kedlaya"><i>p</i>-adic cohomology: from theory to practice</a></li>
+
+	<LI>
+	  Kessel, AWS 1998 course abstract: <A HREF="/aws/1998/98KesselCA.html" >html</A> 
+	</LI>
+	<LI>
+	  Kessel, &#147;Teaching Mathematical Problem Solving&#148;: <A HREF="/aws/1998/98Kessel-Arcavi.ps">ps</A>, <A HREF="/aws/1998/98Kessel-Arcavi.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Kessel, AWS 1998 references: <A HREF="/aws/1998/98Kesselrefs.ps">ps</A>, <A HREF="/aws/1998/98Kesselrefs.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Kim, with Ribet, &#147;Torsion points on modular curves and Galois theory&#148;: <A HREF="/dls/DLSRibet.dvi">dvi</A>, <A HREF="/dls/DLSRibet.ps">ps</A>, <A HREF="/dls/DLSRibet.pdf">pdf</A>
+	</LI>
+	<li>
+	  Kimura, &#147;Chow groups can be finite dimensional, in some sense&#148;: <a href="/aws/2002/02VoisinKimura.ps">ps</a>
+	</li>
+	<LI>
+	  Lakatos, notes of a lecture series by Pillay, &#147;Model theory and diophantine geometry&#148;. These notes contain a few inaccuracies and should be considered as a preliminary draft: <A HREF="/dls/DLSPillay.ps">ps</A>, <A HREF="/dls/DLSPillay.pdf">pdf</A>
+	</LI>
+	<LI>
+	  Lauter, with Schoof and Zieve, AWS 2000 course description: <A HREF="/aws/2000/00LSZCD.html" >html</A> 
+	</LI>
+	<LI>
+	  Lauter, with Zieve, AWS 2000 project description: <A HREF="/aws/2000/00LZPD.dvi">dvi</A>, <A HREF="/aws/2000/00LZPD.ps">ps</A>, <A HREF="/aws/2000/00LZPD.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Lauter, &#147;Deligne-Lusztig curves as ray class fields&#148;: <A HREF="/aws/2000/00LauterMPI-1997-63.ps">ps</A> <A HREF="/aws/2000/00LauterMPI-1997-63.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Lauter, &#147;A formula for constructing curves over finite fields with many rational points&#148;: <A HREF="/aws/2000/00LauterJNT.ps">ps</A> <A HREF="/aws/2000/00LauterJNT.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Levy, AWS 2001 course description: <A HREF="/aws/2001/01Levy.html" >html</A> 
+	</LI>
+	<LI>
+	  Loeser, AWS 2003 course and project description: <a href="/aws/2003/03LoeserCD.pdf">pdf</a>
+	</LI>
+	<LI>
+	  Loeser, AWS 2003 course notes (revised 9/03): <a href="/aws/2003/03LoeserNotes.pdf">pdf</a>
+	</LI>    
+	<LI>
+	  Luca, AWS 1998 abstract of contributed talk: <A HREF="/aws/1998/98ContribA.html" >html</A> 
+	</LI>
+	<LI>
+	  Macintyre, AWS 2003 course and project description: <a href="/aws/2003/03MacintyreCD.pdf">pdf</a>
+	</LI>
+	<LI>
+	  Macintyre, AWS 2003 course notes: <a href="/aws/2003/03MacintyreNotes.pdf">pdf</a>
+	</LI>    
+	<LI>
+	  Marshall, AWS 1999 talk slides: <A HREF="/aws/1999/99Marshall.dvi">dvi</A>, <A HREF="/aws/1999/99Marshall.ps">ps</A>, <A HREF="/aws/1999/99Marshall.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Masser, AWS 1998 reading list: <A HREF="/aws/1998/98MasserRL.html" >html</A> 
+	</LI>
+	<li>Matsumoto, AWS 2005 course description: <a href="/aws/2005/05MatsumotoCD.pdf">pdf</a>
+	</li>
+	<li>Matsumoto, AWS 2005 course notes: <a href="/aws/2005/05MatsumotoNotes.pdf">pdf</a>
+	</li>
+	<LI>
+	  Mazur, AWS 1998 course abstract: <A HREF="/aws/1998/98MazurCA.html" >html</A> 
+	</LI>
+	<LI>
+	  Mazur, AWS 1998 reading list: <A HREF="/aws/1998/98MazurRL.html" >html</A> 
+	</LI>
+	<LI>
+	  Mazur, &#147;Three lectures about the arithmetic of elliptic curves&#148;: <A HREF="/aws/1998/98MazurLN.dvi">dvi</A>, <A HREF="/aws/1998/98MazurLN.ps">ps</A>, <A HREF="/aws/1998/98MazurLN.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Mazur, AWS 1999 bibliography: <A HREF="/aws/1999/99MazurBib.dvi">dvi</A>, <A HREF="/aws/1999/99MazurBib.ps">ps</A>, <A HREF="/aws/1999/99MazurBib.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Mazur, comments on &#147;visualizing elements in the Shafarevich-Tate group,&#148;: <A HREF="/aws/1999/99MazurComments.dvi">dvi</A>, <A HREF="/aws/1999/99MazurComments.ps">ps</A>, <A HREF="/aws/1999/99MazurComments.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Mazur, (with Cremona), &#147;Visualizing elements in the Shafarevich-Tate group,&#148; (to appear in the Journal of Experimental Math): <A HREF="/aws/1999/99MazurCremonaV.dvi">dvi</A>, <A HREF="/aws/1999/99MazurCremonaV.ps">ps</A>, <A HREF="/aws/1999/99MazurCremonaV.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Mazur, &#147;Visualizing elements of order three in the Shafarevich-Tate group,&#148; (to appear in the Journal of Asian Mathematics): <A HREF="/aws/1999/99MazurVisual.dvi">dvi</A>, <A HREF="/aws/1999/99MazurVisual.ps">ps</A>, <A HREF="/aws/1999/99MazurVisual.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Mazur, AWS 2001 preliminary lecture notes: <A HREF="/aws/2001/01MazurL0.dvi">dvi</A>, <A HREF="/aws/2001/01MazurL0.ps">ps</A>, <A HREF="/aws/2001/01MazurL0.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Mazur, AWS 2001, More detailed notes by Mazur's students: <A HREF="/aws/2001/01MazurL1.dvi">dvi</A>, <A HREF="/aws/2001/01MazurL1.ps">ps</A>, <A HREF="/aws/2001/01MazurL1.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Mazur, AWS 2001 project description: <A HREF="/aws/2001/01MazurPD.dvi">dvi</A>, <A HREF="/aws/2001/01MazurPD.ps">ps</A>, <A HREF="/aws/2001/01MazurPD.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Mazur's AWS 2001 students, &#147;Notes on Kato-Siegel functions,&#148;: <A HREF="/aws/2001/01MazurPW.dvi">dvi</A>, <A HREF="/aws/2001/01MazurPW.ps">ps</A>, <A HREF="/aws/2001/01MazurPW.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Mazur, A repository at Harvard of <A HREF="http://modular.fas.harvard.edu/mazur/aws2001/" >documents related to Mazur's lectures and project</A> 
+	</LI>
+	<LI>
+	  McCallum's AWS 1999 student group, <A HREF="http://www.math.arizona.edu/%7Eaprl/math/jacobianWelcome.shtml" >web site</A> on Jacobians of genus 1 curves 
+	</LI>
+	<li>Morrison, AWS 2004 course description: <a href="/aws/2004/04MorrisonCD.pdf">pdf</a>
+	</li>
+	<LI>
+	  O'Neil, thesis: <A HREF="/aws/1999/99ONeil.dvi">dvi</A>, <A HREF="/aws/1999/99ONeil.ps">ps</A>, <A HREF="/aws/1999/99ONeil.pdf">pdf</A> 
+	</LI>
+	<LI>Papikian, write up of Ulmer&#146;s AWS 2000 project: <A HREF="/aws/2000/00Papikian.ps">ps</A>, <A HREF="/aws/2000/00Papikian.pdf">pdf</A></LI>
+	<LI>
+	  Pillay, notes by Lakatos, &#147;Model theory and diophantine geometry&#148;. These notes contain a few inaccuracies and should be considered as a preliminary draft: <A HREF="/dls/DLSPillay.ps">ps</A>, <A HREF="/dls/DLSPillay.pdf">pdf</A>
+	</LI>
+	<LI>
+	  Pillay and Scanlon, AWS 2003 course and project description: <a href="/aws/2003/03PillayCD.pdf">pdf</a>
+	</LI>
+	<LI>
+	  Pillay, Notes for AWS 2003 course: <a href="/aws/2003/03PillayNotes1.pdf">pdf</a>
+	</LI>
+	<LI>
+	  Poonen, &#147;Algebraic families of nonzero elements of Shafarevich-Tate groups&#148; (with Colliot-Th&eacute;l&egrave;ne): <A HREF="/aws/1999/99PoonenSha.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Poonen, &#147;Computational aspects of curves of genus at least 2&#148;: <A HREF="/aws/1999/99Pooneng2.ps">ps</A>, <A HREF="/aws/1999/99Pooneng2.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Poonen, AWS 1999 project description: <A HREF="/aws/1999/99PoonenPD.html" >html</A> 
+	</LI>
+	<LI>
+	  Poonen, <A HREF="http://www.math.berkeley.edu/%7Epoonen/" >web site</A> 
+	</LI>
+	<LI>
+	  Poonen, AWS 2003 course and project description: <a href="/aws/2003/03PoonenCD.pdf">pdf</A>
+	</LI>
+	<LI>
+	  Poonen, AWS 2003 course notes: <a href="http://math.berkeley.edu/~poonen/papers/aws2003.pdf">pdf</a> and gzipped <a href="http://math.berkeley.edu/~poonen/papers/aws2003.dvi.gz">dvi</a>
+	</LI>    
+	<LI>
+	  Pop, AWS 2003 course and project description: <a href="/aws/2003/03PopCD.pdf">pdf</a>
+	</LI>
+	<LI>
+	  Pop, AWS 2003 course notes: <a href="/aws/2003/03PopNotes.pdf">pdf</a>
+	</LI>    
+	<li>Pop, AWS 2005 course description: <a href="/aws/2005/05PopCD.pdf">pdf</a>
+	</li>
+	<li>Pop, AWS 2005 course notes: <a href="/aws/2005/05PopNotes.pdf">pdf</a>
+	</li>
+	<LI>
+	  Ramakrishnan, AWS 2001 course outline and project description: <A HREF="/aws/2001/01RamakrishnanPD.dvi">dvi</A>, <A HREF="/aws/2001/01RamakrishnanPD.ps">ps</A>, <A HREF="/aws/2001/01RamakrishnanPD.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Ribet, with Kim, &#147;Torsion points on modular curves and Galois theory&#148;: <A HREF="/dls/DLSRibet.dvi">dvi</A>, <A HREF="/dls/DLSRibet.ps">ps</A>, <A HREF="/dls/DLSRibet.pdf">pdf</A>
+	</LI>
+	<LI>
+	  Rohrlich, &#147;False division towers of elliptic curves&#148;: <A HREF="http://www.idealibrary.com/cgi-bin/links/citation/0021-8693/229/249" >link</A> to the Journal of Algebra
+	</LI>
+	<LI>
+	  Rohrlich, &#147;A deformation of the Tate module&#148;: <A HREF="http://www.idealibrary.com/cgi-bin/links/citation/0021-8693/229/280" >link</A> to the Journal of Algebra
+	</LI>
+	<LI>
+	  Rubin, &#147;Elliptic curves with complex multiplication&#148;: <A HREF="/aws/1999/99RubinCM.dvi">dvi</A>, <A HREF="/aws/1999/99RubinCM.ps">ps</A>, <A HREF="/aws/1999/99RubinCM.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Rubin, &#147;Euler systems and modular elliptic curves&#148;: <A HREF="/aws/1999/99RubinDur.dvi">dvi</A>, <A HREF="/aws/1999/99RubinDur.ps">ps</A>, <A HREF="/aws/1999/99RubinDur.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Rubin, &#147;General Euler systems&#148; (large: 840K dvi file, 9MB pdf file!): <A HREF="/aws/1999/99RubinES.dvi">dvi</A>, <A HREF="/aws/1999/99RubinES.ps">ps</A>, <A HREF="/aws/1999/99RubinES.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Rubin, AWS 1999 project description: <A HREF="/aws/1999/99RubinPD.html" >html</A> 
+	</LI>
+	<LI>
+	  Rubin, <A HREF="http://math.stanford.edu/%7Erubin" >web site</A> 
+	</LI>
+	<LI>
+	  Sarnak, AWS 2001 course and project description: <A HREF="/aws/2001/01SarnakPD.html" >html</A> 
+	</LI>
+	<LI>
+	  Sarnak, AWS 2001 references: <A HREF="/aws/2001/01SarnakRefs.dvi">dvi</A>, <A HREF="/aws/2001/01SarnakRefs.ps">ps</A>, <A HREF="/aws/2001/01SarnakRefs.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Scanlon and Pillay, AWS 2003 course and project description: <a href="/aws/2003/03PillayCD.pdf">pdf</a>
+	</LI>
+	<LI>
+	  Scanlon, AWS 2003 course notes: <a href="/aws/2003/03ScanlonNotes.pdf">pdf</a>
+	</LI>
+	<li>
+	  Scanlon, AWS 2003 Slides: <a href="/aws/2003/03ScanlonSlides.pdf">pdf</a>
+	</li>
+	<li>Schneps, AWS 2005 course description: <a href="/aws/2005/05SchnepsCD.pdf">pdf</a>
+	</li>
+	<li>Schneps, AWS 2005 course notes: <a href="/aws/2005/05SchnepsNotes.pdf">pdf</a>
+	</li>
+	<LI>
+	  Schoof, with Lauter and Zieve, AWS 2000 course description: <A HREF="/aws/2000/00LSZCD.html" >html</A> 
+	</LI>
+	<LI>
+	  Schoof, &#147;Algebraic curves and coding theory&#148;: <A HREF="/aws/2000/00SchoofN.dvi">dvi</A>, <A HREF="/aws/2000/00SchoofN.ps">ps</A>, <A HREF="/aws/2000/00SchoofN.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Sharifi, notes of a lecture series by Carlson, &#147;An introduction to Hodge theory and its applications&#148;: <A HREF="/dls/DLSCarlson.dvi">dvi</A>, <A HREF="/dls/DLSCarlson.ps">ps</A>, <A HREF="/dls/DLSCarlson.pdf">pdf</A>
+	</LI>
+	<LI>
+	  Stein, &#147;Some Abelian Varieties with Visible Shafarevich-Tate Groups&#148;: <A HREF="/aws/1999/99Stein.dvi">dvi</A>, <A HREF="/aws/1999/99Stein.ps">ps</A>, <A HREF="/aws/1999/99Stein.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Stein, <A HREF="http://www.wstein.org/Tables">Number Theory Tables</A> 
+	</LI>
+	<LI>
+	  Stein, <A HREF="http://www.sagemath.org">SAGE: Open Source Mathematics Software</A> 
+	</LI>
+	<li>Stillman, AWS 2006 course description: <a href="/aws/2006/06StillmanCD.pdf">pdf</a>
+	</li>
+	<li>Stillman, AWS 2006 course notes: <a href="/aws/2006/06StillmanNotes.pdf">pdf</a>
+	</li>
+	<LI>Stillman, AWS 2006 slides from lectures:
+	  <ul>
+	    <li>Lecture 1, <a href="/aws/2006/06StillmanSlides1.pdf">pdf</a></li>
+	    <li>Lecture 2, <a href="/aws/2006/06StillmanSlides2.pdf">pdf</a></li>
+	    <li>Lecture 3, <a href="/aws/2006/06StillmanSlides3.pdf">pdf</a></li>
+	    <li>Lecture 4, <a href="/aws/2006/06StillmanSlides4.pdf">pdf</a></li>
+	  </ul>
+	</LI>
+	<li>Stillman, AWS 2006 Macaulay code: <a href="/aws/2006/06Stillman-m2.tar">tar</a>
+	</li>
+	<li>Sturmfels, AWS 2006 course description: <a href="/aws/2006/06SturmfelsCD.pdf">pdf</a>
+	</li>
+	<li>Sturmfels, AWS 2006 lecture notes: <a href="/aws/2006/06SturmfelsLN.pdf">pdf</a> by Silvia Adduci</li>
+	<LI>Sturmfels, AWS 2006 slides from lectures:
+	  <ul>
+	    <li>Lecture 1, <a href="/aws/2006/06SturmfelsSlides1.pdf">pdf</a></li>
+	    <li>Lecture 2, <a href="/aws/2006/06SturmfelsSlides2.pdf">pdf</a></li>
+	    <li>Lecture 3, <a href="/aws/2006/06SturmfelsSlides3.pdf">pdf</a></li>
+	    <li>Lecture 4, <a href="/aws/2006/06SturmfelsSlides4.pdf">pdf</a></li>
+	  </ul>
+	</LI>
+	<li>
+	  Swinnerton-Dyer, &#147;Diophantine
+	  Equations: Progress and Problems&#148;: <A
+						     HREF="/dls/DLSSw-Dyer1b.pdf">pdf</A>
+	</li>
+	<li>
+	  Swinnerton-Dyer, &#147;A new method for certain Diophantine equations&#148;: <A
+											  HREF="/dls/DLSSw-Dyer2.pdf">pdf</A>
+	</li>
+	<LI>
+	  Szpiro, AWS 1998 reading list: <A HREF="/aws/1998/98SzpiroRL.html" >html</A> 
+	</LI>
+	<li>
+	  Takahashi, &#147;Spreadsheet Software as a Teaching Tool for Introductory 
+	  Mathematics Courses&#148;: <a href="/aws/2002/02Takahashi.ppt">ppt</a>
+	</li>
+	<li>
+          Takahashi, Zip archive of 7 spreadsheets and a Powerpoint file to accompany his lecture: <a href="/aws/2002/02Takahashi.zip">zip</a> (2.6MB)
+	</li>
+	<li>Teitelbaum, AWS 2007: <a href="/aws/07/speakers/index.html#teitelbaum">The <i>p</i>-adic upper half plane</a></li>
+	<LI>
+	  Tsuji, &#147;Explicit reciprocity law for Lubin-Tate groups&#148;: <A HREF="/dls/DLSTsuji1.dvi">dvi</A>, <A HREF="/dls/DLSTsuji1.ps">ps</A>, <A HREF="/dls/DLSTsuji1.pdf">pdf</A>
+	</LI>
+	<LI>
+	  Tsuji, &#147;Crystalline sheaves, syntomic cohomology, and p-adic polylogarithms&#148;: <A HREF="/dls/DLSTsuji2.dvi">dvi</A>, <A HREF="/dls/DLSTsuji2.ps">ps</A>, <A HREF="/dls/DLSTsuji2.pdf">pdf</A>
+	</LI>
+	<LI>
+	  Tzermias, &#147;The Manin-Mumford Conjecture: A Brief Survey&#148;: <A HREF="/aws/1999/99Tzermias.dvi">dvi</A>, <A HREF="/aws/1999/99Tzermias.ps">ps</A>, <A HREF="/aws/1999/99Tzermias.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Ulmer, AWS 2000 course description: <A HREF="/aws/2000/00UlmerCD.html" >html</A> 
+	</LI>
+	<LI>
+	  Ulmer, AWS 2000 course outline: <A HREF="/aws/2000/00UlmerLO.dvi">dvi</A>, <A HREF="/aws/2000/00UlmerLO.ps">ps</A>, <A HREF="/aws/2000/00UlmerLO.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Ulmer, AWS 2000 project description: <A HREF="/aws/2000/00UlmerPD.dvi">dvi</A>, <A HREF="/aws/2000/00UlmerPD.ps">ps</A>, <A HREF="/aws/2000/00UlmerPD.pdf">pdf</A> 
+	</LI>
+	<LI>Ulmer, AWS 2000 project, write-up by Papikian: <A HREF="/aws/2000/00Papikian.ps">ps</A>, <A HREF="/aws/2000/00Papikian.pdf">pdf</A></LI>
+	<LI>
+	  Ulmer, &#147;Elliptic curves over function fields with large rank&#148;: arXiv <A HREF="http://arXiv.org/abs/math.NT/0109163" >link</A></LI>
+	<LI>
+	  Ulmer, &#147;A simple simulation to value stock options&#148;: <a href="/aws/2002/02UlmerOptions.ppt">ppt</a> 
+	</LI>
+	<li>
+	  Ulmer, Zip archive of 3 spreadsheets on option valuation models: <a href="/aws/2002/02Ulmer.zip">zip</a>
+	</li>
+	<li>
+          Ulmer, &#147;A note on &#145;risk-neutral valuation&#146;&#148;: <a href="/aws/2002/02UlmerRN.pdf">pdf</a>
+	</li>
+	<li>
+	  Villegas, AWS 2002 course and project description: <A HREF="/aws/2002/02FRVCD.dvi">dvi</A>, <A HREF="/aws/2002/02FRVCD.ps">ps</A>, <A HREF="/aws/2002/02FRVCD.pdf">pdf</A>
+	</li>
+	<li>
+          Voisin, AWS 2002 course and project description: <a href="/aws/2002/02VoisinCD.html" target="_blank">html</a>
+	</li>
+	<li>
+          Voisin, Extract from a book on Hodge theory: <a href="/aws/2002/02VoisinExt.ps">ps</a>
+	</li>
+	<LI>
+	  Vojta, AWS 1998 course abstract: <A HREF="/aws/1998/98VojtaCA.html" >html</A> 
+	</LI>
+	<LI>
+	  Vojta, AWS 1998 reading list: <A HREF="/aws/1998/98VojtaRL.html" >html</A> 
+	</LI>
+	<LI>
+	  Vojta, &#147;A more general abc conjecture&#148;: <A HREF="/aws/1998/98Vojta.dvi">dvi</A>, <A HREF="/aws/1998/98Vojta.ps"> ps</A>, <A HREF="/aws/1998/98Vojta.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Vojta: &#147;Chapter 0&#148; of preliminary material on number theory and algebraic geometry: <A HREF="/aws/1998/98VojtaChap0.dvi">dvi</A>, <A HREF="/aws/1998/98VojtaChap0.ps">ps</A>, <A HREF="/aws/1998/98VojtaChap0.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Voloch, AWS 1998 course abstract: <A HREF="/aws/1998/98VolochCA.html" >html</A> 
+	</LI>
+	<LI>
+	  Voloch, AWS 1998 reading list: <A HREF="/aws/1998/98VolochRL.html" >html</A> 
+	</LI>
+	<LI>
+	  Voloch, AWS 1998 lecture notes: <A HREF="/aws/1998/98VolochLN.dvi">dvi</A>, <A HREF="/aws/1998/98VolochLN.ps">ps</A>, <A HREF="/aws/1998/98VolochLN.pdf">pdf</A> 
+	</LI>
+	<li>Wan, AWS 2004 course description: <a href="/aws/2004/04WanCD.pdf">pdf</a>
+	</li>
+	<li>Wan, AWS 2004 course notes: <a href="/aws/2004/04WanNotes.pdf">pdf</a>
+	</li>
+	<LI>
+	  Wang, &#147;A note on Wronskians and the abc theorem in function fields of prime characteristic&#148;: <A HREF="/aws/1998/98Wangwronskian.dvi">dvi</A>, <A HREF="/aws/1998/98Wangwronskian.ps">ps</A>, <A HREF="/aws/1998/98Wangwronskian.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Wang, &#147;ABC estimate, integral points, and geometry of Pn minus hyperplanes&#148;: <A HREF="/aws/1998/98Wangabc.dvi">dvi</A>, <A HREF="/aws/1998/98Wangabc.ps">ps</A>, <A HREF="/aws/1998/98Wangabc.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Wang, AWS 1998 abstract of contributed talk: <A HREF="/aws/1998/98ContribA.html" >html</A> 
+	</LI>
+	<LI>
+	  Weston, &#147;The modular curves X<SUB>0</SUB>(11) and X<SUB>1</SUB>(11)&#148;: <A HREF="/aws/2001/01Weston1.ps">ps</A>, <A HREF="/aws/2001/01Weston1.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Weston, &#147;The Euler system of Heegner points&#148;: <A HREF="/aws/2001/01Weston2.dvi">dvi</A>, <A HREF="/aws/2001/01Weston2.ps">ps</A>, <A HREF="/aws/2001/01Weston2.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  Wetherell, AWS 1999 project description: <A HREF="/aws/1999/99WetherellPD.html" >html</A> 
+	</LI>
+	<LI>
+	  Wetherell, thesis: <A HREF="/aws/1999/99WetherellThesis.dvi">dvi</A>, <A HREF="/aws/1999/99WetherellThesis.ps">ps</A>, <A HREF="/aws/1999/99WetherellThesis.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  J. Yu, AWS 1998 abstract of contributed talk: <A HREF="/aws/1998/98ContribA.html" >html</A> 
+	</LI>
+	<LI>
+	  J. Yu, &#147;On arithmetic of hyperelliptic curves&#148;: <A HREF="/aws/1998/98Yu.dvi">dvi</A>, <A HREF="/aws/1998/98Yu.ps">ps</A>, <A HREF="/aws/1998/98Yu.pdf">pdf</A> 
+	</LI>
+	<LI>
+	  K. Yu, AWS 1998 abstract of contributed talk: <A HREF="/aws/1998/98ContribA.html" >html</A> 
+	</LI>
+	<LI>
+	  Zieve, with Lauter and Schoof, AWS 2000 course description: <A HREF="/aws/2000/00LSZCD.html">html</A> 
+	</LI>
+	<LI>
+	  Zieve, with Lauter, AWS 2000 project description: <A HREF="/aws/2000/00LZPD.dvi">dvi</A>, <A HREF="/aws/2000/00LZPD.ps">ps</A>, <A HREF="/aws/2000/00LZPD.pdf">pdf</A> 
+	</LI>
+      </UL>
+    </div>
+  </BODY>
+</HTML>

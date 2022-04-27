@@ -1,0 +1,230 @@
+This is pdfTeX, Version 3.14159-1.00b-pretest-20020211 (Web2C 7.3.7x) (format=pdflatex 2002.11.3)  8 DEC 2003 10:31
+**04BatyrevCD.tex
+(./04BatyrevCD.tex{/usr/local/teTeX/share/texmf.local/pdftex/config/pdftex.cfg}
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, d
+utch, nohyphenation, loaded.
+(/usr/local/teTeX/share/texmf/tex/latex/base/latex209.def
+File: latex209.def 1998/05/13 v0.52 Standard LaTeX file
+
+
+          Entering LaTeX 2.09 COMPATIBILITY MODE
+ *************************************************************
+    !!WARNING!!    !!WARNING!!    !!WARNING!!    !!WARNING!!   
+ 
+ This mode attempts to provide an emulation of the LaTeX 2.09
+ author environment so that OLD documents can be successfully
+ processed. It should NOT be used for NEW documents!
+ 
+ New documents should use Standard LaTeX conventions and start
+ with the \documentclass command.
+ 
+ Compatibility mode is UNLIKELY TO WORK with LaTeX 2.09 style
+ files that change any internal macros, especially not with
+ those that change the FONT SELECTION or OUTPUT ROUTINES.
+ 
+ Therefore such style files MUST BE UPDATED to use
+          Current Standard LaTeX: LaTeX2e.
+ If you suspect that you may be using such a style file, which
+ is probably very, very old by now, then you should attempt to
+ get it updated by sending a copy of this error message to the
+ author of that file.
+ *************************************************************
+
+\footheight=\dimen102
+\@maxsep=\dimen103
+\@dblmaxsep=\dimen104
+\@cla=\count79
+\@clb=\count80
+\mscount=\count81
+(/usr/local/teTeX/share/texmf/tex/latex/base/tracefnt.sty
+Package: tracefnt 1997/05/29 v3.0j Standard LaTeX package (font tracing)
+\tracingfonts=\count82
+LaTeX Info: Redefining \selectfont on input line 96.
+)
+\symbold=\mathgroup4
+\symsans=\mathgroup5
+\symtypewriter=\mathgroup6
+\symitalic=\mathgroup7
+\symsmallcaps=\mathgroup8
+\symslanted=\mathgroup9
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 288.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 289.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 290.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 296.
+LaTeX Info: Redefining \em on input line 306.
+
+(/usr/local/teTeX/share/texmf/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup10
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 42.
+)
+LaTeX Font Info:    Redeclaring math delimiter \lgroup on input line 370.
+LaTeX Font Info:    Redeclaring math delimiter \rgroup on input line 372.
+LaTeX Font Info:    Redeclaring math delimiter \bracevert on input line 374.
+
+(/usr/local/teTeX/share/texmf/tex/latex/config/latex209.cfg
+File: latex209.cfg 2001/06/05 v1.0 teTeX customized LaTeX 2.09 compatibility mo
+de setup
+)
+(/usr/local/teTeX/share/texmf/tex/latex/tools/rawfonts.sty
+Package: rawfonts 1994/05/08 Low-level LaTeX 2.09 font compatibility
+
+(/usr/local/teTeX/share/texmf/tex/latex/tools/somedefs.sty
+Package: somedefs 1994/06/01 Toolkit for optional definitions
+)
+LaTeX Font Info:    Try loading font information for U+lasy on input line 44.
+
+(/usr/local/teTeX/share/texmf/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)))
+(/usr/local/teTeX/share/texmf/tex/latex/base/article.cls
+Document Class: article 2001/04/21 v1.4e Standard LaTeX document class
+(/usr/local/teTeX/share/texmf/tex/latex/base/size12.clo
+File: size12.clo 2001/04/21 v1.4e Standard LaTeX file (size option)
+)
+\c@part=\count83
+\c@section=\count84
+\c@subsection=\count85
+\c@subsubsection=\count86
+\c@paragraph=\count87
+\c@subparagraph=\count88
+\c@figure=\count89
+\c@table=\count90
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+Compatibility mode: definition of \rm ignored.
+Compatibility mode: definition of \sf ignored.
+Compatibility mode: definition of \tt ignored.
+Compatibility mode: definition of \bf ignored.
+Compatibility mode: definition of \it ignored.
+Compatibility mode: definition of \sl ignored.
+Compatibility mode: definition of \sc ignored.
+LaTeX Info: Redefining \cal on input line 501.
+LaTeX Info: Redefining \mit on input line 502.
+\bibindent=\dimen105
+)
+(/usr/local/teTeX/share/texmf/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2002/01/22 v2.2d
+
+(/usr/local/teTeX/share/texmf/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2001/10/25 v2.2f
+\@emptytoks=\toks14
+\symAMSa=\mathgroup11
+\symAMSb=\mathgroup12
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 132.
+))
+(/usr/local/teTeX/share/texmf/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/teTeX/share/texmf/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/teTeX/share/texmf/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks15
+\ex@=\dimen106
+))
+(/usr/local/teTeX/share/texmf/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen107
+)
+(/usr/local/teTeX/share/texmf/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count91
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count92
+\leftroot@=\count93
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count94
+\DOTSCASE@=\count95
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen108
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count96
+\c@MaxMatrixCols=\count97
+\dotsspace@=\muskip10
+\c@parentequation=\count98
+\dspbrk@lvl=\count99
+\tag@help=\toks16
+\row@=\count100
+\column@=\count101
+\maxfields@=\count102
+\andhelp@=\toks17
+\eqnshift@=\dimen109
+\alignsep@=\dimen110
+\tagshift@=\dimen111
+\tagwidth@=\dimen112
+\totwidth@=\dimen113
+\lineht@=\dimen114
+\@envbody=\toks18
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+\c@prop=\count103
+ (./04BatyrevCD.aux)
+\openout1 = `04BatyrevCD.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Try loading font information for U+msa on input line 48.
+ (/usr/local/teTeX/share/texmf/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2002/01/19 v2.2g AMS font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 48.
+
+(/usr/local/teTeX/share/texmf/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2002/01/19 v2.2g AMS font definitions
+) [1
+
+{/usr/local/teTeX/share/texmf/dvips/config/pdftex.map}{/usr/local/teTeX/share/t
+exmf.os/dvips/config/Ttbbold.map}{/usr/local/teTeX/share/texmf.os/dvips/config/
+wolfram.map}]
+[2] [3] (./04BatyrevCD.aux) ) 
+Here is how much of TeX's memory you used:
+ 1468 strings out of 60917
+ 16378 string characters out of 1188883
+ 4058477 words of memory out of 6513834
+ 4447 multiletter control sequences out of 10000+50000
+ 30546 words of font info for 117 fonts, out of 500000 for 1000
+ 54 hyphenation exceptions out of 1000
+ 29i,8n,24p,288b,291s stack positions out of 1500i,500n,5000p,200000b,5000s
+ 52 PDF objects out of 300000
+ 0 named destinations out of 131072
+ 0 words of extra memory for PDF output out of 65536
+</usr/local/teTeX/share/texmf/fonts/type1/bluesky/
+cm/cmti12.pfb></usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmex10.pfb><
+/usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmr8.pfb></usr/local/teTeX/
+share/texmf/fonts/type1/bluesky/cm/cmmi12.pfb></usr/local/teTeX/share/texmf/fon
+ts/type1/bluesky/cm/cmr12.pfb></usr/local/teTeX/share/texmf/fonts/type1/bluesky
+/cm/cmbx12.pfb></usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmsy10.pfb>
+</usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmmi8.pfb></usr/local/teTe
+X/share/texmf/fonts/type1/bluesky/cm/cmsy8.pfb></usr/local/teTeX/share/texmf/fo
+nts/type1/bluesky/cm/cmmi10.pfb></usr/local/teTeX/share/texmf/fonts/type1/blues
+ky/cm/cmbx10.pfb></usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmti10.pf
+b></usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmr10.pfb></usr/local/te
+TeX/share/texmf/fonts/type1/bluesky/cm/cmcsc10.pfb>
+Output written on 04BatyrevCD.pdf (3 pages, 101089 bytes).

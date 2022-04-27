@@ -1,0 +1,187 @@
+<html>
+  <include src="/head.html.in" {'PAGE':'SWC: Video by Speaker'}>
+  <body>
+    <include src="/topbar.html.in" >
+    <include src="/navcol.html.in"  {'nav_notes':'navsel'}>
+    <div class="page">
+
+      <h1 class="header">Video by Speaker</H1> 
+
+      <TD CLASS="blotter" VALIGN="top" BGCOLOR="#FFFFFF">
+
+	<UL>
+	  <li>Batyrev, AWS 2004 course on &#147;Cohomology, periods, and the Hodge structure of toric hypersurfaces&#148;
+	    <ul>
+	      <li>Lecture 1: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/batyrev/batyrev1.rm">video</a>, <a href="/video/aws2004/batyrev/batyrev-3-13-1.pdf">pdf slides</a>.</li>
+	      <li>Lecture 2: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/batyrev/batyrev2.rm">video</a>, <a href="/video/aws2004/batyrev/batyrev-3-13-2.pdf">pdf slides</a>.</li>
+	      <li>Lecture 3: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/batyrev/batyrev3.rm">video</a>, <a href="/video/aws2004/batyrev/batyrev-3-14.pdf">pdf slides</a>.</li>
+	      <li>Lecture 4: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/batyrev/batyrev4.rm">video</a>, <a href="/video/aws2004/batyrev/batyrev-3-15.pdf">pdf slides</a>. </li>
+	      <li>Lecture 5: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/batyrev/batyrev5.rm">video</a>, <a href="/video/aws2004/batyrev/batyrev-3-16.pdf">pdf slides</a>.</li>
+	    </ul>
+	  </li>
+	  <li>Bernstein, AWS 2006 course on &#147;Integer factorization&#148;
+	    <ul>
+	      <li>Lecture 1: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/bernstein/bernstein031106.rm">video</a>, <a href="/aws/2006/06BernsteinSlides1.pdf">pdf slides</a>.</li>
+	      <li>Lecture 2: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/bernstein/bernstein031206.rm">video</a>, <a href="/aws/2006/06BernsteinSlides2.pdf">pdf slides</a>.</li>
+	      <li>Lecture 3: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/bernstein/bernstein031306.rm">video</a>, <a href="/aws/2006/06BernsteinSlides3.pdf">pdf slides</a>.</li>
+	      <li>Lecture 4: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/bernstein/bernstein031406.rm">video</a>, <a href="/aws/2006/06BernsteinSlides4.pdf">pdf slides</a>.</li>
+	    </ul>
+	  </li>
+	  <li>Candelas, AWS 2004 course on &#147;Periods and zeta functions&#148;
+	    <ul>
+	      <li>Lecture 1: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/candelas/candelas1.rm">video</a>, <a href="/video/aws2004/candelas/candelas-3-13.pdf">pdf slides</a>.</li>
+	      <li>Lecture 2: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/candelas/candelas2.rm">video</a>, <a href="/video/aws2004/candelas/candelas-3-14-1.pdf">pdf slides</a>.</li>
+	      <li>Lecture 3: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/candelas/candelas3.rm">video</a>, <a href="/video/aws2004/candelas/candelas-3-14-2.pdf">pdf slides</a>.</li>
+	      <li>Lecture 4: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/candelas/candelas4.rm">video</a>, <a href="/video/aws2004/candelas/candelas-3-15.pdf">pdf slides</a>.</li>
+	      <li>Lecture 5: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/candelas/candelas5.rm">video</a>, <a href="/video/aws2004/candelas/candelas-3-16.pdf">pdf slides</a>.</li>
+	    </ul>
+	  </li>
+	  <li>Cohen, AWS 2006 course on &#147;Explicit methods for solving Diophantine equations&#148;
+	    <ul>
+	      <li>Lecture 1: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/cohen/cohen031106.rm">video</a></li>
+	      <li>Lecture 2: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/cohen/cohen031206.rm">video</a></li>
+	      <li>Lecture 3: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/cohen/cohen031306_lec1.rm">video</a></li>
+	      <li>Lecture 4: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/cohen/cohen031306_lec2.rm">video</a></li>
+	      <li>Lecture 5: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/cohen/cohen031406.rm">video</a></li>
+	    </ul>
+	  </li>
+	  <li>Deninger, May 2005 Distinguished Lectures on &#147;Arithmetic geometry and analysis on foliated spaces&#148;
+	    <ul>		
+	      <li>Lectures 1 and 2: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/deninger/deninger_050505.rm">video</a></li>
+	      <li>Lecture 3: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/deninger/deninger_050605.rm">video</a></li>
+	      <li>Lecture 4: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/deninger/deninger_051006.rm">video</a></li>
+	      <li>Lecture 5: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/deninger/deninger_051107.rm">video</a></li>
+	    </ul>
+	  </li>
+	  <li>Hain, AWS 2005 course on &#147;Iterated integrals, Hodge theory, and fundamental groups&#148;
+	    <ul>
+	      <li>Lecture 1: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/hain/hain-031205.rm">video</a></li>
+	      <li>Lecture 2: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/hain/hain-031305.rm">video</a></li>
+	      <li>Lecture 3: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/hain/hain-031405.rm">video</a></li>
+	      <li>Lecture 4: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/hain/hain-031505.rm">audio</a></li>
+	    </ul>
+	  </li>
+	  <li>Loeser, AWS 2003 course on &#147;Motivic and <it>p</it>-adic integration&#148;
+	    <ul>
+	      <li>Lecture 1: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/04ALoeser3-15.rm">video</a>, <a href="/video/aws2003/loeser/loeser_3_15-1.pdf">pdf slides</a>.</li>
+	      <li>Lecture 2: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/05ALoeser3-15.rm">video</a>, <a href="/video/aws2003/loeser/loeser_3_15-2.pdf">pdf slides</a>.</li>
+	      <li>Lecture 3: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/10ALoeser3-16.rm">video</a>, <a href="/video/aws2003/loeser/loeser_3_16.pdf">pdf slides</a>.</li>
+	      <li>Lecture 4: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/16ALoeser3-17.rm">video</a>, <a href="/video/aws2003/loeser/loeser_3_17-1.pdf">pdf slides</a>.</li>
+	      <li>Lecture 5: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/17ALoeser3-17.rm">video</a>, <a href="/video/aws2003/loeser/loeser_3_17-2.pdf">pdf slides</a>.</li>
+	    </ul>
+	  </li>
+	  <li>Macintyre, AWS 2003 course on &#147;The history of interactions between logic and number theory&#148;
+	    <ul>
+	      <li>Lecture 1: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/01AMacIntyre3-15.rm">video</a>, <a href="/video/aws2003/macintyre/macintyre_3_15.pdf">pdf slides</a>.</li>
+	      <li>Lecture 2: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/07AMacIntyre3-15.rm">video</a>, <a href="/video/aws2003/macintyre/macintyre_3_16.pdf">pdf slides</a>.</li>
+	      <li>Lecture 3: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/13AMacIntyre3-17.rm">video</a>, <a href="/video/aws2003/macintyre/macintyre_3_17.pdf">pdf slides</a>.</li>
+	      <li>Lecture 4: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/19AMacIntyre3-18.rm">video</a>, <a href="/video/aws2003/macintyre/macintyre_3_18.pdf">pdf slides</a>.</li>
+	    </ul>
+	  </li>
+	  <li>Matsumoto, AWS 2005 course on &#147;Galois representations in fundamental groups and their Lie algebras&#148;
+	    <ul>
+	      <li>Lecture 1: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/matsumoto/matsumoto-031205.rm">video</a>, <a href="/video/aws2005/matsumoto/matsumoto_3_12.pdf">pdf slides</a>.</li>
+	      <li>Lecture 2: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/matsumoto/matsumoto_ses2-031305.rm">video</a>, <a href="/video/aws2005/matsumoto/matsumoto_3_13_1.pdf">pdf slides</a>.</li>
+	      <li>Lecture 3: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/matsumoto/matsumoto_ses3-031305.rm">video</a>, <a href="/video/aws2005/matsumoto/matsumoto_3_13_2.pdf">pdf slides</a>.</li>
+	      <li>Lecture 4: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/matsumoto/matsumoto-031505.rm">audio with slides</a>, <a href="/video/aws2005/matsumoto/matsumoto_3_15.pdf">pdf slides</a>.</li>
+	    </ul>
+	  </li>
+	  <li>Morrison, AWS2004 course on &#147;Instanton sums and monodromy&#148;
+	    <ul>
+	      <li>Lecture 1: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/morrison/morrison1.rm">video</a>, <a href="/video/aws2004/Morrison/Morrison_1.pdf">pdf slides</a>.</li>
+	      <li>Lecture 2: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/morrison/morrison2.rm">video</a>, <a href="/video/aws2004/Morrison/Morrison_2.pdf">pdf slides</a>.</li>
+	      <li>Lecture 3: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/morrison/morrison3.rm">video</a>, <a href="/video/aws2004/Morrison/Morrison_3.pdf">pdf slides</a>.</li>
+	      <li>Lecture 4: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/morrison/morrison4.rm">video</a>, <a href="/video/aws2004/Morrison/Morrison_4.pdf">pdf slides</a>.</li>
+	      <li>Lecture 5: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/morrison/morrison5.rm">video</a>, <a href="/video/aws2004/Morrison/Morrison_5.pdf">pdf slides</a>.</li>
+	      <li>A pdf scan of <a href="/video/aws2004/Morrison/morrison-scan.pdf">notes written during the lecture</a>.</li>
+	    </ul>
+	  </li>
+	  <li>Pillay, first half of an AWS 2003 course on &#147;Model theory and diophantine geometry&#148;
+	    <ul>
+	      <li>Lecture 1: <a href="rtsp://redstar.faccenter.arizona.edu/ulmer_math/Pillay3-15/03APillay3-15.rm">video</a>, <a href="/video/aws2003/pillay/pillay_3_15.pdf">pdf slides</a>.</li>
+	      <li>Lecture 2: <a href="rtsp://redstar.faccenter.arizona.edu/ulmer_math/Pillay3-16-1/09APillay3-16-1.rm">video</a>, <a href="/video/aws2003/pillay/pillay_3_16-1.pdf">pdf slides</a>.</li>
+	      <li>Lecture 3: <a href="rtsp://redstar.faccenter.arizona.edu/ulmer_math/PillayScanlon3-16-2/11APillayScanlon3-16-2.rm">video</a>, <a href="/video/aws2003/pillay/pillay_3_16-2.pdf">pdf slides</a>.</li>
+	    </ul>
+	  </li>
+	  <li>Poonen, AWS 2003 course on &#147;Hilbert's tenth problem&#148;
+	    <ul>
+	      <li>Lecture 1: <a href="rtsp://redstar.faccenter.arizona.edu/ulmer_math/Poonen3-15/02APoonen3-15.rm">video</a>, <a href="/video/aws2003/poonen/poonen_3_15.pdf">pdf slides</a>.</li>
+	      <li>Lecture 2: <a href="rtsp://redstar.faccenter.arizona.edu/ulmer_math/Poonen3-16/08APoonen3-16.rm">video</a>, <a href="/video/aws2003/poonen/poonen_3_16.pdf">pdf slides</a>.</li>
+	      <li>Lecture 3: <a href="rtsp://redstar.faccenter.arizona.edu/ulmer_math/Poonen3-17/14APoonen3-17.rm">video</a>, <a href="/video/aws2003/poonen/poonen_3_17.pdf">pdf slides</a>.</li>
+	      <li>Lecture 4: <a href="rtsp://redstar.faccenter.arizona.edu/ulmer_math/Poonen3-18/20APoonen3-18.rm">video</a>, <a href="/video/aws2003/poonen/poonen_3_18.pdf">pdf slides</a>.</li>
+	    </ul>
+	  </li>
+	  <li>Pop, AWS 2003 course on &#147;Elementary equivalence of finitely generated fields&#148;
+	    <ul>
+	      <li>Lecture 1: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/06APop3-15.rm">video</a>, <a href="/video/aws2003/pop/pop_3_15.pdf">pdf slides</a>.</li>
+	      <li>Lecture 2: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/12APop3-16.rm">video</a>, <a href="/video/aws2003/pop/pop_3_16.pdf">pdf slides</a>.</li>
+	      <li>Lecture 3: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/18APop3-17.rm">video</a>, <a href="/video/aws2003/pop/pop_3_17.pdf">pdf slides</a>.</li>
+	      <li>Lecture 4: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/27APop3-19.rm">video</a>, <a href="/video/aws2003/pop/pop_3_19.pdf">pdf slides</a>.</li>
+	    </ul>
+	  </li>
+	  <li>Pop, AWS 2005 course on  &#147;Anabelian phenomena in arithmetic and geometry&#148;
+	    <ul>
+	      <li>Lecture 1: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/pop/pop-031205.rm">video</a></li>
+	      <li>Lecture 2: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/pop/pop-031305.rm">video</a></li>
+	      <li>Lecture 3: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/pop/pop-031405.rm">video</a></li>
+	      <li>Lecture 4: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/pop/pop-031505.rm">audio</a></li>
+	    </ul>
+	  </li>
+
+	  <li>Scanlon, second half of an AWS 2003 course on &#147;Model theory and diophantine geometry&#148;
+	    <ul>		
+	      <li>Lecture 1: <a href="rtsp://redstar.faccenter.arizona.edu/ulmer_math/PillayScanlon3-16-2/11APillayScanlon3-16-2.rm">video</a>, <a href="/video/aws2003/scanlon/scanlon_3_16.pdf">pdf slides</a>.</li>
+	      <li>Lecture 2: <a href="rtsp://redstar.faccenter.arizona.edu/ulmer_math/Scanlon3-17/15AScanlon3-17.rm">video</a>, <a href="/video/aws2003/scanlon/scanlon_3_17.pdf">pdf slides</a>.</li>
+	      <li>Lecture 3: <a href="rtsp://redstar.faccenter.arizona.edu/ulmer_math/21AScanlon3-18.rm">video</a>, <a href="/video/aws2003/scanlon/scanlon_3_18.pdf">pdf slides</a>.</li>
+	      <li>Slides Scanlon projected during his lectures: <a href="files/03ScanlonSlides.pdf">pdf</a>
+	    </ul>
+	  </li>
+	  <li>Schneps, AWS 2005 course on &#147;Grothendieck-Teichmueller theory, moduli spaces, and multi-zeta values&#148;
+	    <ul>
+	      <li>Lecture 1: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/schneps/schneps_ses2-031205.rm">video</a>, <a href="/video/aws2005/schneps/schneps_3_12_1.pdf">pdf slides</a>.</li>
+	      <li>Lecture 2: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/schneps/schneps_ses1-031205.rm">video</a>, <a href="/video/aws2005/schneps/schneps_3_12_05_2.pdf">pdf slides</a>.  </li>
+	      <li>Lecture 3: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/schneps/schneps-031305.rm">video</a>, <a href="/video/aws2005/schneps/schneps_3_15_1.pdf">pdf slides</a>.</li>
+	      <li>Lecture 4: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/schneps/schneps-031505.rm">audio with slides</a>, <a href="/video/aws2005/schneps/schneps_3_15_2.pdf">pdf slides</a>.</li>
+	    </ul>
+	  </li>
+	  <li>Stillman, AWS 2006 course on &#147;Computing cohomology in algebraic geometry&#148;
+	    <ul>
+	      <li>Lecture 1: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/stillman/stillman031106.rm">video</a>, <a href="/aws/2006/06StillmanSlides1.pdf">scanned slides</a>.</li>
+	      <li>Lecture 1.5 (joint Stillman/Sturmfels lecture): <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/strumfels/stillman_strumfels031206.rm">video</a></li>
+	      <li>Lecture 2: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/stillman/03122006_part1.rm">video</a>, <a href="/aws/2006/06StillmanSlides2.pdf">scanned slides</a>.</li>
+	      <li>Lecture 3: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/stillman/03122006_part2.rm">video</a>, <a href="/aws/2006/06StillmanSlides3.pdf">scanned slides</a>.</li>
+	      <li>Lecture 4: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/stillman/stillman031306.rm">video</a>, <a href="/aws/2006/06StillmanSlides4.pdf">scanned slides</a>.</li>
+	    </ul>
+	  </li>
+	  <li>Sturmfels, AWS 2006 course on &#147;Discriminants, resultants, and their tropicalization&#148;
+	    <ul>
+	      <li>Lecture 1: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/strumfels/strumfels031106_lec1.rm">video</a>, <a href="/aws/2006/06SturmfelsSlides1.pdf">scanned slides</a>.</li>
+	      <li>Lecture 2: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/strumfels/strumfels031106_lec2.rm">video</a>, <a href="/aws/2006/06SturmfelsSlides2.pdf">scanned slides</a>.</li>
+	      <li>Lecture 2.5 (joint Stillman/Sturmfels lecture): <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/strumfels/stillman_strumfels031206.rm">video</a></li>
+	      <li>Lecture 3: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/strumfels/strumfels031306.rm">video</a>, <a href="/aws/2006/06SturmfelsSlides3.pdf">scanned slides</a>.</li>
+	      <li>Lecture 4: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/strumfels/strumfels031406.rm">video</a>, <a href="/aws/2006/06SturmfelsSlides4.pdf">scanned slides</a>.</li>
+	    </ul>
+	  </li>
+	  <li>Swinnerton-Dyer, December 2002 Distinguished Lectures on &#147;New methods for Diophantine equations&#148;
+	    <ul>		
+	      <li>Lecture 1: <a href="rtsp://redstar.faccenter.arizona.edu/ulmer_math/HPFSD/HPFSD1.rm ">video</a>, <a href="/video/hpfsd/SD/SD1.pdf">pdf slides</a>.</li>
+	      <li>Lecture 2: <a href="rtsp://redstar.faccenter.arizona.edu/ulmer_math/HPFSD/HPFSD2.rm ">video</a>, <a href="/video/hpfsd/SD/SD2.pdf">pdf slides</a>.</li>
+	      <li>Lecture 3: <a href="rtsp://redstar.faccenter.arizona.edu/ulmer_math/HPFSD/HPFSD3.rm ">video</a>, <a href="/video/hpfsd/SD/SD3.pdf">pdf slides</a>.</li>
+	      <li>Lecture 4: <a href="rtsp://redstar.faccenter.arizona.edu:8080/ulmer_math/HPFSD/HPFSD4.rm ">video</a>, <a href="/video/hpfsd/SD/SD4.pdf">pdf slides</a>.</li>
+	    </ul>
+	  </li>
+	  <li>Wan, AWS 2004 course on &#147;Zeta Functions of Toric Calabi-Yau Hypersurfaces&#148;
+	    <ul>
+	      <li>Lecture 1: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/wan/wan1.rm">video</a>, <a href="/video/aws2004/wan/wan1.pdf">pdf slides</a>.</li>
+	      <li>Lecture 2: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/wan/wan2.rm">video</a>, <a href="/video/aws2004/wan/wan2.pdf">pdf slides</a>.</li>
+	      <li>Lecture 3: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/wan/wan3.rm">video</a>, <a href="/video/aws2004/wan/wan3.pdf">pdf slides</a>.</li>
+	      <li>Lecture 4: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/wan/wan4.rm">video</a>, <a href="/video/aws2004/wan/wan4.pdf">pdf slides</a>.</li>
+	      <li>Lecture 5: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/wan/wan5.rm">video</a>, <a href="/video/aws2004/wan/wan5.pdf">pdf slides</a>.</li>
+	    </ul>
+	  </li>
+
+
+	</UL>
+    </div>
+  </BODY>
+</HTML>

@@ -1,0 +1,67 @@
+This is pdfTeX, Version 3.14159-1.00b-pretest-20020211 (Web2C 7.3.7x) (format=pdflatex 2002.11.3)  9 MAR 2003 08:26
+**AWSGuide
+(./AWSGuide.tex{/usr/local/teTeX/share/texmf.local/pdftex/config/pdftex.cfg}
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, d
+utch, nohyphenation, loaded.
+(/usr/local/teTeX/share/texmf/tex/latex/base/article.cls
+Document Class: article 2001/04/21 v1.4e Standard LaTeX document class
+(/usr/local/teTeX/share/texmf/tex/latex/base/size10.clo
+File: size10.clo 2001/04/21 v1.4e Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (./AWSGuide.aux)
+\openout1 = `AWSGuide.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 7.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 7.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 7.
+
+
+LaTeX Warning: No \author given.
+
+[1
+
+{/usr/local/teTeX/share/texmf/dvips/config/pdftex.map}{/usr/local/teTeX/share/t
+exmf.os/dvips/config/Ttbbold.map}{/usr/local/teTeX/share/texmf.os/dvips/config/
+wolfram.map}] [2] [3] (./AWSGuide.aux) ) 
+Here is how much of TeX's memory you used:
+ 247 strings out of 60917
+ 2728 string characters out of 1188883
+ 4045549 words of memory out of 6500906
+ 3317 multiletter control sequences out of 10000+50000
+ 7587 words of font info for 27 fonts, out of 500000 for 1000
+ 54 hyphenation exceptions out of 1000
+ 23i,6n,17p,335b,213s stack positions out of 1500i,500n,5000p,200000b,5000s
+ 19 PDF objects out of 300000
+ 0 named destinations out of 131072
+ 0 words of extra memory for PDF output out of 65536
+</usr/local/teTeX/share/texmf/fonts/typ
+e1/bluesky/cm/cmbx12.pfb></usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/c
+mr10.pfb></usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmr17.pfb>
+Output written on AWSGuide.pdf (3 pages, 37200 bytes).

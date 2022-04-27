@@ -1,0 +1,95 @@
+This is pdfTeX, Version 3.14159-1.00b-pretest-20020211 (Web2C 7.3.7x) (format=pdflatex 2002.11.3)  5 MAR 2004 12:27
+**04WanCD.tex
+(./04WanCD.tex{/usr/local/teTeX/share/texmf.local/pdftex/config/pdftex.cfg}
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, d
+utch, nohyphenation, loaded.
+(/usr/local/teTeX/share/texmf/tex/latex/base/article.cls
+Document Class: article 2001/04/21 v1.4e Standard LaTeX document class
+(/usr/local/teTeX/share/texmf/tex/latex/base/size10.clo
+File: size10.clo 2001/04/21 v1.4e Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+\c@theorem=\count87
+\c@maintheorem=\count88
+
+
+LaTeX Warning: Unused global option(s):
+    [10XSpt].
+
+(./04WanCD.aux)
+\openout1 = `04WanCD.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 108.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 108.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 108.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 111.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 111.
+ [1
+
+{/usr/local/teTeX/share/texmf/dvips/config/pdftex.map}{/usr/local/teTeX/share/t
+exmf.os/dvips/config/Ttbbold.map}{/usr/local/teTeX/share/texmf.os/dvips/config/
+wolfram.map}] [2] [3]
+Underfull \hbox (badness 1005) in paragraph at lines 343--346
+[]/cmr10/D. Wan, Al-go-rith-mic the-ory of zeta func-tions over fi-nite fields,
+
+ []
+
+
+Underfull \hbox (badness 3407) in paragraph at lines 343--346
+/cmr10/to ap-pear in MSRI Al-go-rith-mic Num-ber The-ory Pro-ceed-ings,
+ []
+
+[4] (./04WanCD.aux) ) 
+Here is how much of TeX's memory you used:
+ 347 strings out of 60917
+ 3223 string characters out of 1188883
+ 4046094 words of memory out of 6501451
+ 3413 multiletter control sequences out of 10000+50000
+ 8613 words of font info for 31 fonts, out of 500000 for 1000
+ 54 hyphenation exceptions out of 1000
+ 23i,6n,17p,199b,276s stack positions out of 1500i,500n,5000p,200000b,5000s
+ 55 PDF objects out of 300000
+ 0 named destinations out of 131072
+ 0 words of extra memory for PDF output out of 65536
+</usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmr5.
+pfb></usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmsy5.pfb></usr/local/
+teTeX/share/texmf/fonts/type1/bluesky/cm/cmex10.pfb></usr/local/teTeX/share/tex
+mf/fonts/type1/bluesky/cm/cmsy7.pfb></usr/local/teTeX/share/texmf/fonts/type1/b
+luesky/cm/cmmi5.pfb></usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmbx10
+.pfb></usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmr7.pfb></usr/local/
+teTeX/share/texmf/fonts/type1/bluesky/cm/cmmi7.pfb></usr/local/teTeX/share/texm
+f/fonts/type1/bluesky/cm/cmsy10.pfb></usr/local/teTeX/share/texmf/fonts/type1/b
+luesky/cm/cmbx12.pfb></usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmmi1
+0.pfb></usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmr10.pfb></usr/loca
+l/teTeX/share/texmf/fonts/type1/bluesky/cm/cmr12.pfb></usr/local/teTeX/share/te
+xmf/fonts/type1/bluesky/cm/cmr17.pfb>
+Output written on 04WanCD.pdf (4 pages, 83884 bytes).

@@ -1,0 +1,182 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amsthm,amscd,amssymb}
+\usepackage{latexsym}
+\usepackage{graphicx}
+
+%\pagestyle{empty}
+
+\begin{document}
+
+\title{P-adic Modular Forms by Kevin Buzzard - Lecture 1}
+
+\maketitle
+
+\newtheorem{lem}{Lemma}
+\newtheorem{defn}{Definition}
+\newtheorem{conj}{Conjecture}
+
+\section{History}
+
+\medskip
+\noindent
+Serre and Katz (1972):
+Understand congruences mod $p$ and mod $p^n$ between modular forms
+(see Antwerp).\\
+Serre (1972):
+Application to $p$-adic $L$-functions.\\
+Katz (1972):
+Wanted conceptual explanation of Atkin's work and Serre's paper.\\
+Hida (early 80's):
+``Ordinary'' subspace of space of $p$-adic modular forms, and
+constructed families.\\
+Gouvea (1987):
+Makes conjectures that Mazur's deformation rings correspond to Hida's
+ring of Hecke operators.\\
+Wiles and Taylor-Wiles (1994):
+Deformation rings = Hecke rings\\
+Taylor et al:
+Applications to conjecture of Artin.\\
+Gouvea-Mazur:
+Conjecture ``forms come in big families''\\
+Coleman:
+Uses rigid analytic approach, proved that forms come in small
+families.\\
+Wan, Smithline, Emerton (more recently)\\
+Stein (more recently):
+Enables us to do calculations.
+
+\medskip
+
+\section{Gouvea-Mazur Conjecture}
+
+Let $p$ be prime, $N\geq 1$ an integer prime to $p$ and
+$S_k(\Gamma_0(Np))$ the space of cusp forms of weight $k$ and level $Np$
+(think of $N$, $p$ fixed with $k$ varying). Consider $U_p$, the Hecke
+operator, acting on $S_k(\Gamma_0(Np))$, the characteristic
+polynomial of $U_p$ lies in $\mathbb Z[X]$, think of the roots,
+$\lambda_1,...,\lambda_n$ of this polynomial as elements of
+$\overline{\mathbb Q}_p$ so that they
+have valuations. For $\alpha\in\mathbb Q$ define
+\begin{align*}
+d(k,\alpha) = \#\{\lambda_i : v(\lambda_i)=\alpha \}
+\end{align*}
+
+\begin{conj}
+Let $k_1,k_2\in\mathbb Z$, $\alpha\in\mathbb Q$, $\alpha\geq 0$ and
+assume that\\
+(i) $k_1,k_2 > \alpha + 1$\\
+(ii) $k_1 \equiv k_2 \bmod (p-1)p^r$ for some $r\in\mathbb Z, r\geq\alpha$\\
+then $d(k_1,\alpha) = d(k_2,\alpha)$.
+\end{conj}
+
+\medskip
+
+One approach:\\
+Remove hypothesis (i) but instead let $d(k,\alpha)$ be the number of
+eigenvalues, with valuation $\alpha$, of $U_p$ acting on huge space of
+``overconvergent $p$-adic
+modular forms of weight $k$''.
+\begin{center}
+Classical mod forms of wt $k$ $\subset$ Overconvergent
+$p$-adic mod forms of wt $k$
+\end{center}
+
+\section{Modular Forms}
+
+\begin{defn}
+A modular form of level 1 and weight $k\in\mathbb Z$ is an analytic
+function $f:\mathcal H \to \mathbb C$ such that
+\begin{align*}
+f\biggl( {a\tau + b \over c\tau + d} \biggr) = (c\tau +d)^kf(\tau)
+\text{ for all } \begin{pmatrix} a&b \\ c&d \end{pmatrix}\in
+SL_2(\mathbb Z)
+\end{align*}
+and f satisfies boundedness conditions.
+\end{defn}
+
+If $k=0$ the only modular forms are constants. One could weaken
+the boundedness conditions by, e.g., allowing $f$ to have some poles,
+and then one gets a whole lot of interesting functions (e.g. $j$,
+which has a "pole at infinity"). For $k=0$ a modular form is a
+function on $SL_2(\mathbb Z)\setminus\mathcal H$, however if $k\ne 0$
+then one can't think of a modular form as a function on $SL_2(\mathbb
+Z)\setminus\mathcal H$ because of the $(c\tau +d)^k$ factor.\\
+
+$SL_2(\mathbb Z)\setminus\mathcal H$ is a parameter space for elliptic
+curves:\\
+$\tau\in\mathcal H$ : $\mathbb C/\langle 1,\tau\rangle$ is a
+1-dimensional complex torus.
+\begin{align*}
+\mathbb C/\langle 1,\tau\rangle\cong \mathbb C/\langle 1,\sigma\rangle 
+&\iff \lambda\langle 1,\sigma\rangle = \langle 1,\tau\rangle \text{ for
+  some } \lambda\in\mathbb C\\
+&\iff \lambda = c\tau + d , \sigma\lambda = a\tau + b\\
+&\iff \sigma = {a\tau + b \over c\tau + d} \text{ for some } \begin{pmatrix} a&b \\ c&d \end{pmatrix}  \in SL_2(\mathbb Z)
+\end{align*}
+So let's remember $\lambda$ by considering functions $f$ sending a
+pair $(E,\omega)$ to a complex number $f(E,\omega)$ where $E$ is a
+complex 1-dimensional torus and $\omega$ is a non-vanishing global differential
+such that $f(E,\lambda\omega) = \lambda^{-k}f(E,\omega)$
+A modular form of weight $k$ is an analytic rule sending $(E,\tau)$ to
+$f(E,\tau)$ such that $f(E,\lambda\omega) = \lambda^{-k}f(E,\omega)$
+and $f$ satisfies boundedness conditions.\\
+
+That's ``encoded'' the functional equation, now we wish to encode the
+word ``analytic'' by allowing families of tori.\\
+
+If $S$ is a base complex manifold and $\pi:T\to S$ is a family of tori
+then we should try and make sense of $f(T/S,\omega)$ where $\omega$ is
+now a family of non-vanishing differentials: $f(T/S,\omega)$ should be
+an analytic function $S\to\mathbb C$ and if $s\in\mathbb C$ then
+$f(T/S,\omega)(s) = f(T_s,\omega_s)$.\\
+
+This is now getting very non-computable but also much more algebraic.\\
+
+\begin{defn}
+Let $R_0$ be a ring (commutative with identity). A modular form of
+level 1 and weight $k$ defined over $R_0$ is a rule, which to every
+pair $(E/R,\omega)$ where,\\
+(1) $R$ is an $R_0$-algebra\\
+(2) $E/R$ is an elliptic curve, $\pi : E\to Spec(R)$\\
+(3) $\omega\in H^0(E,\Omega^1)$ is a nowhere vanishing differential\\
+an element $f(E/R,\omega)\in R$ such that\\
+(a) $f(E/R,\omega)$ only depends on the isomorphism class of the
+data\\
+(b) if $E/R_1$ and $E'/R_2$ are elliptic curves, and we have
+$\beta:Spec(R_2)\to Spec(R_1)$, then we can form the pullback
+$\beta^*E$ of $E$ to $Spec(R_2)$ along $\beta$, and
+if we have an isomorphism from $E'$ to $\beta^*E$ then the data
+of the f's should match up too.\\
+(c) $f(Tate(q),\omega_{can})\in R_0[[q]]$ (boundedness conditions)\\
+(d) $f(E/R,\lambda\omega) = \lambda^{-k}f(E/R,\omega)$ for all $\lambda\in R^*$
+\end{defn}
+
+Explanation of (c):
+There is an elliptic curve called $Tate(q)$ defined over
+the $p$-adic completion of $R_0((q))$, with a canonical nowhere-vanishing
+differential $\omega_{can}$, and by definition $f(Tate(q),\omega_{can})$ will
+be in the $p$-adic completion of $R_0((q))$, and the assertion is that
+it has to be in the much smaller ring $R_0[[q]]$ (the point is that
+we want to rule out poles at infinity).\\
+
+
+Non-computable definition: a modular form is a well behaved rule on
+(Elliptic curves, differentials).
+
+\bigskip
+
+\begin{flushright}
+David Whitehouse\\
+California Institute of Technology\\
+March 26, 2001
+\end{flushright}
+
+\end{document}
+
+
+
+
+
+
+
+

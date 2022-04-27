@@ -1,0 +1,156 @@
+\magnification=\magstep1
+\centerline{\bf Computing with cohomology in algebraic geometry}
+\bigskip
+\centerline{Mike Stillman (mike@math.cornell.edu)}
+
+\bigskip
+In modern algebraic geometry, cohomology is an important tool for many
+different kinds of problems: it gives rise to numerical invariants of
+algebraic varieties and it may be used to find tangent spaces of
+deformation spaces and parameter spaces, among many other
+applications.
+
+\smallskip%\noindent
+In this series of lectures, we introduce computing sheaf cohomology on
+projective varieties and schemes, and illustrate its use in examples
+and computational applications.  Our main goals are (1) to bring to
+life the abstract cohomology machinery by learning how to compute
+cohomology and use it computationally in examples, and (2) to present
+the state of the art methods for computing sheaf cohomology.
+ 
+\smallskip%\noindent
+The suggested project (described later) will have us working on an
+unsolved problem, that is interesting by itself, but it also ties into
+the larger goal of "mapping the Hilbert scheme".
+
+\bigskip\noindent
+{\bf Lecture 1}: We show how to think of sheaves on projective schemes in a
+computational manner, and show how to compute the most important
+sheaves associated to a projective variety: tangent and cotangent
+sheaves, normal sheaves, canonical sheaves, and line bundles and
+divisors.
+
+It is amazing that one can compute all of these, using only Groebner
+bases and some byproducts of computing Groebner bases.
+
+\bigskip\noindent
+{\bf Lecture 2}: The Cech cohomology method of defining sheaf cohomology
+translates into a reasonable method for computing sheaf cohomology.
+We describe Serre's methods for computing sheaf cohomology: as direct
+limits of Ext modules, and via local duality as the dual of an Ext
+module.  We apply these methods to some of the sheaves that we
+considered in the first lecture.
+
+\bigskip\noindent
+{\bf Lecture 3}: Each sheaf on projective space gives rise by an explicit
+method to an exact complex (infinite in both directions) of free
+E-modules, where E is the exterior algebra.  (This is called the 
+Berstein-Gelfand-Gelfand correspondence).  The resulting complex is called
+the Tate resolution, and can be computed using computer algebra
+systems, such as Macaulay2.  It has many amazing properties and
+applications, including that the cohomology of the original sheaf
+and all of its twists appears in the Tate resolution!  This turns out
+to be an excellent method to compute sheaf cohomology.  This approach
+was pioneered by Eisenbud, Floystad and Schreyer.  In this lecture we
+present this technique and its application to computing sheaf
+cohomology.
+
+\bigskip\noindent
+{\bf Lecture 4}: We apply the above technique to examples.  Depending on the
+interest and background of the students, we will consider (1)
+the Beilinson monad, which is a very interesting method which can be
+used to (attempt to) construct varieties with specific cohomology, (2)
+resultants and Chow varieties, (3) computing higher direct image
+sheaves, and applications, or (4) computing the "Hodge diamond" of a variety.
+
+\bigskip\noindent
+{\bf Reading list and prerequisites}
+
+\medskip%\noindent
+A knowledge of sheaves and schemes is not necessary for these lectures, nor
+for the project,  The only prerequisite as far as this goes is an understanding that 
+cohomology of sheaves is important and carries interesting geometric information.
+
+\smallskip%\noindent
+In order to prepare for these lectures, I suggest reading about Groebner 
+bases and some of their applications (especially syzygies and free resolutions).  
+An excellent readable introduction can be found in the book  
+``Ideals, Varieties, and Algorithms'', by Cox, Little and O'Shea.
+
+\smallskip%\noindent
+Since we will be using Macaulay2 throughout the lectures and 
+projects, it is worth downloading the latest version from 
+our web site: {\tt http://www.math.uiuc.edu/Macaulay2} and playing with it.
+Closer to the winter school, I will place a Macaulay 2 tutorial 
+on the winter school web site, along with some exercises for you to develop
+familiarity with the system.
+
+\smallskip%\noindent
+Although knowledge of sheaves is not completely necessary, it is
+useful.  I suggest Serre's FAC (Faisceaux Algebrique Coherent) paper
+from 1955 (this one is in French).  Hartshorne's book "Algebraic
+Geometry" has a good introduction to sheaves, at the beginning of
+Chapter 2.  However, our view of sheaves will be far more explicit and
+computational.  So even if you don't know much about sheaves, these
+lectures should be understandable.  The most important part is an
+understanding that sheaves and their cohomology is important in the
+first place!
+
+\bigskip\noindent
+{\bf Suggested Project} 
+
+\medskip
+ If $I$ is a homogeneous ideal in the polynomial ring $S =
+k[x_0,...,x_n]$, then the normal sheaf $N$ of the projective variety
+$X = V(I) \subset {\bf P}^n$ corresponds to the graded $S$-module
+$Hom(I/I^2,S/I)$.  The normal sheaf contains a large amount of
+information about "nearby" varieties (i.e. deformations).
+
+\smallskip%\noindent
+In the special, yet very interesting case when $I$ is an ideal
+generated by monomials, we will attempt to find formulas for the
+dimensions of the cohomology groups $\dim H^0(N)$ and $\dim H^1(N)$
+for certain classes, or certain examples of monomial ideals.  No
+general formulas for these dimensions are known.
+
+\smallskip%\noindent
+Besides being an open problem that can be attacked using computational
+methods, these dimensions are interesting in "mapping the Hilbert
+scheme".  The Hilbert scheme is a projective algebraic set (scheme)
+whose points are in 1-1 correspondence with homogeneous (and
+saturated) ideals $I$.  A path on the Hilbert scheme is a deformation,
+or family of varieties.  For example, a Groebner basis computation
+gives rise to a path which connects your original ideal to its initial
+ideal of monomials.  Because of this, it is very interesting to
+understand how the monomial ideals sit on the Hilbert scheme.  They
+are in some ways the "backbone" or "subway stops" which allow you to
+move around the Hilbert scheme.  The cohomology groups we will
+consider in this project give geometric information about how the
+ideal sits on the Hilbert scheme.
+
+\smallskip%\noindent
+For example, $\dim H^0(N)$ is the dimension of the Zariski tangent
+space at the point of the Hilbert scheme at the point corresponding to
+the ideal $I$.  $H^1(N)$ contains the obstructions for this Hilbert
+scheme to be smooth at this point (so if it is zero, the Hilbert
+scheme is smooth at that point).  In general, cohomology groups carry
+interesting and subtle geometric information, in this case about
+deformations of the algebraic variety $X$.
+
+\bigskip\noindent
+{\bf Other possible projects} 
+
+\medskip
+There are many other projects that one could suggest, depending on the
+background and interests of the participants.  For example, suppose
+you are given equations for a "mystery" variety, and you wish to
+determine some structural information about it (e.g. If it is a
+surface, where does it fit in the Kodaira classification of surfaces.
+Or, if it is a rational surface, how is it obtained from ${\bf P}^2$
+by a series of blow-up and blow-downs of points).  In this possible
+project, we would be given equations for a variety, and we would
+compute its cohomology, and attempt to understand the structure of the
+variety.
+
+
+\end

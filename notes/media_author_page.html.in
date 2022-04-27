@@ -1,0 +1,290 @@
+<ul>
+  <li class="speaker">
+    <include src="/aws/2000/x_Anderson.html.in" {'SHORTTITLE': 'AWS 2000', 'TITLE': 'Topics in the Arithmetic of Function Fields'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2007/x_Baker.html.in" {'SHORTTITLE': 'AWS 2007', 'TITLE': 'p-adic Geometry'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2004/x_Batyrev.html.in" {'SHORTTITLE': 'AWS 2004', 'TITLE': 'Number Theory and Physics'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2010/x_Benedetto.html.in" {'SHORTTITLE': 'AWS 2010', 'TITLE': 'Number Theory and Dynamics'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2006/x_Bernstein.html.in" {'SHORTTITLE': 'AWS 2006', 'TITLE': 'Computational and Algorithmic Aspects of Algebra and Arithmetic'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2008/x_Beukers.html.in" {'SHORTTITLE': 'AWS 2008', 'TITLE': 'Special Functions and Transcendence'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2009/x_Bhargava.html.in" {'SHORTTITLE': 'AWS 2009', 'TITLE': 'Quadratic Forms'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/1998/x_Borisov.html.in" {'SHORTTITLE': 'AWS 1998', 'TITLE': 'Workshop on Diophantine Geometry Related to the ABC Conjecture'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2012/x_BouwWewers.html.in" {'SHORTTITLE': 'AWS 2012', 'TITLE': 'Ramification and Geometry'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/1998/x_Buium.html.in" {'SHORTTITLE': 'AWS 1998', 'TITLE': 'Workshop on Diophantine Geometry Related to the ABC Conjecture'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2001/x_Buzzard.html.in" {'SHORTTITLE': 'AWS 2001', 'TITLE': 'Modular Forms'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2013/x_Calegari.html.in" {'SHORTTITLE': 'AWS 2013', 'TITLE': 'Modular Forms and Modular Curves'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2004/x_Candelas.html.in" {'SHORTTITLE': 'AWS 2004', 'TITLE': 'Number Theory and Physics'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2013/x_Caraiani.html.in" {'SHORTTITLE': 'AWS 2013', 'TITLE': 'Modular Forms and Modular Curves'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2015/x_Cesnavicius.html.in" {'SHORTTITLE': 'AWS 2015', 'TITLE': 'Arithmetic and Higher-Dimensional Varieties'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2012/x_ChinburgStover.html.in" {'SHORTTITLE': 'AWS 2012', 'TITLE': 'Ramification and Geometry'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2001/x_Clozel.html.in" {'SHORTTITLE': 'AWS 2001', 'TITLE': 'Modular Forms'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2006/x_Cohen.html.in" {'SHORTTITLE': 'AWS 2006', 'TITLE': 'Computational and Algorithmic Aspects of Algebra and Arithmetic'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2015/x_Colliot-Thelene.html.in" {'SHORTTITLE': 'AWS 2015', 'TITLE': 'Arithmetic and Higher-Dimensional Varieties'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/1999/x_ColliotThelene.html.in" {'SHORTTITLE': 'AWS 1999', 'TITLE': 'Local-to-Global Principles in Arithmetic Geometry'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2007/x_Conrad.html.in" {'SHORTTITLE': 'AWS 2007', 'TITLE': 'p-adic Geometry'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2009/x_Conway.html.in" {'SHORTTITLE': 'AWS 2009', 'TITLE': 'Quadratic Forms'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/1998/x_Darmon.html.in" {'SHORTTITLE': 'AWS 1998', 'TITLE': 'Workshop on Diophantine Geometry Related to the ABC Conjecture'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2011/x_Darmon.html.in" {'SHORTTITLE': 'AWS 2011', 'TITLE': 'Stark-Heegner points'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2011/x_Dasgupta.html.in" {'SHORTTITLE': 'AWS 2011', 'TITLE': 'Stark-Heegner points'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2014/x_David.html.in" {'SHORTTITLE': 'AWS 2014', 'TITLE': 'Arithmetic Statistics'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2002/x_deJong.html.in" {'SHORTTITLE': 'AWS 2002', 'TITLE': 'Periods'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2002/x_Deligne.html.in" {'SHORTTITLE': 'AWS 2002', 'TITLE': 'Periods'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2010/x_Einsiedler.html.in" {'SHORTTITLE': 'AWS 2010', 'TITLE': 'Number Theory and Dynamics'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2009/x_Elkies.html.in" {'SHORTTITLE': 'AWS 2009', 'TITLE': 'Quadratic Forms'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2014/x_Ellenberg.html.in" {'SHORTTITLE': 'AWS 2014', 'TITLE': 'Arithmetic Statistics'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2013/x_Folsom.html.in" {'SHORTTITLE': 'AWS 2013', 'TITLE': 'Modular Forms and Modular Curves'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/1998/x_Frankenhuysen.html.in" {'SHORTTITLE': 'AWS 1998', 'TITLE': 'Workshop on Diophantine Geometry Related to the ABC Conjecture'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2013/x_Gee.html.in" {'SHORTTITLE': 'AWS 2013', 'TITLE': 'Modular Forms and Modular Curves'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2005/x_Hain.html.in" {'SHORTTITLE': 'AWS 2005', 'TITLE': 'Fundamental Groups in Arithmetic'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2009/x_Hanke.html.in" {'SHORTTITLE': 'AWS 2009', 'TITLE': 'Quadratic Forms'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2012/x_HarbaterHartmann.html.in" {'SHORTTITLE': 'AWS 2012', 'TITLE': 'Ramification and Geometry'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2014/x_Ho_Shankar.html.in" {'SHORTTITLE': 'AWS 2014', 'TITLE': 'Arithmetic Statistics'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2000/x_Katz.html.in" {'SHORTTITLE': 'AWS 2000', 'TITLE': 'Topics in the Arithmetic of Function Fields'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2007/x_Kedlaya.html.in" {'SHORTTITLE': 'AWS 2007', 'TITLE': 'p-adic Geometry'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2000/x_Lauter.html.in" {'SHORTTITLE': 'AWS 2000', 'TITLE': 'Topics in the Arithmetic of Function Fields'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2003/x_Loeser.html.in" {'SHORTTITLE': 'AWS 2003', 'TITLE': 'Logic and Number Theory'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/1998/x_Luca.html.in" {'SHORTTITLE': 'AWS 1998', 'TITLE': 'Workshop on Diophantine Geometry Related to the ABC Conjecture'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2003/x_Macintyre.html.in" {'SHORTTITLE': 'AWS 2003', 'TITLE': 'Logic and Number Theory'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/1998/x_Masser.html.in" {'SHORTTITLE': 'AWS 1998', 'TITLE': 'Workshop on Diophantine Geometry Related to the ABC Conjecture'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2014/x_MatchettWood.html.in" {'SHORTTITLE': 'AWS 2014', 'TITLE': 'Arithmetic Statistics'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2005/x_Matsumoto.html.in" {'SHORTTITLE': 'AWS 2005', 'TITLE': 'Fundamental Groups in Arithmetic'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/1998/x_Mazur.html.in" {'SHORTTITLE': 'AWS 1998', 'TITLE': 'Workshop on Diophantine Geometry Related to the ABC Conjecture'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/1999/x_Mazur.html.in" {'SHORTTITLE': 'AWS 1999', 'TITLE': 'Local-to-Global Principles in Arithmetic Geometry'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2001/x_Mazur.html.in" {'SHORTTITLE': 'AWS 2001', 'TITLE': 'Modular Forms'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/1999/x_McCallum.html.in" {'SHORTTITLE': 'AWS 1999', 'TITLE': 'Local-to-Global Principles in Arithmetic Geometry'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2012/x_MiedaSaito.html.in" {'SHORTTITLE': 'AWS 2012', 'TITLE': 'Ramification and Geometry'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2004/x_Morrison.html.in" {'SHORTTITLE': 'AWS 2004', 'TITLE': 'Number Theory and Physics'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2012/x_Obus.html.in" {'SHORTTITLE': 'AWS 2012', 'TITLE': 'Ramification and Geometry'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2013/x_Ono.html.in" {'SHORTTITLE': 'AWS 2013', 'TITLE': 'Modular Forms and Modular Curves'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2008/x_Papanikolas.html.in" {'SHORTTITLE': 'AWS 2008', 'TITLE': 'Special Functions and Transcendence'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2009/x_Parimala.html.in" {'SHORTTITLE': 'AWS 2009', 'TITLE': 'Quadratic Forms'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2003/x_PillayScanlon.html.in" {'SHORTTITLE': 'AWS 2003', 'TITLE': 'Logic and Number Theory'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2015/x_Pirutka.html.in" {'SHORTTITLE': 'AWS 2015', 'TITLE': 'Arithmetic and Higher-Dimensional Varieties'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2011/x_Pollack.html.in" {'SHORTTITLE': 'AWS 2011', 'TITLE': 'Stark-Heegner points'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/1999/x_Poonen.html.in" {'SHORTTITLE': 'AWS 1999', 'TITLE': 'Local-to-Global Principles in Arithmetic Geometry'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2003/x_Poonen.html.in" {'SHORTTITLE': 'AWS 2003', 'TITLE': 'Logic and Number Theory'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2014/x_Poonen.html.in" {'SHORTTITLE': 'AWS 2014', 'TITLE': 'Arithmetic Statistics'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2003/x_Pop.html.in" {'SHORTTITLE': 'AWS 2003', 'TITLE': 'Logic and Number Theory'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2005/x_Pop.html.in" {'SHORTTITLE': 'AWS 2005', 'TITLE': 'Fundamental Groups in Arithmetic'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2011/x_Prasanna.html.in" {'SHORTTITLE': 'AWS 2011', 'TITLE': 'Stark-Heegner points'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2001/x_Ramakrishnan.html.in" {'SHORTTITLE': 'AWS 2001', 'TITLE': 'Modular Forms'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/1999/x_Rubin.html.in" {'SHORTTITLE': 'AWS 1999', 'TITLE': 'Local-to-Global Principles in Arithmetic Geometry'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2000/x_Sarnak.html.in" {'SHORTTITLE': 'AWS 2000', 'TITLE': 'Topics in the Arithmetic of Function Fields'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2001/x_Sarnak.html.in" {'SHORTTITLE': 'AWS 2001', 'TITLE': 'Modular Forms'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2005/x_Schneps.html.in" {'SHORTTITLE': 'AWS 2005', 'TITLE': 'Fundamental Groups in Arithmetic'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2010/x_Silverman.html.in" {'SHORTTITLE': 'AWS 2010', 'TITLE': 'Number Theory and Dynamics'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2010/x_Soundararajan.html.in" {'SHORTTITLE': 'AWS 2010', 'TITLE': 'Number Theory and Dynamics'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2006/x_Stillman.html.in" {'SHORTTITLE': 'AWS 2006', 'TITLE': 'Computational and Algorithmic Aspects of Algebra and Arithmetic'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2006/x_Sturmfels.html.in" {'SHORTTITLE': 'AWS 2006', 'TITLE': 'Computational and Algorithmic Aspects of Algebra and Arithmetic'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/1998/x_Szpiro.html.in" {'SHORTTITLE': 'AWS 1998', 'TITLE': 'Workshop on Diophantine Geometry Related to the ABC Conjecture'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2007/x_Teitelbaum.html.in" {'SHORTTITLE': 'AWS 2007', 'TITLE': 'p-adic Geometry'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2008/x_Tretkoff.html.in" {'SHORTTITLE': 'AWS 2008', 'TITLE': 'Special Functions and Transcendence'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2000/x_Ulmer.html.in" {'SHORTTITLE': 'AWS 2000', 'TITLE': 'Topics in the Arithmetic of Function Fields'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2015/x_Vakil.html.in" {'SHORTTITLE': 'AWS 2015', 'TITLE': 'Arithmetic and Higher-Dimensional Varieties'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2015/x_Varilly-Alvarado.html.in" {'SHORTTITLE': 'AWS 2015', 'TITLE': 'Arithmetic and Higher-Dimensional Varieties'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2002/x_Villegas.html.in" {'SHORTTITLE': 'AWS 2002', 'TITLE': 'Periods'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2015/x_Viray.html.in" {'SHORTTITLE': 'AWS 2015', 'TITLE': 'Arithmetic and Higher-Dimensional Varieties'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2002/x_Voisin.html.in" {'SHORTTITLE': 'AWS 2002', 'TITLE': 'Periods'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/1998/x_Vojta.html.in" {'SHORTTITLE': 'AWS 1998', 'TITLE': 'Workshop on Diophantine Geometry Related to the ABC Conjecture'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/1998/x_Voloch.html.in" {'SHORTTITLE': 'AWS 1998', 'TITLE': 'Workshop on Diophantine Geometry Related to the ABC Conjecture'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2008/x_Waldschmidt.html.in" {'SHORTTITLE': 'AWS 2008', 'TITLE': 'Special Functions and Transcendence'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2004/x_Wan.html.in" {'SHORTTITLE': 'AWS 2004', 'TITLE': 'Number Theory and Physics'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/1998/x_Wang.html.in" {'SHORTTITLE': 'AWS 1998', 'TITLE': 'Workshop on Diophantine Geometry Related to the ABC Conjecture'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2013/x_Weinstein.html.in" {'SHORTTITLE': 'AWS 2013', 'TITLE': 'Modular Forms and Modular Curves'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/1998/x_YuJ.html.in" {'SHORTTITLE': 'AWS 1998', 'TITLE': 'Workshop on Diophantine Geometry Related to the ABC Conjecture'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/1998/x_YuK.html.in" {'SHORTTITLE': 'AWS 1998', 'TITLE': 'Workshop on Diophantine Geometry Related to the ABC Conjecture'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/1999/x_zzzCremona.html.in" {'SHORTTITLE': 'AWS 1999', 'TITLE': 'Local-to-Global Principles in Arithmetic Geometry'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/1998/x_zzzKessel.html.in" {'SHORTTITLE': 'AWS 1998', 'TITLE': 'Workshop on Diophantine Geometry Related to the ABC Conjecture'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2001/x_zzzLevy.html.in" {'SHORTTITLE': 'AWS 2001', 'TITLE': 'Modular Forms'}>
+  </li>
+  <li class="speaker">
+    <include src="/aws/2002/x_zzzProfDev.html.in" {'SHORTTITLE': 'AWS 2002', 'TITLE': 'Periods'}>
+  </li>
+</ul>

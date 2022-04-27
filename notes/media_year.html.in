@@ -1,0 +1,178 @@
+<html>
+  <head>
+    <title>Southwest Center for Arithmetic Geometry: AWS Media by Year</title>
+    <meta http-equiv="Content-Type"
+    content="text/html; charset=ISO-8859-1" /> <link rel="stylesheet"
+    href="/style.css" type="text/css" />
+    <style type="text/css">
+      .control, .toggle {
+        cursor: pointer;
+      }
+      .toggle {
+        font-family: monospace;
+      }
+      a.control {
+        color: #0000aa;
+      }
+      a.control:hover {
+        color: #00aaff;
+      }
+      h4 {
+        margin: 0;
+      }
+    </style>
+    <script type="text/javascript" src="/js/json2.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.cookie.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+	var opened = '&nbsp;-&nbsp;', closed = '&nbsp;+&nbsp;', display_years;
+
+	// Cookie helpers.  We save all years in one cookie for speed
+	// and to avoid browser limits.
+	function save_years_cookie() {
+	    $.cookie('year-years', JSON.stringify(display_years));
+	}
+	function load_years_cookie() {
+	    display_years = JSON.parse($.cookie('year-years') || '{}');
+	}
+	load_years_cookie();
+
+	// Helpers to show/hide years, show only videos/notes/everything.
+	function show_year(tog) {
+	    var ul = $('ul.year', tog.parent().parent());
+	    ul.show();
+	    tog.html(opened);
+	    // 1 is short for 'show this year'.
+	    display_years[ul.attr('id')] = 1;
+	}
+	function hide_year(tog) {
+	    var ul = $('ul.year', tog.parent().parent());
+	    ul.hide();
+	    tog.html(closed);
+	    delete display_years[ul.attr('id')];
+	}
+	function show_only_videos() {
+	    $('.everything').click();
+	    $('li.speaker li[class!=video]').hide();
+	    $('li.speaker li[class=video] li').show();
+	    $('li.speaker').not('li.speaker:has(li.video)').hide();
+	    $('ul.year').not('ul.year:has(li.video)').parent().hide();
+	    $.cookie('year-only_videos', 1);
+	    $.cookie('year-only_notes', null);
+	}
+	function show_only_notes() {
+	    $('.everything').click();
+	    $('li.speaker li[class!=notes]').hide();
+	    $('li.speaker li[class=notes] li').show();
+	    $('li.speaker').not('li.speaker:has(li.notes)').hide();
+	    $('ul.year').not('ul.year:has(li.notes)').parent().hide();
+	    $.cookie('year-only_videos', null);
+	    $.cookie('year-only_notes', 1);
+	}
+	function show_everything() {
+	    $('li.speaker li[class!=video]').show();
+	    $('li.speaker li[class!=notes]').show();
+	    $('li.speaker').show();
+	    $('div.wrap_year').show();
+	    $.cookie('year-only_videos', null);
+	    $.cookie('year-only_notes', null);
+	}
+
+        // Add a second set of controls at the bottom of the page.
+        $('#controls_top').clone().attr('id', 'controls_bottom')
+	    .appendTo('div.page');
+
+	// Set up the controls.
+	$('.hide_all').click(function () {
+	    $('.toggle').each(function () {
+		hide_year($(this));
+	    });
+	    save_years_cookie();
+	});
+	$('.show_all').click(function () {
+	    $('.toggle').each(function () {
+		show_year($(this));
+	    });
+	    save_years_cookie();
+	});
+	$('.toggle_all').click(function () {
+	    $('.toggle').each(function () {
+		var ul, t = $(this);
+		ul = $('ul.year', t.parent().parent());
+		if (ul.is(':hidden')) {
+		    show_year(t);
+		} else {
+		    hide_year(t);
+		}
+	    });
+            save_years_cookie();
+        });
+	$('.only_videos').click(function () {
+	    show_only_videos();
+	});
+	$('.only_notes').click(function () {
+	    show_only_notes();
+	});
+	$('.everything').click(function () {
+	    show_everything();
+	});
+
+	// Update display of years/videos/notes/everything from cookies.
+	$('.toggle').each(function () {
+	    var ul, t = $(this);
+	    ul = $('ul.year', t.parent().parent());
+	    // We hide all years by default.
+	    if (display_years[ul.attr('id')] == 1) {
+		show_year(t);
+	    }
+	});
+	// We show everything by default.
+	if ($.cookie('year-only_videos') == 1) {
+	    show_only_videos();
+	} else if ($.cookie('year-only_notes') == 1) {
+	    show_only_notes();
+	}
+
+	// Toggle individual years.
+	$('.toggle').click(function (i) {
+	    var ul, t = $(this);
+	    ul = $('ul.year', t.parent().parent());
+	    if (ul.is(':hidden')) {
+		show_year(t);
+	    } else {
+		hide_year(t);
+	    }
+	    save_years_cookie();
+	});
+    });
+    </script>
+  </head>
+
+  <body vlink="blue";>
+    <include src="/topbar.html.in">
+    <include src="/navcol.html.in" {'nav_notes':'navsel'}>
+    <div class="page">
+      <h1 class="header">Arizona Winter School Media by Year</h1>
+
+      <div id="controls_top">
+	All years:
+        &nbsp;
+	<a class="hide_all control" title="Click to hide all years">hide</a>
+        &nbsp;
+	<a class="show_all control" title="Click to show all years">show</a>
+        &nbsp;
+	<a class="toggle_all control" title="Click to toggle all years">toggle</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Show:
+        &nbsp;
+        <a class="only_videos control" title="Click to show only audio and video">Only videos</a>
+        &nbsp;
+        <a class="only_notes control" title="Click to show only lecture notes">Only notes</a>
+        &nbsp;
+	<a class="everything control" title="Click to show everything">Everything</a>
+      </div>
+	<include src="media_year_page.html.in">
+      </div>
+  </BODY>
+</HTML>

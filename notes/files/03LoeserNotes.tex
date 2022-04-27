@@ -1,0 +1,3145 @@
+
+\documentclass[english,12pt]{amsart}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amscd}
+%\usepackage[T1]{fontenc}
+\usepackage[all]{xypic}
+%\usepackage{aspmproc}
+
+
+
+
+\textwidth=15cm
+\oddsidemargin=5mm
+\evensidemargin=5mm
+\textheight=21.5cm
+\parindent=0cm
+
+
+
+\swapnumbers
+\let\Bbb\mathbb
+\def\limproj{\mathop{\oalign{lim\cr
+\hidewidth$\longleftarrow$\hidewidth\cr}}}
+\def\deg{{\rm deg}}
+
+
+\def\aa{{\mathbf a}}\def\bb{{\mathbf b}}
+\def\limind{\mathop{\oalign{lim\cr
+\hidewidth$\longrightarrow$\hidewidth\cr}}}
+\def\Var{{\rm Var}}
+\def\Sing{{\rm Sing}}
+\def\ac{{\rm ac}}
+\def\Def{{\rm Def}}
+\def\DefR{{\rm Def}_{R}}
+\def\kvar{{K_0 ({\rm Var}_k)}}
+\def\VarR{\Var_{R}}
+\def\GL{{\rm GL}}
+\def\Spec{{\rm Spec}}
+\def\Gr{{\rm Gr}}
+\def\SL{{\rm SL}}
+\def\eff{{\rm eff}}
+\def\longhookrightarrow{\mathrel\lhook\joinrel\longrightarrow}
+\let\cal\mathcal
+\let\got\mathfrak
+\def\gP{{\got P}}
+\def\pp{{\mathbf p}}
+\def\AA{{\mathbf A}}
+\def\BB{{\mathbf B}}
+\def\CC{{\mathbf C}}
+\def\DD{{\mathbf D}}
+\def\EE{{\mathbf E}}
+\def\FF{{\mathbf F}}
+\def\GG{{\mathbf G}}
+\def\HH{{\mathbf H}}
+\def\II{{\mathbf I}}
+\def\JJ{{\mathbf J}}
+\def\KK{{\mathbf K}}
+\def\LL{{\mathbf L}}
+\def\MM{{\mathbf M}}
+\def\NN{{\mathbf N}}
+\def\OO{{\mathbf O}}
+\def\PP{{\mathbf P}}
+\def\QQ{{\mathbf Q}}
+\def\RR{{\mathbf R}}
+\def\SS{{\mathbf S}}
+\def\TT{{\mathbf T}}
+\def\UU{{\mathbf U}}
+\def\VV{{\mathbf V}}
+\def\WW{{\mathbf W}}
+\def\XX{{\mathbf X}}
+\def\YY{{\mathbf Y}}
+\def\ZZ{{\mathbf Z}}
+
+
+\def\cA{{\mathcal A}}
+\def\cB{{\mathcal B}}
+\def\cC{{\mathcal C}}
+\def\cD{{\mathcal D}}
+\def\cE{{\mathcal E}}
+\def\cF{{\mathcal F}}
+\def\cG{{\mathcal G}}
+\def\cH{{\mathcal H}}
+\def\cI{{\mathcal I}}
+\def\cJ{{\mathcal J}}
+\def\cK{{\mathcal K}}
+\def\cL{{\mathcal L}}
+\def\cM{{\mathcal M}}
+\def\cN{{\mathcal N}}
+\def\cO{{\mathcal O}}
+\def\cP{{\mathcal P}}
+\def\cQ{{\mathcal Q}}
+\def\cR{{\mathcal R}}
+\def\cS{{\mathcal S}}
+\def\cT{{\mathcal T}}
+\def\cU{{\mathcal U}}
+\def\cV{{\mathcal V}}
+\def\cW{{\mathcal W}}
+\def\cX{{\mathcal X}}
+\def\cY{{\mathcal Y}}
+\def\cZ{{\mathcal Z}}
+\mathchardef\alphag="7C0B
+\mathchardef\betag="7C0C
+\mathchardef\gammag="7C0D
+\mathchardef\deltag="7C0E
+\mathchardef\varepsilong="7C22
+\mathchardef\varphig="7C27
+\mathchardef\psig="7C20
+\mathchardef\zetag="7C10
+\mathchardef\epsilong="7C0F
+\mathchardef\rhog="7C1A
+\mathchardef\taug="7C1C
+\mathchardef\upsilong="7C1D
+\mathchardef\iotag="7C13
+\mathchardef\thetag="7C12
+\mathchardef\pig="7C19
+\mathchardef\sigmag="7C1B
+\mathchardef\etag="7C11
+\mathchardef\omegag="7C21
+\mathchardef\kappag="7C14
+\mathchardef\lambdag="7C15
+\mathchardef\mug="7C16
+\mathchardef\xig="7C18
+\mathchardef\chig="7C1F
+\mathchardef\nug="7C17
+\mathchardef\varthetag="7C23
+\mathchardef\varpig="7C24
+\mathchardef\varrhog="7C25
+\mathchardef\varsigmag="7C26
+\mathchardef\Omegag="7C0A
+\mathchardef\Thetag="7C02
+\mathchardef\Sigmag="7C06
+\mathchardef\Deltag="7C01
+\mathchardef\Phig="7C08
+\mathchardef\Gammag="7C00
+\mathchardef\Psig="7C09
+\mathchardef\Lambdag="7C03
+\mathchardef\Xig="7C04
+\mathchardef\Pig="7C05
+\mathchardef\Upsilong="7C07
+
+
+\newtheorem{theorem}[subsubsection]{Theorem}
+\newtheorem{lem}[subsubsection]{Lemma}
+\newtheorem{klem}[subsubsection]{Key-Lemma}
+\newtheorem{cor}[subsubsection]{Corollary}
+\newtheorem{prop}[subsubsection]{Proposition}
+\newtheorem{problem}[subsubsection]{Problem}
+\newtheorem{kp}[subsubsection]{Key-Point}
+\newtheorem{sconjecture}[subsubsection]{Rationality conjecture (strong form)}
+\newtheorem{wconjecture}[subsubsection]{Rationality conjecture (weak form)}
+\newtheorem{monoconjecture}[subsubsection]{Monodromy conjecture}
+\newtheorem{gmonoconjecture}[subsubsection]{Generalised monodromy conjecture}
+\newtheorem{holoconjecture}[subsubsection]{Holomorphy conjecture}
+\newtheorem{gholoconjecture}[subsubsection]{Generalised holomorphy conjecture}
+
+\theoremstyle{definition}
+\newtheorem{definition}[subsubsection]{Definition}
+\newtheorem{example}[subsubsection]{Example}
+\newtheorem{xca}[subsubsection]{Exercise}
+\newtheorem{def-prop}[subsubsection]{Proposition-Definition}
+\newtheorem{def-theorem}[subsubsection]{Theorem-Definition}
+
+\theoremstyle{remark}
+\newtheorem{remark}[subsubsection]{Remark}
+\newtheorem{remarks}[subsubsection]{Remarks}
+
+
+
+\theoremstyle{plain}
+
+
+
+\numberwithin{equation}{subsection}
+\def\limind{\mathop{\oalign{lim\cr
+\hidewidth$\longrightarrow$\hidewidth\cr}}}
+\def\boxit#1#2{\setbox1=\hbox{\kern#1{#2}\kern#1}%
+\dimen1=\ht1 \advance\dimen1 by #1
+\dimen2=\dp1 \advance\dimen2 by #1
+\setbox1=\hbox{\vrule height\dimen1 depth\dimen2\box1\vrule}%
+\setbox1=\vbox{\hrule\box1\hrule}%
+\advance\dimen1 by .4pt \ht1=\dimen1
+\advance\dimen2 by .4pt \dp1=\dimen2 \box1\relax}
+\def \pext{\, \hbox{\boxit{0pt}{$\times$}}\,}
+
+
+
+\newcommand{\sur}[2]{\genfrac{}{}{0pt}{}{#1}{#2}}
+\renewcommand{\theequation}{\thesubsection.\arabic{equation}}
+
+
+\def\longhookrightarrow{\mathrel\lhook\joinrel\longrightarrow}
+\let\cal\mathcal
+\let\got\mathfrak
+\def\AA{{\mathbf A}}
+\def\BB{{\mathbf B}}
+\def\CC{{\mathbf C}}
+\def\DD{{\mathbf D}}
+\def\EE{{\mathbf E}}
+\def\FF{{\mathbf F}}
+\def\GG{{\mathbf G}}
+\def\HH{{\mathbf H}}
+\def\II{{\mathbf I}}
+\def\JJ{{\mathbf J}}
+\def\KK{{\mathbf K}}
+\def\LL{{\mathbf L}}
+\def\MM{{\mathbf M}}
+\def\NN{{\mathbf N}}
+\def\OO{{\mathbf O}}
+\def\PP{{\mathbf P}}
+\def\QQ{{\mathbf Q}}
+\def\RR{{\mathbf R}}
+\def\SS{{\mathbf S}}
+\def\TT{{\mathbf T}}
+\def\UU{{\mathbf U}}
+\def\VV{{\mathbf V}}
+\def\WW{{\mathbf W}}
+\def\XX{{\mathbf X}}
+\def\YY{{\mathbf Y}}
+\def\ZZ{{\mathbf Z}}
+
+
+\def\cA{{\mathcal A}}
+\def\cB{{\mathcal B}}
+\def\cC{{\mathcal C}}
+\def\cD{{\mathcal D}}
+\def\cE{{\mathcal E}}
+\def\cF{{\mathcal F}}
+\def\cG{{\mathcal G}}
+\def\cH{{\mathcal H}}
+\def\cI{{\mathcal I}}
+\def\cJ{{\mathcal J}}
+\def\cK{{\mathcal K}}
+\def\cL{{\mathcal L}}
+\def\cM{{\mathcal M}}
+\def\cN{{\mathcal N}}
+\def\cO{{\mathcal O}}
+\def\cP{{\mathcal P}}
+\def\cQ{{\mathcal Q}}
+\def\cR{{\mathcal R}}
+\def\cS{{\mathcal S}}
+\def\cT{{\mathcal T}}
+\def\cU{{\mathcal U}}
+\def\cV{{\mathcal V}}
+\def\cW{{\mathcal W}}
+\def\cX{{\mathcal X}}
+\def\cY{{\mathcal Y}}
+\def\cZ{{\mathcal Z}}
+
+
+\def\ord{{\rm ord}}
+\mathchardef\alphag="7C0B
+\mathchardef\betag="7C0C
+\mathchardef\gammag="7C0D
+\mathchardef\deltag="7C0E
+\mathchardef\varepsilong="7C22
+\mathchardef\varphig="7C27
+\mathchardef\psig="7C20
+\mathchardef\zetag="7C10
+\mathchardef\epsilong="7C0F
+\mathchardef\rhog="7C1A
+\mathchardef\taug="7C1C
+\mathchardef\upsilong="7C1D
+\mathchardef\iotag="7C13
+\mathchardef\thetag="7C12
+\mathchardef\pig="7C19
+\mathchardef\sigmag="7C1B
+\mathchardef\etag="7C11
+\mathchardef\omegag="7C21
+\mathchardef\kappag="7C14
+\mathchardef\lambdag="7C15
+\mathchardef\mug="7C16
+\mathchardef\xig="7C18
+\mathchardef\chig="7C1F
+\mathchardef\nug="7C17
+\mathchardef\varthetag="7C23
+\mathchardef\varpig="7C24
+\mathchardef\varrhog="7C25
+\mathchardef\varsigmag="7C26
+\mathchardef\Omegag="7C0A
+\mathchardef\Thetag="7C02
+\mathchardef\Sigmag="7C06
+\mathchardef\Deltag="7C01
+\mathchardef\Phig="7C08
+\mathchardef\Gammag="7C00
+\mathchardef\Psig="7C09
+\mathchardef\Lambdag="7C03
+\mathchardef\Xig="7C04
+\mathchardef\Pig="7C05
+\mathchardef\Upsilong="7C07
+
+
+
+\author{Fran\c cois Loeser}
+\title[$p$-adic and motivic integration]{Arizona Winter School Lecture Notes on 
+$p$-adic and motivic integration}
+\address{{\'E}cole Normale Sup{\'e}rieure,
+D{\'e}partement de math{\'e}matiques et applications,
+45 rue d'Ulm, 75230 Paris Cedex 05, France (UMR 8553 du CNRS)}
+\email{Francois.Loeser@ens.fr}
+\urladdr{http://www.dma.ens.fr/~loeser/}
+\dedicatory{Revised, September 2003}
+\begin{document}
+
+
+\maketitle
+\noindent
+\setcounter{tocdepth}{1}
+%\tableofcontents
+
+\section{$p$-adic integration}
+
+\subsection{The $p$-adic measure}Let $p$ be a prime number.
+We consider a field $K$ 
+with a valuation $\ord : K^{\times}\rightarrow \ZZ$,
+extended to $K$ by $\ord (0) = \infty$.
+We denote by $\cO_K$ the valuation ring 
+$\cO_K = \{x \in K | \ord (x) \geq 0\}$ and we fix an uniformizing parameter
+$\varpi$, that is,  an element of valuation $1$ in $\cO_K$.
+The ring $\cO_K$
+is a local ring with maximal 
+ideal $\cM_K$ of $\cO_K$ generated by $\varpi$.
+We shall assume the residue field
+$k := \cO_K / \cM_K$ is finite with $q = p^e$ elements.
+We endow $K$ with a norm by setting
+$|x| := q^{- \ord (x)}$ for $x$ in $K$.
+We shall furthermore assume $K$
+is complete for $| \_ |$.
+
+
+
+It follows in particular that the abelian groups
+$(K^n, +)$ are locally compact, hence they have a canonical
+Haar measure $\mu_n$, unique up to multiplication by a non zero
+constant, so we may  assume $\mu_n (\cO_K^n) = 1$.
+The measure  $\mu_n$ is the unique $\RR$-valued Borel measure on
+$K^n$
+which is invariant by translation and such that $\mu_n (\cO_K^n) = 1$.
+For instance the measure of $a + \varpi^m \cO_K^n$ is $q^{- mn}$.
+For any measurable subset $A$ of $K^n$ and any $\lambda$ in $K$,
+$\mu_n (\lambda A) = \vert \lambda \vert^n \mu_n (A)$. More generally,
+for every $g$ in ${\rm GL}_n (K)$, 
+\begin{equation}\label{gl}
+\mu_n (gA) = \vert {\rm det} g\vert \mu_n (A). 
+\end{equation}
+
+
+If $f$ is, say, a $K$-analytic function on $A$,
+we
+set 
+$$
+\int_A \vert f \vert \mu_n := \int_A \vert f \vert \vert dx \vert
+:=
+\sum_{m \in \ZZ}  \mu_n (\ord (f) = m) q^{-m},
+$$
+assuming the series $\sum_{m \in \ZZ}  \mu_n (\ord(f) = m) q^{-m}$
+is convergent in $\RR$. More generally, we define similarly
+$\int_A \vert f \vert^s \vert dx \vert$
+by
+$\sum_{m \in \ZZ}  \mu_n (\ord (f) = m) q^{-ms}$ whenever it makes sense.
+For instance, when $n = 1$,
+we have, for $s > 0$ in $\RR$,
+\begin{equation}\label{cal}
+\begin{split}
+\int_{x \in \cO_K, \ord (x) \geq m} \vert x \vert^s &= \sum_{j \geq m} q^{-sj} \int_{\ord (x) = j} \vert dx \vert
+= \sum_{j \geq m} q^{-sj} (q^{-j}- q^{-j -1})\\
+&=(1 -q^{-1})q^{- (s +1) m} / (1- q^{-( s+ 1)}).\\
+\end{split}
+\end{equation}
+
+
+
+\subsection{Integration on analytic varieties}Formula (\ref{gl}) is a very special form of the following fundamental change of variables
+formula (see \cite{igusabook} p. 111):
+
+
+\begin{prop}[The $p$-adic change of variables formula]\label{pcvf}
+Let $U$ be an open subset of $K^n$
+and consider  $K$-analytic functions $f_1, \dots, f_n$
+on $U$. Assume
+$f = (f_1, \dots, f_n) : U \rightarrow K^n$
+is a  $K$-analytic isomorphism between
+$U$ and an open subset $V$ of  $K^n$. 
+Then,
+for every integrable function $\varphi$ on $V$,
+$$
+\int_V \varphi \mu_{n \vert V}
+=
+\int_U (\varphi \circ f)
+\vert \partial (f_1, \dots, f_n) / \partial (x_1, \dots, x_n) \vert
+\mu_{n \vert U},
+$$
+
+where $\partial (f_1, \dots, f_n) / \partial (x_1, \dots, x_n)$
+is the determinant of the jacobian matrix of $f$.
+\end{prop}
+
+Let $X$ be an $n$-dimensional smooth $K$-analytic manifold.
+One assigns to any $K$-analytic $n$-differential form $\omega$
+on $X$ a measure $\mu_{\omega}:= \vert \omega \vert$ as follows.
+Take an atlas $\{(U, \phi_U)\}$ of $X$. Write
+$(\phi_U^{-1})^* \omega_{\vert U} = f_U dx_1 \wedge \dots \wedge dx_n$.
+If $A$ is small enough to be contained in some $U$,
+we set $\mu_{\omega} (A) := \int_{\phi_U (A)} \vert f_U \vert \vert dx \vert$.
+It follows from
+the change of variables formula that the measure may be extended uniquely
+by additivity to any  $A$ in a way which is
+independent of the choice 
+of the atlas.
+
+\subsection{Rationality of a Poincar\'e series}\label{ig}Let $f$
+be a polynomial in $\cO_K [x_1, \dots, x_n]$.
+Denote by
+$N_m$
+the number of elements $x$
+in
+$(\cO_K / \varpi^{m + 1} \cO_K)^n$ such that $f (x) \equiv 0 \mod \varpi^{m + 1}$
+and set $$Q (T):= \sum_{m \geq 0}N_m T^m.$$
+When
+$K = \QQ_p$, Borevich and Shafarevich conjectured
+that $Q (T)$ 
+is always a rational function of $T$.
+
+
+\begin{theorem}[Igusa]Assume $K$ is of characteristic zero (i.e. 
+$K$ is a finite extension of $\QQ_p$). Then the series
+$Q (T)$ is rational. More precisely it is of the form
+$$\frac{R (T)}{\prod_{j \in F}(1 - q^{-a_j}T^{b_j})}$$
+with $R (T)$ in $\ZZ [p^{-1}][T]$, $F$ finite,
+$a_j$ in $\NN$ and $b_j$ in $\NN \setminus \{0\}$.
+\end{theorem}
+
+
+The idea of Igusa's proof is the following. We  refer to \cite{igusa} or
+\cite{igusabook} for more details.
+One first observe
+that $$N_m = q^{(m + 1)n}\mu_n (\{ x \in \cO_K^n \vert \ord f (x) \geq m + 1\}).$$
+By an easy  calculation similar to (\ref{cal})
+one deduces
+the relation
+$$
+Q (q^{-n -s}) = \frac{q^n}{1 - q^{-s}}(1 - I (s)),
+$$
+with
+$$I (s) :=
+\int_{\cO_K^n} \vert f \vert^s \vert dx \vert.$$
+Hence it is sufficient to prove the rationality
+of $I (s)$ as function of $q^{-s}$.
+This is achieved in the following way. By Hironaka's resolution (this is the place
+where the hypothesis that $K$ is of characteristic zero is crucial),
+there exists a smooth compact manifold $Y$
+and an analytic
+morphism $h : Y \rightarrow \cO_K^n$,  obtained by composition of
+blowing up smooth centers, which is an isomorphism away from
+the locus of $f = 0$.
+By the change of variables formula
+$I(s)$ may be expressed
+as 
+$$
+I (s)
+=
+\int_Y \vert f  \circ h \vert^s \vert h^* dx \vert.
+$$
+On $Y$,  $f  \circ h$ and $h^* dx$ are both locally monomial,
+i.e. of the form $f  \circ h = u \prod y_i^{N_i}$
+and
+$h^* dx = v \prod y_i^{n_i} dy$,
+with $u$ and $v$ units, and $y = (y_1, \dots, y_n)$
+local coordinates, 
+in which case the explicit calculation of the integral
+becomes very easy, since it is a product of integrals of type
+(\ref{cal}).
+
+\subsection{The Serre series}Instead of
+considering the number
+$N_m$ of approximate solutions modulo $ \varpi^{m + 1}$
+of $f = 0$ in $(\cO_K / \varpi^{m + 1} \cO_K)^n$, one may want to consider
+approximate solutions that can be lifted to actual solutions of
+$f = 0$ in $\cO_K^n$.
+More precisely, we denote by $\tilde N_m$ the number of elements $y$
+in
+$(\cO_K / \varpi^{m + 1} \cO_K)^n$ such that $y \equiv  x \mod \varpi^{m + 1}$,
+with $x$ in $\cO_K^n$ such that $f (x) = 0$.
+The corresponding generating series 
+$$P(T):= \sum_{m \geq 0}\tilde N_m T^m$$
+was first considered by Serre who raised the question of
+its  rationality, that was solved (in characteristic zero)
+by Denef in \cite{denef}.
+
+
+\begin{theorem}[Denef]\label{prat}Assume $K$ is of characteristic zero. Then the series
+$P (T)$ is rational. More precisely it is of the form
+$$\frac{R (T)}{\prod_{j \in F}(1 - q^{-a_j}T^{b_j})}$$
+with $R (T)$ in $\ZZ [p^{-1}][T]$, $F$ finite,
+$a_j$ in $\ZZ$ and $b_j$ in $\NN \setminus \{0\}$.
+\end{theorem}
+ Since
+$$\tilde N_m =
+q^{(m + 1)n}\mu_n (\{ y \in \cO_K^n \vert \exists
+x, f (x) = 0, x \equiv y \mod \varpi^{m +1}\}),$$
+one can reduce the rationality of $P (T)$ to the rationality
+of the integral $$J (s) := \int_{\cO_K^n} d (x, V)^s \vert dx \vert,$$
+where $d (x, V)$ is the distance function to
+the hypersurface $V$ defined by $f = 0$.
+One then sees that a major difference with the Igusa case
+\ref{ig} occurs: the function 
+$d (x, V)$ is in general not analytic, due to the presence of quantifiers
+in its definition. So, in the proof of his Theorem, Denef had to use
+Macintyre's Theorem on quantifier elimination, which we shall explain now.
+
+
+
+Let us mention that, in the positive characteristic case, the rationality
+of $Q (T)$ would follow at once,  as soon as  Hironaka resolution
+will be known. For the rationality 
+of $P (T)$, the situation is much more open, since,
+in this setting, one does not know, even conjecturally, what
+could be a sensible 
+analogue of Macintyre's Theorem.
+
+\subsection{Definable subsets of $\QQ_p$}For simplicity we shall
+assume $K = \QQ_p$, the case of finite extensions of $\QQ_p$
+being quite similar.
+
+
+Let $\cL_{\rm Mac}$ denote the first order language
+whose variables run over $\QQ_p$ and with symbols
+to denote $+, - \times, 0, 1$ and, for every $d = 2, 3, 4$ \dots,
+a symbol $P_d$ to denote the predicate ``$x$ is a $d$-th power in
+$\QQ_p$''. 
+Moreover, for every element in $\ZZ_p$,
+there is a symbol to denote that element.
+As for any first order language, formulas of
+$\cL_{\rm Mac}$ are built up from the above specified symbols and variables,
+together with 
+the logical connectives
+$\wedge$ (and), $\vee$ (or), $\neg$ (not), the quantifiers $\exists$,
+$\forall$ and the equality symbol $=$.
+Macintyre's Theorem \cite{angus} states that $\QQ_p$
+has quantifier elimination in the language $\cL_{\rm Mac}$,
+meaning that every formula in that language is equivalent in $\QQ_p$
+to a formula without quantifiers.
+A subset of $\QQ_p^n$ is called semi-algebraic if is definable by a 
+(quantifier-free) formula in $\cL_{\rm Mac}$.
+
+We shall also consider the first order language $\cL_{\rm Pres}$
+of Presburger arithmetic. In this language variables run over $\ZZ$
+and symbols are $+, \leq, 0, 1$ and, for  every $d = 2, 3, 4$ \dots,
+a symbol  to denote the binary relation $x \equiv y \mod d$.
+One should note there is no symbol in $\cL_{\rm Pres}$ for multiplication.
+It is an old result of Presburger that $\ZZ$
+has quantifier elimination in the language $\cL_{\rm Pres}$.
+
+It is also useful to consider  the first order language $\cL$
+with two sorts of variables: a  first sort of variable running
+over $\QQ_p$ and a second sort running over $\ZZ$. The symbols
+of
+$\cL$ consist of the  symbols of $\cL_{\rm Mac}$ for the first sort,
+the  symbols of $\cL_{\rm Pres}$ for the second sort,
+and a symbol to denote the valuation function
+$\ord : \QQ_p \setminus \{0\} \rightarrow \ZZ$.
+As remarked in \cite{denef}, it follows
+from Macintyre's Theorem that $\QQ_p$ has elimination 
+of quantifiers in the language
+$\cL$ and every subset of
+$\QQ_p^n$ which is definable in $\cL$ is semi-algebraic.
+A function is called $\cL$-definable if its graph is $\cL$-definable.
+
+
+
+\subsection{Denef's Cell Decomposition Theorem}
+
+
+In \cite{denef} Denef gave two proofs of Theorem \ref{prat}. We already
+mentioned
+the first one, which uses
+Hironaka resolution and Macintyre's Theorem. The second one 
+was based on the following cell decomposition Theorem \ref{cdt}
+which Denef originally deduced
+from  Macintyre's Theorem (in fact, Macintyre's Theorem also
+easily follows from Theorem \ref{cdt}). 
+Then, in \cite{Dcell} Denef gave a direct 
+proof of Theorem \ref{cdt}
+
+
+
+\begin{theorem}[Denef's $p$-adic cell decomposition]\label{cdt}
+Let $f_i (x, t)$, $1 \leq i \leq m$, be polynomials in $\QQ_p [x, t]$,
+with $x = (x_1, \dots, x_{n - 1})$ and $t$ another variable.
+Fix an integer $d \geq 2$. There exists a finite partition of
+$\QQ_p^n$ into subsets (called cells) of the form
+$$
+A =  
+\Bigl\{
+(x, t) \in \QQ_p^n \Bigm \vert x \in C \, \text{and} \, 
+\vert a_1 (x) \vert
+\square_1 \vert t - c (x) \vert \square_2 \vert a_2 (x) \vert
+\Bigr\},
+$$
+where $C$ is an $\cL$-definable subset of $\QQ_p^{n - 1}$, $ \square_i$
+denotes either $\leq$, $<$, or no condition, and
+$a_i (x)$ and $c (x)$ are $\cL$-definable functions from
+$\QQ_p^{n - 1}$ to $\QQ_p$
+such that, for every $(x, t)$ in $A$,
+$$
+f_i (x, t) = u_i (x, t)^d h_i (x) (t - c (x))^{\nu_i},
+$$
+for $1 \leq i \leq m$, where $u_i  (x, t)$ is a unit on $A$, $h_i (x)$ 
+is an $\cL$-definable function, and $\nu_i$ is in $\NN$.
+\end{theorem}
+
+
+\subsection{Basic Theorem on $p$-adic
+integration and applications}
+
+
+The following general result is proved by successive
+application of the cell decomposition Theorem and integration with respect to the $t$-variable,
+cf. \cite{D85} and \cite{D2000}.
+
+
+\begin{theorem}[Denef]\label{btp}Let
+$(A_{\lambda, \ell})_{\lambda \in \QQ_p^k, \ell \in \ZZ^r}$
+be an $\cL$-definable family of bounded subsets of $\QQ_p^n$,
+meaning that the relation $x \in A_{\lambda, \ell}$ may be expressed by a formula 
+in the language $\cL$, with variables $x, \lambda$ and $\ell$.
+Let $\alpha (x, \lambda, \ell)$  be a $\ZZ$-valued $\cL$-definable function
+on $\QQ_p^n \times \QQ_p^k \times \ZZ^r$.
+Assume that all values of $\alpha$ are $\geq 0$.
+Then the integral
+$$
+I_{\lambda, \ell} :=  \int_{A_{\lambda, \ell}} p^{- \alpha (x, \lambda, \ell)} \vert dx \vert
+$$
+is a $\QQ$-valued function of $\lambda, \ell$
+belonging to the $\QQ$-algebra generated by functions of
+the form $\theta (\lambda, \ell)$ and
+$p^{\theta (\lambda, \ell)}$ with $\theta (\lambda, \ell)$ a $\ZZ$-valued
+$\cL$-definable function.
+\end{theorem}
+
+
+
+
+In the special case where there is no variable $\lambda$,
+the function $I (\lambda)$ in Theorem \ref{btp} is particularly simple:
+it is built from Presburger functions (i.e. $\cL_{\rm Pres}$-definable functions)
+using multiplication, exponentiation and $\QQ$-linear combinations.
+From this observation Denef could deduce 
+in an elementary way the following general rationality
+statement.
+
+
+\begin{theorem}[Denef]\label{grat}Assume the notation of Theorem \ref{btp} with no
+$\lambda$ involved. Then
+the series
+$$
+\sum_{\ell \in \NN^r}I (\ell) T^{\ell}
+$$
+in $\QQ [[T_1, \dots, T_r]]$ is a rational function of $T$.
+\end{theorem}
+
+Remark that the rationality of
+$Q (T)$ and $P (T)$ is a direct consequence of Theorem \ref{grat}.
+
+
+We now give a striking application to the problem of counting subgroups.
+For a finitely generated group $G$ and an integer $n \geq 1$, 
+let us denote by $a_n (G)$ the number 
+number of subgroups of order $n$ in $G$. This is always
+a finite number (cf. \cite{GSS}).
+
+The following Theorem is due to 
+Grunewald, Segal and Smith \cite{GSS}:
+\begin{theorem}If $G$ is a torsion-free
+finitely generated nilpotent group, then the series
+$\sum_m a_{p^m} (G) T^m$
+is rational, for every prime $p$.
+\end{theorem}
+
+The Theorem is proved by expressing $a_{p^m} (G) $ in terms of
+a $p$-adic integral
+$$\int_{A_m} p^{- \theta (x)} \vert dx \vert,$$
+with $(A_m)_{m \in \NN}$ and $\theta$ definable in $\cL$ and applying 
+Theorem \ref{grat}.
+
+
+
+
+%\subsection{The Serre invariant}
+
+\section{Prehistory of motivic integration:
+Proving results over $\CC$ by computing $p$-adic integrals}\label{prehistory}
+
+
+\subsection{The topological zeta function}\label{tzf}Let $X$ be a
+smooth complex algebraic variety of dimension $n$
+and $D$ an effective divisor on $X$. By a log-resolution of $(X, D)$
+we mean a proper birational morphism
+$h : Y \rightarrow X$ with $Y$ smooth, which is an isomorphism away from
+the preimage of the support of $D$
+and such that $h^{-1}( D)$ a divisor with normal crossings.
+We denote by  $E_i$, $i \in J$ the irreducible components
+of $h^{-1}( D)$ (in particular each  $E_i$ is smooth).
+We set $E_I = \cap_{i \in I}E_i$, for $I \subset J$ and
+$E_I^{\circ} = E_I \setminus \cup_{j \notin I}E_j$. Finally we denote by
+$N_i$ the multiplicity of $E_i$ in $h^{-1}(D)$, i.e.
+$h^{-1}(D) = \sum_{i \in J} N_i E_i$
+and also we write
+$\Omega^n_Y = h^{*}\Omega^n_X + \sum_{i \in J}(\nu_i - 1) E_i$,
+where $\Omega^n$
+stands for the sheaf of algebraic differential forms of degree $n$.
+(We  use here the same notation for invertible sheaves and the
+corresponding divisors.)
+Let $W$  be a complex algebraic variety.
+We denote ${\rm Eu} (W)$
+its topological  Euler-Poincar\'e characteristic with compact supports:
+${\rm Eu}  (W) := \sum_i (-1)^i {\rm rk}_{\CC} H^i_c (W (\CC))$. 
+In fact, it can be shown, but we shall not use it, that 
+${\rm Eu}  (W) $ is also equal to the
+topological  Euler-Poincar\'e characteristic with compact supports
+$ \sum_i (-1)^i {\rm rk}_{\CC} H^i (W (\CC))$.
+
+
+Now, we can state the following result, which was first proved
+using $p$-adic integration in \cite{jams92}:
+
+
+\begin{theorem}[Denef-Loeser]\label{ttt}Let $X$ be a smooth complex algebraic variety of dimension $n$
+and $D$ a divisor on $X$. Then
+the rational function
+\begin{equation}\label{tft}
+Z_{\rm top} (X, D)(s) :=
+\sum_{I \subset J}
+\frac{{\rm Eu}(E_I^{\circ})}{\prod_{i \in I}(N_i s + \nu_i)}
+\end{equation}
+does not depend of the choice of a log-resolution $h : Y \rightarrow X$,
+but only of the pair $(X, D)$.
+\end{theorem}
+
+
+
+
+Let us explain the idea of the proof.
+We shall  assume, as in \cite{jams92}, that $X = \AA^n$
+and $D = f^{-1} (0)$, with $f$ a polynomial in $\CC [x_1, \dots, x_n]$
+but
+the proof in general works just the same.
+We shall write $Z_{{\rm top}, f} (s)$ for $Z_{\rm top} (X, D)(s)$.
+Now, we shall make the assumption that the coefficients of $f$
+all lie in the same number field
+$K$, i.e. $f $ is in $K [x_1, \dots, x_n] $
+(in general, we can only assume
+they lie in a field of finite type over
+$\QQ$, but the basic idea of the proof still remains the
+same, see \cite{jams92}).
+
+Now for every prime ideal $\gP$
+in the ring of integers $\cO_K$, we denote by $K_{\gP}$ the corresponding local
+field, with ring of integers $\cO_{\gP}$ and residue field
+$k_{\gP}$.
+We consider the local zeta function
+$$Z_{f, K_{\gP}} (s) := \int_{\cO_{\gP}^n} \vert f\vert_{\gP}^s \vert dx \vert_{\gP},$$
+where $\vert \_ \vert_{\gP}$ stands for the $\gP$-adic norm on $K_{\gP}$.
+Consider now a log-resolution
+$h : Y \rightarrow X$ defined over $K$.
+It follows from a formula of Denef \cite{D87}
+that, for almost all $\gP$,
+\begin{equation}\label{red}
+Z_{f, K_{\gP}} (s)
+=
+q^{-n} 
+\sum_{I \subset J} {\rm card} (E_I^{\circ} (k_{\gP}))
+\prod_{i \in I}\frac{(q - 1)q^{- (N_i s + \nu_i)}}{1 - q^{- (N_i s + \nu_i)}},
+\end{equation}
+with $q = {\rm card} k_{\gP}$.
+Here we should explain what we mean
+by $ {\rm card} (E_I^{\circ} (k_{\gP}))$. For $Z$ a variety over
+$K$ we choose a model $\cZ$ over $\cO_K$, i.e. a variety over 
+$\cO_K$ wich is isomorphic to $Z$ over $K$, and we set
+${\rm card} (X (k_{\gP})) = {\rm card} ((\cX \otimes k_{\gP}) (k_{\gP}))$.
+Of course, this may depend on the choice of the model $\cX$, but 
+this will be the case
+only for a finite number of prime ideals $\gP$, 
+so it makes sense to consider
+${\rm card} (X (k_{\gP}))$ for almost all $\gP$.
+For $e \geq 1$, let us write $ K_{\gP}^{(e)}$ for the unramified extension of
+$K_{\gP}$ of degree $e$. Its residue field $k_{\gP}^{(e)}$ has $q^e$ elements.
+Also, for almost all $\gP$,  equation (\ref{red}) still holds when
+replacing $K_{\gP}$ by $ K_{\gP}^{(e)}$, 
+yielding
+\begin{equation}\label{ered}
+Z_{f, K_{\gP}^{(e)}} (s)
+=
+q^{-en} 
+\sum_{I \subset J} {\rm card} (E_I^{\circ} (k_{\gP}^{(e)}))
+\prod_{i \in I}\frac{(q^e - 1)q^{- e(N_i s + \nu_i)}}{1 - q^{- e(N_i s + \nu_i)}}.
+\end{equation}
+Now, taking formally the limit as $e \mapsto 0$ in
+(\ref{ered}) gives us (\ref{tft}). This is quite clear, once we
+know
+that $\lim_{e \mapsto 0} {\rm card}W (k_{\gP}^{(e)}) = {\rm Eu}  W (\CC)$,
+for almost all $\gP$, when $W$
+is a variety over $K$.
+This last fact follows from Grothendieck's trace formula for the Frobenius acting
+on $\ell$-adic cohomology and standard comparison results between
+$\ell$-adic and classical Betti cohomology.
+Indeed, we have ${\rm card}W (k_{\gP}^{(e)}) = \sum \alpha_i^e
+- \sum \beta_j^e$, with $ \alpha_i$ and $ \beta_j$ the eigenvalues,
+respectively in
+even and odd degree,
+of the Frobenius acting on  $\ell$-adic cohomology groups with compact supports
+with compact supports, and taking $e = 0$ just gives the trace of the identity,
+i.e. the alternating sum of the ranks of $\ell$-adic cohomology groups with compact supports.
+Of course, this is just a rough sketch of the proof and further work is
+required in order to show this process of
+taking limits as $e \mapsto 0$ really makes sense.
+
+
+
+\subsection{Birational Calabi-Yau varieties have the same
+Betti numbers}\label{cy}
+
+Let $X$ be a smooth complex projective variety of dimension $n$. We say $X$
+is Calabi-Yau if $X$ admits
+a nowhere vanishing degree $n$ algebraic
+differential form $\omega$. This is equivalent to
+the sheaf $\Omega^n_X$ being trivial.
+Recall the Betti numbers $b_i (X)$ are the ranks of the cohomology
+groups $H^i (X (\CC), \CC)$.
+Considerations from theoretical physics (string theory)
+led to the guess that 
+birational Calabi-Yau varieties should have the same
+Betti numbers (and even the same Hodge numbers, cf. \ref{hdp}).
+
+
+This was proved by Batyrev \cite{batyrev} using
+$p$-adic integration and the Weil conjectures.
+
+
+\begin{theorem}[Batyrev]\label{bat}Let $X$ and $X'$ be complex
+Calabi-Yau varieties of dimension $n$.
+Assume 
+$X$ and $X'$  are birationally equivalent.
+Then they have the same Betti numbers.
+\end{theorem}
+
+
+
+Let us  sketch the proof. For simplicity, we assume,
+as in the proof of Theorem \ref{ttt} that
+$X$, $X'$ and all the
+data are defined over some number field $K$
+(in general they are defined only over some field of finite type,
+but the basic idea of the proof is the same).
+We keep the notation of \ref{tzf}.
+By Hironaka there exists a smooth projective $Y$ defined over $K$,
+and birational proper morphisms (also defined over $K$)
+$h : Y \rightarrow X$ and $h' : Y \rightarrow X'$. 
+Furthermore we may assume
+there exists a divisor with normal crossings $E = \cup_{i \in J} E_i$
+such that the exceptional locus of $h$  and $h'$
+respectively, is a finite union of $E_i$'s. We may write
+$\Omega^n_Y = h^{*}\Omega^n_X + \sum_{i \in J}(\nu_i - 1) E_i$
+and
+$\Omega^n_Y = h'{}^{*}\Omega^n_{X'} + \sum_{i \in J}(\nu'_i - 1) E_i$.
+Since $h^{*}\Omega^n_X$ and $h'{}^{*}\Omega^n_{X'}$ are both trivial, 
+it follows\footnote{This is not completely evident, but can
+be proved quite easily using
+elementary algebraic geometry. Check it as  an exercise.}
+that $\nu_i = \nu'_i$ for every $i$ in $J$.
+One then deduces
+follows from the change of variables formula, that for almost all $\gP$,
+with a slight abuse of notation, with have
+$$
+\int_{X (K_{\gP})} \vert \omega  \vert_{\gP}
+=
+\int_{X' (K_{\gP})} \vert \omega' \vert_{\gP}
+$$
+and the same holds  for all unramified extensions $K_{\gP}^{(e)}$.
+Indeed, we may express by the change of variables formula
+both integrals as  the same integral over the rational points of $Y$.
+Since,
+for almost all $\gP$ and every $e$,
+$\int_{X (K_{\gP}^{(e)})} \vert \omega  \vert_{\gP}$ is
+equal to 
+$q^{-en}{\rm card}(X (k^{(e)}_{\gP}))$
+(this is a special case of Denef's result above mentionned
+that goes back at least to A. Weil), it follows that for almost
+all $\gP$, the reductions of (some model of) $X$ and $X'$ mod $\cM_{\gP}$
+have same the zeta function. 
+On the other side, for proper smooth varieties over a finite field,
+the zeta function determines the
+$\ell$-adic Betti numbers by Deligne's proof of the Weil 
+conjectures, hence the result follows from standard comparison results
+between $\ell$-adic and usual Betti numbers.
+
+\begin{remark}The above proof gives in fact the following stronger
+result (see \cite{batyrev}): if $X$ and $X'$ are two $n$-dimensional
+smooth proper
+complex varieties that are $K$-equivalent, meaning that there
+exists
+birational proper morphisms 
+$h : Y \rightarrow X$ and $h' : Y \rightarrow X'$ with $Y$ 
+smooth proper such that the invertible sheaves
+$h^* (\Omega^n_X)$ and $h^* (\Omega^n_{X'})$ are isomorphic,
+then $X$ and $X'$ have the same Betti numbers.
+\end{remark}
+
+\subsection{Towards motivic integration}The fact that one
+can use $p$-adic integration to prove results over $\CC$  may look appealing
+to model theorists - after all
+using finite fields to prove surjectivity of injective 
+polynomial complex morphisms goes back to Ax \cite{inj} - 
+but it was  challenging  for geometers to find a more direct approach.
+Of course, one obvious try would like to perform some kind of integration
+over the field $\CC ((t))$, but since it is not  locally compact  it
+is hopeless to  construct any reasonable
+real valued measureon it.
+The real breakthrough happened at the end of 1995, when 
+Maxim Kontsevich got the idea of motivic integration: one should replace the
+real numbers by (the completion of) the Grothendieck ring of algebraic varieties
+as he explained in his seminal Orsay talk \cite{maxim}.
+
+
+
+\section{Additive invariants and Grothendieck rings}
+
+
+
+\subsection{Additive invariants of algebraic varieties}\label{3.1}Let $R$ be a ring. We denote by ${\rm Var}_R$
+the category of algebraic varieties over $R$, i.e. reduced and separated schemes of 
+finite type over
+$R$.
+If $X$ and $X'$ are varieties over $R$,
+we
+denote by $X \times X'$ their cartesian product
+in  ${\rm Var}_R$. By definition $X \times X' $
+is equal to
+$(X \otimes_{\Spec R} X')_{\rm red}$,
+that is the scheme $X \otimes_{\Spec R} X'$
+endowed with its reduced structure.
+An additive invariant
+$$
+\lambda : 
+{\rm Var}_R
+\longrightarrow
+S,
+$$
+with $S$ a ring, assigns to any $X$
+in ${\rm Var}_R$ an element $\lambda (X)$ of $S$
+such that
+$$
+\lambda (X) = \lambda (X')
+$$
+for $X \simeq X'$,
+$$
+\lambda (X) = \lambda (X') + \lambda (X \setminus X'),
+$$
+for $X'$ closed in $X$,
+and
+$$
+\lambda (X \times X')
+=
+\lambda (X) \lambda (X')
+$$
+for every $X$ and $X'$.
+
+
+
+
+Let us remark that additive invariants
+$\lambda$ naturally extend to take their values
+on
+constructible subsets  of algebraic varieties.
+Indeed a constructible subset $W$
+may be written as a finite
+disjoint union of locally closed subvarieties $Z_i$, $i \in I$. One may define
+$\lambda (W)$ to be $\sum_{i \in I} \lambda (Z_i)$. By the very axioms, this is independent
+of the decomposition into locally closed subvarieties.
+
+
+\subsection{Examples}
+
+
+\subsubsection{}There exists a universal
+additive invariant
+$[\_] : {\rm Var}_R \rightarrow K_0 ({\rm Var}_R)$ 
+in the sense that 
+composition with $[\_] $ gives a bijection between
+ring morphisms $ K_0 ({\rm Var}_R) \rightarrow S$
+and 
+additive invariants ${\rm Var}_R \rightarrow S$.
+The construction of $K_0 ({\rm Var}_R)$ is quite easy:
+take the
+free abelian group on isomorphism classes $[X]$
+of objects of ${\rm Var}_R$ and mod out by the relation
+$[X] = [X'] + [X \setminus X']$ for $X'$ closed in $X$.
+The product is now defined by $[X] [X'] = [X \times X']$.
+
+
+
+
+We shall denote by $\LL$ the class of the affine line $\AA^1_R$ in
+$K_0 ({\rm Var}_R)$. An important role will be played by
+the ring 
+$\cM_R := K_0 ({\rm Var}_R)[\LL^{- 1}]$ obtained by localization with respect to the 
+multiplicative set generated by $\LL$.
+This construction is analogue to the construction
+of the category of Chow motives from the category of effective
+Chow motives by localization with respect to the Lefschetz motive.
+(Remark that the morphism $\chi_c$
+of \ref{vm} sends $\LL$ to the class of the Lefschetz motive.)
+
+
+
+
+
+
+One should stress that very little is known about the structure
+of the rings $K_0 ({\rm Var}_R)$ and $\cM_R$ even when $R$ is a field.
+Let us just
+quote a result by Poonen \cite{poonen}
+saying that 
+when $k$ is a field of characteristic zero the ring
+$K_0 ({\rm Var}_k)$ is not a domain. For instance, even for a field $k$, it is not known whether
+the localization morphism
+ $K_0 ({\rm Var}_k) \rightarrow \cM_k$ is injective or not.
+
+\remark In fact, the ring 
+$K_0 ({\rm Var}_k)$
+as well as the canonical morphism
+$\chi_c : K_0 ({\rm Var}_k) \rightarrow
+K_0 ({\rm CHMot}_k)$,
+were already considered by Grothendieck in a letter to Serre dated
+August 16, 1964, cf. p. 174 of \cite{gs}.
+
+
+
+\subsubsection{Euler characteristic}Here $R = k$ is a field. When $k$ is a subfield
+of $\CC$, the Euler characteristic
+${\rm Eu} (X) := \sum_i (-1)^i {\rm rk} H^i_c (X (\CC), \CC)$
+give rise to an additive invariant
+${\rm Eu} : {\rm Var}_k \rightarrow \ZZ$. For general $k$, replacing
+Betti cohomology with compact support
+by $\ell$-adic cohomology with compact support,
+$\ell \not= {\rm char} k$, one gets  an additive invariant
+${\rm Eu}_{\ell} : {\rm Var}_k \rightarrow \ZZ$, which does not
+depend on $\ell$.
+Since the Euler number of the affine line is 1, 
+the Euler characteristic extends to a morphism $\cM_k \rightarrow \ZZ$.
+
+\subsubsection{Hodge polynomial}\label{hdp}Let us assume 
+$R = k$ is a field of characteristic zero.
+Then it follows from Deligne's Mixed Hodge Theory that
+there is a unique 
+additive invariant
+$H : {\rm Var}_k \rightarrow \ZZ [u, v]$,
+which assigns to a smooth projective variety $X$ over $k$
+its usual Hodge polynomial
+$$
+H (u, v) := \sum_{p, q} (-1)^{p + q} h^{p,q} (X) u^p v^q ,
+$$
+with $h^{p,q} (X) = \dim H^q (X, \Omega^p_X)$ the $(p,q)$-Hodge number of $X$.
+This is is also a consequence of Bittner's Theorem that we shall
+explain in \ref{bitt}.
+Since $H (\AA^1_k) = uv$,
+$h$ extends to a ring morphism
+$\cM_k \rightarrow \ZZ [u, v, (uv)^{-1}]$.
+
+
+\subsubsection{Virtual motives}\label{vm}More generally, 
+when $R = k$ is a field of characteristic zero, there exists by Gillet and Soul\'e \cite{GS},
+Guillen and Navarro-Aznar \cite{GN},
+a unique additive invariant $\chi_c : {\rm Var}_k \rightarrow K_0 ({\rm CHMot}_k)$,
+which 
+assigns to a smooth projective variety $X$ over $k$
+the class of its Chow motive, where $ K_0 ({\rm CHMot}_k)$
+denotes the Grothendieck ring of the category of Chow
+motives over $k$ (with rational coefficients).
+
+
+
+Let us explain what  Chow motives and the category
+$K_0 ({\rm CHMot}_k)$ are.
+Let 
+$\cV$ denote the category of smooth and projective $\CC$-schemes.
+For  an object $X$ in $\cV$ and an integer $d$, $\cZ^{d} (X)$
+denotes the free abelian group generated by irreducible subvarieties of
+$X$ of codimension $d$. We define the rational Chow group
+$A^{d} (X)$ as the quotient of $\cZ^{d} (X) \otimes \QQ$
+modulo rational equivalence.
+For $X$ and $Y$ in $\cV$,  we denote by ${\rm Corr}^{r} (X, Y)$ the
+group of correspondences of degree $r$ from $X$ to $Y$. If $X$ is purely
+$d$-dimensional, ${\rm Corr}^{r} (X, Y) = A^{d + r} (X \times Y)$,
+and if $X = \coprod X_{i}$, 
+${\rm Corr}^{r} (X, Y) = \oplus \, {\rm Corr}^{r} (X_{i}, Y)$.
+The category $\textrm{Mot}$ of $\CC$-motives may be defined as follows
+(cf. \cite{Scholl}).
+Objects of $\textrm{Mot}$ are triples $(X, p, n)$ where $X$ is in $\cV$,
+$p$ is an idempotent (i.e. $p^{2} = p$) in ${\rm Corr}^{0} (X, X)$, and
+$n$ is an integer in $\ZZ$. If $(X, p, n)$
+and $(Y, q, m)$ are motives, then
+$$
+{\rm Hom}_{\textrm{Mot}} ((X, p, n), (Y, q, m))
+=
+q \, {\rm Corr}^{m - n} (X, Y) \, p.
+$$
+Composition of morphisms is given by composition of correspondences.
+The category $\textrm{Mot}$ is  additive, $\QQ$-linear, and pseudo-abelian.
+There is a natural tensor product on $\textrm{Mot}$, 
+defined on objects by
+$$
+(X, p, n) \otimes (Y, q, m) = (X \times Y, p \otimes q, n + m).
+$$
+We denote by $h$ the functor $h : \cV^{\circ} \rightarrow
+\textrm{Mot}$ which sends an object $X$ to $h (X) = (X, {\rm id}, 0)$
+and a morphism $f : Y \rightarrow X$ to its graph in
+${\rm Corr}^{0} (X, Y)$. This functor is compatible with the
+tensor product and the unit motive $1 = h ({\rm Spec} \, \CC)$ is the identity
+for the product. We denote by ${\LL}$ the Lefschetz motive
+$\LL = ({\rm Spec} \, \CC, {\rm id}, -1)$. One can prove
+there is a canonical isomorphism
+$h (\PP^{1}) \simeq 1 \oplus \LL$,
+so, in some sense, $\LL$ corresponds to $H^{2} (\PP^{1})$.
+%For any field $E$ containing $\QQ$
+%one defines similarly
+%the category $\textrm{Mot} \otimes E$ of motives with coefficients
+%in $E$, by
+%replacing
+%the Chow groups
+%$A^{\cdot}$ by $A^{\cdot} \otimes_{\QQ} E$.
+
+Since algebraic correspondences naturally
+act  on cohomology, any cohomology theory on the category $\cV$ factors
+through $\textrm{CHMot}_k$ hence motives
+have canonical Betti and Hodge realizations.
+
+
+
+
+\begin{theorem}\label{MEC}There exists a unique
+morphism of rings
+$$
+\chi_{c} :
+K_{0} ({\rm Var}_k) \longrightarrow K_{0} ({\rm CHMot}_k)
+$$
+such that $\chi_{c} ([X]) = [h (X)]$
+for $X$ projective and smooth.
+\end{theorem}
+
+
+
+Remark that $\chi_{c} ([\LL]) = \LL$.
+
+
+
+\subsubsection{Counting points} Counting points also
+yields additive invariants.
+Assume $k = \FF_q$, then
+$N_n : X \mapsto \vert X (\FF_{q^n}) \vert$ gives rise to an additive invariant
+$N_n : {\rm Var}_k \rightarrow \ZZ$.
+Similarly, if $R$ is (essentially) of finite type over $\ZZ$, for every maximal
+ideal $\gP$ of $R$ with finite residue field $k_{\gP}$, we have 
+an additive invariant
+$N_{\gP} : {\rm Var}_R \rightarrow \ZZ$, which assigns to $X$
+the cardinality of $(X \otimes k_{\gP})(k_{\gP})$.
+
+
+
+
+\subsection{Bittner's Theorem}\label{bitt}We assume form now on that $k$ 
+is a field of characteristic zero.
+It is a rather straightforward consequence of Hironaka's theorem
+that $K_0 (\Var_k)$ is generated by classes of smooth irreducible
+projective  varieties. More subtle is the following
+presentation by generators and relations of 
+$K_0 (\Var_k)$
+due to F. Bittner \cite{Bittner}.
+We denote
+by  $K_0^{\rm bl} (\Var_k)$
+the quotient of the free abelian group
+on isomorphism classes of irreducible smooth projective
+varieties over $k$
+by the relations 
+$$
+[{\rm Bl}_Y X] - [E] =  [X] - [Y],
+$$
+for $Y$ and $X$ irreducible
+smooth projective over $k$,
+$Y$ closed in $X$, ${\rm Bl}_Y X$ the blowup of $X$ with center
+$Y$ and $E$ the exceptional divisor in ${\rm Bl}_Y X$.
+As for $K_0 (\Var_k)$,
+cartesian product induces a product on 
+$K_0^{\rm bl} (\Var_k)$ which endows it with a ring structure.
+There is a canonical ring morphism
+$
+K_0^{\rm bl} (\Var_k) \rightarrow K_0 (\Var_k),
+$
+which sends $[X]$ to $[X]$.
+
+
+\begin{theorem}[Bittner \cite{Bittner}]\label{bi}Assume $k$
+is of characteristic zero. The
+canonical ring morphism
+$$
+K_0^{\rm bl} (\Var_k) \rightarrow K_0 (\Var_k)
+$$
+is an isomorphism.
+\end{theorem}
+
+
+The proof is based on Hironaka resolution of singularities
+and the weak factorization theorem
+of Abramovich, Karu, Matsuki and
+W{\l}odarczyk \cite{wf} which we quote in  the following version:
+
+
+
+
+\begin{theorem}[Weak factorization theorem]\label{wft}
+Let $k$ be a field of characteristic zero.
+Let $\phi : X_1 \dashrightarrow X_2$
+be a birational map
+between proper smooth irreducible varieties over $k$. Let $U \subset X_1$ 
+be the largest open subset
+on which $\phi$ is an isomorphism.
+Then $\phi$ can be factored into a sequence of blowing
+ups and blowing down
+with smooth centers disjoint from $U$:
+$\phi_i : V_{i - 1}\dashrightarrow V_i$, $i = 1, \dots, \ell$,
+with $V_0 = X_1$, $V_{\ell} = X_2$,
+with $\phi_i$ or $\phi_i^{-1}$ blowing ups with smooth centers away from $U$.
+Moreover there exists $i_0$ such that
+$V_i \dashrightarrow X_1$ is defined everywhere and projective for $i \leq i_0$
+and
+$V_i \dashrightarrow X_2$ is defined everywhere and projective for $i \geq i_0$.
+\end{theorem}
+
+Theorem \ref{bi} is a  very efficient  tool to provide
+additive invariants. Indeed, it is enough to know the invariant for smooth projective
+varieties and to check it behaves properly for blowing
+ups with smooth centers. In particular it is now a straightforward
+consequence of theorem \ref{bi}
+(but using the full
+strenght of weak factorization)
+that the Hodge-Deligne polynomial
+of
+\ref{hdp} and the virtual motives of \ref{vm}
+are well-defined additive invariants. 
+
+
+
+
+
+\subsection{Grothendieck rings of first order theories}\label{g1t}The Grothendieck ring
+$K_0 ({\rm Var}_k)$ may be generalized as follows to any
+first order theory.
+Let $\cL$ be a first order language and let $T$ be a theory in the
+language 
+$\cal L$.
+
+
+We denote by $K_{0} (T)$ the quotient of the
+free abelian group generated by
+symbols $[\varphi]$ for $\varphi$ a formula in $\cL$
+by the subgroup generated by the following
+relations~
+\begin{enumerate}
+\item[(1)] If $\varphi$ is a formula in $\cL$ with free variables
+$x = (x_{1}, \ldots, x_{n})$ and
+$\varphi'$ is a formula in $\cL$ with free variables
+$x' = (x'_{1}, \ldots, x'_{n'})$, then
+$[\varphi] = [\varphi']$ if there exists a formula
+$\psi$ in $\cL$, with free variables
+$(x, x')$,
+such that
+$$
+T \models [\forall x (\varphi (x) \rightarrow \exists! x' : (\varphi' (x')
+\wedge \psi (x, x')))]
+\wedge
+[\forall x' (\varphi' (x') \rightarrow \exists! x : (\varphi (x)
+\wedge \psi (x, x')))].$$
+\item[(2)] \, $[\varphi \vee \varphi'] = [\varphi] + [\varphi'] - [\varphi
+\wedge \varphi']$, for $\varphi$ and $\varphi'$  formulas in $\cL$.
+\end{enumerate}
+Furthermore one puts a ring structure on 
+$K_{0} (T)$ by setting
+\begin{enumerate}
+\item[(3)] \, $[\varphi (x) ] \cdot [\varphi' (x')] =
+[\varphi (x) \wedge  \varphi' (x')] $, if
+$\varphi$ and $\varphi'$  are formulas in $\cL$ with disjoint free
+variables $x$ and $x'$.
+\end{enumerate}
+
+
+
+For every interpretation of a theory $T_{1}$ in a theory
+$T_{2}$ there is  a canonical morphism of rings
+$K_{0} (T_{1}) \rightarrow K_{0} (T_{2})$, and this gives rise to a functor
+from the category of theories in $\cL$, morphisms being given by
+interpretation, to the category of commutative rings.
+
+
+
+\medskip
+
+
+If $k$ is a field and $T_{\rm ac}$ is 
+the theory of algebraically closed fields containing $k$,
+then $K_{0} (T_{\rm ac})$ is isomorphic to $K_{0} ({\rm Var}_k)$. If
+$T_{\RR}$ is the theory
+of real closed fields in the language of ordered rings, 
+then $K_{0} (T_{\RR})$ is isomorphic to $\ZZ$.
+Recently, Cluckers and Haskell \cite{CH} proved that the theory of
+any fixed $p$-adic field, in the language of rings,
+has trivial Grothendieck group.
+In fact, Cluckers proved in \cite{raf} that for any two
+$p$-adic semi-algebraic $X$ and $X'$
+sets of the same dimension $d > 0$, there exists a semi-algebraic isomorphism
+between $X$ and $X'$.
+
+
+\section{Geometric motivic integration}
+
+
+
+
+\subsection{ Arc spaces}Arc spaces are the $k [[t]]$-analogue of
+$p$-adic points.
+Let $k$ be a field of characteristic $0$. 
+Many of the results presented in these lectures do not hold
+anymore or become unknown
+in positive characteristic.
+
+For $n \geq 0,$ we introduce the space of $n$-arcs on $X,$ denoted by $\cL_n(X)$.
+This is an algebraic variety which represents the functor:
+$$  k-{\rm algebras} \longrightarrow \text{Sets}$$
+$$ R \mapsto 
+\text{Hom}_{k-schemes}(\Spec(R[t]/(t^{n+1}),X):=X(R[t]/(t^{n+1})). $$
+
+
+
+
+
+
+For example when $X$ is an affine variety with equations $f_i (\vec x) = 0$,
+$i= 1, \cdots, m$, $\vec x = (x_1,\cdots, x_r)$, then ${\cal L}_n(X)$
+is given by the equations, in the variables $\vec a_0, \cdots, \vec a_n$,
+expressing that $f_i (\vec a_0 + \vec a_1t + \cdots + \vec a_n t^n) \equiv 0
+\mod t^{n+1}, i = 1,\cdots, m$.  
+
+
+
+We have canonical
+isomorphisms
+$\cL_0(X)=X$ and $\cL_1(X)=TX$,
+where $TX$ denotes the tangent space of the variety  $X$.
+
+
+
+
+
+For $m \geq n$ there are canonical morphisms
+$\theta_m^n : \cL_m(X) \rightarrow \cL_n(X)$. In general, when $X$ is not smooth,
+they need nor to be surjective. When $X$ is smooth of dimension $d$,
+$\theta_m^n$ is a locally trivial fibration for the Zariski topology with fiber
+$\AA^{(m - n)d}$.
+
+
+
+Taking the projective limit of these algebraic varieties ${\cal L}_n(X)$ we
+obtain
+the arc space ${\cal L}(X)$ of $X$. A priori this is just a pro-scheme,
+but since the transition maps
+$\theta_m^n$ are affine it is indeed a $k$-scheme.
+
+
+
+
+
+In general, ${\cal L}(X)$ is not of finite type over $k$.
+The $K$-rational points of ${\cal L} (X)$ are
+the
+$K[[t]]$-rational points of $X$.  These are called $K$-arcs on $X$.  For
+example when $X$ is an affine variety with equations $f_i(\vec x) = 0,
+i = 1, \cdots m, \vec x = (x_1,\cdots,x_r)$, then the $K$-rational points
+of
+${\cal L}(X)$ are the sequences $(\vec a_0, \vec a_1, \vec a_2, \cdots) \in
+(K^n)^{\NN}$ satisfying $f_i (\vec a_0 + \vec a_1 t + \vec a_2t^2 +
+\cdots )  = 0$,  for $i = 1,\cdots,m$. 
+For every $n$ we have natural morphisms
+$$\pi_n : {\cal L}(X) \rightarrow {\cal L}_n(X)$$
+obtained by truncation.  For any arc $\gamma$ on $X$ (i.e. a $K$-arc for
+some field $K$ containing $k$), we call $\pi_0(\gamma)$ the origin of the
+arc
+$\gamma$.
+
+
+
+One can easily check that $\cL (X)$ represents the functor
+$$  k-\text{algebras} \longrightarrow \text{Sets}$$
+$$ R \mapsto  \text{Hom}_{k-schemes}(\Spec(R[[t]]),X):=X(R[[t]]). $$
+It also represents the functor
+$$  k-\text{schemes} \longrightarrow \text{Sets}$$
+$$S \mapsto  \text{Hom}_{\text{locally ringed spaces}}((S, \cO_S [[t]]),X). $$
+
+
+If $f : Y \rightarrow X$ is a morphism of varieties, we shall still 
+denote by 
+$f$ the corresponding morphism $\cL (Y) \rightarrow \cL (X)$.
+
+
+\subsection{Completing $\cM_k$}We want to assign a measure
+to subsets of $\cL (X)$. This measure will take values
+in a ring related to $K_0 ({\rm Var}_k)$. In the analogy with $p$-adic integration,
+$K_0 ({\rm Var}_k)$ is the analogue of $\ZZ$
+and $\cM_k$ is the analogue of $\ZZ[p^{-1}]$ (the number of rational
+points of the affine line over $\FF_p$ is $p$). Since in $\RR$, $p^{-n} \mapsto 0$
+as $n \mapsto \infty$, we shall complete
+$\cM_k$ is such a way that
+$\LL^{-n} \mapsto 0$
+as $n \mapsto \infty$.
+This is achieved in the following way: 
+we define $F^m \cM_k$ to be the subgroup
+of
+$\cM_k$ generated by elements of the form
+$[S] \LL^{-i}$, with ${\rm dim}S - i \leq -m$.
+We have $F^{m + 1} \subset F^m$,
+$\LL^{-m} \in F^m$ and $F^n F^m \subset F^{n + m}$.
+We denote by $\widehat \cM_k$ the completion of
+$\cM_k$ with respect to that filtration.
+
+
+A minor technical issue shows up here, since it is not known whether
+the canonical morphism
+$\cM_k \rightarrow \widehat \cM_k$ is injective or not.
+Nevertheless, this is not too much a problem for applications by the following:
+
+
+\begin{prop}Invariants ${\rm Eu} : \cM_k \rightarrow \ZZ$ (Euler number)
+and $H:  \cM_k \rightarrow \ZZ [u, v, (uv)^{-1}]$ (Hodge polynomial) factor through
+the image $\overline \cM_k$ of
+$\cM_k$ in $\widehat \cM_k$.
+\end{prop}
+
+
+\begin{proof}Since ${\rm Eu} = H (1, 1)$, it is enough to prove
+the result for $H$. 
+But if $a$ is in $F^m \cM_k$, the total degree of $h (a)$ is $\leq - 2m$, so if $a$
+belongs to the kernel $\cap_m F^m \cM_k$
+of  $\cM_k \rightarrow \widehat \cM_k$, $h (a)$ should be zero.
+\end{proof}
+
+
+\subsection{Measurable sets}\label{123}For more details
+about this section, see the appendix to \cite{compositio}.
+Let $X$ be an algebraic variety over $k$
+of dimension $d$, maybe singular.
+By a cylinder 
+in $\cL ( X)$, we mean a subset $A$ of $\cL (X)$
+of the form $A = \pi_n^{-1} (C)$ with $C$ a constructible subset
+of $\cL_n (X)$, for some $n$.
+We say $A$ is stable (at level $n$) if furthermore
+$\pi_{m + 1} (\cL (X)) \rightarrow \pi_{m} (\cL (X))$ is a piecewise Zariski fibration over
+$\pi_m (A)$ with fiber $\AA^d_k$ for all $m \geq n$. By
+a piecewise Zariski
+fibration over
+$\pi_m (A)$ we mean that there exists a finite  partition of $\pi_m (A)$
+into locally closed subsets of $\cL_m (X)$ over which the morphism is
+a locally trivial fibration for the Zariski topology.
+
+
+If $A$ is a stable cylinder at level $n$, we set
+$$
+\tilde \mu (A) := [\pi_n (A) ] \LL^{- (n + 1) d}
+$$
+in $\cM_k$.
+Remark that the stability condition insures that we would get the same value
+by viewing $A$ as a stable cylinder at level $m$, $m \geq n$.
+Also, it can be proved that if $X$ is smooth, all cylinders are stable.
+In particular, in this case $\cL (X)$ itself is a stable
+cylinder and $\tilde \mu (\cL (X)) = [X] \LL^{-d}$.
+
+
+In general, we can assign to any cylinder
+$A$ in $\cL (X)$ a measure $\mu (A)$ in $\widehat \cM_k$
+by a limit process as follows:
+for $e \geq 0$, set
+$\cL^{(e)} (X) := \cL (X) \setminus \pi^{-1}_e (\pi_e (\cL (X_{\rm sing})))$,
+where $X_{\rm sing}$ denote the singular locus of $X$ and we view 
+$\cL (X_{\rm sing})$ as a subset of $\cL (X)$.
+The set $\cL^{(e)} (X)$ should be viewed as $\cL (X)$ minus some tubular neighborhood
+of the singular locus.
+It can be proved that $A \cap 
+\cL^{(e)} (X)$ is a stable cylinder
+and that $\tilde \mu (A \cap 
+\cL^{(e)} (X))$ does have a limit in $\widehat \cM_k$ as $e$ goes to $\infty$.
+We denote this limit by  $\mu (A)$. This apply in particular to $A = \cL (X)$
+when $X$ is not smooth.
+
+
+
+
+
+We shall define
+$$\vert \vert \_ \vert \vert : \widehat \cM_k : \rightarrow \RR_{\geq 0}$$
+to be given by $\vert \vert a \vert \vert = 2^{-n}$
+if $a \in F^n\widehat \cM_k$ and $a \notin F^{n + 1}\widehat \cM_k$, 
+where $F^{\bullet} \widehat \cM_k$
+denotes the induced filtration on $\widehat \cM_k$.
+
+
+
+
+We shall say a subset $A$ of $\cL (X)$ is measurable
+if, for every $\varepsilon >0$, there exists
+cylinders $A_i (\varepsilon)$, $i \in \NN$,
+such that $(A \cup A_0 (\varepsilon))
+\setminus 
+(A \cap A_0 (\varepsilon))$ is contained
+in $\cup_{i \geq 1} A_i (\varepsilon)$,
+and $\vert \vert \mu (A_i (\varepsilon)) \vert \vert \leq \varepsilon$,
+for every $i \geq 1$.
+Then one can show (cf. appendix to \cite{compositio}) that
+$\mu (A) := \lim_{\varepsilon \mapsto 0} \mu (A_0 (\varepsilon))$
+exists and is independent of the choice of the $A_i (\varepsilon)$'s.
+We say that $A$ is strongly measurable
+if moreover we can take $A_{0} (\varepsilon) \subset A$.
+
+
+Let $A$ be a measurable subset of $\cL (X)$
+and
+$\alpha : A \rightarrow \ZZ \cup \{\infty\}$ 
+be a function
+such that all its fibers are measurable.
+We shall say $\LL^{\-\alpha}$ is integrable
+if the series
+$$
+\int_A \LL^{- \alpha} d \mu :=
+\sum_{n \in \ZZ} \mu (A \cap \alpha^{-1} (n) ) \LL^{-n}
+$$
+is convergent in $\widehat \cM_k$.
+
+
+
+\subsection{Semi-algebraic subsets}An important class
+of measurable sets is that of semi-algebraic subsets of 
+$\cL (X)$. We shall explain here only what are
+semi-algebraic subsets of $\cL (\AA^n_k)$, the definition
+for general $X$ being deduced by using charts
+from the affine case.
+
+
+We shall view points of $\cL (\AA^n_k)$ as $n$-uplets of formal power series.
+A semi-algebraic subset
+of $\cL (\AA^n_k)$ is a finite boolean combination of subsets
+defined by
+conditions of the form
+\begin{align*}
+\text{(1)}&&\ord f_1 (x_1, \ldots, x_m) \geq
+\ord f_2 (x_1, \ldots, x_m) + L (\ell_1, \ldots, \ell_r)\\
+\text{(2)}&&\ord f_1 (x_1, \ldots, x_m) \equiv
+L (\ell_1, \ldots, \ell_r) \pmod d\\
+\intertext{and}
+\text{(3)}&&h (\ac (f_1 (x_1, \ldots, x_m)),
+\ldots,
+\ac (f_{m'} (x_1, \ldots, x_m))) = 0,
+\end{align*}
+where $f_i$ are polynomials with coefficients in  $k [[t]]$,
+$h$ is a polynomial with coefficients in  $k$,
+$L$ is a polynomial of degree $\leq 1$ over $\ZZ$, $d \in \NN$,
+and $\ac (x)$ is the coefficient of lowest degree in $t$
+of $x$ if $x \not= 0$, and is equal to 0 otherwise.
+Here we use the convention that $\infty + \ell =  \infty$
+and
+$\infty \equiv \ell \; {\rm mod} \, d$, for all $\ell \in \ZZ$.
+In particular the algebraic 
+condition 
+$f (x_1, \ldots, x_m) = 0$, for $f$ a
+polynomial over $k [[t]]$, defines a semi-algebraic subset.
+
+
+
+The following (consequence of a) quantifier elimination Theorem
+of J. Pas \cite{Pas} is of fundamental use 
+in the theory:
+
+
+\begin{theorem}\label{Pas}Let $\pi : \AA_k^n
+\rightarrow \AA^{n - 1}_k$ be the projection on the $n - 1$ first coordinates.
+If $A$ is a semi-algebraic subset of
+$\cL (\AA_k^n)$, then $\pi (A)$ is a 
+semi-algebraic subset of
+$\cL (\AA_k^{n - 1})$. 
+\end{theorem}
+
+
+
+
+One can prove that every semi-algebraic subset of $\cL (X)$
+is strongly measurable. Furthermore, we have the following nice
+description
+of $\mu (A)$ in this case, which is an analogue of a $p$-adic result of
+Oesterl\'e \cite{jo}, cf. \cite{inv}:
+
+\begin{theorem}[Denef-Loeser]\label{mo}If $A$ is a semi-algebraic subset of $\cL (X)$,
+with $X$ of dimension $d$,
+then $\mu (A)$ is equal to limit of
+$[\pi_n (A)] \LL^{- (n+ 1) d} $ in $\widehat \cM_k$.
+\end{theorem}
+
+Note that $[\pi_n (A)]$ in the above statement makes sense since
+one can deduce from Pas' Theorem that
+$\pi_n (A)$ is constructible.
+
+
+\subsection{Pas quantifier elimination}\label{uuu}We give here the original statement
+of Pas quantifier elimination. This subsection may be skipped at first reading
+but it  will be used
+later in the lectures.
+Let $K$ be a valued field, with valuation
+${\rm ord} : K \rightarrow \Gamma \cup \{\infty \}$,
+where $\Gamma$ is an ordered abelian group.
+We denote by $\cO_{K}$ the valuation ring, by $\cM_K$ the valuation ideal,
+by $U$ the group of units in $\cO_{K}$, by $k$ the residue field, 
+and by ${\rm Res} : \cO_{K} \rightarrow k$ the canonical projection.
+We assume that $K$ has an angular component map.
+By this we mean a map $\ac :
+K \rightarrow k$ such that
+$\ac 0 = 0$, the restriction of $\ac$ to
+$K^{\times}$ is multiplicative and 
+the restriction of $\ac$ to $U$
+coincides with the restriction of ${\rm Res}$.
+From now on we fix that angular component map
+$\ac$.
+
+We consider 3-sorted first order languages
+of the form 
+$$
+\cL = (\LL_{K}, \LL_{k}, \LL_{\Gamma}, \ord, \ac),
+$$
+consisting of
+\begin{enumerate}
+\item[(i)] the language $\LL_{K} = \{+, -, \times, 0, 1\}$ of rings as 
+valued
+field sort,
+\item[(ii)] the language $\LL_{k} = \{+, -, \times, 0, 1\}$ of rings as 
+residue field sort,
+\item[(iii)] a language $\LL_{\Gamma}$, which is an extension of the 
+language $\{+, 0, \infty, \leq\}$ of ordered abelian groups with an 
+element $\infty$
+on top, as the value sort,
+\item[(iv)] a function symbol $\ord$ from the valued field
+sort to
+the value sort, which stands for the valuation,
+\item[(v)]  a function symbol $\ac$ from the valued field sort to
+the residue field sort, which stands for the angular component map.
+\end{enumerate}
+
+
+
+
+
+In the following we shall assume that $K$ is henselian and that $k$ 
+is of characteristic zero.
+We consider $(K, k, \Gamma \cup \{\infty\}, \ord, \ac)$ as
+a structure
+for the language $\cL$, the interpretations of symbols being the 
+standard ones. By an  henselian
+$\cL$-extension of $K$, we mean an
+extension
+$(K', k', \Gamma' \cup \{\infty\}, \ord', \ac')$ of the structure
+$(K, k, \Gamma \cup \{\infty\}, \ord, \ac)$ with respect to the language
+$\cL$, with $K'$ a henselian valued field.
+(By an extension, we mean a structure for the language $\cL$
+which contains the original structure as a substructure.)
+By abuse of language we shall
+say that $K'$ is a henselian $\cL$-extension of $K$.
+
+
+
+
+We may now state the quantifier elimination Theorem of Pas 
+\cite{Pas}.
+
+
+
+
+\begin{theorem}[Pas]\label{GPas}Let $K$ be a valued field
+which satisfies the previous
+conditions. For every  $\cal L$-formula $\varphi$ there exists 
+an $\cal L$-formula $\varphi'$
+without quantifiers over the valued field sort, such that
+$\varphi$
+is equivalent
+in $K'$ to $\varphi'$, for every
+henselian $\cL$-extension $K'$ of $K$.
+\end{theorem}
+
+
+In particular, when the value group is $\ZZ$, we shall use the language
+$$
+\cL_{\rm Pas} = (\LL_{K}, \LL_{k}, \cL_{\rm PR \infty}, \ord, \ac),
+$$
+
+where $\cL_{\rm Pres \infty} = \cL_{\rm Pres} \cup \{\infty\}$,
+whith $ \cL_{\rm Pres}$
+the Presburger language.
+
+
+
+
+\subsection{Change of variables formula}
+
+We have the following motivic analogue of
+the $p$-adic change of variables formula \ref{pcvf}:
+
+
+
+\begin{theorem}[Change of variables formula]\label{cvf}Let $X$
+be an algebraic variety over $k$ of dimension $d$.
+Let $h : Y \rightarrow X$ be a proper birational morphism. We assume $Y$
+to be smooth. Let $A$ be  a subset 
+of $\cL (X)$ such that $A$ and $h^{-1} (A) $ are strongly measurable.
+Assume
+$\LL^{- \alpha}$ is integrable on $A$.
+Then
+$$
+\int_A \LL^{- \alpha} d \mu
+=
+\int_{h^{-1} (A)} \LL^{- \alpha \circ h - \ord h^* (\Omega^d_X)} d\mu.
+$$
+\end{theorem}
+
+We should explain what is meant by  $ \ord h^{*} (\Omega^d_X)$.
+Firstly, if $\cI$ is some ideal sheaf on $Y$, we denote by
+$\ord \cI$ the function which to a arc $\varphi$ in $\cL (Y)$
+assigns $\inf \ord g (\varphi)$ where $g$ runs over local sections of $\cI$ at
+$\pi_0 (\varphi)$. We set $\Omega^d_X$ to be the $d$-th exterior power of
+$\Omega^1_X$, the K\"ahler differentials. The image of
+$h^* (\Omega^d_X)$ in $\Omega^d_Y$ is of the form
+$\cI \Omega^d_Y$ and we set $ \ord h^{*} (\Omega^d_X) := \ord \cI$.
+
+
+
+The proof of Theorem \ref{cvf}, given in section 3 of 
+\cite{inv} (for $A$ semi-algebraic),
+relies on the following geometric statement (Lemma 3.4 
+of  \cite{inv}):
+
+
+\begin{prop}[Denef-Loeser]\label{procvf}Let $X$
+be an algebraic variety over $k$.
+Let $h : Y \rightarrow X$ be proper birational morphism. We assume $Y$
+to be smooth.
+For $e$ and $e'$ in $\NN$, we set
+$$
+\Delta_{e, e'} :=
+\Bigl \{ \varphi \in \cL (Y) \Bigm \vert
+\ord^h{*} (\Omega^d_X) (\varphi) =
+e \quad \text{and} \quad h (\varphi) \in \cL^{(e)} (X)\Bigr\}.
+$$
+Then there exists $c > 0$ such that, for $n \geq \sup (2e, e + ce')$,
+\begin{enumerate}
+\item[(1)]The image $\Delta_{e, e', n}$ of
+$\Delta_{e, e'}$  in $\cL_n (Y)$ is a union of fibers of $h_n$, the morphism induced by $h$.
+\item[(2)]The morphism
+$h_n : \Delta_{e, e', n} \rightarrow h_n (\Delta_{e, e', n})$
+is a piecewise Zariski fibration with fiber $\AA^e_k$.
+\end{enumerate}
+\end{prop}
+
+
+
+
+\subsection{Some applications}We can  now reprove and reinterpret the results
+in section \ref{prehistory} using motivic integration.
+
+Let us begin by Batyrev's Theorem \ref{bat}.
+
+\begin{theorem}[Kontsevich]\label{keq}Let $X$ and $X'$ be two proper smooth
+varieties over $k$. Assume there are $K$-equivalent, i.e. that there 
+exists
+birational proper morphisms 
+$h : Y \rightarrow X$ and $h' : Y \rightarrow X'$ with $Y$ 
+smooth proper such that the invertible sheaves
+$h^* (\Omega^n_X)$ and $h^* (\Omega^n_{X'})$ are isomorphic.
+The $[X] = [X']$ in $\overline \cM_k$.
+\end{theorem}
+
+
+\begin{proof}Since $\int_{\cL (Y)} 
+\LL^{- \ord h^* (\Omega^d_X)} d\mu
+=
+\int_{\cL (Y)} 
+\LL^{- \ord h'{}^* (\Omega^d_{X'})} d\mu$, it follows from the change of variables 
+formula that $\mu (\cL(X)) = \mu (\cL(X'))$, hence $[X] = [X']$, since $X$
+and $X'$ are smooth.
+\end{proof}
+
+
+\begin{cor}Let $X$ and $X'$ be two proper smooth
+varieties over $k$. Assume there are $K$-equivalent (this holds in particular if they are both
+Calabi-Yau). Then they have the same Hodge numbers and Betti numbers.
+\end{cor}
+
+
+\begin{remark}Theorem \ref{keq} can also be proved as a consequence of the
+weak factorization Theorem \ref{wft}.
+\end{remark}
+
+
+
+
+
+
+
+
+Now we shall give an intrisic meaning to the topological zeta function.
+Let $X$ be a smooth algebraic variety of dimension $n$ over $k$
+and $D$ a divisor on $X$. For any integer $m \geq 0$
+we may consider $\cX_n := \{\varphi \in \cL_m (X) \vert \ord f (\varphi) =m\}$,
+whet $f$ is a local equation for $d$ at $\pi_0 (\varphi)$.
+We consider
+$Z_{\rm mot, naive}(X, D)  (T)$ to be the formal series
+$$
+Z_{\rm mot, naive} (X, D)  (T) := \sum_{m \in \NN} [\cX_n] \LL^{-mn} T^m
+$$
+in $\cM_k [[T]]$. This is the naive motivic zeta function
+attached to the pair $(X, D)$.
+
+One deduces from Proposition \ref{procvf} the following formula
+for $Z_{\rm mot, naive} (X, D)  (T)$ in terms of a log-resolution of $(X, D)$.
+
+\begin{prop}[Denef-Loeser]\label{nmz}Let  $h : Y \rightarrow X$ be a log-resolution of $(X, D)$.
+With the notations of \ref{tzf} we have
+$$
+Z_{\rm mot, naive} (X, D)  (T) = 
+\LL^{-n} 
+\sum_{I \subset J} [E_I^{\circ}]
+\prod_{i \in I}\frac{(\LL- 1)\LL^{- \nu_i}T^{N_i}}{1 - \LL^{- \nu_i}T^{N_i}}.
+$$
+\end{prop}
+
+Let us formally
+evaluate $Z_{\rm mot, naive} (X, D)  (T)$ at $T = \LL^{-s}$ for $s$ an integer $ \geq 1$.
+We obtain from the above Proposition a well defined element
+$$
+\LL^{-n} 
+\sum_{I \subset J} [E_I^{\circ}]
+\prod_{i \in I}\frac{(\LL- 1)\LL^{- (N_i s + \nu_i)}}{1 - \LL^{- (N_i s + \nu_i)}}.
+$$
+in the ring $\cM_{k, {\rm loc}}$ obtained from
+$\cM_k$ by inverting the the
+elements $[\PP^i_k] = 1 + \LL + \LL^2 + \cdots + \LL^i$, for $i =
+1,2,3,\cdots$, where $\PP^i_k$ denotes the $i$-dimensional projective space
+over $k$.
+The ring morphism
+${\rm Eu}  : \cM_k \rightarrow \ZZ$
+extends uniquely to a ring morphism
+${\rm Eu}  : \cM_{k, {\rm loc}} \rightarrow \QQ$.
+
+Hence we deduce the following conceptual and intrinsic
+interpretation of
+$Z_{\rm top} (X, D) (s)$:
+
+\begin{prop}[Denef-Loeser]For every integer $s \geq 1$,
+\begin{equation}\label{rtt}
+Z_{\rm top} (X, D) (s) 
+={\rm Eu} (Z_{\rm mot, naive} (X, D)  (\LL^{-s})).
+\end{equation}
+\end{prop}
+
+\begin{remark}One may also prove  Theorem \ref{ttt} by
+using
+the weak factorization Theorem \ref{wft} (which was not available at the time
+of the first two proofs), but then one would miss 
+the intrinsic interpretation (\ref{rtt}).
+\end{remark}
+
+
+Another important feature of $Z_{\rm mot, naive} $ is that it  ``contains'' also
+the corresponding $p$-adic integrals. More precisely:
+
+
+\begin{prop}[Denef-Loeser]\label{gyg}Let  $K$ be
+a number field, set $X = \AA^n_K$ and let $D$ be the divisor of
+a polynomial $f $ in $K [x_1, \dots, x_n]$.
+For almost all $\gP$, $$N_{\gP} (Z_{\rm mot, naive} (X, D)  (\LL^{-s}))$$ is equal to 
+the $p$-adic integral 
+$$Z_{f, K_{\gP}} (s) := \int_{\cO_{\gP}^n} \vert f\vert_{\gP}^s \vert dx \vert_{\gP}.$$
+Here, we extend $N_{\gP}$ to $\cM_K (\LL^{- s})$ by sending
+$\LL^{- s}$ to $q^{-s}$, with $q$ the cardinal of $k_{\gP}$.
+\end{prop}
+
+\begin{proof}Follows directly from 
+(\ref{red}) and Proposition \ref{nmz}.
+\end{proof}
+
+\subsection{Geometrization of $Q$}Let us now slighly generalize the Poincar\'e series $Q$ and $P$.
+For $X$ a variety over a $\cO_K$, for $K$ a finite extension
+of $\QQ_p$. 
+We set
+$N_m :=  \vert X (\cO_K / \varpi^{m + 1}) \vert$, for $m \geq 0$
+and consider the series $Q (T)
+:=  \sum_{m \geq 0}   N_m T^m$. 
+The series $Q (T)$ is still rational (cf. \cite{meuser}, see also the
+review MR 83g:12015).
+Also, we denote by $\tilde N_m$ the cardinality of the image
+of $X (\cO_K)$ in $X (\cO_K / \varpi^{m + 1})$. In other words,
+$\tilde N_m$ is the number of points in
+$X (\cO_K / \varpi^{m + 1})$ 
+that may be lifted to actual points in 
+$X (\cO_K)$ and we set $P (T)
+:=  \sum_{m \geq 0}  \tilde N_m T^m$.
+Denef's rationality proof extends to this setting.
+When $X$ is defined by $f = 0$
+in the affine space one recovers the previous definitions.
+
+
+It follows from Proposition \ref{gyg} that, when $X$ is an hypersurface in the affine space
+defined over some number field $K$,
+$
+N_{\gP} (Q_{\rm geom} (T)) = Q_{X \otimes \cO_{K_{\gP}}} (T).
+$
+forr almost all $\gP$.
+This may be extended to any $X$ over a number field $K$ (cf. \cite{rat}).
+
+
+
+\subsection{Geometrization of $P$}As a geometric analogue of the Serre series $P (T)$,
+it is natural to consider, for a variety $X$ over a field $k$,
+the generating series
+$$
+P_{\rm geom} (T) :=
+\sum_{m \geq 0} [\pi_m (\cL (X))] \, T^m
+$$
+in
+$\cM_k [[T]]$.
+Here we should check that
+the image $\pi_m (\cL (X))$ of $\cL (X)$ in $\cL_m (X)$ is a constructible subset
+of $\cL_m (X)$.
+This holds
+thanks to Greenberg's Theorem on solutions of polynomial systems in Henselian rings
+\cite{gree}, which states that $\pi_m (\cL (X))$ is equal to $\theta_n^m ( \cL_n(X))$
+for some $n \geq m$, together with Chevalley's constructibility Theorem.
+
+
+
+
+
+
+
+
+
+\begin{theorem}[Denef-Loeser \cite{inv}]\label{Pg}
+Assume ${\rm char} k = 0$.
+The series 
+$P_{\rm geom} (T)$
+in $\cM_k [[T]]$ is rational of the form
+$$
+\frac{R (T)}{\prod (1 - \LL^a T^b)},
+$$
+with $R (T)$ in 
+$\cM_k [T]$, $a$ in $\ZZ$ and $b$ in $\NN \setminus \{0\}$.
+\end{theorem}
+
+The prove of this result follows similar lines than the proof of Theorem \ref{prat},
+using motivic integration instead
+of $p$-adic integration and Pas' quantifier elimination instead of Macintyre's.
+
+
+
+
+\subsection{Towards $P_{\rm ar}$}When $X$ is defined over a number field
+$K$, 
+a quite natural guess would be, by
+analogy with what we have seen
+so far, that,
+for almost
+all finite places $\gP$,
+$N_{\gP} (P_{\rm geom} (T)) = P_{X \otimes \cO_{K_{\gP}}} (T)$.
+But such a statement cannot hold true as can be seen on some simple examples.
+This is due to the fact that,
+in the very definition of $P (T)$, one is concerned in not considering
+extensions of the residue field, while in the definition
+of $P_{\rm geom} (T)$ extensions of the residue field $k$
+are allowed.
+To remedy this, one needs to be more careful about
+rationality issues concerning the residue field, and this will be the topic of the  next section.
+
+
+
+
+
+\section{Assigning virtual Chow motives to formulas}
+
+
+\subsection{Subassignments}
+Fix a ring $R$. We denote
+by $\textrm{Field}_R$
+the category of $R$-algebras that are fields.
+For an $R$-scheme $X$, we denote by $h_X$ the functor
+which to a field $K$ in 
+$\textrm{Field}_R$ assigns the set
+$h_X (K) := X (K)$.
+By a subassignment $h \subset h_X$
+of 
+$h_X$
+we mean the datum, for every 
+field $K$ in 
+$\textrm{Field}_R$, of a subset $h (K)$ of 
+$h_X (K)$. We stress that, contrarly to subfunctors,
+no compatibility is required
+between the various sets
+$h (K)$.
+
+
+All set theoretic constructions generalize in an obvious
+way to the case of subassignments. For instance if $h$ and $h'$
+are subassignments of $h_X$, then we denote by
+$h \cap h'$ the subassignment $K \mapsto h (K) \cap h' (K)$, etc.
+
+
+Also, if $\pi : X \rightarrow Y$ is a morphism
+of $R$-schemes and $h$ is a 
+subassignment of $h_X$, we define
+the 
+subassignment $\pi (h)$ of 
+$h_Y$ by $\pi (h) (K) := \pi (h (K)) \subset h_Y (K)$.
+
+\subsection{Definable subassignments}Let $R$
+be a ring. 
+By a ring formula $\varphi$  over $R$, we mean
+a first order formula in the language of rings with coefficients
+in $R$ and free variables $x_1, \dots x_n$.
+
+
+To a  ring formula $\varphi$ over $R$ with
+free variables $x_1, \dots x_n$
+one assigns the subassignment $h_{\varphi}$
+of $h_{\AA^n_R}$ defined by
+\begin{equation}\label{hd}
+h_{\varphi}( K) :=
+\Bigl\{ (a_1, \dots, a_n) \in K^n\Bigm \vert
+\varphi (a_1, \dots, a_n) \, \textrm{holds in } K \Bigr\} \subset
+K^n = h_{\AA^n_R} (K).
+\end{equation}
+
+
+Such a subassignment 
+of $h_{\AA^n_R}$ is called a definable subassignment.
+More generally, using affine coverings, cf. \cite{def}, one defines 
+definable subassignments of $h_X$ for $X$ a variety over $R$.
+
+
+
+It is quite easy to show that if $\pi : X \rightarrow Y$
+is an $R$-morphism of finite presentation,
+$\pi (h)$ is a definable subassignment of $h_Y$
+if $h$ is a definable subassignment of $h_X$.
+
+
+
+In our situation, we are concerned with the
+subassignment
+$\pi (h_{\cL (X)}) \subset h_{\cL_n (X)}$.
+Remark that
+$\pi_n : \cL (X) \rightarrow \cL_n (X)$ is not of finite type.
+Nevertheless, it follows from Pas' Theorem (cf. Proposition \ref{speci})
+that
+$\pi (h_{\cL (X)})$  is a definable subassignment of $h_{\cL_n (X)}$.
+
+
+\subsection{Pseudo-finite fields}Let $\varphi$ be a formula over a number field $K$.
+For almost all finite places $\gP$ with residue field
+$k (\gP)$, one may extend the definition in
+(\ref{hd}) to give a meaning
+to $h_{\varphi}(k (\gP))$.
+If $\varphi$ and $\varphi'$ are formulas over $K$,
+we set $\varphi \equiv \varphi'$
+if $h_{\varphi}(k (\gP)) =
+h_{\varphi'}(k (\gP))$
+for almost all finite places $\gP$.
+
+
+It follows from a  fundamental result of 
+J. Ax \cite{Ax} that
+$\varphi \equiv \varphi'$
+if and only if 
+$h_{\varphi} (L) = h_{\varphi} (L')$
+for every
+pseudo-finite field $L$
+containing $K$.
+We recall that a pseudo-finite field
+$L$ is a perfect
+infinite field which has exactly one extension of each degree
+and such that every absolutely irreducible variety over $L$
+has a rational point
+over
+$L$. J. Ax proved \cite{Ax} that an infinite field $F$ is pseudo-finite
+if and only if every sentence
+in the first order language
+of rings which is true in all finite fields is also true in $F$.
+We recall also that the property of being a pseudo-finite field
+is stable by ultraproducts.
+
+
+
+\subsection{A brief review on quantifier elimination for Galois formulas}
+Let $A$ be an integral and normal scheme.
+A morphism of schemes
+$h : C \rightarrow A$ is a
+Galois cover if $C$ is integral,
+$h$ is {\'e}tale (hence $C$ is normal)
+and there is a
+finite group $G = G (C  / A)$, the Galois group, acting on $C$ 
+such that $A$  is isomorphic to the quotient $C / G$ 
+in such a way that
+$h$ is the composition of the quotient morphism with the 
+isomorphism.
+We say that the Galois cover $h : C \rightarrow A$
+is colored
+if $G (C  / A)$ is equipped with
+a family ${\rm Con}$  of subgroups of
+$G (C  / A)$ 
+which is stable by conjugation under elements of
+$G (C  / A)$.
+
+
+
+
+Let $S$ be an integral normal scheme and let $X_{S}$ be a variety
+over $S$.
+A normal stratification
+of $X_{S}$, 
+$$
+\cA = \langle X_{S}, C_{i} / A_{i} \, \vert \, i \in I \rangle , 
+$$
+is a partition of $X_{S}$
+into a finite
+set of integral and normal locally closed $S$-subschemes
+$A_{i}$, $i \in I$, each equipped with a 
+Galois cover $h_{i} : C_{i} \rightarrow A_{i}$.
+
+
+A normal stratification $\cA$
+may be augmented to a Galois stratification
+$$
+\cA 
+= \langle X_{S}, C_{i} / A_{i}, {\rm Con} (A_{i})
+\, \vert \, i \in I \rangle, 
+$$
+if for each $i \in I$, ${\rm Con} (A_{i})$
+is a family of subgroups of
+$G (C_{i}  / A_{i})$ 
+which is stable by conjugation under elements in $G (C_{i}  / A_{i})$,
+{\it i.e.} $(C_{i} \rightarrow A_{i}, {\rm Con} (A_{i}))$
+is a colored Galois cover.
+
+
+
+Let $U = {\rm Spec} \, R$
+be an affine scheme, which we assume to be integral and normal.
+For any variety $X_{U}$ over $U$
+and any closed point $x$
+of $U$, we denote by $\FF_{x}$ the residual field of $x$ on $U$
+and by
+$X_{x}$ the fiber of $X_{U}$ at $x$.
+More generally, for any field $M$ containing $\FF_{x}$, we shall denote by
+$X_{x, M}$ the fiber product of $X_{U}$ and ${\rm Spec} \, M$ over $x$.
+
+
+
+
+
+
+Let $X_{U}$ be a variety over $U$.
+Let $\cA 
+= \langle X_{U}, C_{i} / A_{i}, {\rm Con} (A_{i}) \, \vert \,
+i \in I \rangle$
+be a Galois stratification of $X_{U}$ and let
+$x$ be a closed point of $U$.
+Let $M$ be a field containing $\FF_{x}$ and 
+let $\aa$
+be  an $M$-rational point of $X_{x}$ belonging
+to $A_{i, x}$. We denote by ${\rm Ar} (C_{i} / A_{i}, x ,\aa)$
+the conjugacy class of subgroups of $G (C_{i}  / A_{i})$
+consisting of  the  decomposition subgroups at $\aa$. We shall
+write
+$$
+{\rm Ar} (\aa) \subset {\rm Con} (\cA)
+$$
+for 
+$${\rm Ar} (C_{i} / A_{i}, x ,\aa) \subset {\rm Con} (A_{i}).
+$$
+For $x$ a  closed point of $U$ and
+$M$ a field containing $\FF_{x}$, we consider the subset
+$$
+Z (\cA, x, M) :=
+\Bigl\{\aa \in X_{U} (M)
+\Bigm \vert {\rm Ar} (\aa) \subset
+{\rm Con} (\cA)
+\Bigr\}
+$$
+of
+$X_{U}(M)$.
+
+
+
+Let
+$\cA 
+= \langle \AA^{m + n}_{U}, C_{i} / A_{i}, {\rm Con} (A_{i})
+\, \vert \, i \in I \rangle$
+be a Galois stratification of $\AA^{m + n}_{U}$.
+Let $Q_{1}, \ldots, Q_{m}$ be quantifiers.
+We denote by $\vartheta$  or by $\vartheta (\YY)$ the formal expression
+$$
+(Q_{1} X_{1}) \ldots (Q_{m} X_{m}) \, [{\rm Ar} (\XX, \YY) \subset
+{\rm Con} (\cA)]
+$$
+with $\XX = (X_{1}, \ldots, X_{m})$ and
+$\YY = (Y_{1}, \ldots, Y_{n})$. We call $\vartheta (\YY)$
+a {\it Galois formula} over $R$ in the free variables $\YY$. 
+
+
+
+Now to a Galois formula $\vartheta$, to a 
+closed point $x$ of $U$ and to a field $M$ containing $\FF_{x}$,
+one associates the subset
+\begin{multline*}
+Z (\vartheta, x, M) :=\\
+\Bigl\{\bb = (b_{1}, \ldots, b_{n}) \in M^n
+\Bigm \vert
+(Q_{1} a_{1}) \ldots (Q_{m} a_{m}) \, [{\rm Ar} (\aa, \bb) \subset
+{\rm Con} (\cA)]
+\Bigr\}
+\end{multline*}
+of
+$M^n$, where the quantifiers $Q_{1} a_{1}$, \dots, $Q_{m} a_{m}$ run
+over $M$.
+
+
+
+
+
+Let $\varphi (Y_{1}, \ldots, Y_{n})$ be a formula 
+in the first order
+language of rings with coefficients in the ring $R$ and free variables
+$Y_{1}, \ldots, Y_{n}$.
+For every 
+closed point $x$ in $U$ and every field $M$ containing
+$\FF_{x}$ we denote by 
+$Z (\varphi, x, M)$ the subset of 
+$M^n$ defined by the (image over $\FF_{x}$ of the) formula
+$\varphi$.
+Assume now $\varphi$ is
+in prenex normal form,
+{\it i.e.} a formula of the form
+\begin{equation}\label{prenex}
+(Q_{1} X_{1}) \ldots (Q_{m} X_{m}) \, \Bigl[
+\bigvee_{i = 1}^{k} \bigwedge_{j = 1}^l f_{i, j}
+(\XX, \YY) = 0 \wedge g_{i, j}
+(\XX, \YY) \not= 0
+\Bigr],
+\end{equation}
+with $f_{i, j}$ and $g_{i, j}$ in $R [\XX, \YY]$.
+The formula between brackets defines
+an $U$-construct\-ible subset $W$ of $\AA_{U}^{m + n}$ to which one 
+associates a Galois stratification 
+by taking any normal stratification
+with all strata contained either in $W$ or in its complement,
+by taking the identity morphism as Galois cover on each stratum, 
+and taking for ${\rm Con} (A_{i})$ the family consisisting of
+the group with one element 
+if
+$A_{i} \subset W$ and the empty family otherwise. In this way
+one obtains a Galois formula $\vartheta$ over $R$ such that
+$Z (\vartheta, x, M) = Z (\varphi, x, M)$ for every closed point $x$ in
+$U$ and every field $M$
+containing $\FF_{x}$.
+
+
+There exists 
+several versions of quantifier elimination for Galois formulas
+\cite{F-S}, \cite{F-H-J}, \cite{F-J}. We shall use the
+following one which
+is a special case
+of Proposition 25.9 of \cite{F-J}.
+
+\begin{theorem}[Fried-Jarden]\label{pfelimination}Let $k$ be a field.
+Let $\cA$
+be a Galois stratification of $\AA^{m + n}_{k}$ and let  $\vartheta$  
+be a
+Galois formula
+$$
+(Q_{1} X_{1}) \ldots (Q_{m} X_{m}) \, [{\rm Ar} (\XX, \YY) \subset
+{\rm Con} (\cA)]
+$$
+with respect to $\cA$.
+There exists a  Galois stratification
+$\cB$ of 
+$\AA^{n}_{k}$ such that,
+for every pseudo-finite field $F$  containing $k$,
+$$Z (\vartheta, {\rm Spec} \, k, F)
+=
+Z (\cB, {\rm Spec} \, k, F).
+$$
+\end{theorem}
+
+
+
+
+\begin{cor}\label{pf2.5}Let $\varphi (Y_{1}, \ldots, Y_{n})$ be a formula 
+in the first order
+language of rings with coefficients in a field $k$ and free variables
+$Y_{1}, \ldots, Y_{n}$.
+There exists a Galois stratification
+$\cB$ of 
+$\AA^{n}_{k}$ such that, 
+for every pseudo-finite  field $F$ containing $k$,
+$$Z (\varphi, {\rm Spec} \, k, F)
+=
+Z (\cB, {\rm Spec} \, k, F).
+$$
+\end{cor}
+
+
+
+
+\subsection{Assigning virtual motives to formulas}
+Let $k$ be a field of characteristic
+zero.
+Let us consider
+the Grothendieck
+ring $K_0 ({\rm PFF}_k)$ of the 
+theory of pseudo-finite fields over $k$ as defined in \ref{g1t}.
+It follows from \ref{vm} that we have a canonical morphism
+$\chi_c :  K_0 ({\rm Var}_k) \rightarrow K_0 ({\rm CHMot}_k)$.
+We shall denote by $K_0^{\rm mot} ({\rm Var}_k) $
+the image of 
+$K_0 ({\rm Var}_k)$
+in
+$K_0 ({\rm CHMot}_k)$ under this morphism.
+Remark that the image of $\LL$
+in
+$K_0^{\rm mot} ({\rm Var}_k)$  is not a zero divisor since it is 
+invertible in 
+$K_0 ({\rm CHMot}_k)$.
+We shall now explain the construction of a canonical ring morphism
+$$ \chi_c : {\rm K}_0
+({\rm PFF}_k ) \longrightarrow {\rm K}_0^{\rm mot} ({\rm Var}_{k} )
+\otimes {\bf Q} $$
+extending the one in \ref{vm}.
+
+\begin{theorem}[Denef-Loeser \cite{def},\cite{icm}]\label{imp}Let $k$
+be a field of characteristic zero.
+There exists a unique ring morphism $$ \chi_c : {\rm K}_0
+({\rm PFF}_k ) \longrightarrow {\rm K}_0^{\rm mot} ({\rm Var}_{k} )
+\otimes {\bf Q} $$
+satisfying  the following two properties:
+\begin{enumerate}\item[(i)] For any formula $\varphi$ which is a conjunction of polynomial equations
+over $k$, the element $\chi_c ([\varphi])$ equals the
+class in ${\rm K}_0^{\rm mot} ({\rm Var}_{k}  ) \otimes {\bf Q}$ of the
+variety defined
+by $\varphi$.
+\item[(ii)] Let $X$ be a normal affine irreducible variety over $k$, $Y$ an unramified
+Galois cover of
+$X$, and $C$ a cyclic subgroup of the Galois group G of $Y$ over $X$. For such data we
+denote by
+$\varphi_{Y,X,C}$ a ring formula, whose interpretation in any field $K$ containing
+$k$, is the set of $K$-rational points on $X$ that lift to a geometric
+point on $Y$ with decomposition group $C$ (i.e. the set of points on $X$ that lift to a $K$-rational
+point of $Y/C$, but not to any $K$-rational point of $Y/C'$ with $C'$ a proper subgroup of
+$C$). Then
+\[
+\chi_c ([\varphi_{Y,X,C} ]) = \frac{{\left| C \right|}}{{\left|
+{{\rm N}_{G} (C)} \right|}}\chi_c ([\varphi_{Y,Y/C,C}
+]),\]
+where ${\rm N}_{G} (C)$ is the normalizer of $C$ in $G$.
+\end{enumerate}
+Moreover, when  $k$ is a number field,
+for almost all finite places $\gP$,
+$ N_{\gP} (\chi_c ([\varphi]))$ is
+equal to the cardinality of $h_{\varphi} (k(\gP))$.
+\end{theorem}
+
+
+
+The above Theorem is a variant of results in \S 3.4  of \cite{def}.
+A sketch of proof is given in \cite{icm}.
+\begin{proof}[Some ingredients in the proof]
+Uniqueness uses quantifier elimination for
+pseudo-finite fields 
+from which 
+it follows by Corollary \ref{pf2.5} that ${\rm K}_0
+({\rm PFF}_k )$ is generated as a group by
+classes of
+formulas of the form $\varphi _{Y,X,C}$.
+Thus by (ii) we only have to
+determine $\chi_c([\varphi _{Y,Y/C,C}])$, with $C$ a cyclic group.
+But this follows
+directly from the following recursion formula: 
+\begin{equation}\label{rec}
+\left| C \right|[Y/C] = \sum\limits_{A\,{\rm  subgroup\,  of }\, C} \left| A \right|
+\chi_c ([\varphi_{Y,Y/A,A}]).
+\end{equation}
+This recursion formula is a direct consequence of (i), (ii), and the fact that
+the formulas $\varphi _{Y,Y/C,A}$ yield a partition of $Y/C$.
+The proof of existence
+is based on work of del Ba{\~ n}o
+Rollin and
+Navarro Aznar
+\cite{Rollin Aznar} who
+associate to any representation over {\bf Q} of a finite group $G$ acting
+freely on an affine variety $Y$ over $k$, an element in the Grothendieck group of Chow
+motives over $k$. By linearity, we can hence associate to any {\bf Q}-central function
+$\alpha$ on $G$ (i.e. a {\bf Q}-linear combination of characters of
+representations of $G$ over {\bf Q}), an element $\chi_c(Y,\alpha )$ of that Grothendieck
+group tensored with {\bf Q}. Using Emil Artin's Theorem, that any {\bf Q}-central function
+$\alpha$ on $G$ is a {\bf Q}-linear combination of characters induced by trivial
+representations of cyclic subgroups, one shows that
+$\chi_c(Y,\alpha )\in {\rm K}_0^{\rm mot} ({\rm Var}_{k}  ) \otimes {\bf Q}$. For $X:=Y/G$
+and $C$ any cyclic subgroup of $G$,
+we define $\chi_c([\varphi _{Y,X,C}]) := \chi_c(Y,\theta)$, where $\theta$ sends $g\in G$ to 1
+if the subgroup generated by $g$ is conjugate to $C$, and else to 0.
+With some more work we prove that
+the above definition of $\chi_c([\varphi _{Y,X,C}])$ extends by additivity to a
+well-defined map
+$ \chi_c : {\rm K}_0
+({\rm PFF}_k ) \longrightarrow {\rm K}_0^{\rm mot} ({\rm Var}_{k} ) \otimes {\bf Q} $. 
+\end{proof}
+
+
+Clearly $\chi_c (\varphi)$ depends only on $h_{\varphi}$ and the construction
+easily extends by additivity
+to 
+definable subassignments of $h_X$, for
+any variety $X$ over $k$. So,
+to any such
+definable subassignment $h$, we may associate $\chi_c (h)$ in
+${\rm K}_0^{\rm mot} ({\rm Var}_{k}) \otimes \QQ$.
+
+
+
+The invariants ${\rm Eu}$ and $H$ being cohomological they factor through
+$ {\rm K}_0^{\rm mot} ({\rm Var}_{k} )$.
+One can show, cf. \cite{rat}, that for any 
+definable subassignment $h$, ${\rm Eu} (\chi_c (h))$ belongs to $\ZZ$.
+Such an integrality result does not hold for $H$ as shown by the following example:
+Let $n$ be a integer $\geq 1$ and
+assume $k$ contains
+all $n$-roots of unity.
+Consider the formula
+$\varphi_n : (\exists y) (x = y^n \; \text{and} \;
+x \not= 0)$ ; then $\chi_c (\varphi_n) = \frac{\LL -1}{n}$.
+In particular
+${\rm Eu} (\chi_c (\varphi_n)) = 0$
+and
+${H} (\chi_c (\varphi_n)) = \frac{uv -1}{n}$.
+(This example contradicts the example on page
+430 line -2 of \cite{def}
+which is unfortunately incorrect.)
+
+
+
+\section{Arithmetic motivic integration}
+\subsection{The series $P_{\rm ar}$}We now consider
+the series
+$$
+P_{\rm ar} (T) := \sum_{n \geq 0} \chi_c (\pi_n (h_{\cL (X)})) \, T^n
+$$
+in
+${\rm K}_0^{\rm mot} ({\rm Var}_{k}) \otimes \QQ$.
+
+\begin{theorem}[Denef-Loeser \cite{def}]\label{Pa}
+Assume ${\rm char} k = 0$.
+\begin{enumerate}
+\item[1)]The series 
+$P_{\rm ar} (T)$
+in ${\rm K}_0^{\rm mot} ({\rm Var}_{k})\otimes \QQ$ is rational of the form
+$$
+\frac{R (T)}{\prod (1 - \LL^a T^b)},
+$$
+with $R (T)$ in 
+$({\rm K}_0^{\rm mot} ({\rm Var}_{k}) \otimes \QQ )[T]$, $a$ in $\ZZ$ and $b$ in $\NN \setminus \{0\}$.
+\item[2)] If $X$ is defined over
+some number field $K$, then, for almost
+all finite places $\gP$,
+$$
+N_{\gP} (P_{\rm ar} (T)) = P_{X \otimes \cO_{K_{\gP}}} (T).
+$$
+\end{enumerate}
+\end{theorem}
+
+Here we use implicitely
+that $N_{\gP}$ factors through $ {\rm K}_0^{\rm mot} ({\rm Var}_{k} )$
+which follows from the fact there exists,
+by Grothendieck trace formula, a cohomological
+expression for $N_{\gP}$.
+
+The proof of Theorem \ref{Pa} relies on the theory of
+arithmetic motivic integration we shall now explain.
+
+
+
+
+\subsection{Definable subassignments of $h_{\cL (X)}$}We shall use now
+the notations and definitions in \ref{uuu}, assuming
+that $K = k ((t))$, that
+$\kappa = k$, with $k$
+a field of characteristic zero,
+and that $\ord$ and $\ac$ have their classical meaning for 
+formal power series.
+
+
+\medskip 
+Let $R$ be a subring of $k$.
+By an $\cL_{\rm Pas}$-formula
+with coefficients in $R$ in the valued field sort and in the residue
+field sort, we mean a formula in the language obtained from
+$\cL_{\rm Pas}$ by adding, for every element of $R$,
+a new symbol to denote it in the valued field sort and in the residue
+field sort. 
+We shall consider $\cL_{\rm Pas}$-formulas
+with coefficients in $R$ in the valued field sort and in the residue
+field sort, free
+variables $x_{1}, \ldots, x_{m}$ running
+over the valued field sort and no free
+variables running over
+the residue field or the value sort. We shall call such formulas
+formulas on $R [[t]]^m$ for short
+
+
+
+
+
+
+
+\medskip
+One may deduce the
+following statement  of Ax/Ax-Kochen-Er{\v s}ov type 
+from
+the Pas Theorem.
+
+
+
+\begin{prop}\label{axax}Let $R$ be a
+normal domain 
+of finite type over $\ZZ$ with field of fractions $k$.
+Let $\sigma$ be a sentence
+in the language $\cL_{{\rm Pas}}$ with coefficients in $R$
+in the valued field sort and in the residue
+field sort. The following
+statements are equivalent:
+\begin{enumerate}
+\item[(1)] The sentence
+$\sigma$ is true in $F ((t))$ for every pseudo-finite field $F$
+containing
+$k$.    
+\item[(2)]
+There exists $f$ in $R \setminus \{0\}$
+such that, for every closed point $x$ in ${\rm Spec} \, R_{f}$,
+the sentence $\sigma$ is true in $\FF_{x}((t))$.
+\end{enumerate}
+If, furthermore, $k$ is a finite extension of $\QQ$, the previous statements
+are also equivalent to the following:
+\begin{enumerate}
+\item[(3)]There exists $f$ in $R \setminus \{0\}$, multiple of the
+discriminant of $k / \QQ$,
+such that, for every closed point $x$ in ${\rm Spec} \, R_{f}$,
+the sentence $\sigma$ is true in $k_{x}$,
+\end{enumerate}
+where $k_{x}$ denotes the completion of $k$ at $x$. Remark that, 
+the extension $k / \QQ$ being non ramified at $x$,
+the field $k_{x}$ admits a canonical uniformizing parameter, hence
+also
+a canonical
+angular component map.
+\end{prop}
+
+
+
+Let $k$ be a field
+and let $X$ be a variety over $k$. 
+We consider the functor
+$h_{\cL (X)} :  K \mapsto X (K[[t]])$ from ${\rm Field}_{k}$
+to the category of sets.
+
+Let $\varphi$ be a formula on $k [[t]]^m$.
+For every field $K$ in ${\rm Field}_{k}$, denote by 
+$Z (\varphi, K[[t]]) $ the subset of
+of all $x$ in
+$K[[t]]^{m} = \AA^{m}_{k} (K [[t]])$
+for which  $\varphi (x)$ is true
+in $K((t))$.
+This defines a subassignment
+$K \mapsto Z (\varphi, K[[t]]) $
+of the functor $h_{\cL (\AA^{m}_{k})}$.
+We call such a subassignment a definable subassignment of 
+$h_{\cL (\AA^{m}_{k})}$.
+
+By using affine coverings, one may also define
+definable subassignments of $h_{\cL (X)}$, for
+$X$ any variety over $k$.
+
+
+
+
+
+
+
+
+We shall denote by ${\rm Def}_{k} (\cL (X))$ the set of
+definable subassignments of $h_{\cL (X)}$. Clearly ${\rm Def}_{k} (\cL
+(X))$ is stable
+by finite intersection and finite union and by taking complements.
+
+
+
+
+For $n$ in $\NN$, recall the  canonical truncation 
+morphism $\pi_{n} : \cL (X) \rightarrow \cL_{n} (X)$.
+Hence if $h$ is a subassignment of $h_{\cL(X)}$ 
+(resp. of $h_{\cL_{n} (X)}$)
+we may consider
+$\pi_{n} (h) : K \mapsto \pi_{n} (h (K))$
+(resp. $\pi_{n}^{-1} (h) : K \mapsto \pi_{n}^{-1} (h (K))$)
+which is a subassignment of $h_{\cL_{n} (X)}$
+(resp. of $h_{\cL (X)}$).
+
+
+
+\begin{prop}\label{speci}Let $h$ be  a definable
+subassignment of $h_{\cL(X)}$. Then, for every 
+$n$ in $\NN$, 
+$\pi_{n} (h)$ is a definable
+subassignment of $h_{\cL_{n} (X)}$ 
+and
+$\pi_{n}^{-1} \pi_{n} (h)$ is a definable
+subassignment of $h_{\cL (X)}$.
+\end{prop}
+
+
+\subsection{Arithmetic motivic integration}Now let us explain briefly how arithmetic motivic integration
+is constructed.
+We shall denote by $\cM^{\rm mot}_k$
+the image of 
+$\cM_k$
+in
+$K_0 ({\rm CHMot}_k)$ by the morphism $\chi_c$.
+We endow $\cM^{\rm mot}_k$ with the filtration $F^{\bullet}$,
+image by $\chi_c$ of the filtration $F^{\bullet}$ on $\cM_k$
+and we denote by $\widehat \cM^{\rm mot}_k$ the completion of
+$\cM^{\rm mot}_k$ with respect to that filtration.
+
+
+
+Arithmetic motivic integration will assign to subassignments $h$ of $h_{\cL (X)}$
+a measure $\nu (h)$ in $\widehat \cM^{\rm mot}_k \otimes \QQ$.
+The idea of the construction is very much the same as the one in \ref{123},
+starting from stable cylinders. 
+Since we are concerned only with definable subassignments, we
+shall not talk about  measurable subassignments here.
+For a definable subassignment $h$ of $\cL (X)$ which is a stable cylinder
+(this is defined 
+in a completely similar way 
+than in the geometric case), 
+the sequence $\chi_c (\pi_n (h)) \LL^{- (n+ 1) d}$
+has a  constant value $\tilde \nu (h)$ in
+$\cM^{\rm mot}_k \otimes \QQ$ for large $n$, with $d$ the dimension of $X$.
+
+
+
+
+\begin{def-theorem}[Denef-Loeser]\label{ami}There exists a unique
+mapping
+$$\nu : {\rm Def}_{k} (\cL (X))
+\longrightarrow
+\widehat \cM^{\rm mot}_k \otimes \QQ$$
+satisfying the following properties.
+\begin{enumerate}
+\item[(1)]If  $h$ is a stable cylinder which is a definable subassignment of $h_{\cL (X)}$,
+then
+$\nu (h)$
+is equal to the image
+of
+$\tilde \nu (h)$ in $\widehat \cM^{\rm mot}_k \otimes \QQ$.
+\item[(2)]If $h$ and $h'$ are definable subassignments of $h_{\cL (X)}$, then
+$$\nu (h \cup h') =
+ \nu (h) +  \nu (h') -
+ \nu (h \cap h').
+$$
+\item[(3)]If $h (E) = h' (E)$ for every pseudo-finite field $E$
+containing $k$,
+then $ \nu (h) =   \nu (h')$.
+\item[(4)]Let  $h$ be a definable subassignment of $h_{\cL (X)}$.
+If there exists a subvariety $S$ of $X$ with ${\rm dim} \, S \leq d - 1$
+such that $h \subset h_{\cL (S)}$, then
+$\nu (h) = 0$.
+\item[(5)]Let $h_{n}$ be a definable partition of a definable subassignment
+$h$
+with parameter $n \in \NN$.
+Then the series $\sum_{n \in \NN} \nu (h_{n})$
+is convergent in
+$\widehat \cM^{\rm mot}_k \otimes \QQ$
+and 
+$$
+\nu (h) = \sum_{n \in \NN} \nu (h_{n}).
+$$
+\item[(6)]Let  $h$ and $h'$ be definable subassignments of $h_{\cL (X)}$.
+Assume
+$h \subset h'$.
+If $ \nu (h') $ belongs to $F^{e} \widehat \cM^{\rm mot}_k \otimes \QQ$, then $\nu (h)$
+also belongs to $F^{e} \widehat \cM^{\rm mot}_k \otimes \QQ$.
+(Here $F^{\bullet} \widehat \cM^{\rm mot}_k \otimes \QQ$ denotes the filtration induced
+by $F^{\bullet}$ on $ \widehat \cM^{\rm mot}_k \otimes \QQ$.)
+\end{enumerate}
+We call $\nu (h)$ the arithmetic motivic volume
+of $h$.
+\end{def-theorem}
+
+
+We have the following analogue of Theorem \ref{mo}:
+\begin{theorem}Let $X$ be a variety over $k$ of dimension $d$.
+Let  $h$ be a definable subassignment of $h_{\cL (X)}$. Then 
+$$
+\lim_{n \rightarrow \infty}
+\chi_{c} (\pi_{n} (h)) \, \LL^{-(n +
+1) d}
+= 
+\nu (h)
+$$ in
+$\widehat \cM^{\rm mot}_k \otimes \QQ$.
+\end{theorem}
+
+Also, if $\alpha : h \rightarrow \NN$ is a definable function
+on the definable subassignment $h$, meaning
+that, for every field
+$K$ containing $k$, we have a function $\alpha (K)  : h (K) \rightarrow \NN$
+and that the graph of these functions are definable in $\cL (X) \times \NN$,
+we may consider the  integral
+$\int_h \LL^{- \alpha} d \nu$.
+In particular,
+we have a direct analogue of
+the change of variables formula (Theorem \ref{cvf})
+for arithmetic motivic integration,
+with a similar proof relying on Proposition \ref{procvf}.
+
+
+We have also general rationality Theorems, for which we refer to
+\S\kern .15em 7 of \cite{def}. 
+Using Proposition \ref{axax}, one may also prove general specialization results
+of arithmetic integrals to $p$-adic ones (cf. \S\kern .15em 8 of \cite{def}).
+In particular Theorem \ref{Pa} concerning $P_{\rm ar}$
+may be obtained as a consequence of these rationality and specialization
+statements.
+Here is a typical example of such a statement:
+
+\begin{theorem}[Denef-Loeser \cite{def}]\label{int}
+Let $K$ be a number field. Let $\varphi$ be
+a first order formula in the language
+$\cL_{\rm Pas}$  with coefficients
+in $K$ and free variables 
+$x_1$, \dots, $x_n$. Let $f$ be a polynomial
+in $K [x_1, \dots, x_n]$.
+For 
+$\got P$ a finite place of $K$, denote by 
+$K_{\got P}$ the completion of $K$
+at $\got P$. For almost all  $\got P$, 
+applying the operator $N_{\gP}$  to the motivic integral $\int_h \LL^{- s (\ord f)} d \nu$
+gives the $p$-adic integral
+$$
+\int_{h_{\varphi} (K_{\got P})} |f|_{\got P}^s |d x|_{\got P}
+$$
+\end{theorem}
+
+
+Let us remark that this result is sufficient
+to get the specialization statement in Theorem \ref{Pa} about $P_{\rm ar}$.
+Indeed,
+one may as well assume $f$ is a definable function in Theorem \ref{int},
+since by a graph construction one may always replace $f$ by a coordinate.
+
+
+
+\subsection{``All natural $p$-adic integrals are motivic''}Theorem \ref{int} is an illustration of the principle
+``All natural $p$-adic integrals are motivic''. It 
+applies in particular to integrals occuring
+in $p$-adic harmonic analysis, like orbital integrals.
+This has led recently Tom Hales \cite{H1}
+to propose that
+many of the basic objects in
+representation theory should be  motivic in nature and to
+develop 
+a beautiful conjectural program aiming to the determination
+of the virtual Chow motives
+that should control the behavior of orbital integrals
+and leading to a motivic fundamental lemma  (see
+\cite{GH} and \cite{H2} for recent progress on these questions).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%\subsection{Epilogue}In these notes we did not discuss 
+
+\bibliographystyle{amsplain}
+\begin{thebibliography}{SGA}
+
+\bibitem{wf}D. Abramovich, K. Karu, K. Matsuki,
+J. W{\l}odarczyk,
+\textit{Torification and factorization of birational
+maps},
+J. Amer. Math. Soc. \textbf{15} (2002), 531--572.
+
+
+
+
+\bibitem{Ax} J. Ax, 
+\textit{The elementary theory of finite fields}, 
+Ann. of Math.
+\textbf{88} (1968), 239--271.
+
+
+
+\bibitem{inj}
+J. Ax, 
+\textit{Injective endomorphisms of varieties and schemes}, 
+Pacific J. Math. 
+\textbf{31} (1969), 1--7.
+14.15
+
+
+
+\bibitem{batyrev}
+V. Batyrev,
+\textit{Birational Calabi-Yau $n$-folds have equal Betti numbers},
+New trends in algebraic geometry (Warwick, 1996), 1--11, 
+London Math. Soc. Lecture Note Ser., 264, 
+Cambridge Univ. Press, Cambridge, 1999. 
+
+
+\bibitem{Bittner}F. Bittner,
+\textit{The universal Euler characteristic
+for varieties of characteristic zero},
+math.AG/0111062, to appear in Compositio Math.
+
+
+
+\bibitem{Rollin Aznar} S. del Ba{\~ n}o Rollin, V. Navarro Aznar,
+\textit{On the motive of a quotient variety},
+{Collect. Math.} \textbf{49} (1998),
+203--226.
+
+
+
+\bibitem{CH}R. Cluckers, D. Haskell,
+\textit{Grothendieck rings of $\ZZ$-valued fields},
+Bull. Symbolic Logic \textbf{7} (2001), 262--269.
+
+
+\bibitem{raf}R. Cluckers,
+\textit{Classification of semi-algebraic $p$-adic sets up to
+semi-algebraic bijection}, J. Reine Angew. Math.
+\textbf{540} (2001), 105--114. 
+
+\bibitem{denef}J. Denef,
+\textit{The rationality of the Poincar{\'e}
+series associated to the $p$-adic points on a variety}, 
+Invent. Math. \textbf{77} (1984), 1--23. 
+
+
+\bibitem{D85}
+J. Denef,
+\textit{On the evaluation of certain $p$-adic integrals},
+S\'eminaire de th\'eorie des nombres, Paris
+1983--84, 25--47, Progr. Math., \textbf{59}, Birkh\"auser
+Boston, Boston, MA, 1985
+
+
+\bibitem{Dcell}
+J. Denef,
+\textit{$p$-adic semi-algebraic sets and cell decomposition},
+J. Reine Angew. Math. \textbf{369} (1986), 154--166.
+
+\bibitem{D87}
+J. Denef,
+\textit{On the degree of Igusa's local zeta function}, 
+Amer. J. Math. \textbf{109} (1987), 991--1008.
+
+\bibitem{D2000}
+J. Denef,
+\textit{Arithmetic and geometric applications of quantifier elimination for valued fields}, Model
+theory, algebra, and geometry, 173--198, Math. Sci. Res. Inst. Publ., 39, Cambridge Univ. Press, Cambridge, 2000.
+
+
+\bibitem{jams92}J. Denef, F. Loeser,
+\textit{Caract\'eristiques d'Euler-Poincar\'e,
+fonctions z\^etas locales et modifications analytiques},
+J. Amer. Math. Soc. \textbf{5} (1992), 705--720.
+
+
+
+\bibitem{jag}J. Denef, F. Loeser,
+\textit{Motivic Igusa zeta functions},
+J. Algebraic Geom.,
+\textbf{7} (1998),
+505--537.
+
+
+\bibitem{inv}J. Denef, F. Loeser,
+\textit{Germs of arcs on singular algebraic varieties
+and motivic integration}, Invent. Math., \textbf{135} (1999), 201--232.
+
+\bibitem{def}
+J. Denef, F. Loeser,
+\textit{Definable sets, motives and $p$-adic integrals},
+J. Amer. Math. Soc. \textbf{14} (2001), 429--469.
+
+\bibitem{compositio}J. Denef, F. Loeser,
+\textit{Motivic integration, quotient singularities and the McKay correspondence},
+Compositio Math. \textbf{131} (2002), 267--290.
+
+
+
+\bibitem{icm}J. Denef, F. Loeser,
+\textit{Motivic Integration and the Grothendieck Group of Pseudo-Finite Fields},
+Proceedings of the International Congress of Mathematicians, Beijing 2002,
+Volume 2, 13--23, Higher Education Press, Beijing 2002.
+
+
+\bibitem{rat}J. Denef, F. Loeser,
+\textit{On some
+rational generating series occuring in arithmetic geometry},
+math.NT/0212202.
+to appear in the volume
+Geometric Aspects of Dwork's Theory.
+
+
+\bibitem{dwork}B. Dwork,
+\textit{On the rationality of the zeta function of an algebraic variety},
+Amer. J. Math. \textbf{82} (1960), 631--648.
+
+
+
+\bibitem{F-H-J}
+M. Fried, D. Haran, M. Jarden,
+\textit{Galois stratifications over Frobenius fields},
+Adv. in  Math., 
+\textbf{51}
+(1984),
+1--35.
+
+\bibitem{F-J} M. Fried, M. Jarden,\textit{Field arithmetic}, Ergebnisse der Mathematik und
+ihrer Grenzgebiete (3), Springer-Verlag, Berlin, 1986.  ISBN: 3-540-16640-8.
+
+\bibitem{F-S}
+M. Fried, G. Sacerdote,
+\textit{Solving diophantine problems over all residue class fields
+of a number field and all finite fields},
+Ann. Math.
+\textbf{100} (1976),
+203--233.
+
+
+\bibitem{GS}
+H. Gillet, C. Soul{\'e},
+\textit{Descent, motives and $K$-theory},
+J. Reine Angew. Math.
+\textbf{478}
+(1996),
+127--176.
+
+
+
+\bibitem{GH}J. Gordon, T. Hales,
+\textit{Virtual transfer factors},
+math.RT/0209001.
+
+
+
+
+
+
+\bibitem{gree}M. Greenberg,
+\textit{Rational points in henselian discrete valuation rings},
+Inst. Hautes {\'E}tudes Sci. Publ. Math.
+\textbf{31}
+(1966), 59--64.
+
+
+\bibitem{GN}
+F. Guill\'{e}n, V. Navarro Aznar,
+\textit{Un crit\`{e}re d'extension d'un foncteur d\'{e}fini sur les
+sch\'{e}mas lisses},
+Inst. Hautes {\'E}tudes Sci. Publ. Math.
+\textbf{95}
+(2002), 1--91.
+
+
+
+
+
+\bibitem{gs}\textit{Correspondance Grothendieck-Serre}, edited by
+P. Colmez and J.-P. Serre, Documents Math\'ematiques \textbf{2},
+Soci\'et\'e math\'ematique de France, 2001.
+
+
+
+\bibitem{GSS}
+F. Grunewald, D. Segal, G. Smith,
+\textit{Subgroups of finite index in nilpotent groups},
+Invent. Math. \textbf{93} (1988), 185--223.
+
+
+\bibitem{H1}
+T. Hales, \textit{Can $p$-adic integrals be computed?},
+math.RT/0205207.
+
+
+
+\bibitem{H2}
+T. Hales, \textit{Orbital Integrals are Motivic},
+math.RT/0212236.
+
+
+
+
+
+
+
+\bibitem{igusa}
+J. Igusa,
+\textit{Complex powers and asymptotic expansions. II. Asymptotic expansions},
+ J. Reine
+Angew. Math. \textbf{278/279} (1975), 307--321. 
+
+
+\bibitem{igusabook}J. Igusa,
+\textit{An introduction to the theory of local zeta functions},
+AMS/IP Studies in Advanced Mathematics, 14. 
+American Mathematical Society, Providence, RI;
+International Press, Cambridge, MA, 2000.
+
+%\bibitem{kapranov}
+%M. Kapranov,
+%\textit{The elliptic curve in the $S$-duality theory and Eisenstein series for
+%Kac-Moody groups},
+%math.AG/0001005.
+
+
+\bibitem{maxim}
+M. Kontsevich, Lecture at Orsay, December 7, 1995.
+
+
+%\bibitem{ll}
+%M. Larsen, V. Lunts,
+%\textit{Motivic measures and stable birational geometry},
+%math.AG/0110255 
+
+
+%\bibitem{rigid}
+%F. Loeser, J. Sebag,
+%\textit{Motivic integration
+%on smooth rigid varieties and invariants of degenerations}
+
+
+
+\bibitem{angus}
+A. Macintyre,
+\textit{On definable subsets of $p$-adic fields},
+J. Symbolic Logic \textbf{41} (1976), 
+605--610. 
+
+\bibitem{meuser}
+D. Meuser, \textit{On the rationality of certain generating functions},
+Math. Ann. \textbf{256} (1981), 303--310. 
+
+
+\bibitem{jo}J. Oesterl\'e,
+\textit{R\'eduction modulo $p^{n}$ des sous-ensembles analytiques ferm\'es
+de $\ZZ^{N}_{p}$},
+Invent. Math., \textit{66} (1982), 325--341.
+
+
+
+
+
+
+
+\bibitem{Pas}
+J. Pas,
+\textit{Uniform $p$-adic cell decomposition and local zeta functions},
+J. Reine Angew. Math.,
+\textbf{399}
+(1989),
+137--172.
+
+\bibitem{poonen}
+B. Poonen,
+\textit{The Grothendieck ring of varieties is not a domain},
+Math. Res. Lett. \textbf{9} (2002), 493--497.
+
+
+
+\bibitem {Scholl}
+A. Scholl,
+\textit{Classical motives},
+in
+\textsl{Motives}, U. Jannsen, S. Kleiman, J.-P. Serre Ed., 
+Proceedings of Symposia in Pure Mathematics, Volume 55 Part 1 (1994),
+163--187.
+
+%\bibitem{serre}J.-P. Serre,
+%\textit{Classification des vari\'et\'es analytiques $p$-adiques
+%compactes},
+%{Topology} \textbf{3} (1965), 409--412.
+
+
+
+
+
+
+
+
+
+
+
+
+\end{thebibliography}
+
+
+\end{document}
+

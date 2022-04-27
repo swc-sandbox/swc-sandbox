@@ -1,0 +1,417 @@
+\documentclass[12pt,titlepage]{article}
+\usepackage{epsfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amscd}
+
+\def\noi{\noindent}
+\def\O{\Omega}
+
+
+\textwidth=5.5in
+\hoffset=-.5in
+\textheight=7in
+\newenvironment{proof}{\medskip {\it Proof.\ }}{\ \rule[-0.5mm]{1mm}
+          {3.5mm}\medskip\noindent}
+
+\def\dbar{\overline{\partial}}
+
+\def\noi{\noindent}
+\def\O{\Omega}
+\def\deg{\mbox{\rm deg}\,}
+\def\Res{\mbox{\rm Res}\,}
+\def\ind{\mbox{\rm ind}\,}
+\def\rank{\mbox{\rm rank}\,}
+\def\Tr{\mbox{\rm Tr}\,}
+\def\tr{\mbox{\rm tr}\,}
+\def\gcd{\mbox{\rm gcd}\,}
+\def\we{\wedge}
+\def\et{e^{it}}
+\def\ett{e^{i\theta}}
+\def\G{\Gamma}
+\def\ii{\sqrt{-1}}
+\def\l{\lambda}
+\def\a{\alpha}
+
+\def\qed{\hbox{\hskip.2in\vrule width.4pt height6.65pt depth.15pt\vrule
+width2.5pt height6.65pt depth-6.25pt\hskip-2.5pt\vrule width2.5pt
+height.25pt depth.15pt\vrule width.4pt height6.65pt depth.15pt}}
+
+
+
+\newcommand{\bea}{\begin{eqnarray*}}
+\newcommand{\eea}{\end{eqnarray*}}
+
+\newcommand{\holo}[1]{\ensuremath{{\cal O}(#1)}}
+\newcommand{\sholo}[1]{\ensuremath{{\cal H}(#1)}}
+\newcommand{\Sholo}[2]{\ensuremath{{\cal O}_{#2}(#1)}}
+\newcommand{\hhull}[2]{\ensuremath{\hat{#1}_{\holo{#2}}}}
+\newcommand{\germ}[2]{\ensuremath{\mathbf{#1}_{#2}}}
+\newcommand{\pr}{\ensuremath{\pi}}
+\newcommand{\envholo}[2]{\ensuremath{\widetilde{#1}_{#2}}}
+\newcommand{\define}[1]{\textbf{#1}}
+\newcommand{\id}{\ensuremath{Id}}
+%\newcommand{\re}{\ensuremath{\Re}}
+%\newcommand{\im}{\ensuremath{\Im}}
+\newcommand{\tangent}[2]{\ensuremath{T({#1})_{{#2}}}}
+\newcommand{\Ctangent}[2]{\ensuremath{T_{\CC}({#1})_{{#2}}}}
+\newcommand{\Pl}{{\mathbb P}}
+
+\newtheorem{lem}{LEMMA}[section]
+\newtheorem{theo}[lem]{Theorem}
+\newtheorem{cla}[lem]{Claim}
+\newtheorem{coro}[lem]{Corollary}
+\newtheorem{prop}[lem]{Proposition}
+\newtheorem{problem}[lem]{Problem}
+\newtheorem{proposition}[lem]{Proposition}
+\newtheorem{definition}[lem]{Definition}
+\newtheorem{remark}[lem]{Remark}
+\def\CQFD{\hfill \vrule width 7pt height 7pt depth 1pt}
+\newtheorem{question}[lem]{Question}
+\newtheorem{example}[lem]{Example}
+\newtheorem{conjecture}[lem]{Conjecture}
+\newtheorem{obs}[lem]{Observation}
+\newtheorem{summary}[lem]{Summary}
+
+
+\begin{document}
+
+\section{Introduction}
+The aim of this work is to investigate when the variation of Hodge
+structures associated to a family of Calabi-Yaus is decomposable.
+We show that assuming the conjecture "Hodge implies Absolutely
+Hodge", the Hodge structure being decomposable can be translated
+into a condition in Galois theory.  Finally we look at some
+numerical data to try and ascertain whether there is sufficient
+evidence for a conjecture that the variation of Hodge structures
+is "rarely" decomposable.
+
+\subsection{Hodge Theory and Galois Theory}
+
+\begin{definition}
+    The \emph{total cohomology} of a variety $X$ over an algebraically closed field $k$ is
+   $H^{i}_{tot}(X) = H^{i}_{DR}(X) \times \prod_{l} H^{i}_{\Acute{e}t}(X,\mathbb{Q}_{l})$ where $H^{i}_{DR}$ is the \\ de Rham
+    cohomology and $H^{i}_{\Acute{e}t}$ is the etale cohomology.
+\end{definition}
+
+Let $\sigma : k \hookrightarrow \mathbb{C}$ and set $\sigma X = X \times_{k} $Spec$ \mathbb{C}$.  Recall that we have comparision isomorphisms:
+\[H^{i}_{B}(\sigma X) \otimes_{\mathbb{Q}} k \overset{\cong}{\rightarrow} H^{i}_{DR}(X)\]
+\[H^{i}_{B}(\sigma X) \otimes_{\mathbb{Q}} \mathbb{Q}_{l} \overset{\cong}{\rightarrow} H^{i}_{\Acute{e}t}(X,\mathbb{Q}_{l})\]
+where $H^{i}_{B}$ is the Betti cohomology.
+
+\begin{definition}
+  Let $\underline{t} = (t_{DR} , (t_{l})_{l}) \in H^{2i}_{tot}(X)$.  Then $t$ is a \emph{Hodge cycle} with respect to
+   $\sigma : k \hookrightarrow \mathbb{C}$ if there exists $t_{B,\sigma} \in H^{2i}_{B}(X)$ such that:\\
+     \indent 1. (rationality) $t_{DR} = $comp$_{B,DR}(t_{B,\sigma} \otimes 1)$ and $t_{l} =
+        $comp$_{B,l}(t_{B,\sigma}\otimes 1)$\\
+     \indent 2. (Hodge condition) $(t_{B,\sigma}) \otimes 1 \in H^{i,i}(\sigma X) \subset H^{2i}_{B}(\sigma X) \otimes
+        \mathbb{C}$
+\end{definition}
+
+\begin{definition}
+   We call a Hodge cycle an \emph{absolute Hodge cycle} if it is a Hodge cycle relative to every embedding
+   $\sigma : k \hookrightarrow \mathbb{C}$.
+\end{definition}
+
+We will assume the following:
+
+\begin{conjecture}\label{AH}
+   Every Hodge cycle is an absolute Hodge cycle.
+\end{conjecture}
+
+Let $k_0$ be a field (not necessarily algebraically closed) contained in $k$.  Then we have the following commutative diagram:
+
+\[
+\begin{CD}
+  X_{\mathbb{C}}            @>>> X              @>>> X_0\\
+    @VVV                      @VVV                @VVV\\
+  \text{Spec}(\mathbb{C})   @>>>\text{Spec}(k)  @>>>\text{Spec}(k_0)\\
+\end{CD}
+\]
+
+There is a natural action of $\text{Gal}(k/k_0)$ on
+$H^{i}_{\Acute{e}t}(X,\mathbb{Q}_{l})$ and the comparision isomorphisms
+can be used to get an action on $V=H^{i}_{B}(X_{\mathbb{C}})$.
+
+\begin{definition}
+   One says that $W$ is a \emph{tensor construction} from $V$ if it satisfies the following two properties:\\
+    \indent 1.  $W = V^{\otimes n_1} \otimes \Check{V}^{\otimes n_2} \otimes \mathbb{Q}(1)^{\otimes n_3}$\\
+    \indent 2.  $W_{Hdg} = W \bigcap (W \otimes \mathbb{C})^{0,0}$
+\end{definition}
+
+Using Deligne's article (Art 1, LNM 900, Prop 2.9), the above conjecture implies that
+the image $W_{Hdg} \hookrightarrow W\otimes \mathbb{Q}_{l}$ is stabilized by $\text{Gal}(k/k_0)$.
+
+\begin{definition}
+  The \emph{Mumford-Tate group MT($V$)} is the largest $\mathbb{Q}$-algebraic subgroup of
+  $\text{GL}(V) \times \text{GL}(\mathbb{Q}(1))$ whose rational points fix all the elements of $W_{Hdg}$. $\text{MT }'(V)$
+  is the projection onto $\text{GL}(V)$.
+\end{definition}
+
+When the associated Hodge structure is polarizable, it can be
+shown (loc. cit.) that this implies that the Mumford Tate group is
+reductive.  In particular this means that a $\mathbb{Q}$-linear
+transformation is in MT($V$) iff it stabilizes all Hodge cycles;
+i.e. this property uniquely characterizes MT($V$).
+
+\begin{proposition}
+  The action of $\text{Gal}(k/k_0)$ normalizes \\
+  $\text{MT }'(V) \subset \text{GL}(V \otimes \mathbb{Q}_{l})$.
+\end{proposition}
+
+\noindent
+\begin{proof}
+  Let $\sigma \in \text{Gal}(k/k_0)$, $m \in \text{MT }'$, and $w \in W_{Hdg}$.  Then $\sigma w = \Acute{w}$ for some
+  $\Acute{w} \in W_{Hdg}$.  We also observe that $m\Acute{w} = \Acute{w}$.  Then $(\sigma^{-1}m\sigma)w = w$
+  By the
+fact mentioned above (i.e. stabilizing all Hodge cycles implies
+membership of MT($V$)) we have that $(\sigma^{-1}m\sigma) \in
+\text{MT}'(V)$.
+\end{proof}
+
+\subsection{The Mumford-Tate Group of a certain 3-dimensional Hodge
+structure}
+
+In this section we consider a Hodge structure $V$ of weight 3 and
+rank 4 such that $V \otimes \mathbb{C} = V^{0,3} \oplus V^{1,2}
+\oplus V^{2,1} \oplus V^{3,0}$ with Hodge numbers all equal to 1.
+We will assume $V = V_1 \oplus V_2$, $V_1 \otimes \mathbb{C} =
+V^{0,3} \oplus V^{3,0}$
+,and $V_2 \otimes \mathbb{C} = V^{1,2} \oplus V^{2,1}$.\\
+Working over $\mathbb{C}$, we can pick a basis for $V_1 \otimes \mathbb{C}$ of the form
+$\left( \begin{smallmatrix} 1 \\ \tau_1 \end{smallmatrix} \right),
+\left( \begin{smallmatrix} 1 \\ \Bar{\tau_1} \end{smallmatrix} \right)$
+and similarly
+$\left( \begin{smallmatrix} 1 \\ \tau_2 \end{smallmatrix} \right),
+\left( \begin{smallmatrix} 1 \\ \Bar{\tau_2} \end{smallmatrix} \right)$
+for $V_2 \otimes \mathbb{C}$.
+Using the polarization one gets that $Im(\tau_1)<0$ and $Im(\tau_2)>0$.\\
+For a Hodge structure $W$, we define a map $\mu: \mathbb{G}_{m} \rightarrow \text{GL}(W)$ by
+$\mu (\lambda)(w^{p,q}) = \lambda^{-p} w^{p,q}$ for $w^{p,q} \in W^{p,q}$.
+
+\begin{prop}
+   The Mumford-Tate group of a Hodge structure $W$ is the smallest algebraic subgroup $G$  of GL($V$)$\times \mathbb{G}_{m}$
+   such that $\mu (\mathbb{G}_{m}) \subset G_{\mathbb{C}}$.
+\end{prop}
+
+\noindent
+\begin{proof}
+  See the article by Deligne referenced above.
+\end{proof}
+
+For $W=V_1$ with respect to the basis given above we have that $\mu_1(\lambda) =
+\left( \begin{smallmatrix} 1&0\\ 0&\lambda^{-3} \end{smallmatrix} \right)$
+,and on $V_2$ with respect to the given basis $\mu_2(\lambda)=
+\left( \begin{smallmatrix} \lambda^{-1}&0 \\ 0&\lambda^{-2} \end{smallmatrix} \right).$\\
+Now with respect to the standard basis $\left( \begin{smallmatrix} 0\\1 \end{smallmatrix} \right)
+\left( \begin{smallmatrix} 1\\0 \end{smallmatrix} \right)$, we have
+
+\[\mu_1(\lambda) = \frac{1}{\Bar{\tau} - \tau} \left(
+     \begin{smallmatrix} \Bar{\tau}\lambda^{-3} - \tau & -\lambda^{-3} + 1 \\
+                         \Bar{\tau}\lambda^{-3}\tau - \tau\Bar{\tau} & -\lambda^{-3}\tau + \Bar{\tau}
+     \end{smallmatrix} \right) \]
+\[\mu_2(\lambda) =  \frac{1}{\Bar{\tau} - \tau} \left(
+     \begin{smallmatrix} \Bar{\tau}\lambda^{-2} - \tau\lambda^{-1} & -\lambda^{-2} + \lambda^{-1}\\
+                         \Bar{\tau}\lambda^{-2}\tau - \lambda^{-1}\tau\Bar{\tau} & \lambda^{-2}\tau + \lambda^{-1}\Bar{\tau}
+     \end{smallmatrix} \right) \]
+
+\noindent
+and that det$\mu_1(\lambda)=$det$\mu_2(\lambda) = \lambda^{-3}$.\\
+
+Now, using the calculations for $\lambda$, we can remove most of the possibilities for MT$'(V_{i})$.
+The only possibilities are $\text{MT}'(V_{i}) = \text{GL}_2$ or $T^2$.\\
+Now we figure out what the possibilities for MT$'(V)$ are for
+dimension 4.  One can show that $\text{MT}'(V) \subset
+\text{MT}'(V_1) \oplus \text{MT}'(V_2)$.  Hence, MT$'(V) \subset
+G$ where $G$ is one of the following:\\
+  \indent a. GL$_2 \times$GL$_2$\\
+  \indent b. GL$_2 \times T^2$\\
+  \indent c. $T^2 \times$ GL$_2$\\
+  \indent d. $T^2 \times T^2$
+
+\begin{prop}
+  $\text{MT }'(V)$ is one of the following groups:\\
+    \indent a. $\{ \left( \begin{smallmatrix} g_1&0\\0&g_2 \end{smallmatrix} \right) \arrowvert g_{i} \in \text{GL}_2,
+               \text{det}g_1 = \text{det}g_2 \}$\\
+  \indent b. $\{ \left( \begin{smallmatrix} g_1&0\\0&g_2 \end{smallmatrix} \right) \arrowvert g_{1} \in \text{GL}_2,
+               g_2 \in T^2, \text{det}g_1 = \text{det}g_2 \}^{o}$\\
+  \indent c. $\{ \left( \begin{smallmatrix} g_1&0\\0&g_2 \end{smallmatrix} \right) \arrowvert g_{1} \in T^2,
+               g_2 \in \text{GL}_2, \text{det}g_1 = \text{det}g_2 \}^{o}$\\
+  \indent d. $\{ \left( \begin{smallmatrix} g_1&0\\0&g_2 \end{smallmatrix} \right) \arrowvert g_{1} \in T^2,
+               g_2 \in T^2, \text{det}g_1 = \text{det}g_2 \}$\\
+  \indent e. $\{ \left( \begin{smallmatrix} t_1&0&0&0\\0&t_2&0&0\\0&0&t_3&0\\0&0&0&t_4 \end{smallmatrix} \right)
+                  \arrowvert t_1t_2=t_3t_4 $ and $ \frac{t_1}{t_2} = (\frac{t_3}{t_4})^3 \} = \text{MT }'(V)_\mathbb{C}$
+
+\end{prop}
+
+\begin{proof} First note that the equality of determinants is an
+immediate consequence of our calculations following Proposition 1.8.  
+In case a one can see that the Mumford-Tate group
+is either the one indicated in the statement of the theorem or it's a
+subgroup thereof with an additional defining condition $g_1=g_2$ or
+$g_2=g_0g_1g_0^{-1}$ for some $2\times 2$ invertible matrix $g_0$. Suppose
+the first possibility occurs, i.e. $g_1=g_2=g$. Then the matrix
+$\left(\begin{smallmatrix} 0&I\\I&0 \end{smallmatrix}\right)$ commutes
+with all the
+elements of MT$'(V)$. Hence the corresponding element in $(\Check{V} 
+\otimes
+V)_{\mathbb{C}}$ is fixed by the complexification of the Mumford-Tate
+group. It follows that $\left(\begin{smallmatrix} 0&I \\ I&0
+\end{smallmatrix}\right)$
+corresponds to an element of bidegree (0,0) in the weight 0 Hodge
+structure $(\Check{V} \otimes V)_\mathbb{Q}$. Thus it gives an
+endomorphism of Hodge structures of $V$, which maps $V_1$ isomorphically
+onto $V_2$, which is absurd as those Hodge structures are not
+isomorphic. This rules out the case $g_1=g_2$. The argument that allows one to
+exclude the
+second case is similar.
+
+For case b note that MT$'(V)$ contains both $SL_2$ and $T$ which intersect
+trivially, hence the claim follows from a dimension argument. 
+
+For d and e we have $2\leq \text{dim MT}'(V) \leq 3$. If dim
+MT$'(V)=3$ we obtain case d. If dim MT$'(V)=2$, the two tori are isogenous
+and the associated quadratic imaginary fields are the same. Consideration
+of the action of the Galois group forces the additional relation occuring
+in case e. 
+\end{proof}
+
+
+\begin{obs} \label{almost_never flips}
+  In cases b-e in the above proposition, an element of the normalizer of $\text{MT }'(V)$ in GL$(V)$ doesn't interchange the pieces
+  of $V$, but in case a it can happen. However, the matrix that flips the pieces has trace 0.
+\end{obs}
+
+\subsection{A Criterion for Irreducibility}
+
+Now we consider the family $Y_s$ of hypersurfaces in $\Pl^4$ given
+by:
+$$Y_s: s(y_0+y_1+y_2+y_3+y_4)^5 = y_0y_1y_2y_3y_4.$$ We want to apply
+ the results of the previous sections to determine the $s \in
+ \mathbb{C}$ for which  $H^3(Y_{s},\mathbb{Q})$ is reducible. We will give a
+ sufficient condition for the irreducibility of the Hodge
+ structure. \\ Assume the Hodge structure is reducible for some $s$.
+ Then from de Jong's lecture we know that $s\in \Bar{\mathbb{Q}}$ if
+ we assume Conjecture 1.4.  Let $k_0 = \mathbb{Q}[s]$, and let
+ $\mathcal{O}_{k_0}$ be the ring of integers of $k_0$. Pick a prime
+ $\wp \subset \mathcal{O}_{k_0}$ and let $Frob_{\wp}$ be a Frobenius
+ element in Gal$(\Bar{\mathbb{Q}}/k_0)$ for $\wp$. For simplicity,
+ assume that $\wp$ is a degree one prime. Also assume that $\wp$ lies
+ above $(p) \subset \mathbb{Z}$. We can then compute the characteristic
+ polynomial $P_{\wp}$ of $Frob_{\wp}$ acting on $H^3_{et}(Y_{s}
+ \otimes \Bar{\mathbb{Q}}, \mathbb{Q}_{l})
+ \overset{\cong}{\rightarrow} H^3_{B}(Y_{s} \otimes \mathbb{C},
+ \mathbb{Q})\otimes \mathbb{Q}_{l}$ for $l \neq p$. (Note that
+ $P_{\wp}$ depends on $s$, but for simplicity we omit the $s$ here.)
+ We can compute $P_{\wp}$ by reducing the equation for $Y_s \mod \wp$ and
+ by counting points over $\mathbb{F}_p, \mathbb{F}_{p^2}$. (We know the
+ contributions of the pieces $H^i_{et}(Y_s\otimes \Bar{\mathbb{Q}},
+ \mathbb{Q}_{l})$ for $i \neq 3$, because the Betti numbers for those
+ pieces are all 0 or 1.)  Then there are two cases to consider:\\
+ \textbf{Case 1:} $Frob_{\wp}$ flips the two factors $V_1$ and $V_2$.
+ Then, as observed above (See Observation 1.10), we know that
+ trace$(Frob_{\wp}) = 0$. This occured only once in our numerical
+ data, so we will ignore this case.\\ \textbf{Case 2:} $Frob_{\wp}$
+ does not flip the pieces.  In this case, the characteristic
+ polynomial $P_{\wp}$ which has degree $4$ must factor into two
+ quadratic factors over $\mathbb{Q}_{l}$ for every $l\neq p$, because
+ $Frob_{\wp}$ preserves the two two-dimensional spaces $V_1$ and
+ $V_2$. We know the shape of the polynomial $P_{\wp}$:
+  \[P_{\wp} = x^4 + a_1 x^3 + a_2 x^2 + p^3 a_1 x + p^6 \]
+  and the roots $\lambda_1, \lambda_2, \lambda_3, \lambda_4$ can be
+  numbered so that they satisfy the equations $\lambda_1 \lambda_2 =
+  p^3$, $\lambda_3 \lambda_4 = p^3$. \\ Now we can ask: When is there
+  an $l$ such that $P_{\wp}$ is irreducible over $\mathbb{Q}_{l}$? It
+  is certainly sufficient that \\ \indent 1. $P_{\wp}$ is irreducible
+  over $\mathbb{Q}$ and \\ \indent 2. If $K$ is the splitting field of
+  $P_{\wp}$, then Gal$(K/\mathbb{Q})$ contains a 4-cycle.\\ However,
+  because of the shape of the polynomial and relations on the roots,
+  the Galois group Gal$(K/\mathbb{Q})$ can only be the Klein 4-group
+  $V_4$ or it contains a 4-cycle.  Therefore, the group we wish to
+  eliminate is $V_4$.  We can check if Gal$(K/\mathbb{Q})$ is $V_4$ by
+  checking whether the discriminant of $P_{\wp}$ is a square in $\mathbb{Q}^*$.
+
+With  notation as above, we can summarize our results as follows:
+\begin{summary}
+  Given an $s$ in $\Bar{\mathbb{Q}}$, if there exists a prime $\wp$ of
+  $\mathcal{O}_{k_0}$ such that $P_{\wp}$ satisfies:\\ \indent
+  1. trace$(P_{\wp}) \neq 0$\\ \indent 2. $P_{\wp}$ is irreducible
+  over $\mathbb{Q}$ \\ \indent 3. disc$(P_{\wp})$ is not a square in
+  $\mathbb{Q}^*$ \\ then $H^3(Y_{s}, \mathbb{Q})$ is
+  irreducible.
+\end{summary}
+\subsection{Some Numerical Data}
+Now we present some numerical data to see if the $P_{\wp}$ are ever
+reducible for any $s$. There certainly is not enough evidence to even
+conjecture whether the Hodge structure is ever decomposable or not
+because we were only able to count the points of $Y_s$ over
+$\mathbb{F}_p$ and $\mathbb{F}_{p^2}$ for very small primes $p$.  We
+are excluding the case where $p=5$, and for each $p$ we look at $s \in
+\{1, \cdots, p-1\}$, $s \neq 1/5^5 \mod p$. In the following we
+compute the characteristic polynomial $P_{\wp}=P_{\wp,s}$ for a given
+prime $p$ and all allowed values of $s$.
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline  $s$ & $P_{\wp}$ for $p=3$ & irredcible ?& disc a square ?
+\\ \hline $1$ & $x^4  + 5 x^3 + 45 x^2  + 135 x + 729$ & yes & no
+
+ \\ 
+
+ \hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline  $s$ & $P_{\wp}$ for $p=7$ & irreducible ? & disc a square ?
+\\ \hline $1$ & $x^4  +5 x^3  + 385 x^2  + 7^3 \cdot 5 x + 7^6 $ & yes &no
+
+ \\ \hline $2$ & $x^4 + 25 x^3 + 350 x^2 + 7^3 \cdot 25 x + 7^6 $ &
+ yes & no\\
+
+
+  \hline $3$ & $x^4  + 10 x^3  + 420 x^2  + 7^3 \cdot 10 x + 7^6$ & yes & no\\
+
+\hline $4$ & $x^4  -5  x^3  - 210 x^2  - 7^3 \cdot 5 x + 7^6$ & yes & no \\
+\hline $6$ & $x^4 - 35 x^3 + 805 x^2 - 35 \cdot 7^3 x + 7^6$ & yes & no\\
+\hline
+\end{tabular}
+\end{center}
+For $p=11$, again, for each allowed value of $s$, the corresponding
+characteristic polynomial has nonzero trace, is irreducible and its
+discriminant is not a square in $\mathbb{Q}^*$.
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline $s$ & $P_{\wp}$ for $p=13$ & irreducible ? & disc a square ?
+\\ \hline $4$ & $x^4 + 10 x^3 -910 x^2 + 13^3 \cdot 10 x + 13^6 $ &
+{\bf{no}} ! &no
+
+ \\ \hline $6$ & $x^4 -120 x^3 + 7670 x^2 + 13^3 \cdot (-120) x + 13^6
+ $ & {\bf{no}} !& no\\
+
+\hline
+\end{tabular}
+\end{center}
+All other allowed values for $s$ are ok when $p$ is $13$.\\
+ For $p=17$ all allowed values of $s$ are ok.
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline  $s$ & $P_{\wp}$ for $p=19$ & irreducible ? & disc a square ?
+\\ \hline $13$ & $(x^2-95x+19^3)(x^2+100x+19^3) $ & {\bf{no}} ! &no
+
+ \\ \hline
+
+\hline
+\end{tabular}
+\end{center}
+All other allowed values for $s$ are ok when $s$ is $19$.\\ When $p$
+is $23$ and $s=18$, the corresponding characteristic polynomial is
+$x^4 + 8050 x^2 + 23^6$ which has trace $0$ and whose discriminant is
+a square.\\ When $p=31$ and $s=5$, the corresponding charcateristic
+polynomial factors as $(x^2-217x+31^3)\cdot(x^2+ 108x+31^3)$.\\ When
+$p=41$ and $s=18$, the corresponding characteristic polynomial
+factors as $(x^2-372x+41^3)\cdot(x^2+328x+41^3)$.
+
+
+
+\end{document}

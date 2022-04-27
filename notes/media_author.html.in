@@ -1,0 +1,166 @@
+<html>
+  <head>
+    <title>Southwest Center for Arithmetic Geometry: AWS Media by Author</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <link rel="stylesheet" href="/style.css" type="text/css" />
+    <style type="text/css">
+      .control, .toggle {
+        cursor: pointer;
+      }
+      a.control {
+        color: #0000aa;
+      }
+      a.control:hover {
+        color: #00aaff;
+      }
+      h4 {
+        margin: 0;
+      }
+    </style>
+    <script type="text/javascript" src="/js/json2.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.cookie.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+	var display_authors, togs;
+
+	// Show links to individual years.
+        $('a.year').show();
+
+        // Cookie helpers.  We save all authors in one cookie for
+        // speed and to avoid browser limits.
+        function save_authors_cookie() {
+            $.cookie('author-authors', JSON.stringify(display_authors));
+        }
+        function load_authors_cookie() {
+            display_authors = JSON.parse($.cookie('author-authors') || '{}');
+        }
+        load_authors_cookie();
+
+	// Helpers to show/hide authors, show only videos/notes/everything.
+	function show_author(tog) {
+	    tog.parent().next().show();
+        // 1 is short for 'show this author'.
+	    display_authors[tog.attr('name')] = 1;
+	}
+	function hide_author(tog) {
+	    tog.parent().next().hide();
+        delete display_authors[tog.attr('name')];
+	}
+	function show_everything() {
+	    $('li.speaker li[class!=video]').show();
+	    $('li.speaker li[class!=notes]').show();
+	    $('li.speaker').show();
+            $.cookie('author-only_videos', null);
+            $.cookie('author-only_notes', null);
+	}
+	function show_only_videos() {
+	    show_everything();
+	    $('li.speaker li[class!=video]').hide();
+	    $('li.speaker li[class=video] li').show();
+	    $('li.speaker').not(':has(li.video)').hide();
+            $.cookie('author-only_videos', 1);
+            $.cookie('author-only_notes', null);
+	}
+	function show_only_notes() {
+	    show_everything();
+	    $('li.speaker li[class!=notes]').hide();
+	    $('li.speaker li[class=notes] li').show();
+	    $('li.speaker').not(':has(li.notes)').hide();
+            $.cookie('author-only_videos', null);
+            $.cookie('author-only_notes', 1);
+	}
+
+        // Add a second set of controls at the bottom of the page.
+        $('#controls_top').clone().attr('id', 'controls_bottom')
+	    .appendTo('div.page');
+
+        // Set up the controls, starting with author toggles.
+	togs = $('h4.speaker a[name]').addClass('toggle');
+	togs.click(function () {
+	    var t = $(this);
+	    if (t.parent().next().is(':visible')) {
+		hide_author(t);
+	    } else {
+		show_author(t);
+	    }
+	    save_authors_cookie();
+	});
+	$('.hide_all').click(function () {
+	    togs.each(function () {
+		hide_author($(this));
+	    });
+	    save_authors_cookie();
+	});
+	$('.show_all').click(function () {
+	    togs.each(function () {
+		show_author($(this));
+	    });
+	    save_authors_cookie();
+	});
+	$('.toggle_all').click(function () {
+	    togs.each(function () {
+		var t = $(this);
+		if (t.parent().next().is(':visible')) {
+		    hide_author(t);
+		} else {
+		    show_author(t);
+		}
+	    });
+	    save_authors_cookie();
+	});
+	$('.only_videos').click(function () {
+	    show_only_videos();
+	});
+	$('.only_notes').click(function () {
+	    show_only_notes();
+	});
+	$('.everything').click(function () {
+	    show_everything();
+	});
+
+        // Update display of authors/videos/notes/everything from cookies.
+        togs.each(function (i) {
+            var t = $(this);
+            // We hide all authors by default.
+            if (display_authors[t.attr('name')] == 1) {
+                show_author(t);
+            }
+        });
+        // We show everything by default.
+        if ($.cookie('author-only_videos') == 1) {
+            show_only_videos();
+        } else if ($.cookie('author-only_notes') == 1) {
+            show_only_notes();
+        }
+    });
+    </script>
+  </head>
+
+  <body vlink="blue";>
+    <include src="/topbar.html.in">
+    <include src="/navcol.html.in" {'nav_notes':'navsel'}>
+    <div class="page">
+      <h1 class="header">Arizona Winter School Media by Author</h1>
+
+      <div id="controls_top">
+	All authors:
+        &nbsp;
+	<a class="hide_all control" title="Click to hide all authors">hide</a>
+        &nbsp;
+	<a class="show_all control" title="Click to show all authors">show</a>
+        &nbsp;
+	<a class="toggle_all control" title="Click to toggle all authors">toggle</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Show:
+        &nbsp;
+        <a class="only_videos control" title="Click to show only audio and video">Only videos</a>
+        &nbsp;
+        <a class="only_notes control" title="Click to show only lecture notes">Only notes</a>
+        &nbsp;
+	<a class="everything control" title="Click to show everything">Everything</a>
+      </div>
+	<include src="media_author_page.html.in">
+      </div>
+  </BODY>
+</HTML>

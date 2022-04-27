@@ -1,0 +1,26 @@
+<html>
+  <include src="/head.html.in" {'PAGE':'Notes and Other Documents'}>
+  <body vlink="blue";>
+    <include src="/topbar.html.in" >
+    <include src="/navcol.html.in"  {'nav_notes':'navsel'}>
+      <div class="page">
+	<H1 CLASS="header">Notes and Other Documents</H1> 
+
+	<H2>Documents and Multimedia</H2>
+
+	<ul>
+	  <li><a href="/notes/media_author.html">Arizona Winter Schools by
+	  author</a></li>
+	  <li><a href="/notes/media_year.html">Arizona Winter Schools by
+	  year</a></li>
+	</ul>
+	
+	<H2>Guides</H2>
+	<ul>
+	  <li><a href="/misc/aboutSWC/AWSGuide.pdf">Guide to the Arizona Winter
+	  School</a></li>
+	</ul>
+
+      </div>
+  </BODY>
+</HTML>

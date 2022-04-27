@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+            "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+	<TITLE>AWS 2002: de Jong Course and Project</TITLE> 
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+	<LINK REL="STYLESHEET" HREF="../../Style.css" TYPE="text/css">
+<SCRIPT SRC="../../misc/slides/Script.js" TYPE="text/javascript"></SCRIPT> 
+</HEAD>
+<BODY>
+<!-- Begin main table -->
+<A NAME="top"></A> 
+<TABLE BORDER="0" CELLPADDING="10" CELLSPACING="0" WIDTH="100%">
+	<TR>
+<!-- SWC corner block-->
+		<TD CLASS="nav" WIDTH="150">
+			<A HREF="../../index.html"> <IMG SRC="../../misc/gifs/SWClogo.gif" ALT="The Southwestern Center for Arithmetical Algebraic Geometry" WIDTH="128" HEIGHT="128" BORDER="0"></A> 
+		</TD>
+<!--Page Header-->
+		<TD ALIGN="left" VALIGN="middle">
+			<H1 CLASS="header">Arizona Winter School 2002
+				<BR>
+				de Jong's Course and Project Descriptions</H1> 
+		</TD>
+	</TR>
+<!--- Blotter cell (spans 2 cols) -->
+	<TR>
+		<TD CLASS="blotter" COLSPAN="2" VALIGN="top" BGCOLOR="#FFFFFF">
+			<H3>Rough outline of lectures</H3>
+<P>
+In the lectures we will discuss how a family of varieties gives rise to a
+variation of Hodge structures (Lecture 1). In Lecture 2 we discuss
+examples of variations of Hodge structure coming from certain explicit
+families of curves. In Lecture 3 we discuss a family of surfaces and its
+associated variation of Hodge structures. A common feature of the examples
+of Lectures 2 and 3 will be the existence of a Shimura variety parametrizing
+the geometric objects. In the final lecture we describe the variation of
+Hodge structure on H<sup>3</sup> of a family of threefolds and we formulate a
+question which will hopefully be addressed by the students.
+</P>
+
+<h3>Prerequisites</h3>
+<P>
+Everybody should know what a Hodge structure is (this will not be
+explained in the lectures). There are several kinds; for us <b>Z</b>-Hodge
+structures and <b>Q</b>-Hodge structures will be the important ones. Students should
+know what a morphism of Hodge structures is, and how to take tensor
+products of Hodge structures, duals etc. It is also important
+to know what a polarization of a Hodge structure is.
+</P><P>
+Everybody should know what an algebraic variety is, and what a family of
+varieties is. (This will not be explained in the lectures.)
+</p><P>
+Useful to know: The cohomology on a nonsingular complex projective
+variety carries a natural polarizable Hodge structure. An abelian variety
+corresponds to a polarizable <b>Z</b>-Hodge structure of weight 1.
+</P>
+<H3>References</H3>
+<P>This is a little tricky since I do not know a short
+introduction to Hodge structures. You really don't have to know Hodge
+theory, you just have to know what a Hodge structure is. You can look at
+the original articles by Deligne, Griffiths for example. There is a book
+by Fouad El Zein ``Introduction &agrave; la th&eacute;orie de Hodge mixte'' where
+you can find the definitions in Section 1.2. You can also look at
+Wells, R. O., Jr. Differential analysis on complex manifolds. Second
+edition. Graduate Texts in Mathematics, 65. Springer-Verlag, New
+York-Berlin, 1980. In general talking about Hodge structures with your
+friends might be a good preparation for this course.</P>
+
+<H3>Project description</H3>
+<P>
+We will take a particular variation of Hodge structures corresponding to a
+family of threefolds and we will try to determine whether the Hodge
+structures in question ever are reducible. This will be related to
+geometrical questions on the 3-folds and we will try to solve those instead. 
+As an experiment, to guess the answers, we are going to do
+some counting of points on the 3-folds modulo <i>p</i>! (At least if there are
+any students who know how to use computers to count points in finite
+fields having <i>p</i>, <i>p</i><sup>2</sup>,... elements.)
+</P>
+
+<P>
+I may have to find another (related) project as this one may be too hard.
+</P>
+
+		</TD>
+	</TR>
+</TABLE>
+</BODY>
+</HTML>

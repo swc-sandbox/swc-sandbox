@@ -1,0 +1,268 @@
+\documentstyle[12pt]{article}
+\title{Outline of lectures on Model Theory and
+Diophantine Geometry, by Anand Pillay and
+Thomas Scanlon}
+\date{ }
+\newtheorem{Theorem}{Theorem}[section]
+\newtheorem{Proposition}[Theorem]{Proposition}
+\newtheorem{Definition}[Theorem]{Definition}
+\newtheorem{Remark}[Theorem]{Remark}
+\newtheorem{Lemma}[Theorem]{Lemma}
+\newtheorem{Corollary}[Theorem]{Corollary}
+\newtheorem{Fact}[Theorem]{Fact}
+\newtheorem{Conjecture}[Theorem]{Conjecture}
+\begin{document}
+\maketitle
+
+\section{Course description.}
+The general theme will be the use of
+model-theoretic methods in proofs of the
+Manin-Mumford conjecture and variants.
+\newline
+If $K$ is an algebraically closed field, $G$ a
+commutative algebraic group over $K$ and
+$\Gamma$ an abstract subgroup of $G(K)$, we
+will say that $\Gamma$ is of {\em Lang type},
+if for any $n$ and subvariety $X$ of $G^{n}$,
+$X(K)\cap \Gamma^{n}$ is a finite union of
+cosets of subgroups of $\Gamma^{n}$. The
+Manin-Mumford conjecture says that if the
+characteristic is $0$ and $G$ is a semiabelian
+variety, then the group $Tor(G)$ of torsion
+points of $G(K)$ is of Lang type.
+\newline
+Hrushovski \cite{Hrushovski-MM} gave a proof of
+the Manin-Mumford conjecture, using the model
+theory of difference fields \cite{C-H}.
+Scanlon
+\cite{Scanlon} proved ``Manin-Mumford for
+Drinfeld modules" in positive characteristic
+(see below), also using the model theory of
+difference fields \cite{C-H-P}.
+
+\vspace{5mm}
+\noindent
+Pillay's lectures will contain a simplified
+and self-contained account of
+Hrushovski's proof of Manin-Mumford in the
+spirit of \cite{Pillay}.  A key step will be an
+elementary proof of the following algebraic
+result, valid in all characteristics:
+\begin{Proposition} Let $A$ be a semiabelian
+variety and $X$ be an irreducible subvariety of
+$A$ containing $0$ which generates $A$. Assume
+$Stab_{A}(X)$ is trivial. Let
+$\phi$ be a separable isogeny of $A$ such that
+$\phi(X) = X$. Then for some $n$, $\phi^{n}$
+is the identity.
+\end{Proposition}
+The methods, coming from
+\cite{Pillay-Ziegler}, are closely related to
+those in recent preprints of Pink and Roessler
+(\cite{Pink-Roessler1},
+\cite{Pink-Roessler2}), but definability in
+difference fields plays a simplifying role.
+\newline
+Pillay will also discuss how and why the
+statements of Manin-Mumford and
+Mordell-Lang, together with uniform
+definability of types in algebraically closed
+fields, automatically yield uniformities as
+the subvariety $X$ of $A$ varies in an
+algebraic family.
+
+\vspace{5mm}
+\noindent
+Scanlon's talks will be around the
+Drinfeld modules version of
+Manin-Mumford. Let
+$K$ be a field of characteristic $p>0$. The
+ring of endomorphism of the additive group
+${\bf G}_{a}$ defined over $K$ can be
+identified with the ``twisted" polynomial ring
+$K\{\tau\} = \{a_{0} + a_{1}\tau + .. +
+a_{n}\tau^{n}: n\in {\bf N}, a_{i}\in K\}$,
+where
+$\tau$ acts as
+$x\rightarrow x^{p}$.
+$\pi:K\{\tau\}\rightarrow K$ takes a polynomial
+$f$ as above to its constant term $a_{0}$. By
+a {\em Drinfeld module} we will mean a
+homomorphism
+$\phi:{\bf F}_{p}[t]\rightarrow K\{\tau\}$
+such that $\phi(t)\notin K$. The Drinfeld
+module $\phi$ equips the additive group of
+any $K$-algebra with an ${\bf
+F}_{p}[t]$-module structure. The Drinfeld
+module
+$\phi$ is said to have {\em generic
+characteristic} if the kernel of
+$\pi\circ\phi$ is $(0)$.
+
+\vspace{2mm}
+\noindent
+Denis \cite{Denis} raised a series of
+conjectures for Drinfeld modules, analogous to
+the Manin-Mumford, Mordell-Lang conjectures.
+Scanlon will explain the proof of the Drinfeld
+module version of Manin-Mumford:
+\begin{Proposition} Let $K$ be an algebraically
+closed field of characteristic
+$p>0$, and
+$\phi:{\bf F}_{p}[t]\rightarrow K\{\tau\}$ a
+Drinfeld module of generic characteristic. Then
+The ${\bf F}_{p}[t]$-torsion submodule of
+$(K,+)$ is of Lang type.
+\end{Proposition}
+Scanlon will also explain how the Drinfeld
+module version of Mordell-Lang with division
+points follows from the Drinfeld module
+version of Mordell-Lang without division
+points.
+
+
+\vspace{5mm}
+\noindent
+{\bf PREREQUISITES.} Familiarity with the
+language of algebraic geometry, as in say
+Shafarevich \cite{Shafarevich}, as well as
+with first order model theory. An acquaintance
+with the first five  chapters of
+\cite{Bouscaren}, by Bouscaren, Ziegler,
+Lascar, Pillay, and Hindry, respectively,
+would be helpful. A good reference on Drinfeld
+modules is Goss' book \cite{Goss},
+specifically pages 63-92 in Chapter 4.
+
+
+\section{Project}
+Theorem 3.1 of \cite{Pink-Roessler2} gives
+a generalization of Proposition 1.1 above to
+the case where $\phi$ is not necessarily
+separable. One case of this generalization is:
+\begin{Proposition} (char = $p > 0$.) Let $A$
+be a semiabelian variety, $\phi$ an isogeny of
+$A$, and $X$ a
+$\phi$-invariant subvariety of $A$ containing
+$0$. Assume that $X$ generates $A$. Let
+$Frob$ the the Frobenius map, and suppose that
+for positive integers
+$r,s$,
+$\phi^{s}$ is the composition of $Frob^{r}$
+with a separable isogeny from $Frob^{r}(A)$ to
+$A$. Then $A$ can be defined over ${\bf
+F}_{p^{r}}$ and $\phi^{s} = Frob^{r}$ on $A$.
+\end{Proposition}
+Project 1 will to be generalize the proof of
+Proposition 1.1 in the lectures to a proof of
+Proposition 2.1
+
+\vspace{5mm}
+\noindent
+Project 2 will be to prove a ``function field"
+version of Denis' Mordell-Lang conjecture. We
+call Drinfeld modules $\phi$ and $\psi$
+equivalent if there is a scalar $\lambda$ such
+that $\psi(t) = \lambda^{-1}\phi(t)\lambda$.
+We define the modular transcendence degree of
+$\phi$ to be the least transcendence degree of
+a field $L$ such that $\phi$ is equivalent to
+a Drinfeld module $\psi$ defined over $L$. The
+project is to prove the following conjecture.
+\begin{Conjecture} Let $K$ be an algebraically
+closed field of characteristic $p>0$, $\phi$ a
+Drinfeld module over $K$ of positive
+modular transcendence degree with
+$\pi\circ\phi(t) = 0$, and $\Gamma \leq (K,+)$
+a finitely generated ${\bf F}_{p}[t]$-module.
+Then $\Gamma$ is of Lang type.
+\end{Conjecture}
+It should be possible to prove Conjecture 2.2
+along the lines of Hrushovski's proof
+\cite{Hrushovski-ML} of the function field
+Mordell-Lang. That is, working in a
+suitable separably closed field
+$L$ of finite Ersov invariant over which the
+data are defined, let
+$\phi^{\sharp}(L)$ the type-definable group
+$\cap_{n}\phi(t)^{n}(L)$ and one has to prove
+the modularity of $\phi^{\sharp}(L)$. By
+\cite{Bouscaren-Delon}, this is equivalent to
+the nonexistence of a definable isogeny
+between $\phi^{\sharp}(L)$ and
+$L^{p^{\infty}}$.
+
+\begin{thebibliography}{99}
+\bibitem{Bouscaren} E. Bouscaren (ed.), Model
+Theory and Algebraic Geometry, Lecture Notes
+Mathematics, 1696, Springer, 1998.
+
+\bibitem{Bouscaren-Delon} E. Bouscaren and F.
+Delon, Minimal groups in separably closed
+fields, Jpurnal of Symbolic Logic, 67 (2002),
+239-259.
+
+\bibitem{C-H} Z. Chatzidakis
+and E. Hrushovski, Model theory of difference
+fields, Transactions AMS, 351 (1999),
+2997-3071.
+
+\bibitem{C-H-P} Z. Chatzidakis, E. Hrushovski,
+and Y. Peterzil, Model Theory of difference
+fields II: periodic ideals and the
+trichomotomy theorem, Proceedings of London
+Math. Soc. 85(2002), 257-311.
+
+\bibitem{Denis} L. Denis, Geometrie
+diophantine sur les modules de Drinfeld, in
+The Arithmetic of Function Fields (ed. D.
+Gross et al) 1992.
+
+\bibitem{Goss} D. Goss, Basic Structures of
+Function Field Arithmetic, Springer, 1996.
+
+\bibitem{Hrushovski-MM} E. Hrushovski, The
+Manin-Mumford conjecture and the model theory
+of difference fields, Annals of Pure and
+Applied Logic, 112 (20001), 43-115.
+
+\bibitem{Hrushovski-ML} E. Hrushovski, The
+Mordell-Lang conjecture for function fields,
+Journal AMS 9 (1996), 667-690.
+
+\bibitem{Pillay} A. Pillay, Mordell-Lang for
+function fields in characteristic zero,
+revisited, to appear in Compositio Math. (See
+``recent preprints" at
+http://www.math.uiuc.edu/People/pillay.html)
+
+\bibitem{Pillay-Ziegler} A. Pillay and M.
+Ziegler, Jet spaces of varieties over
+differential and difference fields. (See
+``recent preprints" at
+http://www.math.uiuc.edu/People/pillay.html)
+
+\bibitem{Pink-Roessler1} R. Pink and D.
+Roessler, On Hrushovski's proof of the
+Manin-Mumford conjecture. (See ``recent
+preprints" at
+http://www.math.ethz.ch/$\tilde{\ }$pink/preprints.html)
+
+\bibitem{Pink-Roessler2} R. Pink and D.
+Roessler, On $\psi$-invariant subvarieties of
+semiabelian varieties and the Manin-Mumford
+conjecture (See ``recent preprints" at
+http://www.math.ethz.ch/$\tilde{\ }$pink/preprints.html)
+
+\bibitem{Scanlon} T. Scanlon, Diophantine
+geometry of the torsion of a Drinfeld module,
+Journal of Number Theory, vol. 97, Number 1,
+(2002), 10-25.
+
+\bibitem{Shafarevich} I. Shafarevich,
+Algebraic Geometry I, II, Springer-Verlag,
+1994.
+\end{thebibliography}
+
+
+\end{document}

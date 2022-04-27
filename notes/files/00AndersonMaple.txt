@@ -1,0 +1,83 @@
+The first chunk of code carries out the calculation
+of the tau-function in the case of a degree 1
+rational point, demonstrating that you do indeed
+get g_2 and g_3 by calculating the tau-function.
+The second chunk of code carries out the
+calculation of the tau-function in the case
+of y^2=a*x^4+4*b*x^3+6*c*x^2+4*bprime*x+aprime,
+demonstrating that you get Hermite's famous
+invariants of binary biquadratic forms as
+g_2 and g_3, as was pointed out by Weil in
+his paper on those invariants.
+
+------------------------------------------
+
+
+ restart;
+ with(linalg):
+ readlib(coeftayl):
+ A:=matrix(7,14):
+ for i from 2 to 6 by 2 do for j from 1 to 14 do if i<>j then A[i,j]:=0
+else A[i,j]:=1 fi; od: od: 
+ for j from 1 to 14 do if j<>8 then A[7,j]:=0
+else A[7,j]:=1 fi: od:  for i from 1 to 5 by 2 do for j from 1 to 14 do
+ if j<i then A[i,j]:=0 else
+ A[i,j]:=coeftayl((1-g2*t^4/4-g3*t^6/4)^(1/2),t=0,j-i) fi: od: od:
+ 
+
+ Adagger:=matrix(14,7);
+ for i from 1 to 14 do for j from 1 to 7 do Adagger[i,j]:=A[8-j,15-i]
+od;od; print(Adagger);  B:=matrix(14,7);
+ for i from 1 to 14 do for j from 1 to 7 do
+ if i<j then B[i,j]:=0 else B[i,j]:=rem(x^(i-j)/(i-j)!,x^8,x) fi; od; od;
+ extract:=proc(tau)
+ local alpha, result,alphapower,i;
+ alpha:=-1+quo(tau,x,x)/subs(x=0,diff(tau,x));
+ result:=0; alphapower:=1;
+ for i from 1 to 7 do
+ alphapower:=rem(alphapower*alpha,x^8,x);
+ result:=result+(-1)^(i+1)*alphapower/i;
+ od;
+ 1/x^2-diff(result,x,x);
+ end;
+ extract(det(multiply(A,B)));
+ rem(det(multiply(A,B)),x^8,x);
+ taylor((1-g2*t^4/4-g3*t^6/4)^(1/2),t=0,12);
+ discrim(4*x^3-g_2*x-g_3,x);
+factor(");
+ "/16;
+
+---------------------------------------------
+
+
+ restart;
+ with(linalg):
+ readlib(coeftayl):
+A:=matrix(14,28,0):
+ a:=vector(14): print(a);
+ for i from 1 to 13 do A[i,i]:=1 od: A[14,15]:=1:
+ for i from 2 to 12 by 2 do for j from 1 to 28 do if j>i and
+irem(j-i,2)=0 then A[i,j]:=a[(j-i)/2] fi: od: od: 
+ print(A);
+ X:=matrix(28,28,0): 
+ for i from 1 to 13 do X[2*i+1,2*i]:=x/2 od: for i from 1 to 13 do
+X[2*i+2,2*i-1]:=a*x/2 od: print(X); 
+ B:=matrix(28,14,0);
+Y:=matrix(28,14,0);  for i from 1 to 14 do  Y[i,i]:=1; od:
+ for i from 0 to 7 do B:= matadd(B,scalarmul(Y,1/i!)); Y:=multiply(X,Y);
+od:  print(B);
+ SAVE:=rem(det(multiply(A,B)),x^8,x); tau:=SAVE;
+ for i from 1 to 7 do
+tau:=subs(a[i]=coeftayl((1+4*b*t/a+6*c*t^2/a+4*bprime*t^3/a+aprime*t^4/a)^(1/2),t=0,i),tau)
+od: 
+ tau:=collect(simplify(tau),x);  extract:=proc(tau)
+ local alpha, result,alphapower,i;
+ alpha:=-1+quo(tau,x,x)/subs(x=0,diff(tau,x));
+ result:=0; alphapower:=1;
+ for i from 1 to 7 do
+ alphapower:=rem(alphapower*alpha,x^8,x);
+ result:=result+(-1)^(i+1)*alphapower/i;
+ od;
+ 1/x^2-diff(result,x,x);
+ end;
+wp:=collect(extract(tau),x,simplify);
