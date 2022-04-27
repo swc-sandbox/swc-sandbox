@@ -1,0 +1,1536 @@
+\documentclass[12pt]{article}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\def\bA{{\mathbf A}}
+\def\bC{{\mathbf C}}
+\def\bG{{\mathbf G}}
+\def\bP{{\mathbf P}}
+\def\bQ{{\mathbf Q}}
+\def\bR{{\mathbf R}}
+\def\bZ{{\mathbf Z}}
+
+\def\fO{{\mathfrak O}}
+\def\fp{{\mathfrak p}}
+\def\fR{{\mathfrak R}}
+
+\def\ga{{\alpha}}
+\def\gG{{\Gamma}}
+\def\gk{{\kappa}}
+\def\gl{{\lambda}}
+\def\gs{{\sigma}}
+
+\def\sB{{\mathcal B}}
+\def\sC{{\mathcal C}}
+\def\sF{{\mathcal F}}
+\def\sN{{\mathcal N}}
+\def\sS{{\mathcal S}}
+
+\newfont{\wncyr}{wncyr10 at 12pt}
+\def\Sha{\mbox{\wncyr Sh}}
+
+\def\beq{\begin{equation} \label}
+\def\ble{\begin{lemma} \label}
+\def\bpr{\begin{question} \label}
+\def\bth{\begin{theorem} \label}
+\def\ele{\end{lemma}}
+\def\epr{\end{question}}
+\def\eth{\end{theorem}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{question}{Question}
+
+\def\half{{\textstyle{\frac{1}{2}}}}
+
+
+\begin{document}
+\begin{center}
+\textbf{DIOPHANTINE EQUATIONS: PROGRESS AND PROBLEMS}
+\end{center}
+
+
+\vskip 0.1in
+
+
+\noindent 1. \emph{Introduction}. \newline
+A \emph{Diophantine problem} over $\bQ$ is concerned with the solutions
+either in $\bQ$ or in $\bZ$ of a finite system of polynomial equations
+\beq{E1} F_i(X_1,\ldots,X_n)=0 \quad (1\leq i\leq m) \end{equation}
+with coefficients in $\bQ$. Without loss of generality we can obviously
+require the coefficients to be in $\bZ$. A system (\ref{E1}) is also called
+a system of \emph{Diophantine equations}. Often one will be interested in a
+family of such problems rather than a single one; in this case one requires
+the coefficients of the $F_i$ to lie in some $\bQ(c_1,\ldots,c_r)$, and one
+obtains an individual problem by giving the $c_j$ values in $\bQ$. Again one
+can get rid of denominators.
+Some of the most obvious questions to ask about such a family are:
+\begin{description}
+\item[(A)] Is there an algorithm which will determine, for each assigned set
+of values of the $c_j$, whether the corresponding Diophantine problem has
+solutions, either in $\bZ$ or in $\bQ$?
+\item[(B)] For values of the $c_j$ for which the system is soluble, is there
+an algorithm for exhibiting a solution?
+\end{description}
+For individual members of such a family, it is also natural to ask:
+\begin{description}
+\item[(C)] Can we describe the set of all solutions, or even its structure?
+\item[(D)] Is the phrase `density of solutions' meaningful, and if so, what
+can we say about it?
+\end{description}
+The attempts to answer these questions have led to the introduction of new
+ideas and these have generated new questions. On some of them I expect progress
+within the next decade, and I have restricted myself
+to these in the text below. Progress
+in mathematics usually means proven results; but there are cases where even a 
+well justified conjecture throws new light on the structure of the
+subject. (For similar reasons, well motivated computations can be helpful; but
+computations not based on a deep feeling for the structure of the subject have
+generally turned out to be a waste of time.)
+But I have not included those problems (such as the Riemann Hypothesis and the
+Birch/Swinnerton-Dyer conjecture) on which I do not expect further progress
+within so short a timescale.
+
+Though the study of solutions in $\bZ$ and in $\bQ$ may look very similar (and
+indeed were believed for a long time to be so), it now appears that they are
+actually very different and that the theory for solutions in $\bQ$ has much
+more structure than that for solutions in $\bZ$. The main reason for this seems
+to be that in the rational case the system (\ref{E1}) defines a variety in
+the sense of algebraic geometry, and many of the tools of that discipline can
+be used; in contrast, in the integral case we do not know how to make
+significant use of such
+tools. However, for varieties of degree greater than 2 it is only
+in low dimension that we yet know enough of the geometry for it to be useful.
+
+Uniquely, the Hardy-Littlewood method is useful both for integral and for
+rational problems; it was designed for integral
+problems but can also be applied to rational problems in projective space,
+because then the $F_i$ in (\ref{E1}) are homogeneous and it does not
+matter whether we treat the variables $X_\nu$ as integral or rational. There
+is a brief discussion of this method in \S8, and a comprehensive
+survey in [42].
+
+Denote by $V$ the variety defined by the equations (\ref{E1}) and let $V'$
+be any variety birationally equivalent to $V$ over $\bQ$. The problem of
+finding solutions of (\ref{E1}) in $\bQ$ is the same as that of finding
+rational points on $V$, which is almost the same as that of 
+finding rational points on $V'$. Hence (except possibly for Question (D) above)
+one expects the properties of the rational solutions of
+(\ref{E1}) to be essentially determined by the birational equivalence class
+of $V$; and the way in which algebraic geometers classify varieties should
+provide at least a first rough guide to the classification of Diophantine
+problems --- though they mainly study birational equivalence over $\bC$
+rather than over $\bQ$. But it does at the moment seem that the
+geometric classification needs some
+modifications and refinements if it is to fit the number-theoretic results
+and conjectures.
+
+Without loss of
+generality we can assume that $V$ is absolutely irreducible. For if $V$ has
+proper components defined over $\bQ$ it is enough to ask the questions above
+for each of the proper components; and if $V$ is the union of varieties
+conjugate over $\bQ$ then any rational point on $V$ lies on the intersection
+of these conjugates, which is a proper subvariety of $V$. Since we can
+desingularize $V$ by a birational transformation defined over $\bQ$,
+it is natural to concentrate on the case when $V$ is
+projective and nonsingular.
+
+The definitions and the questions above can be generalized to an arbitrary
+algebraic number field and the ring of integers in it; the answers are
+usually known or conjectured to be essentially the same as over $\bQ$ or
+$\bZ$, though the proofs can be very much harder. (But there are exceptions;
+for example, the modularity of elliptic curves only holds over $\bQ$.)
+The questions above can also be posed for other fields of
+number-theoretic interest --- in particular for finite fields and for
+completions of algebraic number fields --- and when one studies Diophantine
+problems it is essential to consider these other fields also.
+If $V$ is defined over a field $K$, the set of points on $V$ defined over $K$
+will always be denoted by $V(K)$. If $V(K)$ is not empty we say that $V$ is
+\emph{soluble in} $K$. In the special case where $K=k_v$, the completion of
+an algebraic number field $k$ at the place $v$, we also say that $V$ is
+\emph{locally soluble at} $v$. From now on we denote by
+$\bQ_v$ any completion of $\bQ$; thus $\bQ_v$ means $\bR$ or some $\bQ_p$.
+
+One major reason for considering solubility in complete fields and in finite
+fields
+is that a necessary condition for (\ref{E1}) to be soluble in $\bQ$, for
+example, is that it is soluble in every $\bQ_v$.
+The condition of solubility in every $\bQ_v$ is computationally decidable;
+see \S2. Moreover, at least for primes $p$
+for which the system (\ref{E1}) has good reduction mod $p$, the first step
+in deciding solubility in $\bQ_p$ is to decide whether the reduced
+system is soluble in the finite field GF$(p)$ of $p$ elements.
+
+Geometers are used to studying varieties
+over non-algebraically-closed fields $k$; what makes Diophantine problems
+special is the number-theoretic nature of the fields $k$.
+But it seems that only a few of the properties peculiar to such fields
+are useful in this context, so that a geometer need not learn much
+number-theory in order to work on Diophantine problems. On the other hand,
+a number-theorist would be wise to learn quite a lot of geometry.
+
+Diophantine problems were first
+introduced by Diophantus of Alexandria, the last of the great Greek
+mathematicians, who lived at some time between 300 B.C. and 300 A.D.; but
+he was handicapped by having only one letter available to represent
+variables, all the others being used in classical Greek
+to represent specific numbers.
+Individual Diophantine problems were studied by such great mathematicians
+as Fermat, Euler and Gauss. But it was Hilbert's address to the International
+Congress in 1900 which started the development of a systematic theory. His
+tenth problem asked:
+\begin{quote}
+Given a Diophantine equation with any number of unknown
+quantities
+and with rational integral numerical coefficients: to devise a process
+according to which it can be determined by a finite number of operations
+whether the equation is soluble in rational integers.
+\end{quote}
+Most of the early work on Diophantine equations was concerned with rational
+rather than integral solutions; presumably Hilbert posed this problem in
+terms of integral solutions because such a process for integral solutions
+would automatically provide the corresponding process for rational solutions
+also, by restricting to the special case when the equations are homogeneous.
+In those confident days before the First World War,
+it was assumed that such an process
+must exist; but in 1970 Matijasevi\v{c} showed that this was impossible.
+Indeed he exhibited a polynomial $F(c;x_1,\ldots,x_n)$ such that
+there cannot exist an algorithm which will decide for every given $c$ whether
+$F=0$ is soluble in integers. His proof is part of the great program on
+decidability initiated by G\"odel; good
+accounts of it can be found in [10], pp 323-378 or [9]. The corresponding
+question for
+rational solutions is still open; I am among the very few who believe
+that it may have a positive answer.
+
+But even if the answer to the analogue of Hilbert's tenth problem for rational
+solutions is positive, one must expect that a separate algorithm will be needed
+for each kind of variety. Thus we shall need not one algorithm but an infinity
+of them. So number theorists depend on the development by geometers of an
+adequate classification of varieties. At the moment, such a classification is
+reasonably complete for curves and surfaces, but it is still fragmentary even
+in dimension 3; so number theorists have to concentrate on curves and surfaces,
+and on certain particularly simple kinds of variety in higher dimension.
+
+\bigskip
+
+\noindent 2. \emph{The Hasse Principle and the Brauer-Manin obstruction}.
+\newline
+Let $V$ be a variety defined over $\bQ$. If $V$ is locally soluble at every
+place of $\bQ$, we say that it satisfies the \emph{Hasse
+condition}. If $V(\bQ)$ is not empty then $V$ certainly satisfies
+the Hasse condition. What makes this remark valuable is that the Hasse
+condition is computable --- that is, one can decide in finitely many steps
+whether a given $V$ satisfies the Hasse condition. This follows from the
+next two lemmas.
+\ble{L1} Let $W$ be an absolutely irreducible variety of dimension $n$ defined
+over the finite field
+$k={\mathrm{GF}}(q)$. Then $N(q)$, the number of points on $W$ defined over
+$k$, satisfies
+\[ |N(q)-q^n|<Cq^{n-1/2} \]
+where the constant $C$ depends only on the degree and dimension of $W$ and is
+computable.
+\ele
+This follows from the Weil conjectures, for which see \S3; but weaker results
+which are adequate for the present application were known much earlier. Since
+the singular points of $W$ lie on a proper subvariety, there are at most
+$C_1q^{n-1}$ of them, where $C_1$ is also computable. It follows that if $q$
+exceeds a computable bound depending only on the degree and dimension of $W$
+then $W$ contains a nonsingular point defined over $k$.
+
+Now let $V$ be an absolutely irreducible variety defined over $\bQ$. If $V$ has
+good reduction at $p$, which happens for all but a finite computable set of
+primes $p$, denote that reduction by $\tilde{V}_p$. If $p$ is large enough, it
+follows from the remarks above that $\tilde{V}_p$ contains a nonsingular
+point $Q_p$ defined over GF$(p)$. The result which follows, which is known as
+Hensel's Lemma though the idea of the proof goes back to Sir Isaac Newton,
+now shows that $V$ contains a point $P_p$ defined over $\bQ_p$.
+\ble{L2} Let $V$ be an absolutely irreducible variety defined over $\bQ$ and
+let $\tilde{V}_p$ be its reduction ${\mathrm{mod~}}p$. If $\tilde{V}_p$
+contains a nonsingular point $Q_p$ defined over ${\mathrm{GF}}(p)$ then
+$V$ contains a nonsingular point $P_p$ defined over $\bQ_p$ whose reduction
+${\mathrm{mod~}}p$ is $Q_p$.
+\ele
+In view of this, to decide whether $V$ satisfies the Hasse condition one only
+has to check individually solubility in $\bR$ and in finitely many $\bQ_p$.
+Each of these checks can be shown to be a finite process,
+using ideas similar to those in the proof of Lemma \ref{L1}.
+
+A family $\sF$ of varieties is said to satisfy the \emph{Hasse Principle} if
+every $V$ contained in $\sF$ and defined over $\bQ$
+which satisfies the Hasse condition
+actually contains at least one point defined over $\bQ$. Again, a family $\sF$
+is said to admit \emph{weak approximation} if every $V$ contained in $\sF$
+and defined over $\bQ$, and such that $V(\bQ)$ is not empty, has the following
+property: given any finite set of places $v$ and corresponding non-empty sets
+$\sN_v\subset V(\bQ_v)$ open in the $v$-adic topology, there is a point $P$
+in $V(\bQ)$ which lies in each
+of the $\sN_v$. In the special case when $\sF$ consists of a single variety
+$V$, and $V(\bQ)$ is not empty, we simply say that $V$ admits weak
+approximation. In contrast to the Hasse condition, whether $V$ admits
+weak approximation is in general not computable; for an important exception,
+see [39].
+
+The most important families which are known to have either of these properties
+(and which actually have both) are the families of quadrics of any given
+dimension; this was
+proved by Minkowski for quadrics over $\bQ$ and by Hasse for quadrics
+over an arbitrary algebraic
+number field. But many families, even of very simple varieties, do not
+satisfy either the Hasse Principle or weak approximation. (For example, neither
+of them holds for nonsingular
+cubic surfaces.) It is therefore natural to ask
+\bpr{Q1} For a given family $\sF$, what are the obstructions to the Hasse
+Principle and to weak approximation?
+\epr
+For weak approximation there is a variant of this question which may be both
+more interesting and easier to answer. For another way of stating weak
+approximation on $V$ is to say that if $V(\bQ)$ is not empty then it is dense
+in the adelic space $V(\bA)=\prod_vV(\bQ_v)$. This suggests the following:
+\bpr{Q19} For a given $V$, or family $\sF$, what can be said about the closure
+of $V(\bQ)$ in the adelic space $V(\bA)$?
+\epr
+However, there are families for which Question \ref{Q1} does not seem to be a
+sensible
+question to ask; these probably include for example all families of
+varieties of general type. So one should back up Question \ref{Q1} with
+\bpr{Q2} For what kinds of families is either part of Question $\ref{Q1}$ a
+sensible question to ask?
+\epr
+
+The only systematic obstruction to the Hasse Principle which is known is the
+Brauer-Manin obstruction, though obstructions can be found in the literature
+which are not Brauer-Manin. Let $A$ be a \emph{central simple algebra} ---
+that is, a simple algebra which is finite dimensional over a field $K$ which
+is its centre. Each such algebra consists, for fixed $D$ and $n$, of all
+$n\times n$ matrices with elements in a division algebra $D$ with centre $K$.
+Two
+central simple algebras over $K$ are \emph{equivalent} if they have the same
+underlying division algebra. Formation of tensor products over $K$ gives the
+set of equivalence classes the structure of a commutative group, called the
+\emph{Brauer group} of $K$ and written Br$(K)$. There is a
+canonical isomorphism $\imath_p:{\mathrm{Br}}(\bQ_p)\simeq\bQ/\bZ$ for each
+$p$; and there
+is a canonical isomorphism $\imath_\infty:{\mathrm{Br}}(\bR)\simeq\{0,\half\}$,
+the nontrivial division algebra over $\bR$ being the classical quaternions.
+
+Let $B$ be an element of Br$(\bQ)$; tensoring $B$ with any $\bQ_v$ gives rise
+to an
+element of Br$(\bQ_v)$, and this element is trivial for almost
+all $v$. There is an exact sequence
+\[ 0\rightarrow{\mathrm{Br}}(\bQ)\rightarrow\bigoplus{\mathrm{Br}}(\bQ_v)
+\rightarrow\bQ/\bZ\rightarrow0, \]
+due to Hasse, in which the third map is the sum of the $\imath_v$; it tells us
+when a set of elements, one in each Br$(\bQ_v)$ and almost all
+trivial, can be generated from some element of Br$(\bQ)$.
+
+Now let $V$ be a complete nonsingular variety defined over $\bQ$ and $A$ an
+\emph{Azumaya algebra}
+on $V$ --- that is, a simple algebra with centre $\bQ(V)$ which has a good
+specialization at every point of $V$. The group of equivalence classes of
+Azumaya algebras on $V$ is denoted by Br$(V)$.
+If $P$ is any point of $V$, with field
+of definition $\bQ(P)$, we obtain a simple algebra $A(P)$ with centre $\bQ(P)$
+by specializing at $P$. For all but finitely many $p$, we have $\imath_p(A(
+P_p))=0$ for all $p$-adic points $P_p$ on $V$. Thus a necessary condition for
+the existence of a rational point $P$ on $V$ is that for every $v$ there
+should be a $v$-adic point $P_v$ on $V$ such that
+\beq{E14} \sum\imath_v(A(P_v))=0 \quad {\mathrm{for~all~}} A. \end{equation}
+Similarly, a necessary condition for $V$ with $V(\bQ)$ not empty to admit weak
+approximation is that (\ref{E14}) should hold for all Azumaya algebras $A$ and
+all adelic points $\prod_vP_v$. In each case this is the \emph{Brauer-Manin
+condition}. It is clearly unaffected if we add
+to $A$ a constant algebra --- that is, an element of Br$(\bQ)$. So what we are
+really interested in is Br$(V)/$Br$(\bQ)$.
+
+All this can be put into highbrow language. Even without any hypotheses on $V$,
+there is an injection of Br$(V)$ into the \'{e}tale cohomology group
+H$^2(V,\bG_m)$; and if for example $V$ is a complete nonsingular surface, this
+injection is an isomorphism. If we write
+\[ {\mathrm{Br}}_1(V)={\mathrm{ker(Br}}(V)\rightarrow{\mathrm{Br}}(\bar{V}))
+={\mathrm{ker(H}}^2(V,\bG_m)\rightarrow{\mathrm{H}}^2(\bar{V},\bG_m)), \]
+there is a filtration
+\[ {\mathrm{Br}}(\bQ)\subset{\mathrm{Br}}_1(V)\subset{\mathrm{Br}}(V). \]
+Here only the abstract structure of Br$(V)/$Br$_1(V)$ is known; and in general
+there is no known way of finding Azumaya algebras which represent nontrivial
+elements of this quotient, though in a particular case Harari [20] has
+exhibited a Brauer-Manin obstruction coming from such an algebra. In contrast,
+there is an isomorphism
+\[ {\mathrm{Br}}_1(V)/{\mathrm{Br}}(\bQ)\simeq{\mathrm{H}}^1({\mathrm{Gal}}
+(\bar{\bQ}/\bQ),{\mathrm{Pic}}(V\otimes\bar{\bQ})), \]
+and this is computable in both directions provided Pic$(V\otimes\bar{\bQ})$
+is known. (For details of this, see [8].)
+
+There is no known systematic way of determining Pic$(V\otimes\bar{\bQ})$ for
+arbitrary $V$, and there is strong reason to suppose that this is really a
+number-theoretic rather than a geometric problem. If $V$ is defined over $\bQ$
+(rather than over an arbitrary algebraic number field) there is a tentative
+algorithm, depending on the Birch/Swinnerton-Dyer conjecture,
+for determining an algebraic number field $K$ (depending on $V$)
+such that Pic$(V\otimes\bar{\bQ})=$Pic$(V\otimes K)$, and this may be the
+right first step towards determining Pic$(V\otimes\bar{\bQ})$; but one hopes
+not, because even for so elementary a variety
+as a cubic surface we may need to have $[K:\bQ]\geq51840$. It seems to me
+likely that a better approach to this question will be through the Tate
+conjectures, for which see \S3; but this is a very long-term prospect.
+However, it is usually possible to determine Pic$(V\otimes\bar{\bQ})$ for any
+particular $V$ that one is interested in.
+\bpr{Q3} Is there a general algorithm (even conjectural)
+for determining ${\mathrm{Pic}}
+(V\otimes\bar{\bQ})$ for varieties $V$ defined over an algebraic
+number field?
+\epr
+
+Lang has conjectured that if $V$ is a variety of general type defined over an
+algebraic number field $K$ then there is a finite union $\sS$ of proper
+subvarieties of $V$ such that every point of $V(K)$ lies in
+$\sS$. (Faltings' theorem, for which see \S4, is the special case of this for
+curves.) This raises another question, similar to Question \ref{Q3} but
+probably easier:
+\bpr{Q8} Is there an algorithm for determining ${\mathrm{Pic}}(V)$ where $V$
+is a variety defined over an algebraic number field?
+\epr
+
+There are very few families for which the Brauer-Manin obstruction can be
+nontrivial but for which
+it has been shown that it is the only obstruction to the Hasse
+principle. (See however [12] and, subject to Schinzel's hypothesis, [37]
+and [14].) It is generally believed that the Brauer-Manin obstruction is
+indeed the
+only obstruction to the Hasse principle for rational
+surfaces --- that is, surfaces birationally equivalent to $\bP^2$ over
+$\bar{\bQ}$. On the other hand, Skorobogatov ([33], and see also [34]) has
+exhibited an obstruction to the Hasse principle on a bielliptic surface which
+is definitely not Brauer-Manin.
+\bpr{Q4} Is the Brauer-Manin obstruction the only obstruction
+to the Hasse principle for all unirational (or all Fano) varieties?
+\epr
+We can of course ask a similar question for weak approximation.
+The major difficulty in addressing such questions for a given family $\sF$
+is that we do not know how to deduce anything useful from the fact that there
+is no Brauer-Manin obstruction. The proofs of such results as are known all
+break up into two parts:
+\begin{description}
+\item[(i)] Assuming that $V$ in $\sF$ satisfies the Hasse condition, one finds
+a necessary and sufficient condition for $V$ to have a rational point, or to
+admit weak approximation.
+\item[(ii)] One then shows that this necessary and sufficient condition is
+equivalent to the Brauer-Manin condition.
+\end{description}
+I know of no families for which it has been possible to carry out the first
+part of this programme but not the second. But there are families for which it
+has been possible to find a sufficient condition for solubility (additional to
+the Hasse condition) which appears rather weak but which is
+definitely stronger than the Brauer-Manin condition. However, such a condition
+is usually not necessary and
+the gap should be attributed to clumsiness in the proof.
+\bpr{Q5} When the Brauer-Manin condition is trivial, how can one make use of
+this fact?
+\epr
+
+\bigskip
+
+\noindent 3. \emph{Zeta-functions and L-series}. \newline
+Let $W\subset\bP^n$ be a nonsingular and absolutely irreducible projective
+variety of dimension $d$ defined over the finite field $k=$GF$(q)$,
+and denote by $\phi(q)$ the Frobenius automorphism of $W$ given by
+\[ \phi(q): (x_0,x_1,\ldots,x_n)\mapsto(x_0^q,x_1^q,\ldots,x_n^q). \]
+For any $r>0$ the fixed points of $(\phi(q))^r$ are precisely the points of
+$W$ which are defined over GF$(q^r)$; suppose that there are $N(q^r)$ of them.
+Although the context is totally different, this is almost the formalism of the
+Lefschetz Fixed Point theorem, since for geometric reasons each of these fixed
+points has multiplicity $+1$. This analogy led Weil to conjecture that there
+should be a cohomology theory applicable in this context. This would
+imply that there were finitely many complex numbers $\ga_{ij}$ such that
+\beq{E2} N(q^r)=\sum_{i=0}^{2d}\sum_{j=1}^{B_i}(-1)^i\ga_{ij}^r \quad
+{\mathrm{for~all~}} r>0, \end{equation}
+where $B_i$ is the dimension of the $i$th cohomology group of $W$ and the
+$\ga_{ij}$ are the characteristic roots of the map induced by $\phi(q)$ on
+the $i$th cohomology. For each $i$ duality
+implies that $B_i=B_{2d-i}$ and the $\ga_{2d-i,j}$
+are a permutation of the $q^d/\ga_{ij}$. If we define the local zeta-function
+$Z(t,W)$ by either of the equivalent relations
+\[ \log Z(t)=\sum_{r=1}^\infty N(q^r)t^r/r \quad {\mathrm{or}} \quad
+tZ'(t)/Z(t)=\sum_{r=1}^\infty N(q^r)t^r, \]
+then (\ref{E2}) is equivalent to
+\[ Z(t)=\frac{P_1(t,W)\cdots P_{2d-1}(t,W)}
+{P_0(t,W)P_2(t,W)\cdots P_{2d}(t,W)} \]
+where $P_i(t,W)=\prod_j(1-\ga_{ij}t)$. Each $P_i(t,W)$ must have coefficients
+in $\bZ$, and the analogue of the Riemann hypothesis is that $|\ga_{ij}|=
+q^{i/2}$. (For a fuller account of Weil's conjectures and their motivation,
+see the excellent survey [23].) All this has now been proved, the main
+contributor being Deligne.
+
+\medskip
+
+Now let $V$ be a nonsingular and absolutely irreducible projective variety
+defined over an algebraic number field $K$. If $V$ has good reduction at a
+prime $\fp$ of $K$ we can form $\tilde{V}_\fp$, the reduction of $V$ mod $\fp$,
+and hence form the $P_i(t,\tilde{V}_\fp)$. For $s$ in $\bC$, we can now define
+the $i$th global L-series $L_i(s,V)$
+of $V$ as a product over all places of $K$, the factor at a prime $\fp$ of
+good reduction being $(P_i(q^{-s},\tilde{V}_\fp))^{-1}$ where
+$q=$Norm$_{K/\bQ}\fp$. The
+rules for forming the factors at the primes of bad reduction and at the
+infinite places can be found in [31]. These L-series of course depend on $K$
+as well as on $V$. In particular, $L_0(s,V)$
+is just the zeta-function of the algebraic number field $K$.
+
+To call a function $F(s)$ a (global) zeta-function or L-series carries
+with it certain implications:
+\begin{itemize}
+\item $F(s)$ must be the product of a Dirichlet series and possibly some
+Gamma-functions, and the half-plane of absolute convergence for the Dirichlet
+series must have the form $\fR s>\gs_0$ with $2\gs_0$ in $\bZ$.
+\item The Dirichlet series must be expressible as an Euler product $\prod_p
+f_p(p^{-s})$ where the $f_p$ are rational functions.
+\item $F(s)$ must have an analytic continuation to the entire $s$-plane as a
+meromorphic function, for all of whose poles $s$ is in $\bZ$.
+\item There must be a functional equation relating $F(s)$ and $F(2\gs_0-1-s)$.
+\item The zeroes of $F(s)$ in the critical strip $\gs_0-1<\fR s<\gs_0$ must
+lie on $\fR s=\gs_0-\half$.
+\end{itemize}
+In our case, the first two implications are trivial; and fortunately one is
+not expected to prove the last three, but only to state them as conjectures.
+The last one is the Riemann Hypothesis, which appears to be out of reach even
+in the simplest case, which is the classical
+Riemann zeta-function; and the third and
+fourth have so far only been proved in a few favourable cases.
+\bpr{Q6} Can one extend the list of $V$ for which analytic continuation and
+the functional equation can be proved? (It seems likely that any proof of
+analytic continuation will carry a proof of the functional equation with it.)
+\epr
+
+It has been said about the zeta-functions of algebraic number fields that
+`the zeta-function knows everything about the number field; we just have to
+prevail on it to tell us'. If this is so, we have not yet unlocked the
+treasure-house. Apart from the classical formula which relates $hR$ to
+$\zeta_K(0)$ all that has so far been proved are certain results of Borel [6]
+which
+relate the behaviour of $\zeta_K(s)$ near $s=1-m$ for integers $m>1$
+to the K-groups of $\fO_K$.
+I would be reluctant to claim that the L-series of a variety $V$ contains all
+the information which one would like to have about the number-theoretical
+properties of
+$V$; but one might hope that when a mysterious number turns up in
+the study of Diophantine problems on $V$, some L-series contains information
+about it.
+
+Suppose for convenience that $V$ is defined over $\bQ$, and let its dimension
+be $d$. Even for varieties with $B_1=0$ we do not expect a product like
+\beq{E10} \prod_pN(p)/p^d \quad {\mathrm{or}} \quad
+\prod_pN(p)\left/\left(\frac{p^{d+1}-1}{p-1}\right)\right. \end{equation}
+to be necessarily absolutely convergent. But in some contexts there is a
+respectable expression which is formally equivalent to one of these, with
+appropriate modifications of the factors at the bad primes. The idea that
+such an expression should have number-theoretic significance goes back to
+Siegel (for genera of quadratic forms) and Hardy and Littlewood (for what they
+called the \emph{singular series}). Using the ideas above, we are led to
+replace the study of the products (\ref{E10}) by a study of the behaviour of
+$L_{2d-1}(s,V)$ and $L_{2d-2}(s,V)$ near $s=d$. By duality, this is the same
+as studying $L_1(s,V)$ near $s=1$ and $L_2(s,V)$ near $s=2$. The information
+derived in this way appears to relate to the Picard group of $V$, defined as
+the group of divisors defined over $\bQ$ modulo linear equivalence. By
+considering simultaneously both $V$ and its Picard variety (the abelian
+variety which parametrises divisors algebraically equivalent to zero modulo
+linear equivalence), one concludes that $L_1(s,V)$ must be associated with
+the Picard variety and $L_2(s,V)$ with the group of divisors modulo algebraic
+equivalence --- that is, with the N\'{e}ron-Severi group of $V$. These remarks
+motivate the weak forms of the Birch/Swinnerton-Dyer conjecture
+(for which see \S4) and the case $m=1$ of
+the Tate conjecture below. For the strong forms (which give
+expressions for the leading coefficients of the relevent Laurent series
+expansions) heuristic arguments are less convincing; but one can formulate
+conjectures for these coefficients by asking what other mysterious numbers
+turn up in the
+same context and should therefore appear in the formulae for the leading
+coefficients.
+
+The weak form of the Tate conjecture asserts that the
+order of the pole of $L_{2m}(s,V)$ at $s=m+1$ is equal to the rank of the
+group of classes of $m$-cycles on $V$ defined over $K$, modulo algebraic
+equivalence; it is a natural generalization of the case $m=1$ for which
+the heuristics have just been shown. For a more detailed account of both of
+these,
+including the conjectural formulae for the leading coefficients,
+see [41] or [36].
+\bpr{Q7} What information about $V$ is contained in its L-series?
+\epr
+
+There is in the literature a beautiful edifice of conjecture, lightly
+supported by evidence, about the behaviour of the $L_i(s,V)$
+at integral points.  The principal architects of this edifice are Beilinson,
+Bloch and Kato. Beilinson's conjectures relate to the order and leading
+coefficients of the Laurent series expansions of the $L_i(s,V)$ about integer
+values of $s$; in them
+the leading coefficients are treated as elements of $\bC^*/
+\bQ^*$. (For a full account see [28] or [22].) Bloch and Kato ([4] and
+[5]) have strengthened these conjectures by treating the leading coefficients
+as elements of $\bC^*$. But I do not believe that anything like the full story
+has yet been revealed.
+
+\bigskip
+
+\noindent 4. \emph{Curves}. \newline
+The most important invariant of a curve is its genus. In the language of
+algebraic geometry over $\bC$, curves of genus 0 are called \emph{rational},
+curves of genus 1 are called \emph{elliptic} and curves of genus greater than
+1 are \emph{of general type}. But note that for a number theorist an elliptic
+curve is a curve of genus 1 with a distinguished point $P_0$ on it, both being
+defined over the ground field $K$. The effect of this is that the points on an
+elliptic curve form an abelian group with $P_0$ as its identity
+element, the sum of $P_1$ and $P_2$ being the
+other zero of the function (defined up to multiplication by a constant) with
+poles at $P_1$ and $P_2$ and a zero at $P_0$.
+
+A canonical divisor on a curve $\gG$ of genus 0 has degree $-2$; hence by the
+Riemann-Roch theorem $\gG$ is birationally equivalent over the ground
+field to a conic. The Hasse
+principle holds for conics, and therefore for all curves of genus 0; this gives
+a complete answer to Question (A) at the beginning of these notes. But it does
+not give an answer to Question (B). Over $\bQ$, a very simple answer to
+Question (B) is as follows:
+\bth{T1} Let $a_0,a_1,a_2$ be nonzero elements of $\bZ$. If the equation
+\[ a_0X_0^2+a_1X_1^2+a_2X_2^2=0 \]
+is soluble in $\bZ$, then it has a solution for which each $a_iX_i^2$ is
+absolutely bounded by $|a_0a_1a_2|$.
+\eth
+Siegel [32] has given an answer to Question (B) over arbitrary algebraic
+number fields, and Raghavan [27] has generalized Siegel's work to quadratic
+forms in more variables.
+
+The knowledge of one rational point on $\gG$ enables us to transform $\gG$ 
+birationally into a line; so there is a parametric solution which gives
+explicitly all the points on $\gG$ defined over the ground field. This
+answers Question (C).
+
+\medskip
+
+If $\gG$ is a curve of general type defined over an algebraic number field $K$,
+Mordell conjectured and Faltings proved that $\gG(K)$ is finite; and a number
+of other proofs have appeared since then. But it does not seem that any of them
+enable one to compute $\gG(K)$, though some of them come tantalizingly close.
+For a survey of several such proofs, see [15].
+\bpr{Q10} Is there an algorithm for computing $\gG(K)$ when $\gG$ is a curve
+of general type defined over an algebraic number field $K$?
+\epr
+
+\medskip
+
+The study of rational points on elliptic curves is now a major industry,
+almost entirely separate from the study of other Diophantine problems.
+If $\gG$ is an elliptic curve defined over an algebraic number field $K$,
+the group $\gG(K)$ is called the \emph{Mordell-Weil group}. Mordell proved that
+$\gG(K)$ is finitely generated; Weil's contribution was to extend this result
+to all Abelian varieties. Thanks to Mazur (see [25]) the theory of the torsion
+part of the Mordell-Weil
+group is now reasonably complete; but for the non-torsion part all that was
+known before 1960 is that $\gG(K)$ can be embedded into a certain group
+which is finitely generated and computable. The process involved, which is
+known as the method of infinite descent, goes back to Fermat; for use in \S6
+I shall illustrate it below in a particularly simple case. By means of this
+process
+one can always compute an upper bound for the rank of the Mordell-Weil group
+of any particular $\gG$, and the upper bound thus obtained can frequently
+be shown to be equal to the actual rank by exhibiting enough elements
+of $\gG(K)$. It was also conjectured that
+the difference between the upper bound thus computed and the actual rank was
+always an even integer, but apart from this the actual rank was
+mysterious. This not wholly satisfactory state of
+affairs has been radically changed by the Birch/Swinnerton-Dyer conjecture,
+the weak form of which is described at the end of this section.
+
+I now turn to the situation in which $\gG$ is a curve of genus 1 defined over
+$K$ but not necessarily containing a point defined over $K$. Let $J$ be the
+Jacobian of $\gG$, defined as a curve whose points are in one-one
+correspondence with the divisors of degree 0 on $\gG$ modulo linear
+equivalence. Then $J$ is also a curve of genus 1 defined over $K$, and $J(K)$
+contains the point which corresponds to the trivial divisor. So $J$ is an
+elliptic curve in our sense.
+
+Conversely, if we fix an elliptic curve $J$ defined over $K$ we can consider
+the equivalence classes (for birational equivalence over $K$) of curves $\gG$
+of genus 1 defined over $K$ which have $J$ as Jacobian. For number theory, the
+only ones of interest are those which contain points defined over each
+completion $K_v$. These form a commutative torsion group, called
+the \emph{Tate-Shafarevich group} and usually denoted by $\Sha$;
+the identity element of this group is the
+class which contains $J$ itself, and it consists of those $\gG$ which have $J$
+as Jacobian and which contain a point defined over $K$. (The simplest example
+of a nontrivial element of a Tate-Shafarevich group is the curve
+\[ 3X_0^3+4X_1^3+5X_2^3=0 \quad {\mathrm{with~Jacobian}} \quad
+Y_0^3+Y_1^3+60Y_2^3=0.) \]
+Thus for curves of
+genus 1 the Tate-Shafarevich group is by definition the obstruction to the
+Hasse principle.
+
+Suppose in particular that the elliptic curve $J$ is defined over $\bQ$ and
+has the form
+\[ Y^2=(X-c_1)(X-c_2)(X-c_3) \]
+where the distinguished point is taken to be the point at infinity.
+The three points $(c_i,0)$ on $J$ have order 2; they are called the
+2-\emph{division points}. To any rational point $(x,y)$
+on $\gG$ there exist $m_1,m_2,m_3$ and $y_1,y_2,y_3$
+such that
+\[ m_i(x-c_i)=y_i^2 \quad {\mathrm{for}} \quad i=1,2,3; \]
+here the $m_i$ are really elements of $\bQ^*/\bQ^{*2}$ but it is convenient to
+treat them as square-free integers. We must have $m_1m_2m_3=m^2$ for some
+integer $m$, and $my=y_1y_2y_3$. Conversely the equations
+\[ Y_i^2=m_i(X-c_i)\;\; (i=1,2,3) \quad {\mathrm{and}} \quad mY=Y_1Y_2Y_3 \]
+for any $m,m_i$ with $m_1m_2m_3=m^2$
+define a curve $\sC=\sC(m_1,m_2,m_3)$ and a four-to-one map $\sC\rightarrow J$.
+If $\sC(\bQ)$ is not empty, its image under this map is a coset of $2J(\bQ)$
+in $J(\bQ)$, and we obtain all such cosets in this way. Thus we could find
+$J(\bQ)$ if we could decide which $\sC$ are soluble in $\bQ$.
+
+After a change of variables
+we can assume that the $c_i$ are in $\bZ$.
+Define the \emph{good primes} for $J$ as those which do not divide
+$(c_1-c_2)(c_2-c_3)(c_3-c_1)$; then it is not hard to show that $\sC$ is
+locally soluble at
+all good primes if and only if all the $m_i$ are units at all good primes.
+So there are only finitely many $\sC$ whose solubility in $\bQ$
+is at all hard to decide.
+
+The curves $\sC$ obtained in this way are called 2-\emph{coverings} of $J$,
+and the process of obtaining them is called a 2-\emph{descent}.
+They form a group under multiplication of the corresponding triples
+$(m_1,m_2,m_3)$. The finite subgroup consisting of those 2-coverings which
+are everywhere locally soluble is called the 2-\emph{Selmer group}. It is
+easily computable; and since there is a canonical embedding of $J(\bQ)/2J(\bQ)$
+into the 2-Selmer group, this provides an upper bound for the rank of $J(\bQ)$.
+The descent process can be continued, though with somewhat
+greater difficulty; for 4-descents see [11]. One can also carry out
+2-descents for the more general elliptic curve
+\[ Y^2=X^3+aX^2+bX+c; \]
+but in order to do this one requires information about the splitting field of
+the right hand side.
+
+The weak form of the Birch/Swinnerton-Dyer conjecture states that the rank of
+the Mordell-Weil group of an elliptic curve $J$
+is equal to the order of the zero of $L_1(s,J)$ at $s=1$; the conjecture
+also gives an explicit formula for the leading coefficient of the power series
+expansion at that point. Note that this point is in the critical strip, so
+that the conjecture pre-supposes the analytic continuation of $L_1(s,J)$.
+At present there are two well-understood 
+cases in which analytic continuation is known: when
+$K=\bQ$, so that $J$ can be parametrised by means of modular functions, and
+when $J$ admits complex multiplication. In consequence, these two cases are
+likely to be easier than the general case; but even here I do not expect much
+further progress in the next decade. In each of these two cases, if one
+assumes the Birch/Swinnerton-Dyer conjecture one can derive an algorithm for
+finding the Mordell-Weil group and the order of the Tate-Shafarevich group;
+and in the first of the two cases this algorithm has been implemented by
+Gebel. (See [16].) Without using the Birch/Swinnerton-Dyer conjecture,
+Heegner long ago produced a way of generating a point on $J$ whenever $K=\bQ$
+and $J$ is modular; and Gross
+and Zagier ([18] and [19]) have shown that this point has infinite order
+precisely when $L'(1,J)\neq0$. Building on their work, Kolyvagin (see [17])
+has shown the following.
+\bth{T5} Suppose that the Heegner point has infinite order; then the group
+$J(\bQ)$ has rank $1$ and $\Sha(J)$ is finite.
+\eth
+Kolyvagin [24] has also obtained sufficient conditions for both $J(\bQ)$ and
+$\Sha(J)$ to be finite. The following result is due to Nekovar and Plater.
+\bth{T6} If the order of $L(s,J)$ is odd then either $J(\bQ)$ is infinite or
+$\Sha(J)\{p\}$ is infinite for every good ordinary $p$.
+\eth
+If $J$ can be parametrized by modular
+functions for some arithmetic subgroup of SL$_2(\bR)$ then analytic
+continuation and the functional equation follow; but there is not even a
+plausible conjecture identifying the $J$ which have this property, and there
+is no known analogue of Heegner's construction.
+
+In the complex multiplication case, what is
+known is as follows.
+\bth{T2} Let $K$ be an imaginary quadratic field and $J$ an elliptic curve
+defined and admitting complex multiplication over $K$. If $L(1,J)\neq0$, then
+\begin{description}
+\item[(i)] $J(K)$ is finite;
+\item[(ii)] for every prime $p>7$ the $p$-part of $\Sha(J)$
+has the order predicted by the Birch/Swinnerton-Dyer conjecture.
+\end{description}
+\eth
+Here (i) is due to Coates and Wiles, and (ii) to Rubin. For an account of the
+proofs, see [29]. Katz has generalized (i) and part of (ii) to behaviour over
+an abelian extension of $\bQ$, but with the same $J$ as before.
+
+In general we do not know how to compute $\Sha$. It is
+conjectured that it is always finite; and indeed this assertion can be
+regarded as part of the Birch/Swinnerton-Dyer conjecture, for the formula
+for the leading coefficient of the power series for $L_1(s,J)$
+at $s=1$ contains the
+order of $\Sha(J)$ as a factor. If indeed this order is finite,
+then it must be a square; for Cassels has proved the existence of a
+nonsingular skew-symmetric bilinear form on $\Sha$
+with values in $\bQ/\bZ$. Thus
+finiteness implies that if $\Sha$ contains at most $p-1$ elements of order
+exactly $p$ for some prime $p$ then it actually contains no
+such elements; hence an element which is killed by $p$ is trivial,
+and the curves of genus 1 in that equivalence class
+contain points defined over $K$. For use later, we state the case $p=2$ as a
+lemma.
+\ble{L4} Suppose that $\Sha(J)$ is finite and the
+quotient of the $2$-Selmer group of $J$ by its soluble elements has order at
+most $2$; then that quotient is actually trivial.
+\ele
+This result will play a crucial role in \S\S 6 and 7.
+
+
+\bigskip
+
+\noindent 5. \emph{Generalities about surfaces}. \newline
+Over $\bC$ a full classification of surfaces can be found in [1]. A first
+coarse classification is given by the \emph{Kodaira dimension} $\gk$, which
+for surfaces can take the values $-\infty,0,1$ or 2. What also seems to be
+significant for the number theory (and cuts across this classification)
+is whether the surface is \emph{elliptic} --- that is, whether over $\bC$
+there is a map $V\rightarrow C$ for some curve $C$ whose general fibre
+is a curve of genus 1. The case when the map $V\rightarrow C$ is defined over
+the ground field $K$ and $C$ has genus 0 is discussed in \S6; in this case the
+Diophantine problems for $V$ are only of interest when $C(K)$ is nonzero,
+in which case $C$ can be identified with
+$\bP^1$. When $C$ has genus greater than
+1, the map $V\rightarrow C$ is essentially unique and it and $C$ are therefore
+both defined over $K$. By Faltings' theorem, $C(K)$ is then finite;
+thus each point of $V(K)$ lies on one of a finite set of fibres, and it is
+enough to study these. In contrast,
+we know nothing about the case when $C$ is elliptic.
+
+The surfaces with $\gk=-\infty$ are precisely the \emph{ruled surfaces} ---
+that is, those which are birationally equivalent over $\bC$ to $\bP^1\times C$
+for some curve $C$. Among these, by far the most interesting are the
+\emph{rational surfaces}, which are birationally equivalent to $\bP^2$ over
+$\bC$.
+
+Surfaces with $\gk=0$ fall into four families:
+\begin{itemize}
+\item Abelian surfaces. These are the analogues in two dimensions of elliptic
+curves, and there is no reason to doubt that their number-theoretical
+properties simply generalize those of elliptic curves.
+\item K3 surfaces, including in particular Kummer surfaces. Some but not all
+K3 surfaces are elliptic.
+\item Enriques surfaces, whose number theory has been very little studied.
+Enriques surfaces are necessarily elliptic.
+\item bielliptic surfaces.
+\end{itemize}
+
+Surfaces with $\gk=1$ are necessarily elliptic.
+
+Surfaces with $\gk=2$ are called \emph{surfaces of general type} --- which in
+mathematics is generally a derogatory phrase. About them there is currently
+nothing to say beyond Lang's conjecture stated in \S2.
+
+\medskip
+
+In the next two sections I shall outline what can at present be said about
+rational surfaces and K3 surfaces respectively; these appear to be the two
+most interesting families of surfaces for the
+number-theorist. In both cases many of the most
+recent results depend on one or both of two major conjectures. One of these
+(for the reason given near the end of \S4) is
+the finiteness of the Tate-Shafarevich group; the other is
+Schinzel's Hypothesis, which we now describe. It gives a conjectural answer
+to the following question: given finitely many polynomials $F_1(X),\ldots,
+F_n(X)$ in $\bZ[X]$ with positive leading coefficients, is there an
+arbitrarily large integer $x$ at which they all take prime values? There are
+two obvious obstructions to this:
+\begin{itemize}
+\item One or more of the $F_i(X)$ may split in $\bZ[X]$.
+\item There may be a prime $p$ such that for any value of $x$ mod $p$ at
+least one of the $F_i(x)$ is divisible by $p$.
+\end{itemize}
+Clearly the second obstruction can only happen for $p\leq\sum\deg(F_i)$.
+Schinzel's Hypothesis is that these are the only obstructions: in other words,
+if neither of them happens then we can choose an arbitrarily large $x$ so
+that every $F_i(x)$ is a prime. There are various more complicated variants of
+this hypothesis (including ones in other algebraic
+number fields), but they all follow
+fairly easily from the hypothesis in its original form.
+
+No one in his right mind would attempt to prove Schinzel's Hypothesis; indeed
+one instance is the notoriously intractable twin primes problem,
+which is the special case when the $F_i$ are the two polynomials $X+1$ and
+$X-1$. But probabilistic arguments suggest that the hypothesis is in fact
+true. At the very least it would be perverse to look for counter-examples to
+results which have been proved subject to Schinzel's Hypothesis.
+
+\bigskip
+
+\noindent 6. \emph{Rational surfaces}. \newline
+From the number-theoretic point of view, there are two kinds of rational
+surface:
+\begin{itemize}
+\item Pencils of conics, given by an equation of the form
+\beq{E3} a_0(u,v)X_0^2+a_1(u,v)X_1^2+a_2(u,v)X_2^2=0 \end{equation}
+where the $a_i(u,v)$ are homogeneous polynomials of the same degree. Pencils
+of conics can
+be classified in more detail according to the number of bad fibres.
+\item Del Pezzo surfaces of degree $d$, where $0<d<9$. Over $\bC$, such a
+surface is obtained by blowing up $(9-d)$ points of $\bP^2$ in general
+position. It is known that Del Pezzo surfaces of degree $d>4$ satisfy the
+Hasse principle and weak approximation; indeed those of degree 5 necessarily
+contain rational points. Del Pezzo surfaces of degree 2 or 1
+have no aesthetic
+merits and have attracted little attention; it seems sensible to ignore
+them until the problems coming from those of degrees 4 and 3 have been solved.
+The Del Pezzo surfaces of degree 3 are the nonsingular cubic
+surfaces, which have an enormous but largely irrelevent literature,
+and those of degree 4 are the nonsingular intersections of
+two quadrics in $\bP^4$. For historical reasons, attention has been
+concentrated on the Del Pezzo
+surfaces of degree 3; but the problems presented by those
+of degree 4 are necessarily simpler.
+\end{itemize}
+
+\medskip
+
+We consider first pencils of conics, and assume that (\ref{E3}) is defined
+over $\bQ$, the argument for an arbitrary algebraic number field not being
+essentially different. We can require the coefficients of the
+$a_i(u,v)$ to be in $\bZ$. Since the Hasse principle holds for conics, it is
+enough to choose $u=u_0,v=v_0$ in such a way that (\ref{E3}) is locally
+soluble at $2,\infty$ and all the odd primes which divide any of the
+$a_i(u_0,v_0)$. As it stands, this appears to involve arguing in a circle;
+the way to make the argument respectable is as follows.
+
+Assume that (\ref{E3}) is everywhere locally soluble.
+By absorbing suitable factors into the $X_i$, we can ensure that the $a_i(u,v)$
+are square-free and coprime. To achieve this, we have to drop the condition
+that the $a_i(u,v)$ are all of the same degree; but it is still true that
+their degrees are all even or all odd. Denote by $\sB$ the set of bad places,
+which turns out to consist of $2,\infty$, the primes which divide the
+discriminant of $a_0(u,v)a_1(u,v)a_2(u,v)$ and the primes which do not exceed
+the degree of that product. Let $\sS$ be the space of all pairs of coprime
+integers $u_0,v_0$, with the topology induced by the places of $\sB$; and let
+$\sS_0$ be the subset of $\sS$ consisting of the points at which (\ref{E3}) is
+locally soluble at every place in $\sB$. By hypothesis, $\sS_0$ is not empty;
+and it is open in $\sS$. To obtain solubility in $\bQ$, we have to choose
+$u_0,v_0$ in $\sS_0$ so that (\ref{E3}) is locally soluble at each good prime
+$p_0$ which divides one of the $a_i(u_0,v_0)$; for solubility at the other
+good primes is trivial, and we have already taken care of the bad places.
+Let $c(u,v)$ be the irreducible
+factor of that one of the $a_i(u,v)$ for which $p_0|c(u_0,v_0)$, and to fix
+ideas assume that $c(u,v)$ divides $a_2(u,v)$; here $c(u,v)$ is unique
+because $p_0$ does not divide the discriminant of $a_0a_1a_2$. The condition
+of local solubility at
+$p_0$ is
+\beq{E5} (a_0(u_0,v_0)a_1(u_0,v_0),c(u_0,v_0))_{p_0}=+1 \end{equation}
+where the outer bracket is the Hilbert symbol. So a necessary condition for
+the solubility of (\ref{E3}) is that all the conditions like
+\beq{E6} \prod(a_0(u_0,v_0)a_1(u_0,v_0),c(u_0,v_0))_p=+1 \end{equation}
+hold simultaneously
+for some $(u_0,v_0)$ in $\sS_0$, where the product is taken over all $p$
+which divide $c(u_0,v_0)$.
+
+What is unexpected is that this turns out to be useful, because of the
+following lemma. The proof of the lemma
+is straightforward, since the function $\Phi$
+behaves like a quadratic residue symbol and can be evaluated by a Euclidean
+algorithm process very like that which is used for such symbols.
+\ble{L3} Let $F(u,v),G(u,v)$ be homogeneous polynomials in $\bZ[u,v]$, with
+$\deg(F)$ even. Let $\sB$ be a finite set of places of $\bQ$ which contains
+$2,\infty$ and all the primes which divide the discriminant of $FG$. For
+any coprime $u_0,v_0$ in $\bZ$, write
+\beq{E4} \Phi(\sB;F,G;u_0,v_0)=\prod(F(u_0,v_0),G(u_0,v_0))_p \end{equation}
+where the outer bracket on the right is the Hilbert symbol and the product is
+taken over all primes $p$ not in $\sB$ such that $p|G(u_0,v_0)$.
+Then $\Phi(u_0,v_0)$ is continuous in the topology on $\sS$, and computable.
+\ele
+In this result we take $F=a_0a_1,G=c$; we noted above that $\deg(a_0a_1)$ is
+necessarily even. It follows that a necessary condition for the
+solubility of (\ref{E3}) is that there is a point $(u_0,v_0)$ in $\sS_0$
+such that $\Phi(u_0,v_0)=+1$ for all $\Phi$ which can be generated from
+(\ref{E3}) in this way.
+This condition is computable, and it is unsurprising (though not obvious)
+that it turns out to be equivalent to the Brauer-Manin condition for
+(\ref{E3}).
+
+If one assumes Schinzel's Hypothesis, this condition is also
+sufficient. For suppose that $u_0,v_0$ have been so chosen that there is only
+one good prime $p_0$ which divides $c(u_0,v_0)$; then the product in (\ref{E6})
+reduces to the left hand side of (\ref{E5}), and so (\ref{E5}) holds for this
+prime. Now choose an open set $\sN\subset\sS_0$ such that (\ref{E6}) holds
+throughout $\sN$ for each $c(u,v)$; by a slightly modified version
+of Schinzel's Hypothesis we can choose $(u_0,v_0)$ in $\sN$
+so that every $c(u_0,v_0)$ is
+the product of one good prime and possibly some factors in $\sB$. As $c$ runs
+through all irreducible factors of $a_1a_2a_3$, $p_0$ runs through all those
+primes for which we have to verify (\ref{E5}). Thus (\ref{E3}) is everywhere
+locally soluble for the pair $u_0,v_0$, and therefore globally soluble. With
+minor modifications, the same argument shows that (subject to Schinzel's
+Hypothesis) the Brauer-Manin obstruction is also the only obstruction to weak
+approximation.
+
+If there is no Brauer-Manin obstruction, this construction finds infinitely
+many conics in the pencil which
+contain rational points. But, somewhat unexpectedly, even if we know some
+conics of the pencil which are soluble, without Schinzel's Hypothesis we do
+not know how to generate more such conics.
+\bpr{Q11} Given a pencil of conics and finitely many conics in the pencil each
+of which contains rational points, can we generate further conics of the
+pencil which contain rational points without using Schinzel's Hypothesis?
+\epr
+
+\medskip
+
+If we know even one rational point on a Del Pezzo surface $V$ of degree 3 or 4,
+we can obtain an infinity of curves of genus 0 each of which lies on $V$,
+though they will be singular and for degree 3
+it will usually not be true that each point of $V(\bQ)$ lies on at least
+one curve of the family. But without
+such a point, the best we can do is to find on $V$ a family of curves of
+genus 1. At first sight, it would seem that in these circumstances nothing
+resembling the argument above can be applied;
+for an essential component of that
+argument was that conics satisfy the Hasse principle, and this is not true
+for curves of genus 1. However Lemma \ref{L4} provides us with a way round
+this obstacle.
+
+The arguments involved are applicable to some surfaces $V$ which are not
+necessarily rational, but which are elliptic with a fibration
+$V\rightarrow\bP^1$. Consider a pencil of curves $\sC_\gl$ of genus 1, each of
+which is a 2-covering of its Jacobian $J_\gl$. If we can choose $\gl$ in
+such a way that $\sC_\gl$ is everywhere locally soluble and at least half
+the elements of the 2-Selmer group of $J_\gl$
+are soluble (and if we assume the finiteness of the relevent Tate-Shafarevich
+group), then it will follow from Lemma \ref{L4} that $\sC_\gl$ is soluble.
+For this machinery to have any chance of working, we must be able to implement
+the 2-descent on $J_\gl$ in a manner which is uniform in $\gl$. This more or
+less requires $J_\gl$ to have its 2-division points defined over $\bQ(\gl)$ and
+therefore to have the form
+\beq{E7} Y^2=(X-c_1(\gl))(X-c_2(\gl))(X-c_3(\gl)) \end{equation}
+where the $c_i(\gl)$ are in $\bQ(\gl)$; but an additional trick, given in [2],
+enables the method to be used even if
+$J_\gl$ has just one 2-division point in $\bQ(\gl)$.
+
+The details of this method are unattractive, but the strategy is as follows.
+(For a full account, see [13].)
+Without loss of generality we can assume that the $c_i(\gl)$ are in $\bZ[\gl]$.
+For any particular integral value  $\gl_0$ of
+$\gl$, the bad places for the equation (\ref{E7})
+are the bad places for the system together with the primes which divide one
+of the $c_i(\gl_0)-c_j(\gl_0)$. It was explained in \S4 how to implement the
+2-descent for (\ref{E7}). We shall eventually use Schinzel's Hypothesis
+to choose $\gl_0$ so that the value of each irreducible factor of any
+$c_i(\gl)-c_j(\gl)$ at $\gl=\gl_0$ is the product of some bad primes for the
+system with one good prime. We call the latter a \emph{Schinzel prime}; though
+it is a good prime for the system, it is
+a bad prime for the curve obtained by writing $\gl=\gl_0$ in (\ref{E7}). The
+effect of restricting $\gl_0$ in this way
+is that we know those 2-coverings of (\ref{E7}) for $\gl=\gl_0$
+which are locally soluble at all good primes for the curve; they form a finite
+group of 2-coverings $\sC'_\gl$ of $J_\gl$ which does not depend on the choice
+of $\gl_0$ provided it satisfies the condition above.
+
+This group certainly contains the original $\sC_\gl$ and the 2-coverings which
+correspond to the 2-division points. The next step, which involves a
+sophisticated analysis of the 2-descent process and also requires us to
+introduce additional well chosen bad primes for the
+system, is to find local conditions
+on $\gl_0$ at the bad primes of the system which ensure that for $\gl=\gl_0$
+\begin{itemize}
+\item the only elements of this group which are locally soluble at all the bad
+places of the system lie in the subgroup generated by the original $\sC_\gl$
+and the 2-coverings generated by the 2-division points; and
+\item the original $\sC_\gl$ is locally soluble at all the bad places of the
+system.
+\end{itemize}
+This is not always possible; if it is impossible, that provides an obstruction
+to this method of attack on the problem
+though not necessarily to the solubility of the system. In general this
+obstruction is not much stronger than the Brauer-Manin obstruction, and in some
+cases they are provably the same; so this
+is not too serious a blemish on the method. If we achieve
+the two properties above then solubility at the Schinzel
+primes turns out to be
+automatic. (This is an example of what seems to be a rather
+general phenomenon,
+that the number of related things which go wrong must be even.) With our
+enlarged set of bad places for the system, we now choose $\gl_0$ to satisfy
+the local conditions and the Schinzel condition in the previous paragraph. By
+Lemma \ref{L4}, the curve (\ref{E7}) is soluble for this value of $\gl$.
+But in contrast to what happens for pencils of conics, this kind of
+argument appears to provide no information about weak approximation.
+\bpr{Q12} Can one modify the method above so that it works without any
+assumption about the $2$-division points of $J_\gl$?
+\epr
+
+Unfortunately it is not known (and probably is not even true) that an arbitrary
+Del Pezzo surface of degree 4 contains a pencil of curves of genus 1 of this
+particular type --- and the situation for Del Pezzo surfaces of degree 3 is
+much worse, in that the natural curves to consider are 3-coverings
+rather than 2-coverings.
+
+However, for Del Pezzo surfaces of degree 4 some progress has been made.
+Salberger
+and Skorobogatov [30] have shown that the Brauer-Manin obstruction is the only
+obstruction to weak approximation. As for the Hasse principle, the present
+situation is as follows. A Del Pezzo surface of degree 4 defined over
+the algebraic number field $K$ has the form
+\[ V:F_1(X_0,\ldots,X_5)=F_2(X_0,\ldots,X_5)=0, \]
+where the coefficients of $F_1$ and $F_2$ are in $K$.
+By a linear transformation defined over an extension $K_1$ of odd degree over
+$K$, we can separate off one of the variables; and over $K_1$ we can find a
+pencil of curves $\sC_\gl$ of genus 1 on $V$ for which each $J_\gl$ has one
+2-division point defined over $K_1(\gl)$. 
+Using the trick described in [2], and subject to an obstruction typical for
+the method, it can now be shown that $V$ contains a point defined over
+$K_1$. A straightforward geometric argument, which does not rely on $K$ being
+an algebraic number field, now shows that $V$ contains a point
+defined over $K$. Unfortunately the overall arguments are so complicated
+(and so unnatural) that it is not clear whether the obstruction to the method
+is still simply the Brauer-Manin obstruction to the solubility of $V$ over $K$;
+but even if it is stronger, it is not much stronger.
+
+To use and then collapse a field extension in this way is a device which
+probably has a number of uses. For such a collapse step to be feasible, the
+degree of the field extension needs to be prime to the degree of the variety;
+and this leads one to phrase the same property somewhat differently.
+\bpr{Q13} Let $V$ be a variety defined over a field $K$, not necessarily of
+a number-theoretic kind. For what families of $V$ is it true that if $V$
+contains
+a $0$-cycle of degree $1$ defined over $K$ then it contains a point defined
+over $K$?
+\epr
+As stated above, this is true for Del Pezzo surfaces of degree 4.
+For pencils of conics it is in general false, even for algebraic number fields
+$K$. For Del Pezzo surfaces of degree 3 the question is open: I expect it to
+be true for algebraic number fields $K$ but false for general fields.
+
+A variant of the method above can be applied to diagonal cubic surfaces
+\beq{E12} V:a_0X_0^3+a_1X_1^3=a_2X_2^3+a_3X_3^3, \end{equation}
+subject to one very counterintuitive condition, which is that $K$, the field of
+definition of $V$, must not contain the primitive cube roots of unity.
+Write $V$ in the form
+\beq{E8} a_0X_0^3+a_1X_1^3=\gl Y^3, \quad a_2X_2^3+a_3X_3^3=\gl Y^3
+\end{equation}
+where $\gl$ is at our disposal. We now have two pencils of
+curves of genus 1, each of which is a $\sqrt{-3}$-covering
+of its Jacobian; and we have to apply the method simultaneously to both
+curves. This introduces considerable additional complications, for which
+see [40]; and the obstruction to the method, though weak, is certainly
+strictly stronger than the Brauer-Manin obstruction. The reason for the
+condition on $K$ is that otherwise the curves (\ref{E8}) would admit complex
+multiplication, and the latter acts on the $\sqrt{-3}$-Selmer groups; thus the
+order of the latter would always be an odd power of 3, whereas it has to be
+reduced to 9 for the method to work. (Here one factor 3 arises because of the
+3-division points on the Jacobian defined over $\bQ(\sqrt{-3})$.) On the other
+hand, in this argument we only need apply
+Schinzel's Hypothesis to the single polynomial $X$, so that it can be replaced
+by Dirichlet's theorem on primes in arithmetic progression.
+
+All this relates to Question (A). For Question (B) the only known results
+are for quadrics, for which see the remarks after Theorem \ref{T1}. It seems
+reasonable to ask whether there is an analogous result for other kinds of
+rational surfaces; this is another problem for which the first step should
+probably be to use numerical search to generate a plausible conjecture. For
+this purpose, one needs to examine a system with not too many parameters;
+and this leads to the following question:
+\bpr{Q9} For the surface $V$ given by $(\ref{E12})$ with the $a_i$ in $\bZ$,
+is there a polynomial $P$ in the $|a_i|$ such that if $V$ is soluble in $\bZ$
+then it has such a solution for which each summand is absolutely bounded by
+$P$?
+\epr
+
+The ideal answer to Question (C) would be to provide a birational map
+$V\rightarrow\bP^2$ defined over $\bQ$. However, it can be shown that such a
+map exists for nonsingular cubic surfaces $V$ if and only if $V(\bQ)$ is not
+empty and $V$ contains a divisor defined over $\bQ$ which consists of 2, 3
+or 6 skew lines. (For Del Pezzo surfaces of degree 4, the second condition
+must be replaced by the statement that $V$ contains a divisor defined over
+$\bQ$ which consists of one or more skew lines.) For Ch\^{a}telet surfaces,
+which have the form
+\[ X_2(X_0^2-cX_1^2)=f(X_2,X_3) \]
+where $c$ is a non-square and $f$ is homogeneous cubic, it is known that
+there is a finite set of parametric solutions (each in 4 inhomogeneous
+variables) such that each point of $V(\bQ)$ is represented by one of them,
+though in an infinity of different ways.
+But in general more than one parametric solution is needed, and parametric
+solutions in only 2 variables cannot play a useful part in the process.
+\bpr{Q21} Is there a larger class of cubic surfaces (ideally, the class of
+all nonsingular cubic surfaces) for which analogous results hold?
+\epr
+
+The question of parametric solutions is linked to the idea of
+\emph{R-equivalence}.
+Let $V$ be a variety defined over $\bQ$; then R-equivalence is defined as the
+finest equivalence relation such that two points given by the same parametric
+solution are equivalent. Alternatively, it is the finest equivalence relation
+such that for any map $f:\bP^1\rightarrow V$ and points $P_1,P_2$, all
+defined over $\bQ$, the points $f(P_1)$ and $f(P_2)$ are equivalent. A good
+deal is known about R-equivalence on cubic surfaces; in particular, it is
+shown in [39] that the closure of an R-equivalence class in $V(\bA)$ is
+computable, and that the closures of two R-equivalence classes are either
+the same or disjoint.
+\bpr{Q22} Is the set of R-equivalence classes on a nonsingular cubic surface
+finite? Can there be two distinct R-equivalence classes which have the same
+closure in $V(\bA)$?
+\epr
+
+\bigskip
+
+\noindent 7. K3 \emph{surfaces and Kummer surfaces}. \newline
+K3 surfaces are the simplest kind of variety about whose number-theoretic
+properties very little is known; indeed they still present many unsolved
+problems even
+to the geometer. There are infinitely many families of K3 surfaces;
+the simplest of them, and the only one which will be considered in the
+present article, consists of all nonsingular quartic surfaces. An important
+special type of K3 surfaces consists of the \emph{Kummer surfaces}, a phrase
+which can carry either of two related meanings:
+\begin{itemize}
+\item The quotient of an Abelian surface $A$ by the automorphism $-1$; this
+has 16 singular points corresponding to the 16 2-division points of $A$.
+\item The nonsingular surface obtained by blowing up the 16 singular points
+in the previous definition.
+\end{itemize}
+One advantage of Kummer surfaces in comparison
+with general K3 surfaces is that for the
+former it is easy to determine Pic$(\bar{V})$.
+
+Some K3 surfaces contain one or more pencils of curves of genus 1, and these
+pencils may even be of the kind discussed in the previous section;
+but one should not
+confine one's attention to K3 surfaces with this additional property. For
+the time being, there is
+merit in concentrating on diagonal quartics
+\beq{E13} V:a_0X_0^4+a_1X_1^4+a_2X_2^4+a_3X_3^4=0, \end{equation}
+because these contain few enough parameters to make systematic numerical
+experimentation possible. However, the number theory of such surfaces may be
+exceptional, because the geometry certainly is. Indeed
+Pic$(\bar{V})$ has rank 20, which is the largest possible value for any
+K3 surface, and it is generated by the classes of the 48 lines on $\bar{V}$;
+moreover $V$ is a Kummer surface up to isogeny, and indeed is the Kummer
+surface of $E\times E$ where $E$ is an elliptic curve which admits complex
+multiplication. One consequence of this is that $V$ is rigid in the sense of
+algebraic geometry.
+
+There is an obvious map from $V$ to the quadric surface
+\[ W:a_0Y_0^2+a_1Y_1^2+a_2Y_2^2+a_3Y_3^2=0. \]
+If $a_0a_1a_2a_3$ is a square, each of the two families of lines on $W$ is
+defined over the ground field, and each such line lifts to a curve of genus 1
+on $V$; moreover the Jacobians of these curves have the form (\ref{E7}), so
+that the methods of the previous section can be applied.
+
+Martin Bright [7] has computed and tabulated Br$_1(V)/$Br$(\bQ)$ for all
+$V$ of the form (\ref{E13}); it is necessary to do this by computer, because
+there are 546 distinct cases. I had previously shown in [38] that
+over $\bQ$ the Brauer-Manin obstruction is the only obstruction to the Hasse
+principle in the most general case in which $a_0a_1a_2a_3$ is a square. (Most
+general in this context means that none of the $\pm a_ia_j$ is a square and
+$a_0a_1a_2a_3$ is not a fourth power.) It seems reasonable to hope that the
+same property will still hold in all the cases for which $a_0a_1a_2a_3$ is a
+square; but there are too many of them
+to examine individually. On the other hand, there is strong numerical
+evidence that when $a_0a_1a_2a_3$ is not a square the obstruction coming
+from Br$_1(V)$
+is not in general the only obstruction to the Hasse principle.
+\bpr{Q14} What is the additional obstruction in this case?
+\epr
+One particularly interesting example is the surface
+\beq{E9} X_0^4+2X_1^4=X_2^4+4X_3^4; \end{equation}
+this has two obvious rational points, but appears to have no others.
+
+\bigskip
+
+\noindent 8. \emph{Density of rational points}. \newline
+So far I have ignored Question (D). It differs from the others in that it is
+not a birational question, but is associated with a particular embedding
+of the variety $V$ in
+projective space. For simplicity we work over $\bQ$. A point $P$ in $\bP^n$
+defined over $\bQ$ has a representation $(x_0,\ldots,x_n)$ where the $x_i$ are
+integers with no common factor; and this representation is unique up to
+changing the signs of all the $x_i$. We define the \emph{height} of $P$ to be
+$\max|x_i|$; a linear transformation on the ambient space multiplies heights
+by numbers which lie between two positive constants depending on the linear
+transformation. Denote by $N(H,V)$ the number of points of $V(\bQ)$ whose
+height is less than $H$; then it is natural to ask how $N(H,V)$ behaves as
+$H\rightarrow\infty$.
+This is the core question for the Hardy-Littlewood method, which when it is
+applicable is the best (and often the only) way of proving that $V(\bQ)$ is
+not empty. In very general circumstances that method provides estimates of the
+form
+\[ N(H,V)={\mathrm{~leading~term~+~error~term}}. \]
+The leading term is usually the same as one would obtain by probabilistic
+arguments. But such results are only valuable when it can be shown that the
+error
+term is small compared to the leading term, and to achieve this the dimension
+of $V$ needs to be large compared to its degree. The extreme case of this is 
+the following theorem, due to Birch [3].
+\bth{T3} Let $r_1,\ldots,r_m$ be positive odd integers, not necessarily all
+different. Then there exists $N_0(r_1,\ldots,r_m)$ with the following property.
+For any $N\geq N_0$ let $F_i(X_0,\ldots,X_N)$ be homogeneous polynomials with
+coefficients in $\bZ$ and
+$\deg F_i=r_i$ for $i=1,\ldots,m$. Then the $F_i$ have a common nontrivial
+zero in $\bZ^N$.
+\eth
+The proof falls into two parts. First, the Hardy-Littlewood method is used to
+prove the result in the special case when $m=1$ and $F_1$ is diagonal ---
+that is, to show that if $r$ is odd and $N\geq N_1(r)$ then
+\[ c_0X_0^r+\ldots+c_NX_N^r=0 \]
+has a nontrivial integral solution. Then the general case is reduced to this
+special case by purely elementary methods.
+The requirement that all the $r_i$ should be odd arises from difficulties
+connected with the real place; over a totally complex algebraic number field
+there is a similar theorem for which the $r_i$ can be any positive integers.
+\bpr{Q20} In Theorem $\ref{T3}$, can the condition that all the $r_i$ are odd
+be replaced by the requirement on the $F_i$ that the projective variety given
+by $F_1=\ldots=F_m=0$ has a nonsingular real point?
+\epr
+
+The Hardy-Littlewood method was designed for a single equation in which the
+variables are separated --- for example, an equation of the form
+\[ f_1(X_1)+\ldots+f_N(X_N)=c \]
+where the $f_i$ are polynomials, the $X_i$ are integers, and one wishes to
+prove solubility for all integers $c$, or all large enough $c$, or almost all
+$c$. But it has also been applied both to several simultaneous equations and
+to equations in which the variables are not separated. The following theorem
+of Hooley [21] is much the most impressive result in this direction.
+\bth{T4} Homogeneous nonary cubics over $\bQ$ satisfy both the Hasse
+principle and weak approximation.
+\eth
+
+It appears that the Hardy-Littlewood method can only work for families for
+which $N(H,V)$ is asymptotically equal to its probabilistic value; in
+particular it seems unlikely that it can be made to work for families for
+which weak approximation fails. Manin has put forward a conjecture about the
+asymptotic density of rational solutions for certain geometrically interesting
+families of varieties for which weak approximation is unlikely to hold: more
+precisely, for Fano varieties embedded in $\bP^n$ by means of
+their anticanonical divisors. For simplicity, we describe his conjecture only
+for Del Pezzo surfaces $V$ of degrees 3 and 4.
+To ask about $N(H,V)$ is now the wrong question,
+for $V$ may contain lines $L$ defined over $\bQ$, and for any
+line $N(H,L)\sim AH^2$ for some nonzero constant $A$. This is much greater
+than the order-of-magnitude estimate for $N(H,V)$ given by a
+probabilistic argument. For the latter suggests an estimate
+$AH\prod(N(p)/(p+1))$, where the product is taken over all primes less than
+a certain bound which depends on $H$. In view of what is said in \S3,
+this product ought to be
+replaced by something which depends on the behaviour of $L_2(s,V)$
+near $s=1$. More precisely, the way in which the leading term in the
+Hardy-Littlewood method is obtained suggests that here we should take
+$s-1$ to be comparable with $(\log H)^{-1}$. Remembering the
+Tate conjecture, this gives the right hand side of (\ref{E11}) as a
+conjectural estimate for $N(H,V)$. But if this argument were valid, $L$
+would contain more rational points than $V$, even though $V\supset L$.
+Manin's way to resolve this absurdity is to study not $N(H,V)$ but $N(H,U)$,
+where
+$U$ is the open subset of $V$ obtained by deleting the 27 or 16 lines on $V$.
+Manin conjectured that
+\beq{E11} N(H,U)\sim AH(\log H)^{r-1} {\mathrm{~where~}} r
+{\mathrm{~is~the~rank~ of~Pic}}(V); \end{equation}
+and Peyre [26] has given a conjectural formula for $A$. (But note that there
+exist
+Fano varieties of dimension greater than 2 for which (\ref{E11}) is certainly
+false; and it is not clear how Manin's conjecture should be modified to
+cover such cases.) Various people have proved
+this conjecture
+for the cone $X_0X_1X_2=X_3^3$, and Rudge has sketched a proof for the
+singular cubic surface
+\[ X_0X_1X_2+X_0X_1X_3+X_0X_2X_3+X_1X_2X_3=0, \]
+to which attention had been drawn by Birch.
+\bpr{Q15} Are there nonsingular Del Pezzo surfaces of degree $3$ or $4$ for
+which the Manin conjecture can be proved?
+\epr
+In the first instance, it would be wise to address this problem under rather
+restrictive hypotheses about Pic$(V)$, not least because the Brauer-Manin
+obstruction to weak approximation occurs in the conjectural formula for $A$
+and therefore the problem is likely to be easier for families of $V$ for
+which weak approximation holds. A one-sided estimate for one such family is
+given in [35].
+
+For Del Pezzo surfaces, the value of $c$ for which
+$N(H,U)\sim AH(\log H)^c$ is defined by the geometry rather than by the
+number theory, though that is not true of $A$. For other varieties, the
+corresponding statement need no longer be true. We start with curves. For a
+curve of genus 0 and degree $d$, we have $N(H,V)\sim AH^{2/d}$; and for a
+curve of genus greater than 1 Faltings' theorem is equivalent to the
+statement that $N(H,V)=O(1)$. But if $V$ is an elliptic curve then $N(H,V)\sim
+A(\log H)^{r/2}$ where $r$ is the rank of the Mordell-Weil group. (For elliptic
+curves there is a more canonical definition of height, which is invariant
+under bilinear transformation; this is used to prove the result above.)
+
+For pencils of conics, Manin's question is probably not the best one to ask,
+and it would be better to proceed as follows. A pencil of conics is a surface
+$V$ together with a map $V\rightarrow\bP^1$ whose fibres are conics. Let
+$N^*(H,V)$ be the number of points on $\bP^1$ of height less than $H$ for
+which the corresponding fibre contains rational points.
+\bpr{Q16} What is the conjectural estimate for $N^*(H,V)$ and under what
+conditions can one prove it?
+\epr
+It may be worth asking the same questions for pencils of curves of genus
+1.
+
+For surfaces of general type, Lang's conjecture implies that questions about
+$N(H,V)$ are really questions about certain curves on $V$; and for Abelian
+surfaces (and indeed Abelian varieties in any dimension) the obvious
+generalisation of the theorem for elliptic curves holds. But K3 surfaces
+pose new problems --- and not ones on which any practicable amount of
+computation is likely to shed light. If $V$ is a K3 surface, then we have to
+study not $N(H,V)$ but $N(H,U)$ where $U$ is obtained from $V$ by deleting the
+curves of genus 0 on $V$ defined over $\bQ$, of which there may be an infinite
+number. One can expect
+that $N(H,U)\sim A(\log H)^c$ for some constants $A$ and $c$; and
+it seems reasonable to hope that $c$ will be a half-integer. The surface
+(\ref{E9}) suggests that we can have $c=0$, and it must be certain (though
+perhaps difficult to prove) that $c$ can sometimes be strictly positive.
+\bpr{Q17} Can the value of $c$ be obtained from the L-series $L_2(s,V)$?
+\epr
+\bpr{Q18} If $V$ is a Kummer surface obtained from the Abelian surface $A$,
+is $c$ related to the rank of the Mordell-Weil group of $A$?
+\epr
+
+
+\bigskip
+
+\begin{center} REFERENCES \end{center}
+
+\noindent [1] A.Beauville, \textit{Complex Algebraic Surfaces} (2nd ed.,
+Cambridge, 1996). 
+
+\noindent [2] A.O.Bender and Sir Peter Swinnerton-Dyer, Solubility of certain
+pencils of curves of genus 1, and of the intersection of two quadrics in
+$\bP^4$, Proc. London Math. Soc (3) 83(2001), 299-329.
+
+\noindent [3] B.J.Birch, Homogeneous forms of odd degree in a large number
+of variables, Mathematika 4(1957), 102-105.
+
+\noindent [4] S.J.Bloch, \textit{Higher regulators, algebraic $K$-theory and
+zeta-functions of elliptic curves}, CRM Monograph Series 11 (AMS, 2000).
+
+\noindent [5] S.J.Bloch and K.Kato, $L$-functions and Tamagawa numbers of
+motives, in \textit{The Grothendieck Festschrift}, vol. I, pp. 333-400
+(Birkhauser, 1990).
+
+\noindent [6] A.Borel, Cohomologie de $SL_2$ et valeurs de fonctions
+zeta aux points entiers, Ann. Sc. Norm. Pisa (1976), 613-636.
+
+\noindent [7] M.Bright, Ph.D. dissertation, (Cambridge, 2002).
+
+\noindent [8] M.Bright and Sir Peter Swinnerton-Dyer, Computing the
+Brauer-Manin obstructions, Math. Proc. Cambridge Phil. Soc. (to appear).
+
+\noindent [9] \textit{Hilbert's Tenth Problem: Relations with Arithmetic and
+Algebraic Geometry} (ed. Jan Denef et al), Contemporary Mathematics, vol. 270.
+
+\noindent [10] \textit{Mathematical Developments arising from Hilbert
+Problems}, AMS Symposia in Pure Mathematics, Vol XXVIII (ed. F.E.Browder),
+(Providence, 1976).
+
+\noindent [11] J.W.S.Cassels, Second descents for elliptic curves, J. Reine
+Angew. Math. 494(1998), 101-127.
+
+\noindent [12] J-L.Colliot-Th\'{e}l\`{e}ne, J-J.Sansuc and Sir Peter
+Swinnerton-Dyer, Intersections of two quadrics and Chatelet surfaces,
+J. Reine Angew. Math. 373(1987), 37-107 and 374(1987), 72-168.
+
+\noindent [13] J-L.Colliot-Th\'{e}l\`{e}ne, A.N.Skorobogatov and Sir Peter
+Swinnerton-Dyer, Hasse principle for pencils of curves of genus one whose
+Jacobians have rational 2-division points, Invent. Math. 134(1998),
+579-650.
+
+\noindent [14] J-L.Colliot-Th\'{e}l\`{e}ne and Sir Peter Swinnerton-Dyer,
+Hasse principle and weak approximation for pencils of Severi-Brauer and
+similar varieties, J. Reine Angew. Math., 453(1994) 49-112.
+
+\noindent [15] \textit{Rational Points}, ed. G.Faltings and G. W\"{u}stholz
+(3rd ed., Vieweg, 1992).
+
+\noindent [16] J.Gebel and H.G.Zimmer, Computing the Mordell-Weil Group of
+an Elliptic Curve over $\bQ$, in \textit{Elliptic Curves and Related Topics}
+(ed. H.Kisilevsky and M. Ram Murthy), CRM Proceedings and Lecture Notes, vol 4,
+pp 61-83 (Amer. Math. Soc., 1994).
+
+\noindent [17] B.Gross, Kolyvagin's work on modular elliptic curves, in
+\textit{L-functions and Arithmetic} ed. J.Coates and M.J.Taylor (Cambridge,
+1991).
+
+\noindent [18] B.Gross, W.Kohnen and D.Zagier, Heegner points and derivatives
+of $L$-series II, Math. Ann. 278(1987), 497-562.
+
+\noindent [19] B.Gross and D.Zagier, Heegner points and derivatives of
+$L$-series, Invent. Math. 84(1986), 225-320.
+
+\noindent [20] D.Harari, Obstructions de Manin "transcendantes",
+in \textit{S\'{e}minaire de Th\'{e}orie des Nombres de Paris 1993-1994},
+ed. S.David, (Cambridge, 1996).
+
+\noindent [21] C.Hooley, On nonary cubic forms, J. Reine Angew. Math.,
+386(1988), 32-98 and 415(1991), 95-165 and 456(1994), 53-63.
+
+\noindent [22] W.W.J.Hulsbergen, \textit{Conjectures in Arithmetic
+Algebraic Geometry}, (Vieweg, 1992).
+
+\noindent [23] S.L.Kleiman, Algebraic cycles and the Weil conjectures,
+in \textit{Dix expos\'{e}s sur la cohomologie des sch\'{e}mas},
+ed. A.Grothendieck and N.H.Kuiper (North-Holland, 1968).
+
+\noindent [24] V.A.Kolyvagin, Finiteness of $E(\bQ)$ and $\Sha(E/\bQ)$
+for a class of Weil curves, Izv. Akad. Nauk SSSR 52(1988).
+
+\noindent [25] B.Mazur, Rational isogenies of prime degree, Inv. Math.
+44(1978), 129-162.
+
+\noindent [26] E.Peyre, Hauteurs et mesures de Tamagawa sur les
+vari\'{e}t\'{e}s de Fano, Duke Math. J. 79(1995), 101-218.
+
+\noindent [27] S.Raghaven, Bounds for minimal solutions of Diophantine
+equations, G\"{o}ttinger Nachr. (1975), 109-114.
+
+\noindent [28] \textit{Beilinson's Conjectures on Special Values of
+$L$-Functions}, ed. M.Rapaport, N.Schappacher and P.Schneider (Academic
+Press, 1988).
+
+\noindent [29] K.Rubin, Elliptic Curves with Complex Multiplication and
+the Conjecture of Birch and Swinnerton-Dyer, in \textit{Arithmetic Theory
+of Elliptic Curves} (ed. C.Viola), pp. 167-234 (Springer Lecture Notes
+1716 (1999)).
+
+\noindent [30] P.Salberger and A.N.Skorobogatov, Weak approximation for
+surfaces defined by two quadratic forms, Duke J. Math. 63(1991), 517-536.
+
+\noindent [31] J-P.Serre, Facteurs locaux des fonctions z\^{e}ta des
+vari\'{e}t\'{e}s alg\'{e}briques (d\'{e}finitions et conjectures),
+S\'{e}minaire Delange-Pisot-Poitou 1969/70, exp. 19.
+
+\noindent [32] C.L.Siegel, Normen algebraischer Zahlen, (Werke, Band IV,
+250-268).
+
+\noindent [33] A.N.Skorobogatov, Beyond the Manin obstuction, Inv. Math.
+135(1999), 399-424.
+
+\noindent [34] A.N.Skorobogatov, \textit{Torsors and Rational Points},
+(Cambridge, 2002).
+
+\noindent [35] J.B.Slater and Sir Peter Swinnerton-Dyer, Counting points on
+cubic surfaces I, Ast\'{e}risque 251(1998), 1-11.
+
+\noindent [36] P.Swinnerton-Dyer, The Conjectures of Birch and
+Swinnerton-Dyer, and of Tate, in \textit{Proceedings of a Conference on Local
+Fields} (ed. T.A.Springer), Driebergen 1966, pp. 132-157 (Springer, 1967).
+
+\noindent [37] Sir Peter Swinnerton-Dyer, Rational points on pencils of
+conics and on pencils of quadrics, J. London Math. Soc. (2) 50(1994),
+231-242.
+
+\noindent [38] Sir Peter Swinnerton-Dyer, Arithmetic of diagonal quartic
+surfaces II, Proc. London Math. Soc. (3) 80(2000), 513-544.
+
+\noindent [39] Sir Peter Swinnerton-Dyer, Weak approximation and
+$R$-equivalence on Cubic Surfaces, in \textit{Rational points on algebraic
+varieties} (ed. E.Peyre and Y.Tschinkel) pp. 357-404 (Birkh\"{a}user, 2001).
+
+\noindent [40] Sir Peter Swinnerton-Dyer, The solubility of diagonal cubic
+surfaces, Ann. Scient. \'{E}c. Norm. Sup. (4) 34(2001), 891-912.
+
+\noindent [41] J.T.Tate, On the conjectures of Birch and Swinnerton-Dyer
+and a geometric analog, S\'{e}m. Bourbaki 306(1966).
+
+\noindent [42] R.C.Vaughan, \textit{The Hardy-Littlewood method}, (2nd ed.,
+Cambridge, 1997).
+
+\end{document}
+

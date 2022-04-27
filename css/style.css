@@ -1,0 +1,58 @@
+BODY {color: #000000; background-color:#ffeecc}
+
+
+/* header styles */
+.header {font-family:Verdana,Arial,Helvetica,sans-serif; font-size-adjust:.48; color:#000088; background-color:#ffeecc} 
+
+/* nav styles */
+.nav {font: normal normal 12px Verdana,Arial,Helvetica,sans-serif; font-size-adjust:.48; text-align:center}
+.nav1, .nav2, .nav3, .nav4, .nav5, .nav6, .nav7, .nav8, .nav9, .nav10, .nav11
+ {color:#003311; background-color:#ffeecc; text-decoration:none}
+
+/* Currently selected left navbar entry */
+td.navsel {
+   background-color:#ffffaa; 
+   border:1px solid black;
+   padding:1px;
+}
+
+a.navsel {
+   font: normal bold 12px Verdana,Arial,Helvetica,sans-serif; 
+   font-size-adjust:.48; 
+   color:#0000aa
+   background-color:#ffffaa; 
+   text-decoration:none
+}
+
+
+
+/* blotter styles */
+.blotter {color:#000000; background-color:#ffffff}
+
+
+A {
+   text-decoration: none; 
+}
+
+table.topnav { 
+   /* border:1px solid black; */
+   background-color: #000000; 
+}
+
+td.topnav { 
+   /* border:1px solid black; */
+   padding:7px;
+   background-color: #fafafa; 
+   font: normal normal 25px serif;   
+}
+
+div.links { 
+   text-align:center
+}
+
+
+table.leftnav { 
+   background-color:
+
+
+}

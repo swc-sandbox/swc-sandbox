@@ -1,0 +1,125 @@
+<html>
+
+<include src="/head.html.in" {'PAGE':'Local and Travel Information'}>
+<body vlink="blue";>
+<include src="/topbar.html.in" >
+<include src="/navcol.html.in"  {'nav_travel':'navsel'}>
+
+<div class="page">
+<h1 class='header'><a href="index.html">Local and Travel Information</a></h1>
+
+<h2 style="text-align: center;">Travel to and from the United States</h2>
+<p>
+The Arizona Winter School is funded by the U.S. National Science
+Foundation (NSF). NSF rules place some restrictions on the flights
+that can be reimbursed from NSF funds.  The rules are slightly
+complicated so please read the following carefully.
+</p>
+
+<h3>Travel from the European Union, Switzerland, or Australia.</h3>
+<p>
+The first step is to check whether there is a so-called "city pair"
+agreement between Tucson and the city you intend to fly from.  At <a
+href="http://cpsearch.fas.gsa.gov/cpsearch/search.do">this
+website</a>, type the name of your departure city (not the airport
+code) in the first box, enter Tucson in the second box, and click to
+search the current year.  If the result is that there are no awards
+for the requested city pair, then you are in luck: you may use either
+a U.S. airline or an E.U./Swiss/Australian airline for your travel.
+However, if a fare appears, you must instead follow the
+rest-of-the-world instructions below.
+</p>
+
+<h3>Travel from the rest of the world (including Canada)</h3>
+<p>
+In order to be reimbursed from NSF funds, your flight must be on a
+U.S. airline.   If you are considering a flight that is a code share
+between a U.S. airline and a non-U.S. airline (for instance between
+United and Air Canada, or Delta and Air France), there are two ways to
+satisfy this requirement.  If you actually purchase the flight from
+the U.S. airline, then you can be reimbursed, irrespective of which
+airline actually operates the flight.  Alternately, you may purchase
+the flight from the non-U.S. airline as long as <i>every</i> segment
+is actually on an airplane owned by a U.S. airline.
+</p>
+<p>
+For instance, suppose you wish to fly from Toronto to Tucson,
+connecting in Denver.  If the Toronto-Denver leg is on an Air Canada
+plane, then the flight must be purchased from one of Air Canada's U.S.
+partners (e.g. United or Continental) to be eligible for
+reimbursement.  However, if the Toronto-Denver leg is operated by
+United, then (since the Denver-Tucson leg will also be operated by a
+U.S. carrier) the flight can actually be purchased from Air Canada if
+you wish.  Similarly, a flight from Brasilia to Sao Paulo to Houston
+to Tucson would have to be purchased from the U.S. partner, since the
+Brasilia-Sao Paulo flight will not be operated by a U.S. carrier.
+</p>
+
+<h2 style="text-align: center;">Visa and reimbursement information for non-U.S. citizens</h2>
+<p>
+There are rather strict rules about the documentation required in
+order to be able to reimburse non-U.S. citizens for conference related
+expenses.  Please read this information carefully---<i>without proper
+documentation, we will not be able to reimburse any expenses</i>.
+Any questions about visas and reimbursements should be directed
+to <a href="mailto:swc-coordinator@math.arizona.edu">Aubrey Mouradian</a> in the
+Business Office of the U of A Mathematics Department.
+</p>
+
+<h3>Resident Aliens</h3>
+<p>
+Please bring your Permanent Resident Card with you for documentation purposes.
+</p>
+
+<h3>Canadian Citizens</h3> 
+<p>
+You must specifically request a B-1 visa and obtain an I-94 card at
+the border before you enter the United States---without this visa and
+I-94 card we cannot reimburse you for any conference related expenses.
+</p>
+
+<h3>Non-Resident Aliens</h3>
+<p>
+You will need to obtain either a B-1 or
+WB visa.  Either of these visas will allow you to receive
+reimbursement for conference related expenses only.  To determine
+whether you must obtain your visa before you travel, or whether you
+can obtain your visa upon arrival in the United States, see the visa
+website of the
+<a href="http://travel.state.gov/visa/temp/without/without_1990.html">U.S.
+Department of State</a>.  If you will obtain your visa when you arrive
+in the United States, <b>do not forget to ask the Customs and Immigration
+official to give you a business visa</b>; we cannot reimburse you if you
+obtain a tourist visa.  If you must obtain your visa before you
+travel, please request a letter of invitation from us to attend the
+workshop to expedite your visa processing.
+</p>
+
+<h3>F-1 Visa holders</h3> 
+<p>
+If you are currently on an F-1 visa from another institution,
+the AWS can not directly reimburse you for any expenses.
+Rather, you will be reimbursed for eligible expenses by your home institution,
+in cooperation with the AWS.  More information about this process will be provided to you
+after you have submitted the AWS lodgng survey.  You must bring the following documentation to
+the AWS in order to begin the reimbursement process:
+Your passport, visa with F-1, copy of Form I-20, copy of SSN
+or ITIN if applicable and a copy of both sides of the I-94 card.
+</p>
+
+<h3>J-1 Visa holders</h3>
+<p>
+If you are currently on a J-1 visa from another 
+institution, we will require a letter from your sponsoring institution 
+authorizing reimbursement of conference related expenses and a 
+copy of your IAP-66 form.
+</p>
+
+<p>
+Please be sure to bring your passport, visa, or I-94 card  with 
+you to the conference.
+</p>
+
+</div>
+</BODY>
+</HTML>

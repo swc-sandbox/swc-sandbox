@@ -1,0 +1,93 @@
+#!/usr/bin/python
+
+import os
+
+def get_items():
+    """
+    Look for x_Author.html.in files in the AWS tree.
+    """
+    items = {}
+    for root, dirs, files in os.walk('aws'):
+        for fname in files:
+            if fname.startswith('x_') and fname.endswith('.html.in'):
+                year = root[4:]
+                author = fname[2:-8]
+                fpath = os.path.join(root, fname)
+
+                try:
+                    items[year].append((author, fpath))
+                except KeyError:
+                    items[year] = [(author, fpath)]
+    return items
+
+
+def metadata(year, field):
+    """
+    Return an AWS's metadatum, given the year and field name.  See the
+    YYYY/metadata.txt files.
+    """
+    field += ':'
+    fd = open(os.path.join('aws', year, 'metadata.txt'))
+    line = ''
+    while not line.startswith(field):
+        line = fd.readline().strip()
+    i = line.find(':')
+    if i != -1:
+        line = line[i + 1:].strip()
+    return line
+
+
+def make_media_by_year_page(items):
+    """
+    Generate an "AWS Media by Year" page.
+    """
+    s = ''
+    years = sorted(items)
+    years.reverse()
+    for yr in years:
+        s += '<div class="wrap_year">\n'
+        s += '<h3><a class="toggle" title="Click to toggle this year">&nbsp;+&nbsp;</a>'
+        s += '<a href="/aws/%s/index.html">AWS %s: %s</a></h3>' % (
+            yr, yr, metadata(yr, 'htmltitle'))
+        s += '  <ul id="year_%s" class="year" style="display: none;">\n' % yr
+        speakers = items[yr]
+        speakers.sort(key=lambda x: x[0].lower())
+        for spkr, fpath in speakers:
+            s += '    <li class="speaker">\n'
+            s += '      <include src="/%s">\n' % fpath
+            s += '    </li>\n'
+        s += '  </ul>\n'
+        s += '</div>\n'
+    
+    fd = open('notes/media_year_page.html.in', 'w')
+    fd.write(s)
+    fd.close()
+
+
+def make_media_by_author_page(items):
+    """
+    Generate an "AWS Media by Author" page.
+    """
+    auths = []
+    for yr in sorted(items):
+        for au, fpath in items[yr]:
+            auths.append((au, yr, fpath))
+    auths.sort(key=lambda x: x[0].lower())
+
+    s = '<ul>\n'
+    for au in auths:
+        s += '  <li class="speaker">\n'
+        s += '''    <include src="/%s" {'SHORTTITLE': 'AWS %s', 'TITLE': '%s'}>\n''' % (
+            au[2], au[1], metadata(au[1], 'title'))
+        s += '  </li>\n'
+    s += '</ul>\n'
+
+    fd = open('notes/media_author_page.html.in', 'w')
+    fd.write(s)
+    fd.close()
+
+
+if __name__ == '__main__':
+    items = get_items()
+    make_media_by_year_page(items)
+    make_media_by_author_page(items)

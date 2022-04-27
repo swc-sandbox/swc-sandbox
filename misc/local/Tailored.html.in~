@@ -1,0 +1,52 @@
+<html>
+
+<include src="/head.html.in" {'PAGE':'Student Application Instructions'}>
+<body vlink="blue";>
+<include src="/topbar.html.in" >
+<include src="/navcol.html.in"  {'nav_home':'navsel'}>
+
+<div class="page">
+<h2 style="text-align: center;">Student Application Instructions</h2>
+<p>
+In order to register for the Arizona Winter School, you will need to
+create an account at mathprograms.org.  Please follow the instructions
+below, noting especially that <b>you must submit a tailored letter request</b>,
+rather than a generic letter request.
+
+<p>
+
+<ol>
+<li>
+  To start the application process, open <a href="https://www.mathprograms.org/db/112/841/apply">this link</a> in a new window.
+  </li>
+<li>
+   Create an account with mathprograms.org, using your institutional email address.
+  </li>
+ <li>
+  Fill out the standard cover sheet. 
+  You must enter the name and contact information of your reference-writer (typically your advisor). <b>Leave the box "email notify writer on submit" un-checked.</b>
+  </li>
+   <li>
+  After completing the cover sheet, proceed with your application through mathprograms by filling out
+  all of the additional information requested.
+  </li>
+  <li>
+  You must request a <b>tailored letter</b> from your
+  reference writer. To do this, <b>click the green arrow</b>
+  next to your reference's email address and mark the option <b>Request a tailored letter for this institution only</b>, then click <b>submit</b> in the dialogue box.
+
+  <p>
+  <img src="http://swc.math.arizona.edu/misc/local/ExhibitB1.png" alt="Click The Green Arrow"  width="600">
+  </li>
+<li>
+  Click <b>apply</a>.
+  </li>
+</ol>
+
+You will receive a confirmation from mathprograms.org.
+Application and funding decisions will be made in December.
+
+
+</div>
+</BODY>
+</HTML>
