@@ -1,0 +1,60 @@
+<html>
+
+<include src="/head.html.in" {'PAGE':'Directions for AWS 2015'}>
+<body vlink="blue";>
+<include src="/topbar.html.in" >
+<include src="/navcol.html.in"  {'nav_last':'navsel'}>
+
+<div class="page">
+
+	<h1 class="header">Local Directions for AWS 2015</h1>
+	  <h2>Locations</h2>
+	  
+	  <p>
+	    <b><a href="http://www.marriott.com/hotels/travel/tusup-tucson-marriott-university-park/">Tucson Marriott University Park</a></b>: 880 E. Second St., Tucson AZ 85719. Phone: (520) 792-4100.<br>
+	The Marriott is located one block north and one block west of the west entrance to the University of Arizona campus at University Blvd. & Park Ave.
+	  </p>
+	  
+	  <p>
+	    <b>McClelland Hall</b>: 1130 E. Helen St., Tucson AZ 85721.<br> 
+		McClelland is located on the north side of
+	    Speedway Blvd., over half a mile west of Campbell Ave.;
+	    the entrance is one block to the north of Speedway, on
+	    Helen. 
+	  </p>
+
+	  <h2>Walking to the lectures</h2>
+	  <p>
+	    Here are walking directions between the Marriott and McClelland from Google Maps:
+        <ul><iframe src="https://www.google.com/maps/d/embed?mid=zUumcduc4KvQ.kjKgzIQqlkEM" width="640" height="480"></iframe></ul>
+        These directions take you east through campus and then north, passing through a pedestrian underpass underneath Speedway Ave.
+        on the west side of McClelland.
+	  </p>
+
+      <h2>Parking</h2>
+      <p>
+        Self-parking at the Marriott is available at $13/day.  The Main Gate Garage
+        is right next to the Marriott and is free on weekends and $8/day on weekdays.
+      </p>
+
+	  <p>
+	    For the lectures, participants with cars may park in the Park Avenue Garage
+	    immediately to the west of McClelland Hall, at the corner
+	    of Park and Speedway.  Its rates are the same as the Main Gate Garage.
+      </p>
+
+
+	<h2>Meals</h2>
+	<p>The most convenient location for meals is the area around University Blvd.
+	and Park Ave., near the Marriott.  There are also some restaurants along
+    Speedway Blvd.</p>
+
+    <p>Fourth Avenue and downtown can be easily reached by the new
+    <a href="http://www.sunlinkstreetcar.com">Sun Link Streetcar.</a>
+    The streetcar picks up on Second St. on
+    campus and on University Blvd. just south of the Marriott.  You can take it west and then
+    south down Fourth Ave. to downtown Tucson, which has many nice restaurants.
+    For a map, see <a href="http://www.sunlinkstreetcar.com/images/Route%20Map.pdf">here</a>.</p>
+    </div>
+  </body>
+</html>

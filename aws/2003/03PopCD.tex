@@ -1,0 +1,108 @@
+\magnification=\magstephalf
+\vsize=22.5truecm
+\voffset=-.1truecm
+\hsize=16truecm
+\mathsurround=1.75pt
+\baselineskip=13.5pt
+\nopagenumbers
+%=============================================================================
+\font\maimicrm=cmr10 at 10truept
+\font\maimicsl=cmsl10 at 10truept
+\font\maimicit=cmti10 at 10truept
+\font\marebf=cmbx10 at 12truept
+\font\maimarebf=cmbx10 at 14truept
+%=============================================================================
+\def\hhb#1{\hbox to#1pt{}}  \def\hhh{\hhb{1}}
+\def\pn{\par\noindent} \def\ssn{\smallskip\noindent}
+\def\msn{\medskip\noindent} \def\bsn{\bigskip\noindent}
+%=============================================================================
+
+\ssn
+{\maimarebf Aim/Description of the Course}
+
+\msn
+The aim of this course is to show how arithmetic and
+birational geometry is encoded in the elementary theory
+of a function field $K$ over some base field $k$, where
+the base $k$ is either a number field, or a finite field,
+of an algebraically closed field (such as the complex
+numbers). One of the main questions here is to give 
+{\it sentences\/} in the language of fields by which 
+one can ``detect'' the transcendence degree ${\rm td}(K|k)$. 
+Clearly, the usual way we do this, namely: 
+``$\exists\>(t_1,\dots,t_d)\in K$ which do not satisfy
+a non-trivial polynomial relation over $k$, and all $x\in K$ 
+are algebraic over $k(t_1,\dots,t_d)$'' is not a sentence 
+in the language of fields. Second, supposing that we have 
+found sentences as above, give further sentences in the 
+language of fields by which one can describe the isomorphism 
+type of $K$ (as a field). 
+
+\ssn
+Concerning answers: Detecting the transcendence degree 
+is ``difficult'' in the case $k$ is a number field. (The 
+proof uses the Milnor Conjecture, as proved by Voevodsky 
+et al, but just as a ``black box''.) To the contrary, the 
+case where $k$ is finite or algebraically closed is easy... 
+The problem of detecting the isomorphy type of $K$ from 
+its elementary theory is not completely solved yet. We 
+will nevertheless show that this {\it is possible\/} in 
+the case $K$ is a function field of ``general type''. 
+Here we should remark that the ``conservation of 
+difficulties'' applies: The geometric situation is much 
+more difficult to tackle than the arithmetic one...
+
+\def\blt{$\bullet$}
+\msn
+{\bf Literature:}
+\pn 
+\item{\blt} F.~Pop: {\it Elementary equivalence 
+versus Isomorphism,\/} Invent.\ Math.\ 150 (2002), 385--408. 
+\ssn
+\item{} In order to be able to understand the arguments 
+of the proof, thus what we plan to do, the following 
+basic knowledge is necessary/expected:
+\ssn
+\item{\blt} The usual model theoretic rudiments (like 
+in any introductory book on model theoretic algebra). 
+See e.g., Chang--Keisler: {\it Model Theory\/} (3rd ed.), 
+North Holland, Amsterdam~1990.  
+\ssn
+\item{\blt} Basic facts about Galois cohomology, in particular 
+the relation between cohom.dim.\ and the transcendence degree. 
+Much of these facts mostly used as ``black boxes''. See for 
+instance J.-P. Serre: {\it Galois Cohomology,\/} Springer 
+Verlag 1997.
+\ssn
+\item{\blt} Basic facts about quadratic forms and the Witt 
+ring (of anisotropic quadratic forms), Pfister forms. In 
+particular, their relation to algebraic K-theory (and 
+the Milnor Conjecture), and the Galois cohomology. Much 
+of these facts mostly used as ``black boxes''. See e.g., 
+A.~Pfister: {\it On the Milnor Conjecture: History, 
+Influence, applications,\/} Jahresbericht DMV 102 (2002), 
+no.1, 15--41. Here lots of further literature on the 
+subject can be found.
+\ssn
+\item{\blt} Basic facts about varieties (over number fields,
+finite fields, or algebraically closed fields). See
+e.g., D. Mumford: {\it The red book on Varieties and 
+Schemes.\/} Mostly (but not only) used as a ``black box''.
+\ssn
+\item{\blt} Also, basic facts about: First, schemes of finite 
+type, e.g., the Chebotarev Density Theorem, like in 
+J.-P. Serre: {\it Zeta and L Functions,\/} Arithm.\ Alg.\ 
+Geometry, pp.~82--92, Harper\&Row, New York 1965; and 
+second, varieties of general type, like in Sh.~Iitaka: 
+{\it Algebraic geometry,\/} Springer Verlag. Facts mostly 
+used as ``black boxes''.
+\ssn
+\msn
+{\bf A possible project:} Give the ``axiomatic'' of the 
+finitely generated fields and/or function fields over 
+algebraically closed fields. (This should follow from a
+close analysis of the proof of the result under discussion:
+``\hhb1elem.\hhb1equiv. $\Rightarrow$ isom.'') 
+
+\bye
+

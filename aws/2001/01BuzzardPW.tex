@@ -1,0 +1,284 @@
+%& latex
+\documentclass[12pt]{article}
+\input diagrams
+\pagestyle{empty}
+\setlength{\oddsidemargin}{0in} 
+\setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\textheight}{9.0in}
+
+%\usepackage{amstex}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{amsmath} 
+
+
+\begin{document}
+
+\begin{center}
+\Large Buzzard's Group Presentation \\
+
+\normalsize March 14, 2001
+
+\end{center}
+
+\bigskip
+
+
+Let $p=2$.  Consider the modular curve $\displaystyle X_{0}(2) = \left(
+_{\Gamma_{0}(2)} \backslash ^{\mathcal{H}} \right)^{\ast}$ which
+parametrizes pairs $(E,C)$ where $C$ is a subgroup of order 2.  As an affine
+curve, $X_{0}(2)$ is given by $xy = 2^{12}$.  And we define
+
+\[f:= 1/x = \frac{\Delta(q^{2})}{\Delta(q)} = q \prod_{n=1}^{\infty}(1+
+q^{n})^{24} \]
+
+\noindent Since $\Delta(q), \Delta(q^{2})$ are weight 12 level 2 modular
+forms, $f$ is a modular function of weight 0 level 2.  We have a cannonical
+map of degree 3 between $X_{0}(2)$ and $X_{0}(1)$, which maps the two cusps
+$0, \infty$ of $X_{0}(2)$ to the one cusp $\infty$ of $X_{0}(1)$ and
+preserves $q$-expansions.  (Picture was drawn here during the talk.)  Since
+$\Delta(q)$ has a simple zero at $\infty$ and a double zero at $0$ on
+$X_{0}(2)$ and $\Delta(q^{2})$ has a double zero at $\infty$ and a single
+zero at $0$ on $X_{0}(2)$, $f$ has a simple zero at $\infty$ and a simple
+pole at $0$.  Therefore,
+
+\[ f: X_{0}(2) \stackrel{\sim}{\longrightarrow} \mathbb{P}^{1} \] 
+
+Now if we consider $X_{0}(2)$ as a rigid analytic space, the collection
+$\{1, f, f^{2}, f^{3}, \ldots \}$ forms a basis of the space of funtions on
+$\{x \in X_{0}(2) \ \ : \ \ |f(x)| \leq 1 \}$ such that
+$\sum_{n=0}^{\infty}a_{n}T^{n}$, $|a_{n}|_{2} \rightarrow 0$ as $n
+\rightarrow \infty$, and where $|T| < 1$.  The reduction of
+$X_{0}(2)_{\mathbb{Q}_{2}}$ to $X_{0}(2)_{\mathbb{F}_{2}}$ takes an 2-adic
+annulus of supersingular points $2^{-12} > |x| > 1$ to the singular point of
+$xy = 0$.  (Picture could be drawn here.)
+
+\medskip
+
+If we write $f(q) = \sum_{n=1}^{\infty}a_{n}q^{n}$, then our goal is to
+compute what $U_{2}$ looks like on $\{1, f, f^{2}, f^{3}, \ldots \}$.  If we
+let $\alpha = f(\sqrt{q})$ and $\beta = f(-\sqrt{q})$, then we have
+
+\begin{eqnarray*}
+\alpha + \beta & = & \sum a_{n}q^{n/2} + \sum (-1)^{n}a_{n}q^{n/2} \\
+               & = & 2\sum a_{n}q^{n/2} + 2\sum a_{2n}q^{n} \\
+               & = & 2U_{2}f
+\end{eqnarray*}
+
+\noindent Therefore $U_{2}f = \frac{1}{2}(\alpha + \beta)$, and $U_{2}f:
+X_{0}(2) \longrightarrow \mathbb{P}_{\mathbb{\overline{Q}}_{2}}^{1}$ is a
+map of degree 2.
+
+\medskip
+
+If $f(q)$ is a modular form for $\Gamma$, then $f(\delta q)$ is a modular
+form for $\delta^{-1} \Gamma \delta$.  So $f(\sqrt{q}) = f(\tau/2) = f(
+\bigl( \begin{smallmatrix} 1&0 \\ 0&2 \end{smallmatrix} \bigr)
+\tau)$ is a modular form on $\bigl( \begin{smallmatrix} 1&0 \\ 0&2
+\end{smallmatrix} \bigr)^{-1} \Gamma_{0}(2) \bigl( \begin{smallmatrix} 1&0
+\\ 0&2 \end{smallmatrix} \bigr) \supseteq \Gamma(2)= \left\{ \bigl(
+\begin{smallmatrix} 1&0 \\ 0&1 \end{smallmatrix} \bigr) \bmod 2 \right\}$
+
+\medskip
+
+Note that we know the degree of $\alpha$, $\beta$ are 2, and looking at
+where our maps factor through we have
+
+\begin{diagram}
+\alpha,\ \beta :& X(2) & & \rTo^{2}  &  & \mathbb{P}^{1} \\
+		&	    & \rdTo^{2}_{\tau \mapsto \tau /2}  & &
+\ruTo^{1}_{f} & \\
+		&	    & &   X_{0}(2)   & &
+\end{diagram}
+
+\noindent  Thus $\mbox{deg}(U_{2}f) \leq 4$ on $X(2)$ and we have the
+following diagram
+
+\begin{diagram}
+U_{2}f = 1/2(\alpha + \beta) :& X(2) & & \rTo^{\leq 4}  &  & \mathbb{P}^{1}
+\\
+		&	    & \rdTo_{2}  & &  \ruTo_{\leq 2} & \\
+		&	    & &   X_{0}(2)   & &
+\end{diagram}	
+
+\noindent So $U_{2}f$ will factor through $X_{0}(2)$.  Now the question
+becomes how far out do we need to look for $f$ expansions?  
+
+\medskip
+
+By the above discussion we see that deg($U_{2}f$) = 2 on $X_{0}(2)$, so 
+
+\[ U_{2}f = \frac{\_ + \_ f + \_ f^{2}}{\_ + \_ f + \_ f^{2}} \]
+
+\noindent and we need to figure out what should go in the blanks.  Since $f:
+0 \rightarrow \infty$ and $f: \infty \rightarrow 0$, $U_{2}f = \_ + \_ f +
+\_ f^{2}$.  By a computer calculation we see that $U_{2}f = 24f +
+2084f^{2}$. 
+
+\medskip
+
+The matrix for $2U_{2}$ with respect to $\{1, f, f^{2}, f^{3}, \ldots \}$
+will be denoted by $(c_{ij})$, where $2U_{2}f^{j} = \sum_{i} c_{ij}f^{i}$.
+And this matrix actually begins 
+
+
+\[ \begin{pmatrix} 2 &   0        & 0      & \longrightarrow \\
+                0 &   48       & 2      &  \\
+                0 & 2^{12}     & 2304   & \dots \\
+                0 &   0        & \vdots &  \\
+      \downarrow  & \downarrow & \vdots \end{pmatrix} \]     
+
+\medskip
+
+\noindent So we are interested in a generating function.  Let $g = \sum
+b_{n}q^{n}$, then $2U_{2}g = 2 \sum b_{2n} q^{n} = g(\sqrt{q}) +
+g(-\sqrt{q})$.  So if $g = f^{j}$, $2u_{2}f^{j} = \alpha^{j} + \beta^{j} =
+\sum c_{ij}f^{i}$.  Now
+
+\begin{eqnarray*}
+\sum (\alpha y)^{j} + (\beta y)^{j} & = & \sum c_{ij}f^{i}y^{j} \\
+                                    & = & \frac{1}{1 - \alpha y} +
+\frac{1}{1 - \beta y} \\
+                                    & = & \frac{2 - (\alpha + \beta)y}{1 -
+(\alpha + \beta)y + \alpha \beta y^{2}}
+\end{eqnarray*}
+
+\noindent  In fact
+
+\begin{eqnarray*}
+\alpha \beta & = & \sqrt{q}\prod_{n} \left( 1 + (\sqrt{q})^{n} \right) ^{24}
+\cdot -\sqrt{q}\prod_{n} \left( 1 + (-\sqrt{q})^{n} \right) ^{24} \\
+             & = & -q\prod_{n \mbox{ even}} \left( (1 +
+q^{n})^{2}\right)^{24} \cdot \prod_{n \mbox{ odd}}(1 - q^{n})^{24} \\
+             & = & -q\prod_{n}\frac{\left( (1 + q^{n})^{2} \right)^{24}
+\left( 1 - q^{n} \right)^{24}}{\left( 1 - q^{2n} \right) ^{24}} \\
+             & = & -q\prod_{n} \left( 1 + q^{n} \right)^{24} \\
+             & = & -f
+\end{eqnarray*}
+
+\noindent So we have a generating function 
+
+\[ \frac{2 - (48f + 2^{12}f^{2})y}{1 - (48f + 2^{12}f^{2})y - fy^{2}} \]
+
+\noindent Can you figure out the $c_{ij}$ from this generating function?
+
+\medskip
+
+In order to make our argument rigorous, we need to show that $2U_{2}$ is a
+compact operator on the $\rho$-overconvergent modular forms with $|\rho|_{2}
+< 1$.  We know that if $M = (m_{ij})$ is an infinite matrix giving an
+operator, then $M$ is compact if and only if for $\gamma_{i} = \sup_{j}
+|m_{ij}|_{2}$, we have that $\gamma_{i} \rightarrow 0$ as $i \rightarrow
+\infty$.  The problem we face is that $c_{i,2i} = 2$, so we do not have a
+compact operator for the basis $\{1, f, f^{2}, f^{3}, \ldots \}$.
+
+\medskip
+
+Since we do not have a compact operator on the space of all 2-adic modular
+forms, we must restrict to $\rho$-overconvergent modular forms.  Pick
+$\omega \in \mathbb{\overline{Q}}_{2}$ such that $|\omega|_{2} < 1$.  We now
+adjust our basis:  $\{1, (\omega f), (\omega f)^{2}, \ldots \}$ and look at
+$2U_{2}$ as a matrix with respect to this new basis
+
+\begin{eqnarray*}
+2U_{2}(\omega f)^{i} & = & \omega^{j} \sum_{i} c_{ij} f^{i} \\
+                     & = & \sum_{i} c_{ij} \omega^{j-i}(\omega f)^{i}
+\end{eqnarray*}
+
+\noindent So in terms of the new basis $2U_{2} = (d_{ij}) =
+(c_{ij}\omega^{j-i})$.  Now letting $\omega = 2^{l}$ with $l$ a positive
+rational and recalling the generating function for $(c_{ij})$, we have
+
+\begin{eqnarray*}
+\sum d_{ij}f^{i}y^{j} & = & \sum c_{ij} \omega^{j-i}(\omega y)^{j} \\
+                      & = & \frac{2 - (2^{4} \cdot 3f +
+2^{12}f^{2}\omega^{-1})y}{1 - (2^{4} \cdot 3f + 2^{12}f^{2}\omega^{-1})y -
+\omega fy^{2}} \\
+                      & = & \frac{2 - (2^{4} \cdot 3f + 2^{12-l}f^{2})y}{1 -
+(2^{4} \cdot 3f + 2^{12-l}f^{2})y -2^{l}fy^{2}}
+\end{eqnarray*}
+
+\noindent which has a power series in
+$\mathcal{O}_{\mathbb{\overline{Q}}_{2}}$.  Thus $|d_{ij}|_{2} <
+|2^{il}|_{2} = 2^{-il} \rightarrow 0$ as $i \rightarrow 0$.  So $2U_{2}$ is
+compact on $\{1, (\omega f), (\omega f)^{2}, \ldots \}$ as desired.
+
+\medskip
+
+We have been interested in computing $(c_{ij})$ and a result of Frank
+Calegari shows this matrix is computable for $U_{2}$.
+
+\medskip
+
+\noindent \textbf{Theorem.} $\displaystyle c_{ij} = \frac{2^{8i-4j}3j(i+j
+-1)!}{(2i-j)!(2j-i)!}$ where $c_{ij} = 0$ whenever not well-defined.
+
+\smallskip
+
+\textit{Proof.}  There is a recurrence relation 
+
+\begin{eqnarray*}
+F_{1}   & = & 2U_{2}f = \alpha + \beta = 48f + 4096f^{2} \\
+F_{n}   & = & 2U_{2}f^{n} = \alpha^{n} + \beta^{n} \\
+F_{n+1} & = & 2U_{2}f^{n+1} = \alpha^{n+1} + \beta^{n+1} = (\alpha +
+\beta)(\alpha^{n} + \beta^{n}) - \alpha \beta(\alpha^{n-1} + \beta^{n-1}) 
+\end{eqnarray*}
+
+\noindent then 
+
+\begin{eqnarray*}
+F_{n+1} & = & 2U_{2}f \cdot 2U_{2}f^{n} + f(2U_{2})(f^{n-1}) \\
+        & = & (48f + 4096f^{2})F_{n} + fF_{n-1}
+\end{eqnarray*}
+
+\noindent so $c_{i+1,j+1} = 48c_{i,j} + 4096c_{i-1,j} + c_{i,j-1}$ and the
+rest follows by an ugly calculation.
+
+\medskip
+
+Ideally we would like to have a closed form, which we hope to derive from 
+
+\[\frac{2 - (\alpha + \beta)y}{1 - (\alpha + \beta)y + \alpha \beta y^{2}}
+\]
+
+\noindent but what we have been able to compute is that 
+ 
+\[c_{ij} = 2^{8i - 4j}3^{2j-1}\left( \left( \begin{array}{c} j \\ 2j - i
+\end{array} \right)  
+ + j\sum_{k=1}^{[\frac{2j-i}{3}]} \frac{3^{-3k}}{k} \left( \begin{array}{c}
+j - (k+1) \\ j - 2k \end{array} \right) \left( \begin{array}{c} j - 2k \\ 2j
+- i - 3k \end{array} \right) \right) \]
+
+\noindent but we have been unable to reduce this to Frank's result.
+
+\medskip
+
+There are many related open and fun problems.  We can try the same
+calculations with $E_{2}(q) =$ weight 2, level 2 Eisenstein series, then
+$E_{2}(q)$, $E_{2}(q^{2})$ are overconvergent modular forms of weight 2 and
+level 1.  Let $\displaystyle g = \frac{E_{2}(q)/E_{2}(q^{2}) - 1}{24}$
+(which is overconvergent of weight 0 and level 2) try to compute the matrix
+in terms of the paramaters
+
+\begin{eqnarray*}
+U_{2}(g)     & = & 0 \\
+U_{2}(g^{2}) & = & \sum \left( (2i + 1)3^{i -2}2^{3(j-1)}(-1)^{i+1}\right)
+g^{i} \\
+U_{2}(g^{3}) & = & 0 \\
+U_{2}(g^{4}) & = & \pm \left( U_{2}(g^{2}) \right)^{2}
+\end{eqnarray*}
+
+There are many interesting problems for $p =3,5,7,13, \ldots$.  What are
+nice paramaters ... try to find nice formulae.
+
+
+
+
+ 
+\end{document}
+
+

@@ -1,0 +1,306 @@
+%&LaTeX
+
+\documentclass{article}%[12pt,twoside,a4paper]{article}
+
+\usepackage{amsmath,amsopn,latexsym,amssymb,amscd,amsthm}
+
+\setlength{\oddsidemargin}{0in}
+
+\setlength{\evensidemargin}{0in}
+
+\setlength{\textwidth}{6.5in}
+
+\setlength{\topmargin}{-.20in}
+
+\setlength{\headheight}{0.1in}
+
+\setlength{\headsep}{0in}
+
+\setlength{\textheight}{8.4in}
+
+\setlength{\parindent}{0.1in}
+
+\author{K. Buzzard}
+
+\title{p-adic Modular Forms}
+
+\date{3/13/01}
+
+\newtheorem{theorem}{Theorem}
+
+\newtheorem{prop}[theorem]{Proposition}
+
+\newtheorem{lem}[theorem]{Lemma}
+
+\newtheorem{cor}[theorem]{Corollary}
+
+\newtheorem{rmk}{Remark}
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{Def}[theorem]{Definition}
+\newcommand{\bw}{{\bf w}}
+
+\newcommand{\br}{{\bf R}}
+
+\newcommand{\bO}{{\bf 0}}
+
+\newcommand{\bx}{{\bf x}}
+
+\newcommand{\by}{{\bf y}}
+
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\BP}{{\mathbb{P}}}
+
+\newcommand{\BQ}{{\mathbb{Q}}}
+
+\newcommand{\BF}{{\mathbb{F}}}
+
+\newcommand{\BB}{{\mathbb{B}}}
+
+\newcommand{\BA}{{\mathbb{A}}}
+
+\begin{document}
+
+\maketitle
+
+Let $E/R/R_0$ be an elliptic curve over an $R_0$-algebra $R$, where
+$R_0=\mathcal{O}_K$ with
+
+$[K:\BQ_p]<\infty$. Now consider $E/K$, then we have two cases:
+\begin{equation}
+v(E)\in
+\begin{cases}\text{not defined} & \text{if $E$ is very supersingular}\\
+\text{[0,1)}\cap\BQ & \text{otherwise}
+\end{cases}
+\end{equation}
+
+\begin{thm}(\text{Katz-Lubin})\,\, If 
+
+\begin{equation}
+v(E)<
+\begin{cases}\frac{p}{p+1} & \text{if $p\geq5$}\\
+\frac{p}{2(p+1)} & \text{if $p=3$}\\
+\frac{p}{4(p+1)} & \text{if $p=2$}
+\end{cases}
+\end{equation}
+
+then $E$ has a "canonical" subgroup of ord=p.
+
+\end{thm}
+
+
+
+\begin{rmk}
+
+$v(E)=0\Leftrightarrow$ $E$ has ordinary reduction, and then the canonical
+subgroup is
+
+just the kernel of the reduction map on its $p$-torsions.
+
+\end{rmk}
+
+
+
+Assume $v(\rho)<c_p$, where $c_p$ denotes the number on the right of (2)
+corresponding to
+different $p$'s. If $(E/R,\omega,Y)$ is a $\rho$-overconvergent test object,
+then $v(E_K)\leq v(\rho)<c_p$.
+So $E$ has a canonical subgroup $H$, and $(E/R,\omega,H)$ is a classical
+test object 
+plus a subgroup of order $p$. A rule on these objects is a classical
+modular form of level $p$. Hence we get a map from classical modular forms
+of level $p$
+over $K_0$ to $\rho$-overconvergent forms of level 1.
+So we also have a $U_p$ operator acting on the $\rho$-overconvergent forms.
+If $f$ is a
+$\rho$-overconvergent, then
+%$$ U_p(f)(E/K,\omega,Y)=\sum_{{C\subset E}\genfrac \text{C cyclic of order
+%p}}
+%$$
+
+\begin{rmk}
+Let $E/K$ have $v(E)<c_p$, and $H$ be the canonical subgroup, then\\
+(1) If $C$ is a subgroup of order $n$ with $(n,p)=1$ then $v(E/C)=v(E)$,\\
+(2) If $C$ is not canonical then $v(E/C)=\frac1pv(E)$,\\
+(3) If $v(E)<\frac1pc_p$ then $v(E/C)=pv(E)$, so in fact $U_p$ maps
+$\rho$-overconvergent forms to $\rho^P$-overconvergent forms.
+\end{rmk}
+\begin{Def}
+$$\mathbb{M}_k(K_0,\rho)=(\rho-{\rm overconvergent\: forms\: of\: weight\:
+{\it k}\: defined\: over\:} R_0)\otimes K_0.$$ Then $\mathbb{M}_k(K_0,\rho)$
+is a $p$-adic Banach space over $K_0$.
+\end{Def}
+
+As the remark indicates, we will have Hecke operators $T_l$ for $l\neq p$
+acting on $\mathbb{M}_k(K_0,\rho)$, and $U_p$:
+$\mathbb{M}_k(K_0,\rho)\to\mathbb{M}_k(K_0,\rho^p)$.
+
+While at the same time there is a natural inclusion
+$$\mathbb{M}_k(K_0,\rho^p)\longrightarrow\mathbb{M}_k(K_0,\rho)$$
+where $v(\rho)<\frac1pc_p$.
+
+
+Hence we get a map 
+$$U_p:\mathbb{M}_k(K_0,\rho)\longrightarrow\mathbb{M}_k(K_0,\rho)$$
+
+
+One can also get $U_p(\sum a_nq^n)=\sum a_{np}q^n$.
+
+
+
+\begin{rmk}
+$T_l$'s are continuous. $U_p$ is even better than that! Let $V$ be a big
+infinite
+dimensional $p$-adic Banach space, and assume $e_1,e_2,\ldots$ is a
+countable Banach basis
+of $V$. Then every $v\in V$ can be  written uniquely as 
+$$v=\sum a_ie_i,\text{with $a_m\to0$, $a_n\in K_0$}$$
+Let $T:V\to V$ be a continuous operator, and $T(e_i)=\sum c_{ji}e_j$. So
+$c_{ji}$ is
+the matrix of $T$ with respect to the basis. Then the queation is: does this
+matrix have
+a trace? Of course one cannot expect an affirmative answer in general as the
+identity
+matrix has no trace.\\
+But the operator $T:e_i\to p^ie_i$ of $V$ has a trace=$\sum
+p^i=\frac{p}{1-p}$.
+\end{rmk}
+
+Now denote $\mathcal{L}(V,V)$=continuous linear maps:$V\to V$.
+$\mathcal{L}(V,V)$ inherits a norm from $V$. Let $F$ be the subspace
+consisting of the maps whose image is finite dimensional. We define compact
+operators to be the closure of these $F$'s.
+
+Compact operators have traces, and even better, they have a spectral theory.
+Now say $C$ is a compact linear operator, i.e. $C=\lim_{n\to\infty}C_n$,
+where $C_n:V\to V$
+have finite dimensional images. Put 
+$$P_n(X)=\text{det}(I-XC_n)=1-t_nX+\dots+(-1)^n\text{det}(C_n)X^n$$
+
+then $P_n$'s converge to a power series $P\in K_0[[X]]$ called the
+characteristic power
+series of $C$.
+
+{\bf Example:}Let $C_n=\begin{pmatrix}a & 0\\ 0 & 1\end{pmatrix}$, $C=\lim
+C_n$.
+Then 
+$$P_n(X)=\prod_{i=1}^{n}(1-p^iX)$$
+therefore 
+$$P(X)=\prod_{i=1}^{\infty}(1-p^iX)\in K_0[[X]]$$
+and $P(x)$ converges ofor any $x\in K_0$.
+
+\vspace{.2in}
+Now we have a very nice result
+\begin{thm}
+If $v(\rho)\in (0,\frac1pc_p)$, then
+$U_p:\mathbb{M}_k(K_0,\rho)\longrightarrow\mathbb{M}_k(K_0,\rho)$ is
+compact.
+\end{thm}
+
+\vspace{0.2in}
+{\bf Re-interpretation of G-M:} Fix $\rho$ such that $0<v(\rho)<\frac1pc_p$.
+Recall that
+$M_k(\Gamma_0(p),K_0)$ denotes the classical modular forms with weight $k$
+of level $p$
+over $K_0$. Then we have a $U_p$-covariant linear injection
+$$M_k(\Gamma_0(p),K_0)\longrightarrow\mathbb{M}_k(K_0,\rho)$$
+ 
+$M_k(\Gamma_0(p),K_0)=(\text{old part})\oplus(\text{new part})$. $U_p$ acts
+differently
+on these two parts: \\
+(1) if $f\in$(old part), then $U_p(f)=a_pf$ and $U_p$ has eigenvalues as
+roots of
+$X^2-a_pX+p^{k-1}$, both of which have valuation$\leq k-1$,\\
+(2) if $f\in$(new part), then $U_p$ has eigenvalues $\pm p^{\frac{p-2}2}$.
+Therefore
+if $\lambda$ is a $U_p$-eigenvalue on the classical forms, then
+$v(\lambda)\leq k-1$.
+The converse is almost true!
+
+\begin{thm}[Coleman]
+Assume $f\in\mathbb{M}_k(K_0,\rho)$ is an eigenform for $U_p$, $T_l$, and
+the $U_p$-eigenvalue
+is $\lambda$. If $v(\lambda)<k-1$ then $f\in$ the image of
+$M_k(\Gamma_0(p),K_0)$.
+\end{thm}
+
+\noindent {\bf Definition.} $v(\lambda)$ is called the slope of the
+overconvergent form $f$.
+
+Hence one can retrieve classical forms as being "overconvergent forms of
+small slope".
+
+\noindent {\bf Gouvea-Mazur Conjecture.} Let $k\in 2\BZ$, $\alpha\in\BQ$, 
+$\mathbb{M}_k(K_0,\rho)$, and $d(k,\alpha)=\sharp\{$eigenvalues of $U_p$
+with valuation
+$\alpha\}$. Then $k_1\equiv k_2$ (mod $(p-1)p^m$), for $m\geq\alpha$, will
+imply that
+$d(k_1,\alpha)=d(k_2,\alpha)$.
+
+\vspace{.2in}
+\begin{thm}[Coleman]
+If $P_k(X)$=char power series of $U_p$ acting on $\mathbb{M}_k(K_0,\rho)$,
+then
+$P_k$ varies analytically with $k$.
+\end{thm}
+
+This theorem implies that $d(k,\alpha)$ is a "locally constant" function of
+$k$.
+
+\begin{prop}
+If $k_1\equiv k_2$ (mod $(p-1)p^m$), and $\alpha<O(\sqrt{m})$, then
+$d(k_1,\alpha)=d(k_2,\alpha)$.
+\end{prop}
+ 
+\vspace{.2in}
+\noindent {\bf Example of the Spectrum of $U_p$.} 
+
+Let's seek the structure of $U_2$ on $\mathbb{M}_0(K_0,\rho)$ (i.e. $k=0,
+N=1$). Let
+the char power series of $U_2$ be 
+$$\sum_{n\geq0}a_nX^n=\prod_{i\geq0}(1-\lambda_iX).$$
+The question is: what are the valuations of $\lambda_i$?
+
+Inspired by a method of Kilford, we find that:
+
+\begin{thm}(Buzzard, Calegari)
+The valuations are 3,7,13,15,17,$\ldots$, where the ith term is given by
+$$1+2v_2\left(\frac{(3i)!}{i!}\right).$$
+\end{thm}
+\begin{proof}
+Let's write down a basis for $\mathbb{M}_0(K_0,\rho)$ (the basis depends on
+$\rho$ although the characteristic p.s. of $\rho$ does not), say,
+$$1,\alpha f,\alpha^2 f^2,\alpha^3 f^3,\cdots$$
+where 
+
+$$f=\frac{\Delta(q^2)}{\Delta(q)}=q+24q^2+\cdots$$
+and $\alpha=\alpha(\rho), \alpha\in\bar{\mathbb{Q}}_2,|\alpha|<1$.
+
+
+
+The matrix of $U_2$ is: 
+$$U_2(f^m)=\sum_{n=\lceil\frac{m}2\rceil}^{2m}s_{m,n}f^n$$
+
+where
+$$s_{m,n}=2^{8n-4m-1}\cdot3m(m+n-1)!/(2n-m)!(2m-n)!$$
+Write $U_2=A\cdot B$, where $A$ is lower triangular, $B$ is upper
+triangular, with 1's on both diagonals. Actually we can compute the entries
+$A_{ij}$ and $B_{ij}$. 
+
+Now let $A=C\cdot D$ with $D$ diagonal, then 
+$$D_{ii}=2^{1+2v((3i)!/i!)}$$
+Once we  take $\alpha=2^6$: it changes $C_{ij}$ and $B_{ij}$ by
+$2^{6(j-i)}$. Then the following lemma  concludes the proof. \end{proof} 
+
+\begin{lem}
+After  making the change if $C\equiv B\equiv\text{Id}\hspace{.1in}\text{mod
+2}$, then the slopes of the characteristic power series of $U_2$ and $D$ are
+the same.
+\end{lem}
+
+
+\end{document}
+
+

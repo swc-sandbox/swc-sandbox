@@ -1,0 +1,76 @@
+
+<html>
+<include src="/head.html.in" {'PAGE':'AWS 2006: Courses and Notes'}>
+<body>
+<include src="/topbar.html.in">
+<include src="/navcol.html.in"  {'nav_prev':'navsel'}>
+<div class="page">
+<H1>Arizona Winter School 2006
+				<BR>
+				Course Descriptions and Notes</H1>
+		
+			<H2><A NAME="Bernstein">Daniel J. Bernstein: &#147;Integer factorization&#148;</A></H2> 
+<ul>
+	<li><a href="06BernsteinCD.pdf">Course and project description</a></li>
+	<li><a href="06BernsteinNotes.pdf">Lecture notes</a> (version of March 9, 2006)</li>
+	<li><a href="http://cr.yp.to/2006-aws.html" target="_blank">Course website (check here for updated notes)</a></li>
+	<li><a href="06BernsteinPR.pdf">A report on the student project</a></li>
+     <li>Streaming video:
+		<ul>
+	<li>Lecture 1: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/bernstein/bernstein031106.rm">video</a>, <a href="06BernsteinSlides1.pdf">pdf slides</a>.</li>
+	<li>Lecture 2: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/bernstein/bernstein031206.rm">video</a>, <a href="06BernsteinSlides2.pdf">pdf slides</a>.</li>
+	<li>Lecture 3: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/bernstein/bernstein031306.rm">video</a>, <a href="06BernsteinSlides3.pdf">pdf slides</a>.</li>
+	<li>Lecture 4: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/bernstein/bernstein031406.rm">video</a>, <a href="06BernsteinSlides4.pdf">pdf slides</a>.</li>
+</ul>
+</li>
+			</UL>
+			<H2><A NAME="Cohen">Henri Cohen: &#147;Explicit methods for solving Diophantine equations&#148;</A></H2> 
+<ul>
+	<li><a href="06CohenCD.pdf">Course and project description</a></li>
+	<li><a href="06CohenNotes.pdf">Lecture notes</a></li>
+		<li><a href="06CohenExtract.pdf">An extract from a forthcoming book relevant to the course (1.8MB)</a></li>
+		<li><a href="06CohenExtractRefs.pdf">The references from the book</a></li>
+	<li><a href="06CohenLectures.pdf">Slides for lectures</a></li>
+		<li>Streaming video:
+							<ul>
+	<li>Lecture 1: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/cohen/cohen031106.rm">video</a></li>
+	<li>Lecture 2: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/cohen/cohen031206.rm">video</a></li>
+	<li>Lecture 3: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/cohen/cohen031306_lec1.rm">video</a></li>
+	<li>Lecture 4: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/cohen/cohen031306_lec2.rm">video</a></li>
+	<li>Lecture 5: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/cohen/cohen031406.rm">video</a></li>
+</ul>
+</li>
+			</UL>
+			<H2><A NAME="Stillman">Michael Stillman:  &#147;Computing cohomology in algebraic geometry&#148;</A></H2> 
+<ul>
+	<li><a href="06StillmanCD.pdf">Course  and project description</a></li>
+	<li><a href="06StillmanNotes.pdf">Lecture notes (preliminary, 2/28/06)</a></li>
+	<li><a href="06Stillman-m2.tar">Macaulay 2 demo files</a> from the lectures</li>
+	<li>Streaming video:
+							<ul>
+	<li>Lecture 1: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/stillman/stillman031106.rm">video</a>, <a href="06StillmanSlides1.pdf">scanned slides</a>.</li>
+	<li>Lecture 1.5 (joint Stillman/Sturmfels lecture): <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/strumfels/stillman_strumfels031206.rm">video</a></li>
+	<li>Lecture 2: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/stillman/03122006_part1.rm">video</a>, <a href="06StillmanSlides2.pdf">scanned slides</a>.</li>
+	<li>Lecture 3: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/stillman/03122006_part2.rm">video</a>, <a href="06StillmanSlides3.pdf">scanned slides</a>.</li>
+	<li>Lecture 4: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/stillman/stillman031306.rm">video</a>, <a href="06StillmanSlides4.pdf">scanned slides</a>.</li>
+</ul>
+</li>
+			</UL>
+			<H2><A NAME="Sturmfels">Bernd Sturmfels: &#147;Discriminants, resultants, and their tropicalization&#148;</A></H2> 
+<ul>
+	<li><a href="06SturmfelsCD.pdf">Course and project description</a></li>
+	<li><a href="06SturmfelsLN.pdf">Lecture notes</a> by Silvia Adduci</li>
+	<li>Streaming video:
+<ul>
+	<li>Lecture 1: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/strumfels/strumfels031106_lec1.rm">video</a>, <a href="06SturmfelsSlides1.pdf">scanned slides</a>.</li>
+	<li>Lecture 2: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/strumfels/strumfels031106_lec2.rm">video</a>, <a href="06SturmfelsSlides2.pdf">scanned slides</a>.</li>
+	<li>Lecture 2.5 (joint Stillman/Sturmfels lecture): <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/strumfels/stillman_strumfels031206.rm">video</a></li>
+	<li>Lecture 3: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/strumfels/strumfels031306.rm">video</a>, <a href="06SturmfelsSlides3.pdf">scanned slides</a>.</li>
+	<li>Lecture 4: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/strumfels/strumfels031406.rm">video</a>, <a href="06SturmfelsSlides4.pdf">scanned slides</a>.</li>
+</ul>
+</li>
+			</UL>
+		
+</div>
+</body>
+</html>

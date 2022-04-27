@@ -1,0 +1,1292 @@
+\documentclass{amsart}
+\usepackage{amsmath, amscd, amssymb}
+
+\newcommand{\ACFA}{{\rm ACFA}}
+\newcommand{\DCF}{{\rm DCF}}
+\newcommand{\SCF}{{\rm SCF}}
+
+\newcommand{\Ga}{{{\mathbb G}_a}}
+\newcommand{\Gm}{{{\mathbb G}_m}}
+
+\newcommand{\CC}{{\mathbb C}}
+\newcommand{\FF}{{\mathbb F}}
+\newcommand{\NN}{{\mathbb N}}
+\newcommand{\QQ}{{\mathbb Q}}
+\newcommand{\RR}{{\mathbb R}}
+\newcommand{\UU}{{\mathbb U}}
+\newcommand{\ZZ}{{\mathbb Z}}
+
+\newcommand{\cD}{{\mathcal D}}
+\newcommand{\cL}{{\mathcal L}}
+\newcommand{\cO}{{\mathcal O}}
+
+\newcommand{\fm}{{\mathfrak m}}
+\newcommand{\fp}{{\mathfrak p}}
+\newcommand{\fq}{{\mathfrak q}}
+
+\newcommand{\fM}{{\mathfrak M}}
+\newcommand{\fN}{{\mathfrak N}}
+\newcommand{\fP}{{\mathfrak P}}
+\newcommand{\fQ}{{\mathfrak Q}}
+
+\newcommand{\bA}{{\mathbf A}}
+\newcommand{\bK}{{\mathbf K}}
+
+\newcommand{\acl}{{\rm acl}}
+\newcommand{\alg}{{\rm alg}}
+\newcommand{\sep}{{\rm sep}}
+\newcommand{\tp}{{\rm tp}}
+
+
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{claim}[thm]{Claim}
+\newtheorem{problem}[thm]{Problem}
+\newtheorem{question}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{Def}[thm]{Definition}
+\newtheorem{note}[thm]{Notation}
+
+\theoremstyle{remark}
+\newtheorem{Rk}[thm]{Remark}
+\newtheorem{Example}[thm]{Example}
+
+
+
+\begin{document}
+
+
+\title{Model theory and diophantine geometry \\
+Lectures 3, 4 and 5}
+\author{Thomas Scanlon}
+\thanks{Partially supported by NSF Grant DMS-0007190 and a
+Sloan Fellowship}
+\email{scanlon@math.berkeley.edu}
+\address{University of California, Berkeley \\
+Department of Mathematics \\
+Evans Hall \\
+Berkeley, CA 94720-3480 \\
+USA}
+\maketitle
+
+
+\section*{Introduction}
+These notes continue the notes of Anand Pillay on model theory and
+diophantine geometry.  In my lectures I describe a model theoretic
+approach to some analogues of the Mordell-Lang conjecture for Drinfeld
+modules.  Many questions remain open and algebraic proofs along the lines
+of the proof of the Manin-Mumford conjecture described by Pillay may be
+possible.  We discuss these questions and potential alternate approaches to
+these problems throughout these notes.
+
+These notes are organized as follows.  We begin 
+in Section~\ref{MLs} with a discussion 
+of the Mordell-Lang conjecture in its original form and some of its 
+generalization.  A discussion of Drinfeld modules and the Drinfeld module
+analogues of the the Mordell-Lang conjectures raised by Laurent Denis 
+follows in Section~\ref{DM}.  In Section~\ref{LM} we discuss the 
+general technique for proving Mordell-Lang type theorems by working with 
+locally modular groups in enriched fields.   In Section~\ref{SCFDML} we 
+outline a weak solution to the the Drinfeld module Mordell-Lang conjecture
+proved using the model theory of separably closed fields.   
+In Section~\ref{ACFADMM} we prove the the Drinfeld module version of the 
+Manin-Mumford conjecture using the model theory of difference fields.
+In Section~\ref{q} we end these notes with several open questions.
+
+
+\section{The Mordell-Lang conjecture}
+\label{MLs}
+
+The Mordell-Lang conjecture and its proofs are the subject of several 
+survey papers.  The number theoretic approach to this conjecture is
+well exposed in the book~\cite{Lang} and the survey article~\cite{Maz}.  
+The model theoretic approaches to these problems are described in the 
+book~\cite{Bou} and the paper~\cite{ScDGMT}.  
+
+
+The Mordell-Lang conjecture concerns the structure induced on certain 
+arithmetic subgroups of algebraic groups from the ambient algebraic 
+variety.  
+
+
+
+As was pointed out in Pillay's notes~\cite{PiAWS}, the model-theoretic
+approach to algebraic geometry tends to follow the Weil-style foundations
+in which varieties are identified with their set of points over a very large
+algebraically closed fields, morphisms are identified with the corresponding
+function on these sets points, \emph{et cetera}.  While there is much truth
+in this observation, we will not make such identifications in these notes.  
+When we wish to apply facts about definable sets in certain enriched fields
+to prove results about varieties (or even schemes), we will explicitly describe
+the required interpretations.  
+
+\begin{Def}
+The additive group scheme, $\Ga$, is the commutative group scheme whose corresponding
+functor of points $\Ga: {\rm Sch} \to {\rm Ab}$  is defined by $S \mapsto ({\mathcal O}_S, +)$.
+The additive group scheme, $\Gm$, is the commutative group scheme whose
+functor of points $\Gm: {\rm Sch} \to {\rm Ab}$ is given by $S \mapsto (\cO_S^\times, \cdot)$.
+\end{Def}
+
+
+
+\begin{Def}
+Let $K$ be a field.  An \emph{abelian variety} over $K$ is a nontrivial, connected,
+complete algebraic group defined over $K$.  An \emph{algebraic torus} over
+$K$ is an algebraic group $T$ which when considered as an algebraic group
+over the algebraic closure $K^\alg$ of $K$ is isomorphic to some Cartesian 
+power of the multiplicative group.  A \emph{semi-abelian variety} over $K$ is
+an algebraic group $S$ which fits into an exact sequence
+$$\begin{CD} 0 @>>> T @>>> S @>>> A @>>> 0 \end{CD}$$ 
+where $T$ is an algebraic torus and $A$ is an abelian variety.
+\end{Def}
+
+The reader may wish to consult~\cite{Mum},~\cite{LangAV}, or~\cite{Milne} for more details
+about abelian varieties.  We recall that every abelian variety admits a projective
+embedding.  So, we could have defined an abelian variety to be a projective, connected
+algebraic group.  If $K = \CC$ and $A$ is an algebraic group over $K$, then 
+$A$ is an abelian variety if and only if $A(\CC)$ is a compact, connected Lie group,
+or equivalently, isomorphic as a Lie group to a Cartesian power of circle groups.  
+
+Using the above isomorphism, it is easy to see that for a semiabelian variety $S$ over
+$\CC$ and a positive integer $n$, the $n$-torsion group 
+$$S[n](\CC) := \{ x \in S(\CC) \ \vert \ [n]_S(x) = 0 \}$$ 
+is isomorphic (as a group) to $(\ZZ/n \ZZ)^{t + 2a}$ where $t = \dim T$
+is the dimension of the toric part of $S$ and $a = \dim A$ is the dimension of the 
+abelian part.  Moreover, the full torsion group 
+$$S(\CC)_{\rm tor} := \{ x \in S(\CC) \ \vert \ (\exists n \in \ZZ_+) [n]_S(x) = 0 \}$$
+is dense (in the Zariski as well as the archimedian topologies) in $S(\CC)$.
+
+These properties of the torsion groups of semiabelian varieties hold over other algebraically 
+closed fields of characteristic zero, and in a revised form, over all algebraically
+ closed fields.  In  characteristic zero, one can use the fact that the theory 
+of algebraically closed fields of  characteristic zero is complete to pass from
+ $\CC$ to general algebraically closed fields of characteristic zero generally. 
+Alternatively, one can develop a purely algebraic theory of abelian varieties which
+applies equally well to abelian varieties over fields of positive characteristic.
+
+The arithmetic of abelian varieties is instrumental in understanding 
+the diophantine geometry of curves and other higher dimensional varieties. 
+Given an algebraic curve $C$ over some field $K$, there is an associated 
+abelian variety $J$ (called the Jacobian of $C$).  Given the additional 
+datum of a $K$-rational point $P \in C(K)$, provided that the genus of $C$ is 
+positive, one obtains an embedding 
+$C \hookrightarrow J$ defined over $K$.  We denote the embedded curve by 
+$C$ as well.   In this way, one may identify the set
+of $K$-rational points on $C$ with the intersection of the $K^\alg$-points on $C$
+with the group of $K$-rational points on $J$.  This may not seem like much 
+of a reduction until one sees that whenever $K$ is a finitely generated field and 
+$A$ is an abelian variety over $K$, the group $A(K)$ is a finitely generated abelian
+group.  Consequently, in order to understand the structure of rational points 
+on curves over finitely generated fields, one need only understand intersections
+of finitely generated subgroups of abelian varieties with curves over algeraically
+closed fields.
+
+The Mordell-Lang conjecture grew out of these considerations, but gives a stronger 
+conclusion than merely what the structure of rational points on curves is. 
+We recall that if $\Gamma$ is an abelian group, then the \emph{(rational) rank of $\Gamma$}
+is ${\rm rk} (\Gamma) := \dim_\QQ (\Gamma \otimes \QQ)$.  
+
+\begin{thm}[Mordell-Lang conjecture]
+\label{ML}
+Let $S$ be a semiabelian variety over $\CC$ and let $\Gamma < S(\CC)$ be a 
+subgroup of the $\CC$-points of $S$ having finite rational rank.  If $X \subseteq S$
+is a subvariety, then $X(\CC) \cap \Gamma$ is a finite union of cosets of
+subgroups of $\Gamma$.
+\end{thm}
+
+Theorem~\ref{ML} as stated above is due to McQuillan, though the main case of $\Gamma$
+finitely generated was proved by Faltings.  Various other people 
+(including, but not limited to, Vojta, Lang, and Raynaud)
+made deep contributions
+to its solution.  
+The special case of ${\rm rk} \Gamma = 0$ goes by the name of the Manin-Mumford
+conjecture and its proof is the topic of Pillay's second lecture.  Characteristic
+$p$ versions of the Mordell-Lang conjecture are known, but in this case one 
+must make allowances in some way for varieties defined over finite fields.  
+Our aim is to transpose this problem to Drinfeld modules.  
+
+
+\section{Drinfeld modules}
+\label{DM}
+
+In this section we introduce the theory of Drinfeld modules and Denis' 
+Mordell-Lang-like conjectures for Drinfeld modules.  The main reference
+for this section is~\cite{Goss}.  
+We treat Drinfeld modules as analogues of elliptic curves, emphasizing their
+algebraic, as opposed to their analytic, theory. 
+
+
+If $S$ is a semi-abelian variety over a field $K$, then the
+ring of algebraic endomorphisms of $S$ defined over $K$, 
+${\rm End}_K(S)$, is a finitely generated ring.  In particular, regardless
+of the size of $K$, the ring ${\rm End}_K(S)$ is countable.  
+This fact does not hold for arbitrary commutative algebraic 
+groups.  For example, if $R$ is any commutative ring, then 
+for each $\lambda \in R$ scalar multiplication by $\lambda$
+defines an algebraic endomorphism of the additive group.  If $K$
+is a field of characteristic zero, then one may identify 
+${\rm End}_K \Ga$  with $K$.  This is not the case in positive 
+characteristic.  
+
+If $R$ is a commutative ring of characteristic $p > 0$, then the 
+map  $\tau:R \to R$ given by 
+$x \mapsto x^p$ is a ring endomorphism of $R$. (We write $\tau$
+for this $p$-power Frobenius morphism on all rings of characteristic $p$.)
+Moreover, this
+Frobenius map gives an algebraic endomorphism of the additive group over
+$R$.  As such, polynomials in $\tau$ over $R$ give algebraic
+endomorphisms of the additive group.
+
+\begin{Def}
+Let $R$ be a ring and $\sigma:R \to R$ a ring endomorphism.  
+We define the ring of linear $\sigma$-operators over $R$ to be the 
+simple ring extension $R \{ \sigma \} = \{ \sum_{i=0}^d a_i \tau^i : a_i \in R \}$
+subject to the commutation conditions $\sigma a = \sigma(a) \sigma$ for $a \in R$.
+\end{Def}
+
+While each element of $R \{ \tau \}$ may be naturally regarded as an additive
+map on $R$, it is more than that.  Each $\phi \in R \{ \tau \}$ may be identified with 
+a morphism of algebraic groups $\phi:\Ga \to \Ga$.  As such, we have 
+a map $R \{ \tau \} \to {\rm End} (\Ga_{/R})$ which is actually an isomorphism
+between the twisted polynomial ring in $\tau$ over $R$ and the ring of algebraic 
+endomorphisms of the additive group defined over $R$.   
+
+A Drinfeld module may be regarded as a choice of a finitely generated subring of 
+exotic algebraic endomorphisms of the additive group.
+
+\begin{Def}
+\label{dmfpt}
+Let $K$ be a field of characteristic $p$.  A Drinfeld module over $K$ 
+(for $\FF_p[t]$) is a homomorphism $\varphi:\FF_p[t] \to {\rm End}_K(\Ga) = K \{ \tau \}$
+for which $\varphi(t)$ is not a scalar.  That is, if we write
+ $\varphi(t) = \sum_{i=0}^d a_i \tau^i$, then $a_i \neq 0$ for some $i > 0$.
+\end{Def}
+
+For many purposes, one requires a more general definition of a Drinfeld module
+than what we have in Definition~\ref{dmfpt}.  There are technical advantages to 
+working with more general rings than just $\FF_p[t]$ in our proof of the 
+Drinfeld module version of the Manin-Mumford conjecture.  The applications of
+Drinfeld modules to positive characteristic class field theory rely heavily upon
+these generalizations.
+
+\begin{note}
+Let $q$ be a power of the prime $p$.  Let $C$ be an absolutely irreducible
+curve over $\FF_q$.  Let $\infty \in C$ be a closed point on $C$.  
+Let $C' := C \setminus \{ \infty \}$ be the open curve obtained
+by removing $\infty$ from $C$.  We denote by ${\mathbf A}$ the 
+ring of regular functions on $C'$.  We denote by ${\mathbf K}$ the
+field of rational functions on $C$, the field of fractions of ${\mathbf A}$.
+\end{note}
+
+Taking $q = p$, $C := {\mathbb P}^1$ the projective line over $\FF_p$, 
+and $\infty \in C$ the point at infinity on ${\mathbb P}^1$, we obtain
+$C' = {\mathbb A}^1_{/\FF_p}$ and $\bA \cong \FF_p[t]$.   
+
+With ${\mathbf A}$ fixed, we have our general notion of a Drinfeld
+module.
+
+\begin{Def}
+Let $K$ be a field of characteristic $p$.  A Drinfeld module over
+$K$ (for ${\mathbf A}$) is a ring homomorphism $\varphi: {\mathbf A} \to {\rm End}_K \Ga$
+whose image is not contained in the ring of scalars.  That is, there is
+some $a \in {\mathbf A}$ for which if we write $\varphi(a) = \sum_{i=0}^d \alpha_i \tau^i 
+\in K \{ \tau \}$, then $\alpha_i \neq 0$ for some $i > 0$.
+
+For $a \in {\mathbf A}$ we write $\varphi_a$ for $\varphi(a)$ considered as an 
+endomorphism of $\Ga$.
+\end{Def}
+
+
+A Drinfeld module gives the additive group an exotic ${\mathbf A}$-module structure.
+That is, if $R$ is a $K$-algebra, then we may regard $R$ as an ${\mathbf A}$-module
+via $a*x := \varphi_a(x)$ for $a \in {\mathbf A}$ and $x \in R$.  Via the diagonal
+action, we may regard any Cartesian power $\Ga^g$ of the additive group as 
+an ${\mathbf A}$-module.  
+
+We define now the notion of a morphism between Drinfeld modules.
+
+\begin{Def}
+If $\varphi$ and $\psi$ are two Drinfeld modules over the field $K$,
+then the group of homomorphisms from $\varphi$ to $\psi$ over 
+$K$ is 
+$${\rm Hom}_K(\varphi, \psi) := \{ \alpha \in {\rm End}_K \Ga \ \vert \ (\forall a \in {\mathbf A}) 
+\alpha \circ \varphi_a = \psi_a \}$$  If $\psi = \varphi$, then we write 
+$${\rm End}_K(\varphi) = {\rm Hom}_K(\varphi, \varphi)$$ for the endomorphism ring of $\varphi$.
+\end{Def}
+
+
+
+For a general Drinfeld module $\varphi$, the endomorphism ${\rm End}_K(\varphi)$ is a finitely
+generated ring.  The endomorphism ring ${\rm End}_K(\varphi)$ is commutative for 
+$\varphi$ of \emph{generic characteristic}.
+
+\begin{Def}
+Let $\varphi:\bA \to K \{ \tau \}$ be a Drinfeld module.  Let $\pi:K \{ \tau \} \to 
+K \{ \tau \} / (\tau) \cong K$ be the quotient map modulo the two-sided ideal generated by $\tau$.
+Set $\iota := \pi \circ \varphi: \bA \to K$.   We define the \emph{characteristic} of $\varphi$ 
+to be the ideal $\ker \iota$.  We say that $\varphi$ has \emph{generic characteristic} when 
+the characteristic is $(0)$ and that $\varphi$ has \emph{finite characteristic} otherwise.
+\end{Def}
+
+When $\varphi:\bA \to \FF_{p^n} \{ \tau \}$ is a Drinfeld module over a finite field, then
+necessarily $\varphi$ has finite characteristic $\fp$ (as the image of $\iota$ is a subring 
+of $\FF_{p^n}$).  Moreover, as $\tau^n$ commutes with every element of $\FF_{p^n} \{ \tau \}$ we see that 
+$\tau^n \in {\rm End}_{\FF_{p^n}} (\varphi)$.  As the endomorphism ring is integral over 
+$\bA$, we see that $\tau^n$ satisfies an integral equation over $\bA$.
+Write the minimal polynomial of $\tau^n$ over $\bA$ as $P_n(X) \in \bA[X]$.  
+An analogue of Weil conjectures is known for the roots of $P_n$.
+
+
+Suppose that the image of the Drinfeld module $\varphi:\bA \to K \{ \tau \}$ is actually 
+contained in $R \{ \tau \}$ for some subring $R \subseteq K$ of $K$.  If $\nu:R \to R'$ is 
+any homomorphism, then $\nu$ extends to a map $R \{ \tau \} \to R' \{ \tau \}$.  Composing $\varphi$
+with this map we obtain a morphism $\overline{\varphi}: \bA \to R' \{ \tau \}$.  In the case that
+$R'$ is a field, we actually have a new Drinfeld module.  
+
+Suppose now that $R'$ is a domain.  Let $\fP := \ker{\nu}$ be the kernel of $\nu$.  Let 
+$\fp$ be the characteristic of $\overline{\varphi}$. Then
+we say that $\varphi$ has \emph{good reduction} at $\fP$ if for each $a \in \bA$ the 
+degree of $\varphi_a$ as a polynomial in $\tau$ is the same as that of $\overline{\varphi}_a$. 
+The set of primes of good reduction is a dense Zariski open subset of the spectrum of $R$.  
+
+\begin{Def}
+Let $\varphi:\bA \to K \{ \tau \}$ be a Drinfeld module.  For $a \in \bA$ we define 
+$\varphi[a] := \ker \varphi_a$.  For $I \subseteq \bA$ an ideal we define the 
+\emph{prime-to-$I$ torsion of $\varphi$ in $R$} to be 
+$\varphi_{I'-{\rm tor}}(R) := \bigcup_{a \in \bA \setminus I} \varphi[a](R)$.  
+\end{Def}
+
+The map $\nu:R \to R'$ induces a natural map $\varphi_{\fp'-{\rm tor}} (R) \to \overline{\varphi}_{\fp'-{\rm tor}}(R')$.
+Under the hypothesis that $\varphi$ has good reduction at $\fp$, this map must be injective.
+
+
+The analytic theory of Drinfeld modules is developed in analogy with the analytic theory of 
+elliptic curve.  Let $\bK_\infty$ be the completion with respect to the $\infty$-adic topology of 
+$\bK$.  Let $\CC_\infty$ be the completion of the algebraic closure of $\bK_\infty$.  The valued
+field $\CC_\infty$ plays the r\^{o}le of $\CC$.  If $\varphi:\bA \to \CC_\infty \{\tau\}$ is 
+a Drinfeld module over $\CC_\infty$ of generic characteristic,
+then one can find a power series $f \in \CC_\infty [[X]]$ 
+such that $f(x)$ converges for every $x \in \CC_\infty$, $f$ defines a surjective additive function 
+from $\CC_\infty$ to itself, and $f(ax) = \varphi_a (f(x))$ for all $a \in \bA$ and $x \in \CC_\infty$.
+
+
+Building on the analogy between Drinfeld modules and elliptic curves,
+L. Denis raised a conjecture for Drinfeld modules based
+on the Mordell-Lang conjecture. 
+
+\begin{conj}[Denis]
+\label{DMLc}
+Let $K$ be an algebraically closed field of characteristic $p$.
+Let $\varphi:{\mathbf A} \to  {\rm End}_K \Ga$ be a Drinfeld module of
+generic characteristic.   Let $\Gamma \leq \Ga(K)$ be an ${\mathbf A}$-submodule 
+of $\Ga(K)$ with $\dim_{\mathbf K} (\Gamma \otimes_{\mathbf A} {\mathbf K}) < \infty$.
+If $X \subseteq \Ga^g$ is a subvariety of some Cartesian power of the additive
+group, then $X(K) \cap \Gamma^g$ is a finite union of cosets of ${\mathbf A}$-submodules
+of $\Gamma^g$.
+\end{conj}
+
+
+Conjecture~\ref{DMLc} is still open, but we shall outline proofs of a special case (the 
+analogue of the Manin-Mumford conjecture) and of a slightly different version of the 
+case for finitely generated ${\mathbf A}$-modules.
+
+We discuss the Drinfeld module version of the Manin-Mumford conjecture in Section~\ref{ACFADMM}.
+
+\begin{thm}[Drinfeld module Manin-Mumford]
+\label{DMMM}
+Let $K$ be an algebraically closed field of characteristic $p$.
+Let $\varphi:{\mathbf A} \to {\rm End}_K \Ga$ be a Drinfeld module of 
+generic characteristic.  Let $\Gamma := \varphi_{\rm tor} := \{ x \in \Ga(K) \ \vert \
+ (\exists a \in {\mathbf A} \setminus \{ 0 \}) \varphi_a(x) = 0 \}$ be the 
+module of ${\mathbf A}$-torsion.  Let $X \subseteq \Ga^g$ be a subvariety of 
+some Cartesian power of the additive group.  Then $X(K) \cap \Gamma^g$ 
+is a finite union of cosets of ${\mathbf A}$-submodules of $\Gamma^g$.
+\end{thm}
+
+
+We had proposed a version of Conjecture~\ref{DMLc} as a project for this Winter School, but
+as Dragos Ghioca has pointed out, what I had thought was the missing algebraic lemma is actually
+contained in the Ph.D. thesis of Thomas Blossier~\cite{Blossier}.  We outline a proof of this 
+version of the conjecture in Section~\ref{SCFDML}.  This proof leaves open even the case
+of Conjecture~\ref{DMLc} for $\Gamma$ a finitely generated ${\mathbf A}$-module.  We discuss the 
+open problems and the revised project in Section~\ref{q}.  In any case, let us state the main theorem 
+to be proved there.
+
+\begin{thm}
+\label{wDML}
+Let $K$ be an algebraically closed field of characteristic $p$. 
+Let $\varphi:{\mathbf A} \to {\rm End}_K \Ga$ be a Drinfeld 
+module of \emph{finite} characteristic.  Suppose, moreover, that $\varphi$ has 
+generic moduli in the sense that for no $\lambda \in K^\times$ does
+$\lambda \varphi \lambda^{-1}$ take values in ${\rm End}_{\FF_p^\alg} \Ga$.
+Let $\Gamma \leq \Ga(K)$ be a finitely generated ${\mathbf A}$-module. 
+Then, if $X \subseteq \Ga^g$ is a subvariety of some Cartesian power of the additive group, 
+$X(K) \cap \Gamma^g$ is a finite union of cosets of subgroups of $\Gamma^g$.
+\end{thm}
+
+\section{General strategy via locally modular groups}
+\label{LM}
+
+Our proofs of Theorems~\ref{DMMM} and~\ref{wDML} follow the methods developed by
+Hrushovski in his proofs of the Manin-Mumford conjecture~\cite{HrMM} and 
+the function field Mordell-Lang conjecture~\cite{HrML}.  We find some expansion 
+of the theory of fields and definable groups in those expansions for which the 
+induced structure on these definable groups reflects the induced structure on 
+the arithemtically defined group $\Gamma$.  The auxilliary theories differ ($\ACFA$ 
+for Theorem~\ref{DMMM} and $\SCF$ for~\ref{wDML}), but the general ideas
+are the same.
+
+Suppose that we wish to prove something like Theorem~\ref{wDML}.  The group 
+$\Gamma$ itself may not lend itself to direct geometric arguments.  However,
+by working in some field $\UU$ extending $K$ and  some expansion of the
+language of rings, we might find some definable group $\widetilde{\Gamma} \leq 
+S(\UU)$ with $\Gamma \leq \widetilde{\Gamma}$ with the property that
+for any variety $X$ the intersection $X(\UU) \cap \widetilde{\Gamma}$ is 
+a finite union of cosets of subgroups of $\Gamma$.  It would then follow
+that $\Gamma$ has the same property.
+
+The truth of Theorem~\ref{wDML} implies that one could take $K = \UU$ and 
+expand the language of rings by a predicate for $\Gamma$ taking 
+$\widetilde{\Gamma} = \Gamma$.  Of course, such an argument would be circular.  So,
+if one wishes to apply this technique to prove a nontrivial theorem, one must find
+appropriate enriched fields and groups $\widetilde{\Gamma}$ 
+definable in these expansions for which 
+one can prove the characteristic property (that $X(\UU) \cap \widetilde{\Gamma}$
+is a finite union of cosets of subgroups of $\widetilde{\Gamma}$ for each 
+variety $X$). 
+
+The specific expansions that have been used in such proofs all fit under the 
+rubric of $\cD$-fields.  
+
+
+\subsection{$\cD$-rings}
+The abstract notion of a $\cD$-ring subsumes the notions of difference 
+and differential rings while including some exotic structures.  The notion 
+of a $\cD$-ring is associated to that of a $\cD$-functor.
+
+\begin{Def}  
+Fix a commutative ring $k$.
+A $\cD$-functor over $k$ is a projective system of ring schemes  
+$\{ \pi_{\ell, n}:\cD_\ell \to \cD_n \}_{0 \leq n \leq \ell}$ over $k$
+whose additive groups
+$\{ \Ga(\pi_{\ell, n}): \Ga \circ \cD_\ell \to \Ga \circ \cD_n \}$
+form a projective system of unipotent algebraic groups over $k$  
+and such that $\cD_0$ is the identity fuctor.
+
+We denote the pro-ring scheme $\varprojlim \cD_n$ by $\widehat{\cD}$.
+\end{Def}
+
+Our defintion of a $\cD$-functor is a bit abstract.  Let us instantiate with our
+basic examples.
+
+\begin{Example}
+\label{product}
+Define $\cD_n:{\rm Ring} \to {\rm Ring}$ by $\cD_n(R) := R^{n+1}$ with 
+$\pi_{\ell,n}:\cD_\ell \to \cD_n$ defined to be the projection onto the 
+first $n+1$ coordinates. 
+\end{Example}
+
+\begin{Example}
+\label{psx}
+Let $e > 0$ be a positive integer.
+Define $\cD_n:{\rm Ring} \to {\rm Ring}$ by 
+$\cD_n(R) := R[\epsilon_1, \ldots, \epsilon_e]/(\epsilon_1, \ldots, \epsilon_e)^{n+1}$
+and $\pi_{\ell,n}:\cD_\ell \to \cD_n$ as the reduction modulo 
+$(\epsilon_1, \ldots, \epsilon_e)^{n+1}$
+map.  Taking $\{ \prod_{i=1}^e \epsilon_i^{j_i} : 0 \leq j_i \leq n \}$
+ as a basis for $\cD_n(R)$
+over $R$, we obtain an isomorphism $\nu_n: \Ga \circ \cD_n \to \Ga^{e(n+1)}$.  
+\end{Example}
+
+In the above examples one may work over $\ZZ$.  In the next example, we work over
+a polynomial ring in positive characteristic.
+
+\begin{Example}
+\label{pext}
+Let $e > 0$ be a positive integer. Let $k := \FF_p[t_1, \ldots, t_e]$ be
+the polynomial ring in $e$ indeterminates over the field of $p$ elements.
+For $n \in \NN$ a natural number and $R$ a $k$-algebra, we set 
+$\cD_n(R) := R \otimes_k \FF_p[t_1^{p^{-n}}, \ldots, t_e^{p^{-n}}]$.  
+We take the maps $\pi_{n+\ell,n}:\cD_{n+\ell} \to \cD_n$ in the 
+projective system to be $\tau^\ell$.
+\end{Example}
+
+
+Given a $\cD$-functor we has an associated notion of a $\cD$-ring.
+
+\begin{Def}
+Fix $k$ a commutative ring and $\{ \cD_n \}_{n=0}^\infty$ a 
+$\cD$-functor over $k$.  A \emph{$\cD$-ring} is a $k$-algebra
+$R$ given together with a section $D:R \to \widehat{\cD}(R)$ 
+of the projection map $\pi:\widehat{\cD}(R) \to \cD_0(R) = R$.  
+
+Given a natural transformation $\Psi: \cD \to \cD \circ \cD$, we say that
+the the $\cD$-ring $(R, D)$ is \emph{($\Psi$)-iterative} if the
+following diagram is commutative.
+
+$$
+\begin{CD}
+R @>{D}>> \widehat{\cD}(R) \\
+@V{D}VV 	     @VV{\widehat{\cD}(D)}V \\
+\widehat{\cD}(R) @>>\Psi> \widehat{\cD} (\widehat{\cD} (R)) 
+\end{CD}
+$$
+\end{Def}
+
+As each $\Ga \circ \cD_n$ is unipotent, we may choose coordinates
+identifying the underlying scheme of $\cD_n$ with some affine space
+${\mathbb A}^{m_n}$.  We may thus express $D$ as a sequence 
+$\langle D_{n,i} : 0 \leq n, 1 \leq i \leq m_n \rangle$ of 
+function $D_{n,i}:R \to R$.  
+Likewise, the natural transformation $\Psi: \cD \to \cD \circ \cD$ may 
+be expressed in terms of a coherent system of additive polynomials.  
+The condition that $D = \langle D_{n,i}  \rangle $ defines
+a the structure of a $\cD$-ring on $R$ then translates into equations of the form
+\begin{itemize}
+\item $D_{n,i}(1) = c_{n,i}$ for appropriate constants $c_{n,i}$,
+\item $D_{n,i}(x + y) = A_{n,i}(D_{n,1}(x), \ldots, D_{n,m_n}(x);D_{n,1}(y), \ldots, D_{n,m_n}(y))$
+ for some polynomial $A_{n,i}$, and
+\item $D_{n,i}(x \cdot y) = P_{n,i}(\vec{D(x)}, \vec{D(y)})$
+ for an appropriate polynomial $P_i$, and
+\item $D_{n,i}(x) = \pi_{\ell,n;i}(D_{\ell, 1}(x), \ldots, D_{\ell, m_\ell}(x))$
+	where $\pi_{\ell,n;i}$ is the $i^\text{th}$ coordinate of map
+	 $\pi_{\ell,n}: \cD_\ell \to \cD_n$ considered in coordinates.
+\end{itemize}
+
+If the ground ring $k$ has characteristic zero, then the condition that $D$ be 
+$\Psi$-iterative translates into the additional assertion that $D_{n,i} \circ D_{\ell,j} (x)$ is some 
+particular $k$-linear combination of $\langle D_{s,t}(x) \rangle $.  When $k$ has
+characteristic $p$, one might have to allow for a $k \{ \tau \}$-linear combination.
+
+
+Let us consider now what the associated notions of $\cD$-rings are for 
+our above examples.
+
+\begin{Example}
+In Example~\ref{product}, a $\cD$-ring is just a ring $R$ given together with 
+a sequence of endomorphisms $D_i:R \to R$.   If we 
+define $\Psi:\widehat{\cD} \to \widehat{\cD} \circ \widehat{\cD}$
+by $\langle x_i \rangle_{i=0}^\infty \mapsto \langle \langle x_{i+j} \rangle_{i =0}^\infty \rangle_{j=0}^\infty$,
+then this $\cD$ structure is iterative if and only if $D_i = D_1^i$ for every $i$.
+\end{Example}
+
+\begin{Example}
+In Example~\ref{psx}, a $\cD$-ring is just a ring $R$ given together with 
+$e$ stacks of commuting Hasse derivations.  If $R$ is a $\QQ$-algebra, then 
+such a structure is determined by specifying $e$ commuting derivations
+$\partial_i:R \to R$ and defining
+$D:R \to \widehat{\cD}(R) = R[[\epsilon_1, \ldots, \epsilon_e]]$ by 
+
+$$r \mapsto \sum_{\alpha_1, \ldots, \alpha_e = 0}^\infty \frac{1}{\alpha_1! \cdots \alpha_e!}
+\partial_1^{\alpha_1} \cdots \partial_e^{\alpha_e} (r) \epsilon_1^{\alpha_1} \cdots \epsilon_e^{\alpha_e}$$
+
+In any case, we write $D_\alpha(x)$ for the coefficient of $\epsilon^\alpha$ in
+$D(x)$.
+
+If we regard $\widehat{\cD} \circ \widehat{\cD} (R)$ as 
+$R[[\epsilon_1, \ldots, \epsilon_e]][[\delta_1, \ldots, \delta_e]]$, 
+then we may define $\Psi:\widehat{\cD} \to \widehat{\cD} \circ \widehat{\cD}$
+via the continuous map of $R$-algebras $R[[\eta_1, \ldots, \eta_e]] 
+\to R[[\epsilon_1, \ldots, \epsilon_e; \delta_1, \ldots, \delta_e]]$ 
+which sends $\eta_i$ to $(\epsilon_i + \delta_i)$.   Then, the 
+$\cD$-ring is iterative just in case 
+$D_\alpha \circ D_\beta = \binom{\alpha + \beta}{\alpha} D_{\alpha + \beta}$ for
+all multi-indices $\alpha$ and $\beta$.
+\end{Example}
+
+\begin{Example}
+Consider now Example~\ref{pext}.  We may write $\cD_n(R)$ as 
+$$\oplus_{j_1, \ldots, j_e = 0}^{p^n - 1} R (1 \otimes \prod_{i=0}^{p^n-1} t_i^{j_i p^{-n}})$$
+Let $(R,D)$ be a $\cD$-ring.  Write $D_n(x) = \sum_{I} D_{n,I}(x) (\sqrt[p^n]{t})^I$.  
+As $D_n:R \to \cD_n(R)$ is a section of $\tau^n:\cD_n(R) \to R$, we have 
+$x = \sum_{I} [D_{n,I}(x)]^{p^n} t^I$.  We obtain a map 
+$\Psi: \widehat{\cD} \to \widehat{\cD} \circ \widehat{\cD}$ from the $k$-linear 
+maps $k^{p^{-(n+m)}} \to k^{p^{-n}} \otimes_k k^{p^{-m}}$ defined on the 
+basis element $\prod t_i^{j_i p^{-(n+m)}}$ as 
+$(\prod t_i^{j_i p^{-n}}) \otimes  (\prod t_i^{j_i p^{-m}})$.   
+\end{Example}
+
+
+Associated to each of these notions of a $\cD$-ring, there is a theory of $\cD$-rings.
+
+
+Fix a $\cD$-functor $\langle \cD_n \rangle_{n=0}^\infty$ (over some ring $k$). 
+Fix also isomorphisms $\cD_n \cong {\mathbb A}^{m_n}$ and 
+a natural trasformation $\Psi: \widehat{\cD} \to \widehat{\cD} \circ \widehat{\cD}$.
+The language of $\cD$-rings, $\cL_{\cD}$, is the language of rings $\cL(+, \times, 0, 1)$ augmented by 
+unary function symbols $\alpha \cdot$ (scalar multiplication by $\alpha$ for 
+each $\alpha \in k$) and $D_{n,i}$ for each $n \in \NN$ and $i \leq m_n$.   
+Given a $\cD$-ring $(R,D)$, there is a natural way to put a $\cL_\cD$-structure on $R$.
+The theory of $\cD$-fields, $T_\cD$, is the the first-order theory of the class of interative $\cD$-fields $(K,D)$
+in the language $\cL_\cD$.  
+
+We say that the $\cD$-field $(K,D)$ is $\cD$-closed if it is 
+existentially closed in the class of iterative $\cD$-fields as an $\cL_\cD$-structure.
+In two of the cases considered above (provided that we take $k = \QQ$),
+the class of $\cD$-closed iterative 
+$\cD$-fields is first order axiomatizable, and has been intensively studied.  
+
+
+If $\cD$ comes from Example~\ref{product}, then the model companion of $T_\cD$ is the 
+theory of existentially closed diffence fields, $\ACFA$, described in Pillay's lectures.  Recall that
+a difference field $(K,\sigma)$ is exististentially closed if and only if $K = K^\alg$, $\sigma$ is an 
+automorphism, and for any irreducible variety $X$ over $K$, any irreducible subvariety 
+$V  \subseteq X \times X^\sigma$, and any dense Zariski open $U \subseteq V$, there is a 
+point $a \in X(K)$ with $\langle a, \sigma(a) \rangle \in U(K)$.  
+
+
+If $\cD$ comes from Example~\ref{psx} (and $k = \QQ$), then the model completion of $T_\cD$ is 
+(a definitional expansion of) the theory of differentially closed fields 
+of characteristic zero with $e$ commuting derivations.  While this theory is central in algebraic
+model theory, it does not play a r\^{o}le in our work here.
+
+
+If $\cD$ comes from Example~\ref{pext}, then the framework of $\cD$-fields is still valuable, but 
+the most reasonable model complete theory in $\cL_\cD$ is that of separably closed fields 
+having $t_1, \ldots, t_e$ as a $p$-basis (\emph{ie} $[K:K^p] = p^e$ and $K = K^p(t_1, \ldots, t_e)$). 
+We denote this theory by $\SCF_{p,e}$.
+
+
+
+Associated to any iterative $\cD$-ring $(R,D)$ we have a $\cD$-ring $R \langle X \rangle_\cD$ 
+of $\cD$-polynomials over $R$.  This ring is the universal simple iterative $\cD$-ring
+extension of $R$ and may be expressed as a quotient of the ordinary polynomial ring over $R$
+in the variables $D_{n,i} X$ for $n > 0$ and $0 < i \leq m_n$.  
+ Iterating this process, we obtain the $\cD$-ring $R \langle X_1, \ldots, X_d \rangle_\cD$
+of $\cD$-polynomials over $R$ in $d$ indeterminates. Each $f \in R \langle X_1, \ldots, X_d \rangle_\cD$
+may be expressed as an 
+ordinary polynomial $F$ in the variables $D_{n,i} X_j$ ($i \leq m_n$, $1 \leq j \leq d$) for an 
+approproiate $n \geq 0$.   If $(R,D)$ is an iterative $\cD$-field, then every quantifier-free 
+formula in $\cL_{\cD, R}$ is equivalent to a finite Boolean combination of $\cD$-polynomial 
+equations.   
+
+
+If $(R,D) \to (R',D)$ is a map of $\cD$-rings and $a = \langle a_1, \ldots, a_n \rangle \in (R')^n$
+is an $n$-tuple from $R'$, then the the $\cD$-ideal of $a$ over $R'$, $I(a/R')$, is the 
+set $\{ f \in R \langle X_1, \ldots, X_n \rangle :  f(a) = 0 \}$.      
+
+
+\subsection{Stability and simplicity}
+
+
+
+Many of the model-theoretic tools used in our proofs of Theorems~\ref{DMMM} and~\ref{wDML} come 
+from the study of stable, and more generally simple, theories and the auxilliary theories we use, namely
+$\ACFA$ and $\SCF$, are simple.   In this section we survey some of the basic properties of and 
+concepts for stable and simple theories.  This treatment is by necessity very brief.  You may wish to 
+consult~\cite{Marker} or~\cite{Wagner} for more details.
+
+
+We start by recalling the notion of a type.
+
+\begin{Def}
+Let $\cL$ be a first-order language, $\fM$ an $\cL$-structure, $A \subseteq M$ a subset of the 
+universe of $\fM$, and $b \in M^n$ an tuple of elements of $M$.  Recall that 
+$\cL_A$ is the expansion of the language $\cL$ by new constant symbols $\underline{a}$ for 
+each $a \in A$.  We regard $\fM$ as an $\cL_A$-structure by interpreting $\underline{a}^\fM = a$.  
+An \emph{$n$-type over $A$} is a complete, consistent extension of the $\cL_A$-theory of $\fM$ in
+the language $\cL_A(x_1, \ldots, x_n)$.  
+The set of all $n$-types over $A$ is denoted by $S_n(A)$.   The \emph{type of $b$ over $A$} is the set 
+$\tp(b/A) := \{ \phi(x_1, \ldots, x_n) \in \cL_A(x_1, \ldots, x_n) : \fM \models \phi(b) \}$.
+\end{Def}
+
+
+With the definition of type in place, we can give a quick definition of stability.  However, 
+the definition we present here is more useful for set theoretic problems (\emph{ie} counting 
+the number of models), than for the algebraic problems to which we wish to apply stability.
+
+\begin{Def}
+Let $\cL$ be a first-order language, $T$ an $\cL$-theory, and $\kappa$ an infinite cardinal.
+We say that $T$ is $\kappa$-stable if for every model $\fM \models T$ with $|M| \leq \kappa$, 
+we have $|S_1(M)| \leq \kappa$. We say that $T$ is \emph{stable} if it is $\kappa$-stable
+for some $\kappa$.
+\end{Def}
+
+\begin{Example}
+Using quantifier elimination in the language of rings for 
+algebraically closed fields, one shows that for $K = K^\alg$ an algebraically closed
+field there is a natural bijection between $S_n(K)$ and ${\rm Spec}(K[x_1, \ldots, x_n])$.  
+In particular, as ${\rm Spec}(K[x]) = \{ (0) \} \cup \{ (x - a) : a \in K \}$, we 
+have $|S_1(K)| = |K|$.  That is, the theory of algebraically closed fields if $\kappa$-stable
+for every $\kappa \geq \aleph_0$.
+\end{Example}
+
+Besides the set-theoretic aspect of stability, there are two key features of stable theories.
+First, in a stable theory, every type over a model is definable (formally: if $\fM$ is a 
+model of a stable theory, $p(x) \in S_n(M)$ is a type over $M$, and $\phi(x_1, \ldots, x_n;y_1, \ldots, y_m)$
+ is an $\cL$-formula, then the set $\{ b \in M^m : \phi(x;b) \in p \}$ is definable by a 
+formula in $\cL_M$).  Secondly, in a stable theory one can develop a good notion of independence
+generalizing linear independence in vector spaces and algebraic independence in fields.   The definability
+of types is equivalent to stability, and to date, no good substitute for it is known in 
+more general theories.  If one gives 
+too strong a definition of \emph{good notion of independence}, then this aspect is also equivalent to 
+stability.  However, there are many other theories which possess 
+an indepedence notion naturally generalizing the independence notion of stable theories.  Simple 
+theories fall into this class.
+We give the formal definition of simplicity and of independence now.
+
+
+
+\begin{Def}
+Let $\fM$ be an $\cL$-structure for some first-order language $\cL$.  Let $A \subseteq M$ be
+a subset of the universe of $\fM$.  Let $\phi(x_1, \ldots, x_n;y_1, \ldots, y_m)$ 
+be an $\cL$-formula and $b \in M^m$ an $m$-tuple from $\fM$.  We say that 
+$\phi(x;b)$ \emph{divides over $A$} if there are a natural number $k$ and an infinite 
+sequence $\langle b_i \rangle_{i=0}^\infty$ of realizations of $\tp(b/A)$ (in some elementary 
+extension $\fN \succeq \fM$) such that for any $k$-sequence $j_1 < \cdots < j_k$ of natural numbers 
+we have $\fN \not \models (\exists x) \bigwedge_{i=1}^k \phi(x;b_{j_i})$.
+
+We say that the partial type $\Sigma(x)$ \emph{forks over $A$}  if it implies a finite disjunction of formulas
+each of which divides over $A$. 
+\end{Def}
+
+\begin{Example}
+If $\phi(x_1,x_2;y)$ is the formula $x_2 = x_1 + y$ (in the language of abelian groups), 
+$\fM = (\QQ, +, 0)$ is the field of rational numbers considered as an additive group, 
+and $b$ is any nonzero element of $\QQ$, then $\phi(x;b)$ divides over $\varnothing$.
+\end{Example}
+
+Our independence notion is taken from forking.
+
+\begin{Def}
+Let $\fM$ be an $\cL$-structure for some first-order language $\cL$. 
+Let $B \subseteq C \subseteq M$  and 
+$B \subseteq A \subseteq M$ be subsets of the universe of $\fM$.
+We say that \emph{$A$ is free from $C$ over $B$} if $\tp(A/C)$ does not fork over $B$.
+
+We say that the $\cL$-theory $T$ is \emph{simple} if for any model $\fM \models T$ and 
+sets $B \subseteq A \subseteq M$ and $B \subseteq C \subseteq M$, if 
+$A$ is free from $C$ over $B$, then $C$ is free from $A$ over $B$.
+\end{Def}
+
+While it is not immediately obvious from the defintions we have given here, every 
+stable theory is simple.  Forking has a natural algebraic interpretation in the 
+theories $\ACFA$, $\DCF_0$, and $\SCF$.  Let $K$ be a model of one of these
+theories.  For $B \subseteq A \subseteq K$ and $B \subseteq C \subseteq K$, $A$ is 
+free from $C$ over $B$ if and only if the algebraic closure of the $\cD$-field 
+generated by $A$ is algebraically independent from the algebraic closure of the $\cD$-field
+generated by $C$ over the algebraic closure of the $\cD$-field generated by $B$.  
+
+
+Simple theories come equipped with many dimension functions.  We make particular use of 
+Lascar (or $U$ or $SU$) rank.  This rank is defined as follows. 
+Work inside a very saturated model of some theory.  
+Take $a$ a tuple and $A$ a small subset.  We always have 
+$U(a/A) \geq 0$.  For $\lambda$ a limit ordinal we have $U(a/A) \geq \lambda 
+\Leftrightarrow (\forall \alpha < \lambda) U(a/A) \geq \alpha$.  Finally, 
+$U(a/A) \geq \alpha + 1$ if and only if there is some set $B \supseteq A$ such that 
+$\tp(a/B)$ forks over $A$ and $U(a/B) \geq \alpha$.    
+
+In our applications, we work in cases where the $U$-rank is finite.  In a $\cD$-field,
+if $A = K$ is a $\cD$-subfield, then $U(a/K) \leq {\rm tr.deg}_K(K \langle a \rangle)$
+where $K \langle a \rangle$ is the $\cD$-field generated by $K$ and $a$.  
+
+We use $U$-rank to analyze groups.  If $H \leq G$ is a definable subgroup of $G$ and 
+$U(H) = U(G) < \infty$, then $H$ is of finite index in $G$.  
+When $G$ is a group of finite $U$-rank and $N \trianglelefteq G$ is a normal subgroup, then 
+$U(G) = U(N) + U(G/N)$. 
+
+
+
+
+
+
+\subsection{Modular groups}
+
+The relevance of stability theory to Mordell-Lang-type problems is seen through the
+theory of modular groups.
+
+
+\begin{Def}
+Let $\fM$ be an $\cL$-structure for some  first-order language $\cL$.
+Let $G \subseteq M^n$ be a group living as a definable subset of some 
+Cartesian power of $M$ and having a definable group operation.  Let $\Gamma \leq G$ 
+be a subgroup of $G$ (not necessarily definable!).  We say
+that $\Gamma$ is \emph{modular} if for every natural number $m$ and every 
+quantifier-free $\cL_M$-definable subset of $X \subseteq G^m$ 
+there is another set $Y \subseteq G^m$ which is a finite Boolean combination of 
+definable subgroups of $G^m$ such that $X \cap \Gamma^m = Y \cap \Gamma^m$. 
+\end{Def}
+
+Note that the set $Y \cap \Gamma^n$ of the above definition is itself a finite
+Boolean combination of cosets of subgroups of $\Gamma^n$.
+
+\begin{Rk}
+Our use of the term \emph{modular} is not standard.  First, the term is usually reserved
+for definable, or at worst type-definable, groups.  By expanding $\cL$ with a predicate for 
+$\Gamma$,  we may regard $\Gamma$ as definable.  The second more serious difference is that
+we are considering only quantifier-free formulas while one usually asks that every definable 
+subset of $\Gamma^m$ be a finite Boolean combination of cosets.  Thirdly, we work in a fixed
+structure $\fM$ rather than in the class of all elementarily equivalent structures.  This distinction 
+is relevant to issues of uniformity.  Finally, the correct historical term would be \emph{weakly normal group}.  
+The term \emph{modular} is derived from the theory of combinatorial geometries.  In the case that 
+$G$ is a strongly minimal group, it is modular in the above sense if and only if its associated
+combinatorial pre-geometry is modular.
+\end{Rk}
+
+We note that Theorem~\ref{wDML} may be interpreted as asserting the modularity of $\Gamma$.
+
+\begin{prop}
+\label{modprop}
+Let $K$ be a field.  Let $G$ be an algebraic group over $K$.
+Let $\Gamma \leq G(K)$ be a subgroup of the $K$-rational points of $G$.
+Then $\Gamma$ is modular if and only if for any variety $X \subseteq G^m$
+defined over $K$ the set $X(K) \cap \Gamma^m$ is a finite union of cosets of subgroups of 
+$\Gamma^m$.
+\end{prop}
+
+\begin{proof}
+The right-to-left implication is immediate.  
+
+The left-to-right implication is only slightly less immediate. Let $X \subseteq G^m$ be 
+a subvariety of $G^m$.   Noting that 
+$X(K) \cap \Gamma^m = \overline{X(K) \cap \Gamma^m}(K) \cap \Gamma^m$, 
+we may assume that $X$ meets $\Gamma^m$ in a Zariski dense set.  Moreover, 
+writing $X$ as a finite union of its irreducible components, we may assume that 
+$X$ is irreducible.  
+
+
+Now, $X(K) \cap \Gamma^m$ is a quantifier-free definable subset of 
+$\Gamma^m$ so that by modularity of $\Gamma$, this set is a finite Boolean combination of 
+subgroups of $\Gamma^m$.  Write
+$$X(K) \cap \Gamma^m = \bigcup_{j=1}^d [(a_j + H_j) \setminus (\bigcup_{i=1}^{m_j} b_{i,j} + M_{i,j})]$$
+
+where for each $j$ we have $H_j = \overline{H_j}(K) \cap \Gamma^n$, $\overline{H_j}$ is connected 
+as an algebraic group, $\overline{M_{i,j}} < \overline{H_j}$ for each $i \leq m_n$,
+ and $b_{i,j} + M_{i,j} \subseteq a_j + H_j$.  
+
+Let $$Y_j := \overline{(a_j + H_j) \setminus (\bigcup_{i=1}^{m_j} b_{i,j} + M_{i,j})}$$  
+We claim that $Y_j = a_j + \overline{H_j}$ is a translate of an algebraic subgroup of $G^n$.
+To see this, choose any 
+$$h \in H_j \setminus \bigcup_{i,\ell=1}^{m_j} (a_i - a_\ell) + \sum_{k=1}^{m_j} M_{i,j}$$
+Then 
+$$a_j + H_j = [(a_j + H_j) \setminus (\bigcup_{i=1}^{m_j} b_{i,j} + M_{i,j})] \cup 
+		h + [(a_j + H_j) \setminus (\bigcup_{i=1}^{m_j} b_{i,j} + M_{i,j})]$$
+
+Thus, $a_j + \overline{H_j} = Y_j \cup (h + Y_j)$.  As $\overline{H_j}$ is connected, 
+either $Y_j = a_j + \overline{H_j}$ (as we claimed) or $Y_j = (a_j - h) + \overline{H_j} = 
+	a_j + [(-h) + \overline{H_j}] = a_j + \overline{H_j}$, again as we claimed.
+
+As $X$ is irreducible, we have $X = Y_j$ for some $j$.   We compute
+$X(K) \cap \Gamma^m = Y_j(K) \cap \Gamma^m = (a_j + \overline{H_j}(K)) \cap \Gamma^m = 
+	a_j + (\overline{H_j}(K) \cap \Gamma^m)$ which is a coset of a subgroup of $\Gamma^m$.
+\end{proof}
+
+
+\begin{Rk}
+Using definablity of types in stable theories, one can derive a stronger 
+version of Proposition~\ref{modprop} which itself implies automatic 
+uniformity in such Mordell-Lang-type theorems (see~\cite{PiMTML, HrMM, Scuni}).
+\end{Rk}
+
+
+
+We are left with proving that the group $\Gamma$ is modular.  To do so 
+we prove that some supergroup is modular.
+
+\begin{prop}
+Let $\Gamma \leq \widetilde{\Gamma} \leq G$ be subgroups of some 
+definable group $G$.  If $\widetilde{\Gamma}$ is modular, then
+$\Gamma$ is also quantifier-free modular.
+\end{prop}
+\begin{proof}
+Let $X \subseteq G^m$ be a quantifier-free definable set.  By hypothesis, 
+there is a set $Y \subseteq G^m$ which is a finite Boolean combination of 
+cosets of definable subgroups such that $Y \cap \widetilde{\Gamma} = X \cap \widetilde{\Gamma}$.
+But then $X \cap \Gamma = (X \cap \widetilde{\Gamma}) \cap \Gamma = (Y \cap \widetilde{\Gamma}) \cap \Gamma = 
+Y \cap \Gamma$.
+\end{proof}
+
+
+
+In our proofs of Theorems~\ref{DMMM} and~\ref{wDML}, we take $\widetilde{\Gamma}$ to be 
+an appropriately chosen group definable in either $\ACFA$ or $\SCF$.  For these theories (and 
+some others) there are tractable criteria for recognizing modular definable groups.   These criteria
+are derived from the positive answer to Zilber's conjecture for these theories.
+
+We state Zilber's conjecture in a form directly applicable to our problems.  Before doing so
+we need another definition.
+
+\begin{Def}
+We say that the group $G$ (type-definable in some some sufficiently saturated structure) is 
+\emph{c-minimal} if $G$ is infinite, but every type-definable subgroup $H < G$ of infinite
+index must be finite.
+\end{Def}
+
+\begin{Def}
+Let $T$ be a first-order theory.  We say that the Zilber dichotomy holds for $T$
+if for every non-modular c-minimal group $G$ type-definable in some (sufficiently 
+saturated) model of $T$ there
+is a type-definable field $k$, an algebraic group $H$ over $k$, and a definable
+subgroup $\Psi \leq H(k) \times G$ for which the projection map (to either factor) restricted
+to $\Psi$ has finite kernel and image of finite index.
+\end{Def}
+
+
+\begin{Rk}
+The Zilber dichotomy is usually stated as a trichotomy for strongly minimal sets.
+Recall that a definable set $X$ (in some sufficiently saturated structure) 
+is \emph{strongly minimal} if $X$ is infinite but every definable subset of $X$ is 
+either finite or cofinite.  Zilber had conjectured that every strongly minimal set falls into one of 
+three mutually exclusive classes: trivial (every definable relation on $X^n$ is reducible to 
+binary relations), non-trivial locally modular (there is an interpretable modular group $G$ and a definable 
+finite-to-finite correspondence between $G$ and $X$), or field-like (there is an interpretable 
+algebraically closed field $K$ and a finite-to-finite correspondence between $K$ and $X$).  
+The Zilber trichotomy fails in general, but (properly understood) it holds in the theories 
+we consider here.  Nevertheless, even in these cases this statement of the trichotomy is not 
+immediately meaningful as there are no strongly minimal sets in either $\ACFA$ or $\SCF$.    
+\end{Rk}
+
+
+So, to prove that a group definable in some theory in which the Zilber dichotomy holds is 
+modular, we show that the group has a decomposition series in terms of c-minimal groups
+each of which cannot be put into a finite-to-finite correspondence with the $k$-rational 
+points of an algebraic group.  That this suffices requires an extra argument and facts about the 
+ambient theory (simplicity and weak elimination of quantifiers).  The specific groups we consider
+are actually c-minimal so that this issue does not arise in our proofs, but you should be 
+aware of it before attempting to generalize these arguments.
+
+
+Conjecture~\ref{DMLc} asserts more than merely the modularity of the group $\Gamma$.  Specifically,
+it is conjectured that the quantifier-free definable sets in $\Gamma^g$ must be translates of 
+$\bA$-modules.  In general, one cannot recognize this property in the combinatorial 
+geometry of the enveloping definable groups.  However, we can reduce the issue to the 
+study of subgroups of $\Gamma \times \Gamma$.
+
+\begin{prop}
+Let $G$ be a c-minimal modular group.  Assume that $G$ has the property that every 
+definable subgroup of some Cartesian power of $G$ is of finite index in 
+a quantifier-free definable group. Suppose that $R$ is a (not necessarily commutative) 
+subring of the ring of quantifier-free definable endomorphisms of $G$.  Suppose, moreover, that every definable 
+subgroup of $G$ is commensurable with a $R$-module (in the sense that for every 
+definable $H \leq G \times G$ there is some $R$-submodule $M \leq G \times G$ with $|H/(M \cap H)| < \aleph_0$ 
+and $|M/(H \cap M)| < \aleph_0$), then every definable subgroup of every Cartesian 
+power of $G$ is commensurable with an $R$-module.
+\end{prop}
+
+
+
+
+\section{Difference closed fields and the Drinfeld module Manin-Mumford conjecture}
+\label{ACFADMM}
+
+In this section we outline a proof of Theorem~\ref{DMMM}.  Details of this 
+proof are given in~\cite{ScDMM}.
+
+
+The proof breaks into several distinct parts. First, we find an existentially closed
+difference field $(\UU, \sigma)$ with $K \leq \UU$ and a definable group $\Gamma \leq \Ga(\UU)$
+containing the torsion module and which stands a good chance of being modular.  
+We then establish the modularity of 
+$\Gamma$ by mixing the main dichotomy theorem of~\cite{CHP} with results of Gekeler on 
+Drinfeld modules over finite fields.  If we were satisfied to show that 
+every variety meets the torsion on $\Ga^g$ in a finite union of cosets, then we could stop here, but
+we wish to show that the cosets are actually translates of modules.  To establish this, we mix some 
+difference algebra with the analytic theory of Drinfeld modules to show that every quasi-endomorphism
+is a module, and then prove a general result on rank one groups to conclude the full result.  
+
+
+
+As Pillay suggests in his lectures, the techniques in his proof of Manin-Mumford probably 
+apply to the case of this Drinfeld module version.  
+
+
+The proof of Theorem~\ref{DMMM} begins very much like the proof of usual Manin-Mumford
+conjecture.  We find a finitely generated ring $R \leq K$ for which the Drinfeld
+module $\varphi:\bA \to K \{ \tau \}$ factors through $R \{ \tau \} \hookrightarrow K \{ \tau \}$.
+We then find two maximal ideals $\fP, \fQ \subseteq R$ of good reduction for $\varphi$ with 
+$\fp := \iota^{-1} \fP$ and $\fq := \iota^{-1} \fQ$ coprime in $\bA$.   Write $\varphi_\fP$
+for the reduction of $\varphi$ at $\fP$ and $\varphi_\fQ$ for the reduction of $\varphi$ at $\fQ$.
+
+Let $v$ be a 
+valuation of $K$ extending the $\fP$-adic valuation on the field of fractions of $R$ 
+and $w$ a valuation extending the $\fQ$-adic valuation.  Then it is not hard to see that 
+prime-to-$\fp$ torsion submodule of the full torsion module consists entirely of 
+$v$-unramified points.  Moreover, as the $w$-unramified torsion contains the $\fp$-torsion,  
+the full torsion group is contained in the sum of the $v$-unramified
+torsion and the $w$-unramified torsion.   
+
+Let $n := [R/\fP:\FF_p]$ and $m := [R/\fQ:\FF_p]$.  Let $P(X) \in \bA[X]$ be the minimal
+polynomial of $\tau^{n}$ considered as an element of ${\rm End}(\varphi_\fP)$ and 
+$Q(X) \in \bA[X]$ the minimal polynomial of $\tau^m$  considered as an element of
+ ${\rm End}(\varphi_\fQ)$.  If $\sigma \in {\rm Aut}(K/R)$ extends the relative 
+($p^n$-power) Frobenius on the maximal $v$-unramified extension of $R$, 
+then $P(\sigma)$ vanishes on the  $v$-unramified torsion.  Likewise, if $\rho$ extends the 
+relative ($p^m$-power) Frobenius on the maximal $w$-unramified extension of $R$, then 
+$Q(\rho)$ vanishes on the $w$-unramified torsion.  Possibly at the cost of replacing $R$ 
+by a finite extension (and therefore $n$ and $m$ by some powers), we may find a single automorphism
+$\sigma: K \to K$ so that $P(\sigma) \circ Q(\sigma)$ vanishes on all of the torsion.  
+We fix $(\UU,\sigma)$ an extension of $(K,\sigma)$ to a sufficiently saturated 
+model of $\ACFA$.  We take $\widetilde{\Gamma} := \ker P(\sigma) \circ Q(\sigma): 
+\Ga(\UU) \to \Ga(\UU)$.    
+
+We note that $\widetilde{\Gamma} = \ker P(\sigma)(\UU) + \ker Q(\sigma)(\UU)$
+so that it suffices to show that each summand is modular, c-minimal, and that
+every definable subgroup of its square is commensurable with an $\bA$-module.
+The arguments that follow are insensitive to the differences between $P$ and $Q$.
+We work with $P$, but everything follows \emph{mutatis mutandis} for $Q$.
+To ease notation, write $\Xi := \ker P(\sigma) (\UU)$.    
+
+To prove modularity of $\Xi$, one first shows that $\Xi$ has no proper infinite
+$\bA$-submodules of infinite index.  This fact 
+is itself proved in steps.  Working with prolongations, one shows that every
+definable $\bA$-submodule of $\Xi$ must be commensurable with a module
+defined by an equation of the form $R(\sigma) = 0$ for some $R \in \bA[X]$. 
+So, because $P$ is irreducible, $\Xi$ satisfies the conditions of c-minimality
+for $\bA$-modules.  To prove that $\Xi$ is c-minimal it suffices to show that every infinite
+definable subgroup of $\Xi$ is commensurable with an $\bA$-module.   For this
+one needs to work out the arithemetic of the ring $\UU \{ \tau \} [\sigma]$
+and then apply some facts about the roots of $P$.
+
+If $\Xi$ is not modular, then the non-modularity of $G$ is witnessed by a finite-to-finite definable
+correspondence between $\Xi$ and the $k$-rational points of some algebraic group over 
+some definable field $k$.  Such fields are completely classified; they must take the 
+form ${\rm Fix}(\sigma^i \tau^j) := \{ x \in \UU : \sigma^i (x^{p^j}) = x \}$ for some 
+$i \in \ZZ_+$ and $j \in \ZZ$.  Using this fact and the structure theorem for 
+algebraic groups, one converts the existence of such a correspondence into a specific
+equation in the skew-field of quotients of $\UU \{ \tau \}$.  Using facts about 
+the roots of $P(X)$, one shows that such an equation cannot hold.   Thus, $\Xi$ is modular.
+
+
+Using our general result about modular c-minimal groups, to finish the proof of the theorem, it
+suffices to show that every infinite quantifier-free 
+definable subgroup of $\Upsilon \leq \Xi \times \Xi$ for which the projection in 
+either direction has finite kernel is commensurable with 
+an $\bA$-module.  This is done in several steps.   First, one notes that any such group must 
+be defined over algebraic closure of the fixed field of $\sigma$.  Next, one notes that the algebraic 
+points on $\Xi$ are exactly the torsion points.  Thus, after massaging $\Upsilon$ a bit, we
+see that $\Upsilon$ restricts to give a finite-to-finite correspondence on the torsion module.
+Working analytically, one sees that the commutator of $\Upsilon$ with $\varphi_a$ (for $a \in \bA$)
+(or of its converse relation) defines a contraction mapping $\infty$-adically close to the origin 
+which takes torsion to torsion.  For Galois-theoretic reasons this is seen to be impossible.
+
+
+
+
+
+\section{Separably closed fields and the Drinfeld module Mordell-Lang conjecture}
+\label{SCFDML}
+
+In this section we outline a proof of Theorem~\ref{wDML}.  As we noted in the
+introduction, we had intended for theorem to be addressed as our associated
+project, but what we had thought was the missing algebraic lemma had actually
+been included in Thomas Blossier's thesis~\cite{Blossier}.  At the end of this
+section we discuss a revised version of the project.
+
+
+Our proof of Theorem~\ref{wDML} follows along the lines of Hrushovski's proof 
+of the positive characteristic function field Mordell-Lang theorem in~\cite{HrML}.
+
+
+We start by finding a finitely generated field  
+$L \leq K$ be a finitely generated field for which 
+the image of $\varphi$ is contained in ${\rm End}_L \Ga$
+and $\Gamma \leq \Ga(L)$.   
+
+Fix some $t \in {\mathbf A} \setminus \FF_p^\alg$. 
+We take $\UU$ to be a saturated elementary extension of $L^{sep}$ and 
+define $\varphi^\sharp(\UU) := \bigcap_{n \geq 0} \varphi_{t^n}(\UU)$.  
+
+\begin{claim}
+If $\varphi^\sharp(\UU)$ is modular, then Theorem~\ref{wDML} follows.
+\end{claim}
+
+\begin{proof}
+It suffices to show that if $X$ is an irreducible
+variety and $X(\UU) \cap \Gamma^g$ is Zariski dense in $X$, then 
+$X$ is a translate of an algebraic group.  Let $X$ be a potential
+counterexample to this assertion.  If $\varphi^\sharp(\UU)$ is 
+modular, then it follows by the compactness theorem that there is 
+a natural number $n$ such that for any $a \in \Ga^g(\UU)$ the set
+$(X + a) (\UU) \cap \varphi_{t^n}(\UU)^g$ is a finite union of 
+cosets of subgroups of $\varphi_{t^n}(\UU)^g$.  However,
+group $\Gamma^g$ is contained in finitely cosets $C_1, \ldots, C_s$ 
+of $\varphi_{t^n}(\UU)^g$.  But then, $X(\UU) \cap \Gamma^g = 
+\bigcup (X(\UU) \cap C_i) \cap \Gamma^g$.  Each of the sets $X(\UU) \cap C_i$ 
+is a finite union of cosets.  It follows that intersection with 
+$\Gamma^g$ has the same form.
+\end{proof}
+
+
+We wish to prove that $\varphi^\sharp(\UU)$ is modular by using 
+an algebraic test for modularity.  Such tests exist for \emph{minimal} groups and we check
+now that $\varphi^\sharp(\UU)$ is minimal.
+
+\begin{claim}
+$\varphi^\sharp(\UU)$ is a minimal group.
+\end{claim}
+
+\begin{proof}
+Visibly, $\varphi^\sharp(\UU)$ is infinite, so it suffices to show that $U(\varphi^\sharp(\UU)) \leq 1$.
+Let $a \in \varphi^\sharp(\UU)$ be any point.  Then, as a general result 
+$U(a/L) \leq {\rm tr.deg}_L L \langle a \rangle$ where $L \langle a \rangle$ is the $\cD$-field generated by
+$a$ over $L$. By Lemma 2.15 of~\cite{HrML} (slightly modified) this last transcendence degree is bounded by one.
+\end{proof}
+
+
+The main result of~\cite{BD} shows that if $G \leq \Ga(\UU)$ is a 
+definable subgroup of the additive group, then either $G$ is modular, or
+there is a definable isogeny $\alpha:G \to \Ga(\UU^{p^\infty})$.  
+Lemme 3.4.27 of~\cite{Blossier} shows that if $\theta \in \tau \UU \{ \tau \}$ is
+an inseparable twisted polynomial in the Frobenius over $\UU$ and 
+$\theta^\sharp(\UU) := \bigcap_{n \geq 0} \theta^n (\UU)$ is minimal, then 
+either $\theta^\sharp(\UU)$ is modular, or there is some $\lambda \in \UU^\times$ such 
+that $\lambda \theta \lambda^{-1} \in \UU^p \{ \tau \}$.  Using the saturation 
+of $\UU$, we may conclude from Blossier's lemma that either $\theta^\sharp(\UU)$ is 
+modular or there is some $\lambda \in \UU^\times$ such that 
+$\lambda \theta \lambda^{-1} \in \UU^{p^\infty} \{ \tau \}$.    
+Thus, if $\varphi^\sharp(\UU)$ is not modular, we may find some $\lambda \in \UU^\times$
+such that $\lambda \varphi_t \lambda^{-1} \in \UU^{p^\infty} \{ \tau \}$. 
+
+\begin{claim}
+We may find $\mu \in (L^\sep)^\times$ so that $\mu \varphi_t \mu^{-1} \in \FF_p^\alg \{ \tau \}$.
+\end{claim}
+
+\begin{proof}
+The main point is that if we expand the language of fields by a predicate  for a subfield, then 
+$(L^\alg,\FF_p^\alg) \preceq (\UU^\alg, \UU^{p^\infty})$ is an elementary extension (see Proposition 7.7 
+of~\cite{MoSc}).  Writing $\varphi_t = \sum_{j=1}^d a_j \tau^j$  we have
+$$(\UU^\alg, \UU^{p^\infty}) \models (\exists \lambda \neq 0) \lambda \varphi_t \bigwedge_{j=1}^d S(\lambda^{p^j-1} a_j)$$
+It follows that $(L^\alg, \FF_p^\alg)$ is a model of the same sentence witnessed by some 
+$\mu \in L^\alg$.  Choose $j \leq d$ with $a_j \neq 0$. Let $\mu_j := \mu^{p^j-1} a_j \in (\FF_p^\alg)^\times$. 
+The polynomial $X^{p^j-1} - \mu_j a_j^{-1} \in L^\sep[X]$ is separable, so we actually have
+$\mu \in L^\sep$.
+\end{proof}
+
+With this claim we finish the proof as we had assumed that $\varphi$ could not be conjugated to a 
+Drinfeld module over a finite field.
+
+
+
+\section{Questions}
+\label{q}
+
+Theorem~\ref{wDML} is related to Denis' conjecture, but it is incomplete in at least two ways.  
+First, we have not shown that the groups which arise as intersections with varieties must be 
+${\mathbf A}$-modules.  Secondly, we have not directly addressed the problem raised in Denis' conjecture: the 
+case of Drinfeld modules of generic characteristic.  Our revised project concerns these extensions. 
+
+The issue of whether the exceptional groups must be ${\mathbf A}$-modules is related to the more 
+general question of the structure of the quasi-endomorphism rings of modular minimal groups in 
+separably closed fields. 
+
+
+\begin{question}
+\label{quasiend}
+Let $K = K^\sep$ be a saturated separably closed field of characteristic $p$.
+Let $\phi \in \tau K \{ \tau \} \setminus \{0 \}$ be an inseparable 
+polynomial in the Frobenius over $K$.  )
+Let $\phi^\sharp(K) := \bigcap_{n \geq 0} \phi^n(K)$.  Suppose that
+$\alpha \leq \phi^\sharp(K) \times \phi^\sharp(K)$ is a connected definable subgroup.
+Must there exist a positive integer $n$ such that $\alpha$ commutes with 
+$\phi^n$?
+\end{question}
+
+A positive answer to the following question could be 
+instrumental in resolving Question~\ref{quasiend}.
+
+\begin{question}
+Let $K$ be a finitely generated field of characteristic $p$.
+Let $\varphi:{\mathbf A} \to K \{ \tau \}$ be a Drinfeld
+module over $K$ of finite characteristic.  Let $a \in {\mathbf A}$
+with $\varphi_a \in \tau K \{ \tau \}$.  Let $L := K^\sep$ be the 
+separable closure of $K$.  Suppose that $x \in \bigcap_{n \geq 0} \varphi_{a^n}(L)$.
+Is $x$ necessarily an ${\mathbf A}$-torsion point?
+\end{question}
+
+Denis' Drinfeld module version of the Mordell-Lang conjecture remains open.
+However, Theorem~\ref{wDML} should imply a weak function-field version of 
+Denis' conjecture.
+
+\begin{conj}
+\label{ffDML}
+Let $K = K^\alg$ be an algebraically closed field of characteristic $p$.
+Let $\varphi:{\mathbf A} \to K \{ \tau \}$ be a Drinfeld module over $K$.
+We assume that there does not exist $\lambda \in K^\times$ and $L \leq K$ 
+a subfield of absolute transcendence degree $\leq 1$ such that 
+$\lambda^{-1} \varphi \lambda: {\mathbf A} \to L \{ \tau \}$.  Let 
+$\Gamma \leq \Ga(K)$ be a finitely generate ${\mathbf A}$-module.  
+If $X \subseteq \Ga^g$ is a subvariety of some Cartesian power of the 
+additive group, then $X(K) \cap \Gamma^g$ is a finite union of cosets of 
+subgroups of $\Gamma^g$.
+\end{conj} 
+
+I have in mind a reduction of Conjecture~\ref{ffDML} to Theorem~\ref{wDML} based 
+on a specialization of $\varphi$ to a Drinfeld module of finite characteristic which 
+does not descend to a finite field.  Provided that one chooses the specialization so that
+it is injective on $\Gamma$, the conclusion should follow.
+
+
+
+While the theories of specific kinds of $\cD$-fields (difference fields, differential fields, separably closed 
+fields, \emph{et cetera}) have been studied extensively, the general theory has not been worked out.  
+
+\begin{problem}
+Study the model theory of $\cD$-rings.  Specifically, 
+\begin{itemize}
+\item For which $\cD$-functors does a model companion of the theory of 
+$\cD$-domains exist?
+\item Which of these theories are simple? stable?
+\item Describe the definable groups in these theories.
+\end{itemize}
+\end{problem}
+
+
+
+\begin{thebibliography}{99}
+
+\bibitem{Blossier}  {\sc T. Blossier}, Ensesmbles minimaux localement modulaires, PhD thesis, Paris VII, 2001.
+\bibitem{Bou}  {\sc E. Bouscaren}, Proof of the Mordell-Lang conjecture for function fields,
+{\bf  Model theory and algebraic geometry}, 177--196, Lecture Notes in Math., 1696, Springer, Berlin, 1998.
+\bibitem{BD}  {\sc E. Bouscaren} and {\sc F. Delon}, Minimal groups in separably closed fields, 
+\emph{J. Symbolic Logic} {\bf 67} (2002), no. 1, 239--259.
+\bibitem{CHP} {\sc Z. Chatzidakis}, {\sc E. Hrushovski}, and {\sc Y. Peterzil}, Model theory of difference fields. II.
+ Periodic ideals and the trichotomy in all characteristics, \emph{Proc. London Math. Soc.} (3) {\bf 85} 
+ (2002), no. 2, 257--311.
+\bibitem{Denis} {\sc L. Denis}, G\'{e}om\'{e}trie diophantienne sur les modules de Drinfeld, 
+{\bf The arithmetic of function fields} (Columbus, OH, 1991), 285--302, Ohio State Univ. Math. Res. Inst. Publ.,
+ {\bf 2}, de Gruyter, Berlin, 1992. 
+\bibitem{Goss} {\sc D. Goss}, {\bf Basic Structures of Function Field Arithmetic},
+ Ergebnisse der Mathematik und ihrer Grenzgebiete (3), {\bf 35}, Springer-Verlag, Berlin, 1996.
+\bibitem{Har} {\sc R. Hartshorne}, {\bf Algebraic Geometry}, Graduate Texts in Mathematics, No. 52. Springer-Verlag, New York-Heidelberg, 1977.
+\bibitem{HrMM} {\sc E. Hrushovski}, The Mordell-Lang conjecture for function fields,
+ \emph{JAMS} {\bf 9} (1996), no. 3, 667--690. 
+\bibitem{HrML} {\sc E. Hrushovski}, The Manin-Mumford conjecture and the model theory of difference fields,
+\emph{APAL} {\bf 112} (2001), no. 1, 43--115. 
+\bibitem{LangAV} {\sc S. Lang}, {\bf Abelian Varieties}, Interscience Tracts in Pure and Applied Mathematics, No. 7, 
+Interscience Publishers, Inc., New York; Interscience Publishers Ltd., London, 1959. 
+\bibitem{Lang} {\sc S. Lang}, {\bf Number Theory III:  Diophantine geometry},
+ Encyclopaedia of Mathematical Sciences, {\bf 60}, Springer-Verlag, Berlin, 1991.
+\bibitem{Marker} {\sc D. Marker}, {\bf Model Theory: An introduction}, Graduate Texts in Mathematics, {\bf 217},
+Springer-Verlag, New York, 2002.
+\bibitem{Maz} {\sc B. Mazur}, Abelian varieties and the Mordell-Lang conjecture. 
+{\bf Model theory, algebra, and geometry}, 199--227, MSRI Publ., {\bf 39}, Cambridge Univ. Press, Cambridge, 2000. 
+\bibitem{Milne} {\sc Milne}, Abelian varieties, in {\bf Arithmetic Geometry} (G. Cornell and J. Silverman, eds.) 
+Springer-Verlag, New York, 1986.
+\bibitem{MoSc} {\sc R. Moosa} and {\sc T. Scanlon}, $F$-structures
+and integral points on semiabelian varieties over finite fields, preprint, 2002. 
+\bibitem{Mum} {\sc D. Mumford}, {\bf Abelian Varieties},  
+Tata Institute of Fundamental Research Studies in Mathematics, No. 5,
+Published for the Tata Institute of Fundamental Research, Bombay; Oxford University Press, London, 1970.
+\bibitem{PiMTML} {\sc A. Pillay} {\sc A. Pillay}, The model theoretic content of the Lang's conjecture, in 
+	{\bf Model Theory and Algebraic Geometry}, LNL {\bf 12}, (E. Bouscaren, ed.), 101--106, Springer,
+	Berlin, 1998.
+\bibitem{PiAWS} {\sc A. Pillay}, Lectures 1 and 2 of ``Model Theory and Diophantine Geometry,'' Arizona
+Winter School 2003.
+\bibitem{ScDGMT} {\sc T. Scanlon}, Diophantine geometry from model theory, \emph{Bulletin of Symbolic Logic}, 
+{\bf 7} (2001), no. 1, 37--57. 
+\bibitem{ScDMM} {\sc T. Scanlon}, Diophantine geometry of the torsion of a Drinfeld
+module, \emph{J. Number Theory}, {\bf 97} (2002), no. 1, 10--25.
+\bibitem{Scuni} {\sc T. Scanlon}, Uniformity in the Mordell-Lang conjecture, e-print {\tt math.LO/0105238}, 2001. 
+\bibitem{Wagner} {\sc F. Wagner}, {\bf Simple Theories}, Mathematics and its Applications, 
+{\bf 503}, Kluwer Academic Publishers, Dordrecht, 2000.
+
+\end{thebibliography}
+
+
+\end{document}

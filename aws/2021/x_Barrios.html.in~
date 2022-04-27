@@ -1,0 +1,108 @@
+<h4 class="speaker"><a href="/aws/2021/index.html" title="TITLE" class="year" style="display: none;">SHORTTITLE</a>
+  &nbsp;<a name="2021Barrios"><b><a href="https://apps.carleton.edu/profiles/abarrios/">Alex Barrios</a></b>: A friendly introduction to the theory of modular forms</a>
+</h4>
+
+<p>In 1770, Lagrange proved that every natural number can be represented as a
+sum of four squares! For instance, 86=6<sup>2</sup>+5<sup>2</sup>+4<sup>2</sup>+3<sup>2</sup>. But it can
+also be written as 86=8<sup>2</sup>+3<sup>2</sup>+3<sup>2</sup>+2<sup>2</sup>. This led mathematicians to
+ask: Given a natural number n, how many different ways are there of writing
+n as a sum of four squares? In 1834, Jacobi found a formula that answered
+this question for every natural number! As part of this course, we will embark
+on proving Jacobi's formula and, in the process, venture into the realm of
+modular forms. By tracing their historical roots, we will unravel the
+mysteries that attracted mathematicians to the theory of modular forms long
+before their famed use in the proof of Fermat's Last Theorem.
+</p>
+
+
+<ul>
+
+<!--<li class="notes"><a href="https://arxiv.org/pdf/1910.10752.pdf">Lecture notes</a></li>-->
+
+<li class="video">Video:
+        <ul>
+            <li>
+                Lecture 1: <a href="https://arizona.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=844489ef-3f0d-49d1-b267-acbf012cea34">stream</a>, 
+             <a href="VIDEO_BASE_URL/2021/2021BarriosLecture1.mp4">download</a>
+
+            </li>
+            <li>
+                Lecture 2: <a href="https://arizona.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=e0dc8d58-fa18-4637-abed-acbf00f504e9">stream</a>, 
+             <a href="VIDEO_BASE_URL/2021/Barrios/Lecture2">download</a>
+
+            </li>
+            <li>
+                Lecture 3: <a href="https://arizona.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=f95a7ad0-47e7-4f36-a995-acc600d915ff">stream</a>, 
+             <a href="VIDEO_BASE_URL/2021/Barrios/Lecture3">download</a>
+
+            </li>
+            <li>
+                Lecture 4: <a href="https://arizona.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=defc2024-b72c-431e-b25d-accd00c4b849">stream</a>, 
+             <a href="VIDEO_BASE_URL/2021/Barrios/Lecture4">download</a>
+
+            </li>
+
+
+            <li>
+                Lecture 5: <a href="https://arizona.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=6e691176-c4ed-408d-8dfb-acd401695f5a">stream</a>, 
+             <a href="VIDEO_BASE_URL/2021/Barrios/Lecture5">download</a>
+
+            </li>
+
+
+
+<!--
+
+           <li>
+                Lecture 3: <a href="https://arizona.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9e4e8a6b-f8b3-4e03-9910-ab7801278234">stream</a>,
+ <a href="VIDEO_BASE_URL/2020/2020EdixhovenLecture3.mp4">download</a>,
+<a href = "http://swc-alpha.math.arizona.edu/video/2020/2020EdixhovenLecture3Slides.pdf">slides</a>
+            </li>
+
+
+ <li>
+                Lecture 4:  <a href="https://arizona.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c7fe76da-7f84-4e27-95fc-ab790110159e">stream</a>,
+ <a href="VIDEO_BASE_URL/2020/2020EdixhovenLecture4.mp4">download</a>,
+<a href = "http://swc-alpha.math.arizona.edu/video/2020/2020EdixhovenLecture4Slides.pdf">slides</a>
+            </li>
+
+
+           <li>
+
+
+                Lecture 5: <a href="https://arizona.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2cc24058-6035-45bb-9ead-aa07015fe353">stream</a>,
+ <a href="VIDEO_BASE_URL/2020/2020EdixhovenLecture5.mp4">download</a>,
+<a href = "http://swc-alpha.math.arizona.edu/video/2020/2020EdixhovenLecture5Slides.pdf">slides</a>
+            </li>
+-->
+
+        </ul>
+    </li>
+
+<li class="notes">Notes:
+  <ul>
+ <li><a href = "https://drive.google.com/file/d/1FF-EfVxzflAEafzfK5SuYOtuO6G1Uw3k/view?usp=sharing">Complete notes (updated regularly)</a>
+
+<!--      <li><a href = "http://swc-alpha.math.arizona.edu/video/2021/Barrios/2021BarriosLecture1-2Notes.pdf">Lectures 1--2</a> -->
+
+	</li>
+  </ul>
+
+
+
+<li class="notes">Problem Sets:
+  <ul>
+      <li><a href="https://drive.google.com/file/d/1VfO9wvhE8FOGp5LvbS2a-YQ8nRosYnAD/view?usp=sharing">Problem Set 1</a> 
+	</li>
+      <li><a href="https://drive.google.com/file/d/1r9CMo1s5Ueh1NrTzqRSrK1mGid47_B6k/view?usp=sharing">Problem Set 2</a> 
+	</li>
+      <li><a href="https://drive.google.com/file/d/18owq-Ta19A_7mSzEb0RLbd1GsW9ODO2h/view?usp=sharing">Problem Set 3</a> 
+	</li>
+      <li><a href="https://drive.google.com/file/d/1FSWKwzfX3v2BA5FZ-xgwXptUkfGctDE0/view?usp=sharing">Problem Set 4</a> 
+	</li>
+      <li><a href="https://drive.google.com/file/d/1wkYjHwcXs4shP7A6p0Qe1kUD9rUuPsV9/view?usp=sharing">Problem Set 5</a> 
+	</li>
+  </ul>
+
+</ul>
+

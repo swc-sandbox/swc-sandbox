@@ -1,0 +1,62 @@
+<div class="poster">
+  <a href="/aws/2015/2015Poster-small.jpg">
+    <img src="/aws/2015/2015Poster-smaller.jpg">
+  </a>
+</div>
+<h2>Arizona Winter School 2015: Arithmetic and Higher-Dimensional Varieties</h2>
+
+<p>
+    AWS 2015 will be held March 14-18, 2015 at the
+    University of Arizona in Tucson, AZ.
+</p>
+
+<ul>
+ <!--   <li>
+        <b><a href=http://swc-alpha.math.arizona.edu/register/>Click
+        here to register.</a></b> Registration is open to all.<br>The deadline
+        to apply for funding was January 9.
+    </li> -->
+    <li>
+        <a href=http://swc.math.arizona.edu/aws/2015/schedule.html>Schedule
+	and other important information</a>
+    </li>
+    <li>
+        <a href=http://swc.math.arizona.edu/aws/2015/directions.html>Local directions</a>
+    </li>
+    <li>
+      Organizers: Rachel Pries and Matthew Papanikolas (main program),
+      with Bryden Cais, Mirela Ciperiani, and Romyar Sharifi.
+    </li>
+</ul>
+<h3>Courses:</h3>
+<ul>
+    <li>
+        <include src="/aws/2015/x_Colliot-Thelene.html.in">
+    </li>
+    <li>
+        <include src="/aws/2015/x_Vakil.html.in">
+    </li>
+    <li>
+        <include src="/aws/2015/x_Varilly-Alvarado.html.in">
+    </li>
+    <li>
+        <include src="/aws/2015/x_Viray.html.in">
+    </li>
+</ul>
+<h3>Problem sessions:</h3>
+    <ul>
+        <li>
+            <include src="/aws/2015/x_Cesnavicius.html.in">
+        </li>
+        <li>
+            <include src="/aws/2015/x_Pirutka.html.in">
+        </li>
+    </ul>
+  </ul>
+<h3>Project assistants:</h3>
+    <ul>
+         <li>
+            <include src="/aws/2015/x_Assistants.html.in">
+         </li>
+    </ul>
+</ul>

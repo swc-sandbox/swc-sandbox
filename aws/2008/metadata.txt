@@ -1,0 +1,3 @@
+year: 2008
+title: Special Functions and Transcendence
+htmltitle: Special Functions and Transcendence

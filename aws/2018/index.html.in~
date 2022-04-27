@@ -1,0 +1,14 @@
+<html>
+
+<include src="/head.html.in" {'PAGE':'AWS 2018'}>
+<body vlink="blue";>
+
+<include src="/topbar.html.in">
+<include src="/navcol.html.in"  {'nav_last':'navsel'}>
+
+<div class="page">
+<include src="/aws/2018/page2.html.in">
+</div>
+
+</body>
+</html>

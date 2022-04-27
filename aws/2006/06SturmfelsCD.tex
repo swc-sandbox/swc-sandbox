@@ -1,0 +1,201 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts,color}
+\usepackage[dvips]{epsfig}
+
+\textwidth 14cm
+\textheight 21cm
+\oddsidemargin=1.2cm 
+\evensidemargin=1.2cm
+
+\newcommand{\baseRing}[1]{\ensuremath{\mathbb{#1}}}
+\newcommand{\Z}{\baseRing{Z}}
+\newcommand{\C}{\baseRing{C}}
+\newcommand{\N}{\baseRing{N}}
+\newcommand{\R}{\baseRing{R}}
+\newcommand{\Q}{\baseRing{Q}}
+\newcommand{\T}{\baseRing{T}}
+\newcommand{\D}{\Delta}
+
+\def\P{\baseRing{P}}
+
+\newcommand{\BB}{\mathcal{B}}
+\newcommand{\CC}{\mathcal{C}}
+\newcommand{\GG}{\mathcal{G}}
+\newcommand{\HH}{\mathcal{H}}
+\newcommand{\LL}{\mathcal{L}}
+\newcommand{\MM}{\mathcal{M}}
+\newcommand{\NN}{\mathcal{N}}
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{construction}[theorem]{Construction}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+%\newenvironment{pf}{\noindent {\bf Proof.}}{\hfill $\Box$\vspace{0.3cm}}
+%\newenvironment{explrm}{\begin{expl} \rm}{\end{expl}}
+%\newenvironment{remrm}{\begin{rem} \rm}{\end{rem}}
+%\newenvironment{dfrm}{\begin{df} \rm}{\end{df}}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{algorithm}[theorem]{Algorithm}
+
+
+\def\theenumi{\roman{enumi}}
+\renewcommand{\labelenumi}{\theenumi.}
+
+\numberwithin{equation}{section}
+
+\def\codim{ {\rm codim}\, }
+
+\sloppy
+
+
+\def\pstexInput#1{%
+   \begin{picture}(0,0)%
+     \special{psfile=#1.pstex}%
+   \end{picture}%
+   \input{#1.pstex_t}%
+   }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\title{Discriminants, Resultants  \\ and Their Tropicalization}
+
+\author{Bernd Sturmfels}
+
+\centerline{Arizona Winter School 2006}
+
+\maketitle
+
+The aim of this course is to introduce discriminants and resultants,
+ in the sense of Gel'fand, Kapranov and Zelevinsky \cite{GKZ},
+ with emphasis on the tropical approach which was developed
+ by  Dickenstein, Feichtner and the lecturer \cite{DFS}.
+ 
+ \bigskip
+ 
+{\bf Lecture 1: A-discriminants.}
+Every configuration $A$ of lattice points defines a projective
+toric variety $X_A$, whose dual variety $X_A^*$ is typically
+a hypersurface, known as the {\em $A$-discriminant}.
+We show how many classical discriminants and
+classical resultants arise as special cases of this construction.
+
+\medskip
+
+{\bf Lecture 2: Degree Formulas.}
+We present various known formulas for the degree
+and Newton polytope of the $A$-discriminant. In the case
+of resultants,  this degree involves mixed volumes \cite{BS},
+and is closely related 
+to determinantal formulas for eliminating 
+variables from systems of polynomial equations.
+For arbitrary $A$-discriminants, a positive
+ degree formula was recently given in \cite{DFS}.
+
+\medskip
+
+{\bf Lecture 3: Tropical Varieties.} This lecture
+ assumes familiarity with matroids and Gr\"obner bases,
+ and it gives an otherwise self-contained introduction to
+ tropical algebraic geometry. Software tools for computing
+ arbitrary tropical varieties will be discussed briefly  \cite{BJSST}.
+  We then show how to compute the
+degree and the toric degenerations of a projective variety 
+from its tropicalization, and how to tropicalize
+the image of a map given by
+monomials in linear forms.
+
+\medskip
+
+{\bf Lecture 4: Tropical Horn Uniformization.}
+Kapranov's Horn uniformization \cite{K} parametrizes the
+$A$-discriminant by monomials in linear forms.
+From this we derive that the tropical $A$-discriminant
+is the Minkowski sum of the co-Bergman fan of $A$
+and the row space of $A$. This explains the degree formulas
+discussed in Lecture 2, and it gives an algorithm
+for computing its Newton polytope.
+  We also  relate this to the combinatorial aspects
+  of  Gel'fand-Kapranov-Zelevinsky theory
+(regular triangulations, secondary polytopes \cite{GKZ}).
+
+
+\bigskip
+
+{\bf Project: Mixed Discriminants.}
+Given a sparse system of $n$ polynomials in $n$ variables
+with indeterminate  coefficients, their {\em mixed discriminant}
+is the unique irreducible polynomial in the coefficients
+which vanishes when the system has a double root.
+The aim of this project is to find a formula for the degree 
+and (Newton polytope) of the mixed discriminant, at least
+when $n=2$. As an example consider the 
+following system of two equations in $x$ and~$y$:
+\begin{eqnarray*}
+& \, c_1 x^2 y^{53} + 
+c_2 x^3 y^{47} + 
+c_3 x^5 y^{43} + 
+c_4 x^7 y^{41}\,\,\,
+\quad = \quad 0 , \\ &
+c_5 x^{11} y^{37} + 
+c_6 x^{13} y^{31} + 
+c_7 x^{17} y^{29} + 
+c_8 x^{19} y^{23}
+\quad = \quad 0. 
+\end{eqnarray*}
+If the coefficients $c_1,c_2,\ldots,c_8$ are random complex
+numbers then this system has $???$ distinct roots in $(\C^*)^2$.
+The vanishing of the mixed discriminant is the condition
+for this system to have a double root.
+It is a homogeneous polynomial of degree $???$ in
+the unknowns $c_1,c_2,\ldots,c_8$. Can
+{\bf you} figure out what the two integers 
+indicated by the question marks ``$ ???$'' are~?
+If yes, then this AWS student project is the one for {\bf you}.
+To get our discussions started, please e-mail me your answers
+right away to \
+{\tt bernd@math.berkeley.edu}.
+
+\bigskip \bigskip \bigskip
+
+\begin{thebibliography}{10}
+
+\bibitem{BJSST} T.~Bogart, A.~Jensen, D.~Speyer, B.~Sturmfels and R.~Thomas: 
+
+{\em Computing tropical varieties}; preprint,
+{\tt http://front.math.ucdavis.edu/math.AG/0507563}.
+
+
+
+\bibitem{DFS} A.~Dickenstein, E.-M.~Feichtner and B.~Sturmfels:
+{\em Tropical Discriminants}; in preparation,  preprint
+will appear on the {\tt ArXiV} in October 2005.
+
+\bibitem{GKZ}  I.M.~Gelfand, M.M.~Kapranov, A.V.~Zelevinsky:
+{\em  Discriminants, Resultants, and Multidimensional Determinants\/};
+Birkh\"auser, Boston, MA, 1994. 
+
+\bibitem{K} M.M.~Kapranov: {\em A characterization of 
+$A$-discriminantal hypersurfaces in terms of the logarithmic Gauss map\/};
+Mathematische Annalen  290  (1991),  no. 2, 277--285. 
+
+\bibitem{BS} B.~Sturmfels: {\em On the Newton polytope of the resultant\/}; 
+ Journal of Algebraic Combinatorics  3  (1994), 207--236.
+
+\end{thebibliography}
+\end{document}

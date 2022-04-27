@@ -1,0 +1,90 @@
+<!-- <div class="poster">-->
+  <a href="/aws/2021/2021Poster-small.jpg">
+    <img style="float: right; width: 320px; top:5px; right:10px; padding:5px;" src="/aws/2021/2021Poster-smaller.jpg">
+  </a>
+<!--</div>-->
+<h2>Arizona Winter Semester 2021: Virtual School in Number Theory</h2>
+
+<p>
+    AWS 2021 will be held in two, 6-week, online sessions.  Each session will 
+    feature two lecture series consisting of 6 lectures each (one per week),
+as well as accompanying problem sessions and moderated discussions. 
+The intended audience is undergraduates, but we welcome all interested participants.
+</p>
+
+
+<!--<p>Please refer to University of Arizona <b><a href="http://www.arizona.edu/calendars-events">academic calendars</a></b> for the tentative 
+dates of future Winter Schools.
+(The AWS begins on the first day of the University of Arizona's Spring Recess in any given year.)
+</p>-->
+
+<ul>
+
+
+
+
+<!--<li>
+Applications are no longer being accepted.  The deadline to apply was December 7, 2020.
+If you applied to the program, you should expect to hear from us by early January.
+Click <a href="https://uarizona.co1.qualtrics.com/jfe/form/SV_cZmpGEF6CRlUR6Z">here</a> to apply.
+The deadline to apply is December 7, 2020.
+<br>
+
+</li>
+-->
+
+<!--
+        <a href=http://swc.math.arizona.edu/aws/2021/schedule.html>Schedule
+	and other important information</a>
+    </li>
+    <li>
+        <a href=http://swc.math.arizona.edu/aws/2021/directions.html>Local directions</a>
+    </li>
+-->
+    
+<li>
+Organizers: Alina Bucur, Bryden Cais, Kiran Kedlaya, and David Zureick-Brown (main program),
+      with Mirela Ciperiani, Brandon Levin, and Hang Xue.
+    </li>
+<li>
+  Funded by the <a href="https://www.nsf.gov/">National Science Foundation</a>, with additional support from 
+<a href="https://www.cimpa.info/?">CIMPA</a>.
+</a>
+</li>
+<li>
+  Questions?  Please contact <a href="mailto:swc-coordinator@math.arizona.edu">swc-coordinator@math.arizona.edu</a>.
+</li>
+</ul>
+
+<br>
+
+
+
+<h3>Session 1: January 25 &mdash; March 6, 2021</h3>
+
+<ul>
+    <li>
+        <include src="/aws/2021/x_Barrios.html.in">
+    </li>
+    <li>
+        <include src="/aws/2021/x_Watson.html.in">
+    </li>
+    <li>
+        Assisted by <include src="/aws/2021/y_Assistants1.html.in">
+    </li>
+</ul>
+
+<h3>Session 2: March 22 &mdash; May 1, 2021</h3>
+
+<ul>
+    <li>
+        <include src="/aws/2021/x_Bell.html.in">
+    </li>
+    <li>
+        <include src="/aws/2021/x_Chan.html.in">
+    </li>
+    <li>
+        Assisted by <include src="/aws/2021/y_Assistants2.html.in">
+    </li>
+</ul>
+

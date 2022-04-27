@@ -1,0 +1,100 @@
+<div class="poster">
+  <a href="/aws/2020/2020Poster-small.jpg">
+    <img src="/aws/2020/2020Poster-smaller.jpg">
+  </a>
+</div>
+<h2>Arizona Winter School 2020: Nonabelian Chabauty</h2>
+
+<p>
+    AWS 2020 will be held March 7-11, 2020 at the
+    University of Arizona in Tucson, AZ.
+</p>
+
+
+<ul>
+  <li>Registration will be open soon!  Please check back often.  The deadline to 
+apply for funding is <b>November 8, 2019</b>.
+</li>
+
+<!--
+<li>
+        <b><a href=http://swc-alpha.math.arizona.edu/register/>Click
+        here to register.</a></b> Registration is open to all, and is <b>required
+if you are planning to attend.</b> 
+The deadline
+        to apply for funding was November 11, 2016.
+The deadline to register was December 9, 2016.
+      
+
+    </li>
+
+   <li>
+        <a href=http://swc.math.arizona.edu/aws/2020/schedule.html>Schedule
+	and other important information</a>
+    </li>
+    <li>
+        <a href=http://swc.math.arizona.edu/aws/2020/directions.html>Local directions</a>
+    </li>
+--->
+    
+<li>
+Organizers: Kiran Kedlaya, Brandon Levin, and David Zureick-Brown (main program),
+      with Alina Bucur, Bryden Cais, Mirela Ciperiani, and Hang Xue.
+    </li>
+<li>
+  Funded by the <a href="https://www.nsf.gov/">National Science Foundation,</a>
+supported by the <a href="https://www.nsa.gov/">National Security Agency,</a> 
+and organized in partnership with the <a href="http://www.claymath.org/">Clay Mathematics Institute</a>.
+</li>
+</ul>
+<h3>Courses:</h3>
+<ul>
+    <li>
+        <include src="/aws/2020/x_Balakrishnan.html.in">
+    </li>
+    <li>
+        <include src="/aws/2020/x_Kim.html.in">
+    </li>
+    <li>
+        <include src="/aws/2020/x_Muller.html.in">
+    </li>
+    <li>
+        <include src="/aws/2020/x_ZureickBrown.html.in">
+    </li>
+
+
+<h4>with Clay lecturer</h4>
+    
+    <li>
+      <include src="/aws/2020/x_Poonen.html.in">
+    </li>
+</ul>
+
+<!--
+<h3>Problem sessions:</h3>
+    <ul>
+        <li>
+            <include src="/aws/2020/x_Vogt.html.in">
+        </li>
+        <li>
+            <include src="/aws/2020/x_Hast.html.in">
+        </li>
+        <li>
+            <include src="/aws/2020/x_Warner.html.in">
+        </li>
+    </ul> 
+
+<h3>Project assistants:</h3>
+    <ul>
+         <li>
+            <include src="/aws/2020/y_Assistants.html.in">
+         </li>
+    </ul>
+
+<h3>Study Group Leaders:</h3>
+    <ul>
+         <li>
+            <include src="/aws/2020/y_SGL.html.in">
+         </li>
+    </ul>
+--->

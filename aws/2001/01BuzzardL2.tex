@@ -1,0 +1,140 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+
+\newcommand{\nc}{\newcommand}
+\nc{\abs}[1]{\left| #1 \right|}
+\nc{\en}{\enspace}
+\nc{\qbold}[1]{\boldsymbol{\mathsf{#1}}}
+\nc{\ra}{\rightarrow}
+\nc{\x}{\times}
+
+\nc{\cO}{\mathcal{O}}
+\nc{\C}{\qbold{C}}
+\nc{\F}{\qbold{F}}
+\nc{\Q}{\qbold{Q}}
+\nc{\Z}{\qbold{Z}}
+
+\begin{document}
+
+\begin{center}
+\Large \textbf{$P$-adic Modular Forms by Kevin Buzzard\\
+Lecture 2}
+\end{center}
+
+\paragraph{$\bullet$}
+We know modular forms exist because over $\C$ there exists an explicit
+example (according to the classical definition), namely the Eisenstein
+series: $E_k : \tau \mapsto \sum_{\substack{m,n\in\Z\\ \text{not both }0}}
+\frac{1}{(m\tau + n)^k}, k \geq 4$.
+This is a level $1$ modular form of weight $k$.
+A known fact is that $E_{p-1} \equiv 1 \pmod{p}$, where $p$ is prime and $p
+\geq 5$.
+So in the ring $\Z_p[[q]]$, $E_{p-1}$ ``looks'' invertible becuase it has a
+power series where the constant term is a unit.
+However, no classical forms are of negative weight so $1/E_{p-1}$ is not a
+classical form.
+In addition, for example, $E_4(\pi i/3) = E_4(i) = 0$ so $1/E_4$ is not a
+holomorphic function on the upper half plane.
+
+\paragraph{$\bullet$}
+The following is the Deligne/Katz approach to defining a $p$-adic modular
+form.
+\\
+
+We have $E/R$, where $E$ is an elliptic curve over $R$, an $\F_p$-algebra.
+Now let $\omega \in H^0(E, \Omega^1_{E/R})$ and $\eta \in H^1(E,\cO_E)$ be
+its dual.
+Consider the absolute Frobenius map, $F_{\text{abs}} : \cO_E \ra \cO_E,\en f
+\mapsto f^p$, an additive homomorphism of sheaves of abelian groups.
+Now define $A(E/R,\omega) \in R$, (which is actually the Hasse invariant) by
+setting $F_{\text{abs}}^*(\eta) = A(E/R,\omega) \cdot \eta$ which gives us
+that $A(E/R, \lambda \omega) = \lambda^{1-p} A(E/R, \omega), \en \lambda \in
+R^{\x}$.
+
+So $A$ is a modular form of weight $p-1$.
+Note that the boundedness condition for a modular form is satisfied by
+looking at $A(\text{Tate}(q),\omega_{\text{can}})$ since the restriction of
+a plane curve over $\F_p[[q]]$ is the Tate curve over $\F_p((q))$.
+Now $A(\text{Tate}(q),\omega_{\text{can}}) = 1$ so if $p \geq 5$, then
+$E_{p-1} \equiv A \pmod{p}$.
+Therefore $A = E_{p-1} \pmod{p}$ by the $q$-expansion principle, which says
+that two modular forms of level $1$ and the same weight are equal if they
+have the same $q$-expansion.
+
+We want a $p$-adic theory of modular forms that strongly identifies a
+modular form with its $q$-expansion so that what ``looks'' invertible, as in
+$E_{p-1} \pmod{p}$, is invertible.
+So because the Hasse invariant $A(E/R,\omega) = 0$ if and only if $E$ is
+supersingular, we want to somehow throw away elliptic curves which are
+supersingular or have supersingular reduction.
+
+\paragraph{$\bullet$}
+Katz's definition of a $p$-adic modular form:\\
+Let $p \geq 5$, $R_0$ be the ring of integers in a finite extension of
+$\Q_p$, and $R$ an $R_0$-algebra in which $p$ is nilpotent.
+\\
+A test object is
+
+\begin{minipage}[c]{6in}
+1.\en an elliptic curve $E/R$\\
+2.\en a nowhere-vanishing differential $\omega \in H^0(E,\Omega^1_{E/R})$\\
+3.\en an element $Y \in R$ such that $Y \cdot E_{p-1}(E/R,\omega) = 1 \in
+R$.
+\end{minipage}
+\\
+\\
+A \emph{$p$-adic modular form} of level $1$ of weight $k$ defined over $R_0$
+is a rule $f$ sending $(E/R,\omega,Y)$ to an element of $R$ such that
+
+\begin{minipage}[c]{6in}
+a)\en $f(E/R,\lambda \omega, \lambda^{p-1} Y) = \lambda^{-k}
+f(E/R,\omega,Y)$\\
+b)\en $f(\text{Tate curve over }R_0/p^n R_0((q)),\omega_{\text{can}},1)$ is
+in $R_0/p^n R_0[[q]]$ for all $n \geq 1$.
+\end{minipage}
+\\
+and $f$ depends only the isomorphism class of data and behaves well under
+pullback.
+\\
+\\
+Note that classical modular forms over $R_0$ are already $p$-adic modular
+forms.
+
+\paragraph{$\bullet$}
+The class of $p$-adic modular forms is too large to work with, but we can
+create subtlety through the following definition:
+\\
+Let $R_0$ be the ring of integers in a finite extension of $\Q_p$ and choose
+$\rho\in R_0\setminus 0$, and $R$ an $R_0$-algebra in which $p$ is
+nilpotent.
+\\
+A $\rho$-overconvergent test object is
+
+\begin{minipage}[c]{6in}
+1.\en an elliptic curve $E/R$\\
+2.\en a nowhere-vanishing differential $\omega \in H^0(E,\Omega^1_{E/R})$\\
+3.\en an element $Y \in R$ such that $Y \cdot E_{p-1}(E/R,\omega) = \rho$.
+\end{minipage}
+\\
+\\
+A \emph{$\rho$-overconvergent modular form} is a rule on these test objects
+satisfying the conditions (a) and (b) in the definition of a $p$-adic
+modular form.
+\\
+\\
+Note that if $\abs{\rho} < 1$ then some of these test objects might have
+supersingular geometric fibers.
+
+\paragraph{$\bullet$}
+We don't want to throw away too much so the idea is to define $E$, an
+elliptic curve, as having ``very supersingular reduction'' if
+$A(E\!\!\!\pmod{p}\;/\; R/pR ) = 0 \in R/pR$.
+Now if $R$ is the ring of integers in a highly ramified extension of $\Q_p$
+then $R/pR$ could be huge so maybe there are a lot of elliptic curve whose
+reductions are supersingular but not very supersingular.
+
+
+\end{document}
+
+

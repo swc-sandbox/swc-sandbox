@@ -1,0 +1,115 @@
+
+<html>
+<include src="/head.html.in" {'PAGE':'AWS 2003: Courses and Notes'}>
+<body>
+<include src="/topbar.html.in">
+<include src="/navcol.html.in"  {'nav_prev':'navsel'}>
+<div class="page">
+<H1>Arizona Winter School 2003
+				<BR>
+				Course Descriptions and Notes</H1>
+		Links on this page open in a new window for easy printing or viewing.  For hints on using the videos, have a look at our <a href="/notes/VideoHints.html">video hints</a> page.
+		
+			<H2><A NAME="Loeser">Fran&ccedil;ois Loeser: &#147;Motivic and <i>p</i>-adic integration&#148;</A></H2> 
+			<UL COMPACT>
+				<LI>
+					Loeser's course and project description in <a href="/aws/2003/03LoeserCD.pdf">pdf</a>
+				</LI>
+				<LI>
+				    Notes for Loeser's course (revised 9/03) in <a href="/aws/2003/03LoeserNotes.pdf">pdf</a>
+				</LI>    
+				<li>Streaming video:
+							<ul>
+	<li>Lecture 1: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/04ALoeser3-15.rm">video</a>, <a href="/video/aws2003/loeser/loeser_3_15-1.pdf">pdf slides</a>.</li>
+	<li>Lecture 2: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/05ALoeser3-15.rm">video</a>, <a href="/video/aws2003/loeser/loeser_3_15-2.pdf">pdf slides</a>.</li>
+	<li>Lecture 3: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/10ALoeser3-16.rm">video</a>, <a href="/video/aws2003/loeser/loeser_3_16.pdf">pdf slides</a>.</li>
+	<li>Lecture 4: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/16ALoeser3-17.rm">video</a>, <a href="/video/aws2003/loeser/loeser_3_17-1.pdf">pdf slides</a>.</li>
+	<li>Lecture 5: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/17ALoeser3-17.rm">video</a>, <a href="/video/aws2003/loeser/loeser_3_17-2.pdf">pdf slides</a>.</li>
+</ul>
+</li>
+			</UL>
+			<H2><A NAME="Pillay">Anand Pillay and Thomas Scanlon: &#147;Model theory and diophantine geometry&#148;</A></H2> 
+			<UL COMPACT>
+				<LI>
+				
+					Pillay and Scanlon's course and project description in <a href="/aws/2003/03PillayCD.pdf">pdf</a>
+				</LI>
+				<LI>
+					Notes for the first two and a half lectures by Pillay, in <a href="/aws/2003/03PillayNotes1.pdf">pdf</a>
+				</LI>
+				<li>video of Pillay's lectures:
+			<ul>
+	<li>Lecture 1: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/Pillay3-15/03APillay3-15.rm">video</a>, <a href="/video/aws2003/pillay/pillay_3_15.pdf">pdf slides</a>.</li>
+	<li>Lecture 2: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/Pillay3-16-1/09APillay3-16-1.rm">video</a>, <a href="/video/aws2003/pillay/pillay_3_16-1.pdf">pdf slides</a>.</li>
+	<li>Lecture 3: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/PillayScanlon3-16-2/11APillayScanlon3-16-2.rm">video</a>, <a href="/video/aws2003/pillay/pillay_3_16-2.pdf">pdf slides</a>.</li>
+</ul>
+</li>
+				<LI>
+					Notes for the following three lectures by Scanlon, in <a href="/aws/2003/03ScanlonNotes.pdf">pdf</a>
+				</LI>
+				<li>video of Scanlon's lectures:
+			<ul>		
+	<li>Lecture 1: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/PillayScanlon3-16-2/11APillayScanlon3-16-2.rm">video</a>, <a href="/video/aws2003/scanlon/scanlon_3_16.pdf">pdf slides</a>.</li>
+	<li>Lecture 2: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/Scanlon3-17/15AScanlon3-17.rm">video</a>, <a href="/video/aws2003/scanlon/scanlon_3_17.pdf">pdf slides</a>.</li>
+	<li>Lecture 3: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/21AScanlon3-18.rm">video</a>, <a href="/video/aws2003/scanlon/scanlon_3_18.pdf">pdf slides</a>.</li>
+</ul>
+</li>
+				<li>
+					The slides Scanlon projected during his lectures, in <a href="/aws/2003/03ScanlonSlides.pdf">pdf</a>
+</li>
+			</UL>
+			<H2><A NAME="Poonen">Bjorn Poonen: &#147;Hilbert's tenth problem&#148;</A></H2> 
+			<UL COMPACT>
+				<LI>
+				Poonen's course and project description in <a href="/aws/2003/03PoonenCD.pdf">pdf</A>
+				</LI>
+				<LI>
+				    Notes for Poonen's course in <a href="http://www-math.mit.edu/~poonen/papers/aws2003.pdf">pdf</a> and gzipped <a href="http://www-math.mit.edu/~poonen/papers/aws2003.dvi.gz">dvi</a>
+				</LI> 
+				<li>Streaming video:
+			<ul>
+	<li>Lecture 1: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/Poonen3-15/02APoonen3-15.rm">video</a>, <a href="/video/aws2003/poonen/poonen_3_15.pdf">pdf slides</a>.</li>
+	<li>Lecture 2: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/Poonen3-16/08APoonen3-16.rm">video</a>, <a href="/video/aws2003/poonen/poonen_3_16.pdf">pdf slides</a>.</li>
+	<li>Lecture 3: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/Poonen3-17/14APoonen3-17.rm">video</a>, <a href="/video/aws2003/poonen/poonen_3_17.pdf">pdf slides</a>.</li>
+	<li>Lecture 4: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/Poonen3-18/20APoonen3-18.rm">video</a>, <a href="/video/aws2003/poonen/poonen_3_18.pdf">pdf slides</a>.</li>
+</ul>
+</li>   
+			</UL>
+			<H2><A NAME="Pop">Florian Pop: &#147;Elementary equivalence of finitely generated fields&#148;</A></H2> 
+			<UL COMPACT>
+				<LI>
+				    Pop's course and project description in <a href="/aws/2003/03PopCD.pdf">pdf</a>
+				</LI>
+				<LI>
+				    Notes for Pop's course in <a href="/aws/2003/03PopNotes.pdf">pdf</a>
+				</LI> 
+				<li>Streaming video:
+			<ul>
+	<li>Lecture 1: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/06APop3-15.rm">video</a>, <a href="/video/aws2003/pop/pop_3_15.pdf">pdf slides</a>.</li>
+	<li>Lecture 2: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/12APop3-16.rm">video</a>, <a href="/video/aws2003/pop/pop_3_16.pdf">pdf slides</a>.</li>
+	<li>Lecture 3: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/18APop3-17.rm">video</a>, <a href="/video/aws2003/pop/pop_3_17.pdf">pdf slides</a>.</li>
+	<li>Lecture 4: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/27APop3-19.rm">video</a>, <a href="/video/aws2003/pop/pop_3_19.pdf">pdf slides</a>.</li>
+</ul>
+</li>   
+			</UL>
+			<H2><A NAME="Macintyre">Angus Macintyre: &#147;The history of interactions between logic and number theory</a>&#148;</H2>
+			<UL COMPACT>
+				<LI>
+					Macintyre's course and project description in <a href="/aws/2003/03MacintyreCD.pdf">pdf</a>
+				</LI>
+				<LI>
+				    Notes for Macintyre's course in <a href="/aws/2003/03MacintyreNotes.pdf">pdf</a>
+				</LI> 
+				<li>Streaming video:
+			<ul>
+	<li>Lecture 1: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/01AMacIntyre3-15.rm">video</a>, <a href="/video/aws2003/macintyre/macintyre_3_15.pdf">pdf slides</a>.</li>
+	<li>Lecture 2: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/07AMacIntyre3-15.rm">video</a>, <a href="/video/aws2003/macintyre/macintyre_3_16.pdf">pdf slides</a>.</li>
+	<li>Lecture 3: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/13AMacIntyre3-17.rm">video</a>, <a href="/video/aws2003/macintyre/macintyre_3_17.pdf">pdf slides</a>.</li>
+	<li>Lecture 4: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/19AMacIntyre3-18.rm">video</a>, <a href="/video/aws2003/macintyre/macintyre_3_18.pdf">pdf slides</a>.</li>
+</ul>
+</li>   
+			</UL>
+		
+</div>
+</body>
+</html>

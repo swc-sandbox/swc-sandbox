@@ -1,0 +1,111 @@
+<div class="poster">
+  <a href="/aws/2019/2019Poster-small.jpg">
+    <img src="/aws/2019/2019Poster-smaller.jpg">
+  </a>
+</div>
+<h2>Arizona Winter School 2019: Topology and Arithmetic</h2>
+
+<p>
+    AWS 2019 will be held March 2-6, 2019 at the
+    University of Arizona in Tucson, AZ.
+<br><br>
+
+
+Please refer to University of Arizona <b><a href="http://www.arizona.edu/calendars-events">academic calendars</a></b> for the tentative dates of future Winter Schools. 
+(The AWS begins on the first day of the University of Arizona's Spring Recess in any given year.)
+
+</p>
+
+<!--
+<ul>
+  <li>Registration will be open soon!  Please check back often.  The deadline to 
+apply for funding is <b>November 21, 2018</b>.  The deadline to register
+is <b>December 9, 2018</b>
+</li>
+
+
+
+<li>
+       <b><a href=http://swc-alpha.math.arizona.edu/register/>Click
+        here to register.</a></b> Registration is open to all, and is <b>required
+if you are planning to attend.</b>
+
+--->
+<li> Registration is now closed.  The deadline to register was <b>December 9, 2018</b>.
+The deadline
+        to apply for funding was <b>November 21, 2018</b>. 
+Funding decisions will be sent out by mid January, with additional participant information to follow.
+     
+    </li>
+
+<!--
+   <li>
+        <a href=http://swc.math.arizona.edu/aws/2019/schedule.html>Schedule
+	and other important information</a>
+    </li>
+    <li>
+        <a href=http://swc.math.arizona.edu/aws/2019/directions.html>Local directions</a>
+    </li>
+-->    
+
+<li>
+      Organizers: Kiran Kedlaya, Hang Xue, and David Zureick-Brown (main program),
+      with Alina Bucur, Bryden Cais, and Mirela Ciperiani.
+    </li>
+<li>
+  Supported by the <a href="https://www.nsf.gov/">National Science Foundation,</a> the <a href="https://www.arizona.edu/">University of Arizona</a> <a href="http://math.arizona.edu/">Department of Mathematics</a> and 
+<a href="http://cos.arizona.edu/">College of Science,</a> 
+ and organized in partnership with the <a href="http://www.claymath.org/">Clay Mathematics Institute</a>.
+</li>
+
+</ul>
+
+<h3>Courses:</h3>
+<ul>
+    <li>
+        <include src="/aws/2019/x_Hopkins.html.in">
+    </li>
+    <li>
+        <include src="/aws/2019/x_Lurie.html.in">
+    </li>
+    <li>
+        <include src="/aws/2019/x_Morrow.html.in">
+    </li>
+    <li>
+        <include src="/aws/2019/x_Wickelgren.html.in">
+    </li>
+</ul>
+
+
+
+
+<h3>Problem sessions:</h3>
+<ul>          
+  <li>
+            <include src="/aws/2019/x_Stojanoska.html.in">
+    </li>
+<li>
+            <include src="/aws/2019/x_Zakharevich.html.in">
+    </li>
+</ul>
+
+
+<h3>Project assistants:</h3>
+    <ul>
+         <li>
+            <include src="/aws/2019/y_Assistants.html.in">
+         </li>
+    </ul>
+
+<!--
+<h3>Study Group Leaders:</h3>
+    <ul>
+         <li>
+            <include src="/aws/2019/y_SGL.html.in">
+         </li>
+    </ul>
+
+
+
+
+-->

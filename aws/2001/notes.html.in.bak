@@ -1,0 +1,93 @@
+
+<html>
+<include src="/head.html.in" {'PAGE':'AWS 2001: Courses and Notes'}>
+<body>
+<include src="/topbar.html.in">
+<include src="/navcol.html.in"  {'nav_prev':'navsel'}>
+<div class="page">
+<H1>Arizona Winter School 2001
+				<BR>
+				Course Descriptions and Notes</H1>
+			<H2><A NAME="Buzzard">Kevin Buzzard: p-adic modular forms</A></H2> 
+			<UL COMPACT>
+				<LI>
+					Notes from Buzzard's lectures: 
+					<UL COMPACT>
+						<LI>
+							Lecture 1: <A HREF="/aws/2001/01BuzzardL1.dvi">dvi</A>, <A HREF="/aws/2001/01BuzzardL1.ps">ps</A>, <A HREF="/aws/2001/01BuzzardL1.pdf">pdf</A>
+						</LI>
+						<LI>
+							Lecture 2: <A HREF="/aws/2001/01BuzzardL2.dvi">dvi</A>, <A HREF="/aws/2001/01BuzzardL2.ps">ps</A>, <A HREF="/aws/2001/01BuzzardL2.pdf">pdf</A>
+						</LI>
+						<LI>
+							Lecture 3: <A HREF="/aws/2001/01BuzzardL3.dvi">dvi</A>, <A HREF="/aws/2001/01BuzzardL3.ps">ps</A>, <A HREF="/aws/2001/01BuzzardL3.pdf">pdf</A>
+						</LI>
+						<LI>
+							Lecture 4: <A HREF="/aws/2001/01BuzzardL4.dvi">dvi</A>, <A HREF="/aws/2001/01BuzzardL4.ps">ps</A>, <A HREF="/aws/2001/01BuzzardL4.pdf">pdf</A>
+						</LI>
+					</UL>
+				</LI>
+				<LI>
+					Buzzard's project was about computing the U operator on overconvergent 2-adic modular forms of level 1 and even weight: <A HREF="/aws/2001/01BuzzardPD.dvi">dvi</A>, <A HREF="/aws/2001/01BuzzardPD.ps">ps</A>, <A HREF="/aws/2001/01BuzzardPD.pdf">pdf</A>
+				</LI>
+				<LI>
+					Buzzard's students' write-up of their lecture: <A HREF="/aws/2001/01BuzzardPW.dvi">dvi</A>, <A HREF="/aws/2001/01BuzzardPW.ps">ps</A>, <A HREF="/aws/2001/01BuzzardPW.pdf">pdf</A>
+				</LI>
+			</UL>
+			<H2><A NAME="Clozel">Laurent Clozel: The local Langlands conjecture</A></H2> 
+			<UL COMPACT>
+				<LI>
+					Clozel's project description in <A HREF="/aws/2001/01ClozelPD.html" TARGET="_blank">html</A>
+				</LI>
+			</UL>
+			<H2><A NAME="Mazur">Barry Mazur, assisted by Tom Weston: Euler systems</A></H2> 
+			<UL COMPACT>
+				<LI>
+					Preliminary notes for Mazur's lectures: <A HREF="/aws/2001/01MazurL0.dvi">dvi</A>, <A HREF="/aws/2001/01MazurL0.ps">ps</A>, <A HREF="/aws/2001/01MazurL0.pdf">pdf</A>
+				</LI>
+				<LI>
+					More detailed notes by Mazur's students: <A HREF="/aws/2001/01MazurL1.dvi">dvi</A>, <A HREF="/aws/2001/01MazurL1.ps">ps</A>, <A HREF="/aws/2001/01MazurL1.pdf">pdf</A>
+				</LI>
+				<LI>
+					Mazur's project description: <A HREF="/aws/2001/01MazurPD.dvi">dvi</A>, <A HREF="/aws/2001/01MazurPD.ps">ps</A>, <A HREF="/aws/2001/01MazurPD.pdf">pdf</A>
+				</LI>
+				<LI>
+					&#147;Notes on Kato-Siegel functions,&#148; used in Mazur's students' lectures: <A HREF="/aws/2001/01MazurPW.dvi">dvi</A>, <A HREF="/aws/2001/01MazurPW.ps">ps</A>, <A HREF="/aws/2001/01MazurPW.pdf">pdf</A>
+				</LI>
+				<LI>
+					A paper by Tom Weston on &#147;The modular curves X<SUB>0</SUB>(11) and X<SUB>1</SUB>(11)&#148;: <A HREF="/aws/2001/01Weston1.ps">ps</A>, <A HREF="/aws/2001/01Weston1.pdf">pdf</A>
+				</LI>
+				<LI>
+					Another paper by Tom Weston, on &#147;The Euler system of Heegner points&#148;: <A HREF="/aws/2001/01Weston2.dvi">dvi</A>, <A HREF="/aws/2001/01Weston2.ps">ps</A>, <A HREF="/aws/2001/01Weston2.pdf">pdf</A>
+				</LI>
+				<LI>
+					A repository at Harvard of <A HREF="http://modular.fas.harvard.edu/mazur/aws2001/" TARGET="_blank">documents related to Mazur's lectures and project</A>
+				</LI>
+			</UL>
+			<H2><A NAME="Ramakrishnan">Dinakar Ramakrishnan: Modular forms over CM fields</A></H2> 
+			<UL COMPACT>
+				<LI>
+					An outline of Ramakrishnan's course and his project description: <A HREF="/aws/2001/01RamakrishnanPD.dvi">dvi</A>, <A HREF="/aws/2001/01RamakrishnanPD.ps">ps</A>, <A HREF="/aws/2001/01RamakrishnanPD.pdf">pdf</A>
+				</LI>
+			</UL>
+			<H2><A NAME="Sarnak">Peter Sarnak: Analytic theory of automorphic L-functions and applications</A></H2> 
+			<UL COMPACT>
+				<LI>
+					Sarnak's course description and project in <A HREF="/aws/2001/01SarnakPD.html" TARGET="_blank">html</A>
+				</LI>
+				<LI>
+					A list of references for Sarnak's course: <A HREF="/aws/2001/01SarnakRefs.dvi">dvi</A>, <A HREF="/aws/2001/01SarnakRefs.ps">ps</A>, <A HREF="/aws/2001/01SarnakRefs.pdf">pdf</A>
+				</LI>
+			</UL>
+			<H2>Professional Development Component
+				<BR>
+				<A NAME="Levy">Silvo Levy: Writing and communicating mathematics</A></H2> 
+			<UL COMPACT>
+				<LI>
+					Levy's course description in <A HREF="/aws/2001/01Levy.html" TARGET="_blank">html</A>
+				</LI>
+			</UL>
+		
+</div>
+</body>
+</html>

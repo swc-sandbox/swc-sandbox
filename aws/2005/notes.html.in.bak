@@ -1,0 +1,70 @@
+
+<html>
+<include src="/head.html.in" {'PAGE':'AWS 2005: Courses and Notes'}>
+<body>
+<include src="/topbar.html.in">
+<include src="/navcol.html.in"  {'nav_prev':'navsel'}>
+<div class="page">
+<H1>Arizona Winter School 2005
+				<BR>
+				Course Descriptions and Notes</H1>
+		For hints on using the videos, have a look at our <a href="/notes/VideoHints.html">video hints</a> page.
+		
+			<H2><A NAME="Hain">Richard Hain: &#147;Iterated integrals, Hodge theory, and fundamental groups&#148;</A></H2> 
+			<ul>
+	<li><a href="/aws/2005/05HainCD.txt" target="_blank">Course description</a></li>
+<li><a href="/aws/2005/05HainNotes.pdf">Course notes</a> (Version of March 10, 2005)
+<li>Here is a link to <a href="http://www.math.duke.edu/~hain/aws/" target ="_blank">possibly updated notes</a>.
+     <li>Streaming video:
+		<ul>
+	<li>Lecture 1: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/hain/hain-031205.rm">video</a></li>
+	<li>Lecture 2: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/hain/hain-031305.rm">video</a></li>
+	<li>Lecture 3: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/hain/hain-031405.rm">video</a></li>
+	<li>Lecture 4: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/hain/hain-031505.rm">audio</a></li>
+</ul>
+</li>
+			</UL>
+			<H2><A NAME="Matsumoto">Makoto Matsumoto: &#147;Galois representations in fundamental groups and their Lie algebras&#148;</A></H2> 
+<ul>
+	<li><a href="/aws/2005/05MatsumotoCD.pdf">Course description</a></li>
+	<li><a href="/aws/2005/05MatsumotoNotes.pdf">Course notes</a></li>
+	<li><a href="http://www.math.sci.hiroshima-u.ac.jp/~m-mat/TEACH/ARIZONA-WS/index.html" target="_blank">Course website</a></li>
+		<li>Streaming video:
+							<ul>
+	<li>Lecture 1: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/matsumoto/matsumoto-031205.rm">video</a>, <a href="/video/aws2005/matsumoto/matsumoto_3_12.pdf">pdf slides</a>.</li>
+	<li>Lecture 2: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/matsumoto/matsumoto_ses2-031305.rm">video</a>, <a href="/video/aws2005/matsumoto/matsumoto_3_13_1.pdf">pdf slides</a>.</li>
+	<li>Lecture 3: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/matsumoto/matsumoto_ses3-031305.rm">video</a>, <a href="/video/aws2005/matsumoto/matsumoto_3_13_2.pdf">pdf slides</a>.</li>
+	<li>Lecture 4: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/matsumoto/matsumoto-031505.rm">audio</a>, <a href="/video/aws2005/matsumoto/matsumoto_3_15.pdf">pdf slides</a>.</li>
+</ul>
+</li>
+			</UL>
+			<H2><A NAME="Pop">Florian Pop:  &#147;Anabelian phenomena in arithmetic and geometry&#148;</A></H2> 
+<ul>
+	<li><a href="/aws/2005/05PopCD.pdf">Course description</a></li>
+	<li><a href="/aws/2005/05PopNotes.pdf">Course notes</a></li>
+	<li>Streaming video:
+							<ul>
+	<li>Lecture 1: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/pop/pop-031205.rm">video</a></li>
+	<li>Lecture 2: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/pop/pop-031305.rm">video</a></li>
+	<li>Lecture 3: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/pop/pop-031405.rm">video</a></li>
+	<li>Lecture 4: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/pop/pop-031505.rm">audio</a></li>
+</ul>
+</li>
+			</UL>
+			<H2><A NAME="Schneps">Leila Schneps: &#147;Grothendieck-Teichmueller theory, moduli spaces, and multi-zeta values&#148;</A></H2> 
+<ul>
+	<li><a href="/aws/2005/05SchnepsCD.pdf">Course description</a></li>
+	<li><a href="/aws/2005/05SchnepsNotes.pdf">Course notes</a></li>
+	<li>Streaming video:
+<ul>
+	<li>Lecture 1: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/schneps/schneps_ses2-031205.rm">video</a>, <a href="/video/aws2005/schneps/schneps_3_12_1.pdf">pdf slides</a>.</li>
+	<li>Lecture 2: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/schneps/schneps_ses1-031205.rm">video</a>, <a href="/video/aws2005/schneps/schneps_3_12_05_2.pdf">pdf slides</a>.  </li>
+	<li>Lecture 3: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/schneps/schneps-031305.rm">video</a>, <a href="/video/aws2005/schneps/schneps_3_15_1.pdf">pdf slides</a>.</li>
+	<li>Lecture 4: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/schneps/schneps-031505.rm">audio</a>, <a href="/video/aws2005/schneps/schneps_3_15_2.pdf">pdf slides</a>.</li>
+</ul>
+</li>
+			</UL>
+		
+</div>
+</body>
+</html>

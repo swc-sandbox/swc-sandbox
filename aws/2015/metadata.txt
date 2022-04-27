@@ -1,0 +1,3 @@
+year: 2015
+title: Arithmetic and Higher-Dimensional Varieties
+htmltitle: Arithmetic and Higher-Dimensional Varieties

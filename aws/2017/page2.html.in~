@@ -1,0 +1,85 @@
+<div class="poster">
+  <a href="/aws/2017/2017Poster-small.jpg">
+    <img src="/aws/2017/2017Poster-smaller.jpg">
+  </a>
+</div>
+<h2>Arizona Winter School 2017: Perfectoid Spaces</h2>
+
+<p>
+    AWS 2017 will be held March 11-15, 2017 at the
+    University of Arizona in Tucson, AZ.
+</p>
+
+<!--
+<ul>
+  <li>Registration will be open soon!  Please check back often.  The deadline to 
+apply for funding is <b>November 11, 2016</b>.
+</li>-->
+
+
+<li>
+   <!--     <b><a href=http://swc-alpha.math.arizona.edu/register/>Click
+        here to register.</a></b> Registration is open to all, and is <b>required
+if you are planning to attend.</b>--> 
+The deadline
+        to apply for funding was November 11, 2016.
+The deadline to register was December 9, 2016.
+       
+
+    </li>
+
+   <li>
+        <a href=http://swc.math.arizona.edu/aws/2017/schedule.html>Schedule
+	and other important information</a>
+    </li>
+    <li>
+        <a href=http://swc.math.arizona.edu/aws/2017/directions.html>Local directions</a>
+    </li>
+    
+<li>
+      Organizers: Bryden Cais and Kiran Kedlaya (main program),
+      with Alina Bucur, Mirela Ciperiani, Romyar Sharifi, and David Zureick-Brown
+    </li>
+<li>
+  Funded by the <a href="https://www.nsf.gov/">National Science Foundation</a> and organized in partnership with the <a href="http://www.claymath.org/">Clay Mathematics Institute</a>.
+</li>
+</ul>
+<h3>Courses:</h3>
+<ul>
+    <li>
+        <include src="/aws/2017/x_Bhatt.html.in">
+    </li>
+    <li>
+        <include src="/aws/2017/x_Caraiani.html.in">
+    </li>
+    <li>
+        <include src="/aws/2017/x_Kedlaya.html.in">
+    </li>
+    <li>
+        <include src="/aws/2017/x_Weinstein.html.in">
+    </li>
+
+
+<h4>with opening and closing lectures by</h4>
+    
+    <li>
+      <include src="/aws/2017/x_Scholze.html.in">
+    </li>
+</ul>
+
+<h3>Problem sessions:</h3>
+    <ul>
+        <li>
+            <include src="/aws/2017/x_Mieda.html.in">
+        </li>
+        <li>
+            <include src="/aws/2017/x_Diao.html.in">
+        </li>
+    </ul> 
+
+<h3>Project assistants:</h3>
+    <ul>
+         <li>
+            <include src="/aws/2017/y_Assistants.html.in">
+         </li>
+    </ul>

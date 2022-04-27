@@ -1,0 +1,69 @@
+<div class="poster">
+  <a href="/aws/2016/2016Poster-small.jpg">
+    <img src="/aws/2016/2016Poster-smaller.jpg">
+  </a>
+</div>
+<h2>Arizona Winter School 2016: Analytic Methods in Arithmetic Geometry</h2>
+
+<p>
+    AWS 2016 will be held March 12-16, 2016 at the
+    University of Arizona in Tucson, AZ.
+</p>
+
+<ul>
+<!--
+  <li>Registration will be open soon!  Please check back often.  The deadline to 
+apply for funding is January 8.
+</li>-->
+
+
+<!--<li>
+        <b><a href=http://swc-alpha.math.arizona.edu/register/>Click
+        here to register.</a></b> Registration is open to all.<br>The deadline
+        to apply for funding was January 8.
+    </li>
+
+   <li>
+        <a href=http://swc.math.arizona.edu/aws/2016/schedule.html>Schedule
+	and other important information</a>
+    </li>-->
+    <li>
+        <a href=http://swc.math.arizona.edu/aws/2016/directions.html>Local directions</a>
+    </li>
+    <li>
+      Organizers: Alina Bucur and David Zureick-Brown (main program),
+      with Bryden Cais, Mirela Ciperiani, and Romyar Sharifi.
+    </li>
+</ul>
+<h3>Courses:</h3>
+<ul>
+    <li>
+        <include src="/aws/2016/x_Cojocaru.html.in">
+    </li>
+    <li>
+        <include src="/aws/2016/x_Helfgott.html.in">
+    </li>
+    <li>
+        <include src="/aws/2016/x_Michel.html.in">
+    </li>
+    <li>
+        <include src="/aws/2016/x_Sutherland.html.in">
+    </li>
+</ul>
+
+<h3>Problem sessions:</h3>
+    <ul>
+        <li>
+            <include src="/aws/2016/x_Akhtari.html.in">
+        </li>
+        <li>
+            <include src="/aws/2016/x_Sofos.html.in">
+        </li>
+    </ul> 
+
+<h3>Project assistants:</h3>
+    <ul>
+         <li>
+            <include src="/aws/2016/y_Assistants.html.in">
+         </li>
+    </ul>

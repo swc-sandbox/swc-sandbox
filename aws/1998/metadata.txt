@@ -1,0 +1,3 @@
+year: 1998
+title: Workshop on Diophantine Geometry Related to the ABC Conjecture
+htmltitle: Workshop on Diophantine Geometry Related to the ABC Conjecture

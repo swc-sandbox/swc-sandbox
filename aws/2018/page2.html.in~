@@ -1,0 +1,104 @@
+<div class="poster">
+  <a href="/aws/2018/2018Poster-small.jpg">
+    <img src="/aws/2018/2018Poster-smaller.jpg">
+  </a>
+</div>
+<h2>Arizona Winter School 2018: Iwasawa Theory</h2>
+
+<p>
+    AWS 2018 will be held March 3-7, 2018 at the
+    University of Arizona in Tucson, AZ.
+<br><br>
+Please note that AWS 2018 is being held <b>one week earlier</b> relative to previous Winter Schools due to a recent change
+in the University of Arizona academic calendar.  This change will affect future Winter Schools as well,
+so the dates for AWS 2019 will be March 2-6, 2019 (two weeks earlier relative to tradition).
+Please refer to University of Arizona <b><a href="http://www.arizona.edu/calendars-events">academic calendars</a></b> for future years. 
+(The AWS begins on the first day of the University of Arizona's Spring Recess in any given year.)
+
+</p>
+
+
+<ul>
+<!--
+  <li>Registration will be open soon!  Please check back often.  The deadline to 
+apply for funding is <b>November 10, 2017</b>.  The deadline to register
+is <b>December 10, 2017</b>
+</li>
+-->
+
+
+<li>
+<!--       <b><a href=http://swc-alpha.math.arizona.edu/register/>Click
+        here to register.</a></b> Registration is open to all, and is <b>required
+if you are planning to attend.</b>-->
+<!--Registration is now closed. -->
+The deadline
+        to apply for funding was <b>November 10, 2017</b>. 
+The deadline to register was <b>December 10, 2017</b>.
+      
+    </li>
+
+   <li>
+        <a href=http://swc.math.arizona.edu/aws/2018/schedule.html>Schedule
+	and other important information</a>
+    </li>
+    <li>
+        <a href=http://swc.math.arizona.edu/aws/2018/directions.html>Local directions</a>
+    </li>
+    
+<li>
+      Organizers: Mirela Ciperiani and Romyar Sharifi (main program),
+      with Alina Bucur, Bryden Cais, and David Zureick-Brown
+    </li>
+<li>
+  Funded by the <a href="https://www.nsf.gov/">National Science Foundation</a> and organized in partnership with the <a href="http://www.claymath.org/">Clay Mathematics Institute</a>.
+</li>
+</ul>
+<h3>Courses:</h3>
+<ul>
+    <li>
+        <include src="/aws/2018/x_Coates.html.in">
+    </li>
+    <li>
+        <include src="/aws/2018/x_LoefflerZerbes.html.in">
+    </li>
+    <li>
+        <include src="/aws/2018/x_Sharifi.html.in">
+    </li>
+    <li>
+        <include src="/aws/2018/x_Skinner.html.in">
+    </li>
+
+<h4>with opening and closing lectures by</h4>
+
+    <li>
+      <include src="/aws/2018/x_Greenberg.html.in">
+    </li>
+
+</ul>
+
+<h3>Problem sessions:</h3>
+    <ul>
+        <li>
+            <include src="/aws/2018/x_Buyukboduk.html.in">
+        </li>
+        <li>
+            <include src="/aws/2018/x_Harron.html.in">
+        </li>
+    </ul> 
+
+
+<h3>Project assistants:</h3>
+    <ul>
+         <li>
+            <include src="/aws/2018/y_Assistants.html.in">
+         </li>
+    </ul>
+
+<h3>Study Group Leaders:</h3>
+    <ul>
+         <li>
+            <include src="/aws/2018/y_SGL.html.in">
+         </li>
+    </ul>
+

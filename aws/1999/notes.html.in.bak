@@ -1,0 +1,100 @@
+<html>
+  <include src="/head.html.in" {'PAGE':'AWS 1999: Courses and Notes'}>
+  <body>
+    <include src="/topbar.html.in">
+    <include src="/navcol.html.in"  {'nav_prev':'navsel'}>
+    <div class="page">
+      <H1>Arizona Winter School 1999 
+	<BR>
+	Course Descriptions and Notes</H1>
+      <H2><A NAME="Cremona">John Cremona: Symbolic computation and number theory</A></H2> 
+      <UL COMPACT>
+	<LI>
+	  Cremona's project was about &#147;Rational points on conics.&#148; There is a <A HREF="99CremonaPD.html" TARGET="_blank"> description</A> of the project, and some suggested <A HREF="99CremonaR.html" TARGET="_blank">readings</A> for the project. 
+	</LI>
+	<LI>
+	  <A HREF="http://www.maths.nott.ac.uk/personal/jec/" TARGET="_blank">Cremona's web site</A> has a number of preprints and and slides related to his talk at the Winter School, and to his student project. It also contains a lots of information about symbolic computation packages, other software, and mathematics.
+	</LI>
+      </UL>
+      <H2><A NAME="Colliot">Jean-Louis Colliot-Th&eacute;l&egrave;ne, assisted by David Harari and Alexei Skorobogatov: The Hasse principle</A></H2> 
+      <UL COMPACT>
+	<LI>
+	  A detailed description of Colliot-Th&eacute;l&egrave;ne's project on &#147;The local-global principle&#148; is available in <A HREF="99ColliotPD.dvi">dvi</A>, <A HREF="99ColliotPD.ps">ps</A>, and <A HREF="99ColliotPD.pdf">pdf</A> formats. 
+	</LI>
+	<LI>A list of references for Colliot-Th&eacute;l&egrave;ne's talks: <A HREF="99ColliotRefs.dvi">dvi</A>, <A HREF="99ColliotRefs.ps">ps</A>, <A HREF="99ColliotRefs.pdf">pdf</A> </LI>
+	<LI> Slides for Barbu's talk on the Brauer group: <A HREF="99Barbu.dvi">dvi,</A> <A HREF="99Barbu.ps">ps,</A> <A HREF="99Barbu.dvi">pdf</A>
+	</LI>
+      </UL>
+      <H2><A NAME="Mazur">Barry Mazur: Visualizing elements of the Shafarevich-Tate group</A></H2> 
+      <UL COMPACT>
+	<LI>
+	  There are 4 documents available for Mazur's project on &#147;Visualizing elements in the Shafarevich-Tate group&#148;: 
+	  <OL COMPACT>
+	    <LI>
+	      A bibliography (<A HREF="99MazurBib.dvi">dvi</A>, <A HREF="99MazurBib.ps">ps</A>, <A HREF="99MazurBib.pdf">pdf</A>)
+	    </LI>
+	    <LI>
+	      Mazur's comments on the topic of &#147;visualizing elements in the Shafarevich-Tate group,&#148; (<A HREF="99MazurComments.dvi">dvi</A>, <A HREF="99MazurComments.ps">ps</A>, <A HREF="99MazurComments.pdf">pdf</A>)
+	    </LI>
+	    <LI>
+	      The paper &#147;Visualizing elements in the Shafarevich-Tate group,&#148; by Cremona and Mazur (to appear in the Journal of Experimental Math) (<A HREF="99MazurCremonaV.dvi">dvi</A>, <A HREF="99MazurCremonaV.ps">ps</A>, <A HREF="99MazurCremonaV.pdf">pdf</A>)
+	    </LI>
+	    <LI>
+	      The paper &#147;Visualizing elements of order three in the Shafarevich-Tate group,&#148; by Mazur (to appear in the Journal of Asian Mathematics). (<A HREF="99MazurVisual.dvi">dvi</A>, <A HREF="99MazurVisual.ps">ps</A>, <A HREF="99MazurVisual.pdf">pdf</A>).
+	    </LI>
+	  </OL>
+	</LI>
+	<LI>
+	  The Mazur student project led to a preprint by William Stein entitled &#147;Some Abelian Varieties with Visible Shafarevich-Tate Groups.&#148; (<A HREF="99Stein.dvi">dvi</A>, <A HREF="99Stein.ps">ps</A>, <A HREF="99Stein.pdf">pdf</A>). <A HREF="http://modular.fas.harvard.edu/" TARGET="_blank"> Stein's web site</A> also has many interesting tables, preprints, and program related to modular forms and modular Jacobians.
+	</LI>
+      </UL>
+      <H2><A NAME="McCallum">Bill McCallum, assisted by Pavlos Tzermias and Joseph Wetherell: The method of Coleman and Chabauty</A></H2> 
+      <UL COMPACT>
+	<LI>
+	  Pavlos Tzermias wrote up his Winter School Lectures as &#147;The Manin-Mumford Conjecture: A Brief Survey&#148; (<A HREF="99Tzermias.dvi">dvi</A>, <A HREF="99Tzermias.ps">ps</A>, <A HREF="99Tzermias.pdf">pdf</A>)
+	</LI>
+	<LI>
+	  Wetherell's project was on &#147;An application of the method of Coleman and Chabauty.&#148; Here is a <A HREF="99WetherellPD.html" TARGET="_blank">description</A> of the project; it refers to Wetherell's thesis, which is available in <A HREF="99WetherellThesis.dvi">dvi</A>, <A HREF="99WetherellThesis.ps">ps</A>, and <A HREF="99WetherellThesis.pdf">pdf</A> formats. 
+	</LI>
+	<LI>
+	  Cathy O'Neil's thesis (<A HREF="99ONeil.dvi">dvi</A>, <A HREF="99ONeil.ps">ps</A>, <A HREF="99ONeil.pdf">pdf</A>) on Jacobians of Curves of Genus One was the basis of Tomas Klenke's talk.
+	</LI>
+	<LI>
+	  Several U of A graduates students worked with Bill McCallum on constructing the Jacobian of a genus 1 curve. <A HREF="http://www.math.arizona.edu/%7Eaprl/math/jacobianWelcome.shtml" TARGET="_blank"> Their web site</A> has the details. Slides for David Marshall's talk on this topic are available in <A HREF="99Marshall.dvi">dvi</A>, <A HREF="99Marshall.ps">ps</A>, and <A HREF="99Marshall.pdf">pdf</A> formats.
+	</LI>
+      </UL>
+      <H2><A NAME="Poonen">Bjorn Poonen: Mordell-Weil groups, Selmer groups, and Shafarevich-Tate groups</A></H2> 
+      <UL COMPACT>
+	<LI>
+	  Poonen's lectures at the Winter School were on background material, but two (or more) of the papers on <A HREF="http://www.math.berkeley.edu/%7Epoonen/" TARGET="_blank"> his web site</A> are relelvant to the topic: &#147;Algebraic families of nonzero elements of Shafarevich-Tate groups&#148; (with Colliot-Th&eacute;l&egrave;ne) (<A HREF="99PoonenSha.pdf">pdf</A>), and &#147;Computational aspects of curves of genus at least 2&#148; (<A HREF="99Pooneng2.ps">ps</A>, <A HREF="99Pooneng2.pdf">pdf</A>)
+	</LI>
+	<LI>
+	  Poonen's project was on &#147;The Mordell-Weil group of a genus 2 Jacobian.&#148; Here is a <A HREF="99PoonenPD.html" TARGET="_blank">description</A> of the project. 
+	</LI>
+      </UL>
+      <H2><A NAME="Rubin">Karl Rubin: Shafarevich-Tate groups of CM and modular elliptic curves</A></H2> 
+      <UL COMPACT>
+	<LI>
+	  Here are three papers related to Rubin's lectures at the Winter School: 
+	  <UL>
+	    <LI>
+	      &#147;Elliptic curves with complex multiplication&#148; (<A HREF="99RubinCM.dvi">dvi</A>, <A HREF="99RubinCM.ps">ps</A>, <A HREF="99RubinCM.pdf">pdf</A>)
+	    </LI>
+	    <LI>
+	      &#147;Euler systems and modular elliptic curves&#148; (<A HREF="99RubinDur.dvi">dvi</A>, <A HREF="99RubinDur.ps">ps</A>, <A HREF="99RubinDur.pdf">pdf</A>)
+	    </LI>
+	    <LI>
+	      &#147;General Euler systems&#148; (large: 840K dvi file, 9MB pdf file!) (<A HREF="99RubinES.dvi">dvi</A>, <A HREF="99RubinES.ps">ps</A>, <A HREF="99RubinES.pdf">pdf</A>)
+	    </LI>
+	  </UL>
+	</LI>
+	<LI>
+	  <A HREF="http://math.stanford.edu/%7Erubin" TARGET="_blank"> Karl's web site</A> has other preprints that may be of interest.
+	</LI>
+	<LI>
+	  Rubin's project was on &#147;Tate-Shafarevich groups of twists on an elliptic curve.&#148; Here is a <A HREF="99RubinPD.html" TARGET="_blank">description</A> of the project. 
+	</LI>
+      </UL>
+    </div>
+  </body>
+</html>

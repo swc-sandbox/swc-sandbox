@@ -1,0 +1,152 @@
+\documentclass{article}
+\begin{document}
+\begin{center}
+{\Large\bfseries Project for ``$p$-adic modular forms'' lectures.}
+\end{center}
+\begin{flushright}
+KMB, 6 Feb 2001
+\end{flushright}
+\bigskip
+In this project I will sketch a method which I believe will give an
+explicit formula for all the entries of a matrix representing
+$U$ on overconvergent 2-adic modular forms of level~1 and
+any even weight~$k$. This explicit formula will make it much easier
+to say things about the overconvergent slopes in these cases---for
+example it should lead very easily to explicit lower bounds for
+Newton polygons. Even so, there are still plenty of conjectures, which will
+give us lots of things to think about, even assuming we can get the
+explicit formulae to come out.
+
+\medskip
+
+The genesis of the project is Lawren Smithline's PhD thesis. Before I read
+this thesis, I had no idea that it was possible to compute explicit
+matrices representing $U_p$ on the space of weight~$k$ overconvergent
+modular forms. Now I've seen the idea, I realise that in fact it is not
+too difficult. Smithline was concerned with the case~$p=3$ and tame level~1,
+and weight~0. Using an extension and minor simplification of his ideas,
+this project will attempt to deal with the case~$p=2$, tame level~1, and any
+even integer weight.
+
+\section*{Introduction and weight~0}
+
+There is a unique Eisenstein series $E_2(q)=1+24q+\ldots$ of weight~2 and
+level~2. It is explicitly given as $1+24\sum_{n\geq1}a_nq^n$,
+where $a_n$ is the sum of the odd divisors of~$n$.
+Unfortunately (at least for those of you who do not like computers)
+it may occasionally be necessary to have to compute the $q$-expansions of
+some other forms too. But there are programs to do this sort of thing,
+and assuming I've brought my laptop to the conference, I will have
+access to them, so I could do any computations required.
+
+Using standard facts about $p$-adic modular forms, check that
+$E_2(q)$ and $E_2(q^2)$ are both overconvergent $2$-adic modular
+forms of level~1 and weight~2. Check furthermore that $E_2(q^2)$
+has no zeros on the ordinary locus. Hence the ratio $t=E_2(q)/E_2(q^2)$
+is a $p$-adic modular form of weight~0. It will be an~$r$-overconvergent
+form for some $r<1$---can you say anything about~$r$? This is not
+necessary, but it would be nice. I think it might be possible
+to compute some explicit bounds but I'm not sure. It might involve
+some tricks with the $j$-invariant.
+
+Now $t-1$ can be thought of as an overconvergent function on some
+strict neighbourhood $X$ of the ordinary locus at level 1. Why will $t$
+have a unique zero on~$X$ (assuming~$X$ is a small enough strict
+neighbourhood)?
+The zero is clearly at the cusp. The region $|t-1|\leq B$ will define
+a disk~$D$ in~$X$, for appropriate~$B$. Let $d$ be an appropriate
+multiple of~$t-1$, so that
+the disk~$|d|\leq1$ does indeed define a strict neighbourhood of
+the ordinary locus, which is preserved by the~$U$ operator. You probably
+have a range of choices for the normalisation actually, each of which
+will give slightly different discs, but the theory should be independent
+of these choices. Can you explicitly say, given your choices, that
+functions on~$D$ are $r$-overconvergent functions for some explicit~$r<1$?
+
+Now for the fun part. An explicit basis for modular forms on~$D$
+is just $\{1,d,d^2,d^3,\ldots\}$. What is $U(d^n)$ in terms of
+this basis? A computer might be helpful, but in fact the actual amount
+of computer calculations you have to do is minimal if you see all the
+tricks. Now one can see the matrix for~$U$ in weight~0.
+
+Warm-up question: can you get sufficiently good bounds on the elements
+of this matrix to deduce a quadratic lower bound for the Newton polygon
+of the characteristic power series of $U$ in weight~0? Smithline indicates
+how to do this in his thesis, although he uses a different choice of~$d$.
+
+\section*{Interlude: a conjecture about weight~0 slopes.}
+
+I conjecture that the valuations of the eigenvalues of~$U$ on 2-adic
+cuspidal overconvergent forms of weight~0 are 3,7,13,15,17,\ldots. I will
+explain how to generate this sequence. First of all start with
+the sequence $2,?,?,2,2,?,?,2,2,?,?,2,\ldots$, where the ?s are
+unknown entries that we will work out in due course. This sequence
+could be described as ``2, then alternate double-?s and double-2s''.
+
+Now fill in the question marks, using the sequence ``4, and then
+alternate double-?s and double 4s'', and simply skipping over
+the terms we know already. We get the sequence
+$2,4,?,2,2,?,4,2,2,4,?,2,2,?,4,2,\ldots$.
+
+Now do the same thing with 6: fill in the remaining question marks
+with the sequence ``6, and then alternate double-?s and double-6s''.
+
+Eventually the sequence goes $2,4,6,2,2,8,4,2,2,4,10,2,\ldots$.
+Now form the sequence $1,3,7,13,15,17,25,\ldots$ whose successive
+differences are the terms in our $2,4,6,2\ldots$ sequence. Throw away
+the first 1 and you get what I firmly believe should be the cuspidal slopes
+at weight~0. Can you prove that this is the case?
+
+\section*{Other weights.}
+
+Now we have done all this work in weight~0, it is surprisingly easy
+to work out a matrix for~$U$ at weight~$k=2m$ for all integers~$m$.
+Firstly you have to check that you can use $E_2(q)^md^n$ for $n=0,1,2,\ldots$
+as a basis. Then you have to work out $U(E_2(q)^md^n)$ in terms of this basis.
+Hence you can work out a matrix representing $U$ in weight~$2m$.
+Again the warm-up question: can you work out an explicit quadratic
+lower bound for the Newton polygon of the characteristic power series?
+
+I have conjectures for the valuations of the eigenvalues of~$U$ for
+arbitrary even weights. They are elementary, but messy, to explain and I won't
+do it here (bug me for a preprint). But here are some consequences of these
+conjectures,
+all of which are, I believe, open. I will ignore the ``Eisenstein
+slope'', the 0 which occurs at every weight, here, so ``slope'' below
+refers to the slopes of the overconvergent cusp forms, a ``formula''
+for which you have computed above. So here are the conjectures.
+
+\section*{Lots of conjectures.}
+
+I have no idea how to do any of these. Do the calculations you have
+so far help?
+
+\begin{itemize}
+\item All slopes at all even weights are integers.
+
+\item At weight $-2$ all slopes occur with multiplicity precisely~2. Similarly
+at weight~4---except for the first slope, which is~3, all other
+slopes occur with multiplicity~2. These weights are related by the theta
+operator, so the two observations are basically equivalent.
+
+\item At weight~0 and~4 all slopes are odd. At weights 2 and -2 all slopes
+are even (again some of these things imply others).
+
+\item The $n$th slope is between~$3n$ and~$6n$, and furthermore these
+bounds are obtained infinitely often. In particular there is a
+quadratic upper bound for the Newton polygon.
+
+\item At weight~$k>0$ there are no forms of slope~$s$ for~$s$
+in the range $(k/3,2k/3)$, other than forms of slope $(k-2)/2$
+(these bounds might be slightly wrong, but I think they're OK.
+The idea that there might be a hole here is basically due to Gouvea.)
+
+\item The Gouvea-Mazur conjectures: if $k$ and $k'$ are congruent mod~$2^n$
+then the number of times a slope $s<n$ shows up at weights~$k$ and~$k'$
+should be the same. This is basically known if one replaces $2^n$
+by something like $2^{n^2}$, but is still open in the form above.
+
+\end{itemize}
+\end{document}
+
+

@@ -1,0 +1,262 @@
+<html>
+  <include src="/head.html.in" {'PAGE':'Schedule for AWS 2015'}>
+  <body vlink="blue";>
+    <include src="/topbar.html.in">
+    <include src="/navcol.html.in"  {'nav_last':'navsel'}>
+    <div class="page">
+      <h1 class = "header">Schedule for AWS 2015</h1>
+      
+      <h3>Lecture Schedule</h3>
+
+        <div class="schedule"><table>
+	<thead>
+	  <tr>
+	    <th>
+	      Saturday
+	      3/14
+	    </th>
+
+	    <th>
+	      Sunday
+	      3/15
+	    </th>
+
+	    <th>
+	      Monday
+	      3/16
+	    </th>
+
+	    <th>
+	      Tuesday
+	      3/17
+	    </th>
+
+	    <th>
+	      Wednesday
+	      3/18
+	    </th>
+	  </tr>
+    </thead>
+	<tbody>
+      <tr align="center">
+	    <td>
+	      coffee
+	    </td>
+	    <td>
+	      coffee
+	    </td>
+	    <td>
+	      coffee
+	    </td>
+	    <td>
+	      coffee
+	    </td>
+	    <td>
+	      coffee
+	    </td>
+	  </tr>
+
+	  <tr>
+	    <td>
+	      9:00 - 10:00<br>Intro. + Viray 1
+	    </td>
+    	    <td>
+	      9:00 - 9:50<br>Colliot-Th&eacute;l&egrave;ne 2
+	    </td>
+	    <td>
+	      9:00 - 9:50<br>V&aacute;rilly-Alvarado 3
+	    </td>
+	    <td>
+	      9:00 - 9:50<br>Colliot-Th&eacute;l&egrave;ne 4
+	    </td>
+	    <td>
+	      9:00 - 10:00<br>Colliot-Th&eacute;l&egrave;ne students
+            </td>
+	  </tr>
+      
+        <tr>
+	    <td>
+	      10:10 - 11:00<br>Colliot-Th&eacute;l&egrave;ne 1
+	    </td>
+	    <td>
+	      10:05 - 10:55<br>V&aacute;rilly-Alvarado 2
+	    </td>
+	    <td>
+	      10:05 - 10:55<br>Viray 4
+	    </td>
+	    <td>
+	      10:05 - 10:55<br>V&aacute;rilly-Alvarado 4
+	    </td>
+	    <td>
+	      10:10 - 11:10<br>V&aacute;rilly-Alvarado students
+	    </td>
+	  </tr>
+
+      <tr align="center">
+	    <td>
+	      coffee
+	    </td>
+	    <td>
+	      coffee
+	    </td>
+	    <td>
+	      coffee
+	    </td>
+	    <td>
+	      coffee
+	    </td>
+	    <td>
+	      coffee
+	    </td>
+	  </tr>
+
+
+	  <tr align="center">
+	    <td>
+	      11:30 - 12:20<BR>V&aacute;rilly-Alvarado 1
+	    </td>
+	    <td>
+	      11:30 - 12:20<BR>Vakil 2
+	    </td>
+	    <td>
+	      11:30 - 12:20<BR>Vakil 3
+	    </td>
+	    <td>
+	      11:30 - 12:20<BR>Vakil 4
+	    </td>
+	    <td>
+	      11:30 - 12:30<BR>Vakil students
+	    </td>
+	  </tr>
+
+	  <tr align="center">
+	    <td>
+	      lunch
+	    </td>
+	    <td>
+	      lunch
+	    </td>
+	    <td rowspan="4">
+	      Free<br>Afternoon
+	    </td>
+	    <td>
+	      lunch
+	    </td>
+	    <td>
+	      lunch
+	    </td>
+	  </tr>
+
+	  <tr align="center">
+	    <td>
+	      2:20 - 3:10<br>Vakil 1
+	    </td>
+	    <td>
+ 	      2:20 - 3:10<br>Viray 3
+	    </td>
+	    <td>
+ 	      2:20 - 3:10<br>Viray 5
+	    </td>
+	    <td>
+	      2:30 - 3:30<br>Viray students
+	    </td>
+	  </tr>
+	  
+	  <tr>
+	    <td>
+	      coffee
+	    </td>
+	    <td>
+          coffee
+	    </td>
+	    <td>
+          coffee
+	    </td>
+	    <td rowspan="2">
+	    </td>
+	  </tr>
+      
+	  <tr>
+	    <td>
+	      3:40 - 4:30<br>Viray 2
+	    </td>
+        <td>
+          3:40 - 4:30<br>Colliot-Th&eacute;l&egrave;ne 3
+	    </td>
+        <td>
+          3:40 - 4:30<br>Colliot-Th&eacute;l&egrave;ne 5
+        </td>
+	  </tr>
+	  
+	</tbody>
+      </table></div>
+
+      <h3>Lectures</h3>
+      <p>
+	The lectures will be held in the Berger Auditorium (Room 207)
+	of the McClelland building, on the UA campus.  Here
+	are <a href="/aws/2015/directions.html">directions</a>.
+      </p>
+      
+      <h3>Hotel</h3>
+      <p>
+	The conference hotel is the
+    <a href="http://www.marriott.com/hotels/travel/tusup-tucson-marriott-university-park/">Tucson Marriott University Park</a>.
+	Wi-Fi access is included with your room at the Marriott (if your room was booked by the SWC).
+    The hotel is right next to campus and about half a mile from the lecture hall.  Please see
+	the <a href="/aws/2015/directions.html">directions page</a> for details.
+      </p>
+
+    <h3>Working sessions</h3>
+      <p>
+	There will be evening working sessions at 7:30 PM on Saturday,
+	Sunday, Monday, and Tuesday evenings. The working sessions
+	will provide students with an opportunity to discuss their
+	projects with the speakers, as well as a chance for everyone
+	to get more details or clarifications from the
+	speakers. Active participation by all participants is strongly
+	encouraged. The evening working sessions will take place 
+    in the ballroom of the Marriott. (Though the sessions
+	begin at 7:30, the rooms are reserved from 6:30 PM if you wish
+	to get an early start.)
+      </p>
+     
+    <h3>Registration</h3>
+      <p>
+	Local registration for the conference will take place in the
+	lobby of the Marriott Hotel on Friday evening to 5
+	PM to 8 PM, and again on campus from 8 AM to 10 AM Saturday
+	morning in the area outside of McClelland 207. You can get
+	expense reimbursement forms and pay the registration and
+	banquet fees at these times.
+      </p>
+      
+      <h3>Coffee and snacks</h3>
+      <p>
+	Coffee and snacks will be available 30 minutes before the lectures start
+	each morning and during the longer between-lecture breaks.
+      </p>
+      
+      <h3>Banquet</h3>
+      <p>
+	The conference banquet will be on Wednesday, March 18 in the
+	ballroom of the Marriott.  We plan for the gathering to begin at 6:00 with a
+	cash bar in the foyer, followed by dinner at 6:30.  The cost is $20 for participants, thanks to a
+	subsidy from the Department of Mathematics, and $40
+	for guests.  Payment will be taken at registration. If you
+	would like to attend, please
+    <a href="https://docs.google.com/forms/d/1UiR9c8Vb_oXmGtTos296QZCd0uotEtPLz4RdGX_amww/viewform">sign up</a>
+	no later than Friday, March 13.  More details can be found
+	on the signup page.
+      </p>
+      
+      <h3>Free Afternoon</h3>
+      <p>
+	The afternoon of Monday, March 16 is a free afternoon.  An excursion to Sabina Canyon
+    is planned.  If you would like to participate, please 
+    <a href="https://docs.google.com/forms/d/12_jVWY1qc3kc8r43uv-TCZM2NZwlpIPr5gZBqomdanM/viewform">sign up</a>
+	no later than Friday, March 13.
+    </p>
+    </div>
+  </body>
+</html>

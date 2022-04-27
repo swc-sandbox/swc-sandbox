@@ -1,0 +1,1094 @@
+%% Lecture notes on Toric Calabi-Yau , Morningside
+%% Lectured by Daqing Wan
+
+\documentclass[a4paper,oneside,11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\theoremstyle{plain} \theoremstyle{definition}
+\newtheorem{Thm}{Theorem}[section]
+\newtheorem{Lem}[Thm]{Lemma}
+\newtheorem{Prop}[Thm]{Proposition}
+\newtheorem{Cor}[Thm]{Corollary}
+\newtheorem{Defn}[Thm]{Definition}
+
+\theoremstyle{remark}
+\newtheorem{Rk}{Remark}
+\renewcommand{\theRk}{}
+
+\newenvironment{pf}{ \begin{proof} }{ \end{proof} }
+
+\def\bb #1{ {\mathbb #1} }
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\f}{\mathbb{F}}
+\newcommand{\h}{{\rm H}}
+\newcommand{\vol}{\mathop{\mathrm{Vol}}}
+
+\newcommand{\Mod}{\text{ mod }}
+
+%% Defined for these lecture notes.
+\def\sd { S_{\Delta, p} }
+\def\sdt { \tilde S_{\Delta, p} }
+\def\hap1 {\sum_{u \in L(\Delta)}}
+
+\begin{document}
+
+\title{ \Large \bf Zeta Functions of Toric Calabi-Yau Hypersurfaces}
+\author{\large \bf Daqing Wan\footnote{MCM workshop lectures (Beijing, Dec. 26-27, 2003), notes taken by Guohua Peng. Expanded by Doug. Haessig for the Arizona Winter School (March 14-17, 2004).}}
+%\date{Dec 26-27, 2003}
+\maketitle
+
+\tableofcontents
+
+\section{Toric Geometry}
+\subsection{$n$-Torus}
+Denote by $\mathbb{G}_m^n$ the algebraic $n$-torus over $\f_q$.
+Notice that its $\bb F_{q^k}$-rational points are $\bb
+G(\f_{q^k})=(\f_{q^k}^*)^n$ and so $\# \bb G_m^n(\f_{q^k})
+=(q^k-1)^n$. It follows that its zeta function is rational:
+\begin{align*}
+Z(\mathbb{G}_m^n/\f_q, T) :&= \exp( \sum_{k=1}^\infty
+\frac{\# \mathbb{G}_m^n(\f_{q^k})}{k} T^k ) \\
+=&\prod_{i=0}^n (1-q^iT)^{(-1)^{n-i-1}{n\choose i}}.
+\end{align*}
+
+\subsection{Basic problem}
+Given a Laurant polynomial $f(x_1,\cdots,x_n) \in
+\f_q[x_1^\pm,\cdots,x_n^\pm]$, we may define an affine toric
+hypersurface
+\[
+U_f := \{ x \in \bb G_m^n | f(x) =0 \} \hookrightarrow
+\mathbb{G}_m^n.
+\]
+Wanting to understand the sequence of integers obtained by
+counting the $\bb F_{q^k}$-rational points of $U_f$ leads to its
+zeta function:
+\[
+Z(U_f / \f_q, T) = \exp( \sum_{k=1}^\infty
+\#U_f(\f_{q^k})\frac{T^k}{k})\in 1+T\Z[[T]].
+\]
+As with the $n$-torus, we wonder whether this too will be a
+rational function. Indeed, Dwork has shown this to be true.
+
+\begin{Thm}[Dwork]
+$Z(U_f/\f_q, T) \in \Q (T)$.
+\end{Thm}
+
+A consequence of this theorem is the existence of a formula for
+the numbers $\#U_f(\f_{q^k})$ in terms of the zeros and poles of
+the zeta function. However, how well do we know these zeros and
+poles? Knowing their precise values seems to be too difficult in
+general, so, we may ask for weaker results concerning their
+absolute values ($p$-adic and over $\bb C$). Also, we
+may wonder how these zeros and poles vary in a family.
+
+\subsection{Projective toric hypersurfaces}\label{Ss: toric}
+Let $K$ be a field. With our Laurant polynomial $f$, write $f(x) =
+\sum_{j=1}^J a_j x^{V_j}$ where $a_j \in K$ and
+$V_j=(v_{1j},\cdots,v_{nj}) \in \Z^n$. Associated to $f$ is its
+Newton polytope:
+\[
+\Delta(f) := \Delta := \text{ the closed convex hull of the
+$\{V_j\}$'s in $\R^n$}.
+\]
+We will assume $\dim \Delta=n$. The Newton polytope will be used
+to define a graded algebra $S_\Delta$ as follows. First, define
+the the polytope $\bar \Delta \subset \bb R^{n+1}$, which is one
+dimension higher than $\Delta$, as the closed convex hull of the
+origin in $\bb R^{n+1}$ and the points $(1,V_j) \in \R^{n+1}$.
+Next, define the cone $C(\overline{\Delta})$ as the cone generated
+by $\overline{\Delta}$. Observe that $C(\bar \Delta) =
+\bigcup_{k=1}^\infty k\overline{\Delta}$. Next, define the monoid
+$L(\overline{\Delta})$ as the lattice points in the cone
+$C(\overline{\Delta})$. It may be shown that $L(\bar \Delta)$ is a
+finitely generated monoid. Finally, define the $K$-algebra
+\[
+S_\Delta := K[L(\overline{\Delta})].
+\]
+This means $S_\Delta$ consists of all finite sums of $a_u x^u$
+where $a_u \in K$ and $u \in L(\bar \Delta)$. Since $L(\bar
+\Delta)$ is a finitely generated monoid, $S_\Delta$ is a finitely
+generated $K$-algebra. Further, we may define a grading on
+$S_\Delta$ by $deg(x^u) := u_0$ where $u = (u_0, \ldots, u_n)$.
+Therefore,
+\[
+S_{\Delta} = \bigoplus_{d=0}^\infty (S_\Delta)_d
+\]
+where $(S_\Delta)_d$ is the $K$-submodule of $S_\Delta$ consisting
+of all elements of $S_\Delta$ of degree $d$.
+
+Since $S_\Delta$ is a finitely generated graded $K$-algebra, we
+may define a $K$-scheme $\bb P_\Delta := \rm{Proj\ } S_\Delta$.
+This is the toric variety associated to $\Delta$. Observe that
+this toric variety only depends on those terms of $f$ that lie on
+the vertices of $\Delta$. So, we may think of $\bb P_\Delta$ as an
+analogue of projective space. That is, since $x_0 f \in
+(S_\Delta)_1$, we may define $\overline{U_f} := \rm{Proj\ }
+S_\Delta/(x_0f)$. Notice that $\bar U_f$ embeds in $\bb P_\Delta$
+by construction. Thus, we call $\bar U_f$ a toric hypersurface in
+$\bb P_\Delta$. It follows that we have the diagram:
+$$ \begin{CD}
+\hskip 28mm \overline{U}_f @> >> \mathbb{P}_{\Delta}\\
+\text{projective closure}@AA  A @A  AA \text{compactification w.r.t. $\Delta$}\\
+\hskip 28mm U_f @> >> \mathbb{G}_m^n.
+\end{CD} $$
+
+This raises the new questions: what is $Z(\overline{U_f}, T)$ and
+how is it related to $Z(U_f, T)$?
+
+\subsection{$\Delta$-regularity}
+In this section, we define the notion of a $\Delta$-regular
+polynomial $f$. 
+
+Let $\tau \subset \Delta$ be a face of the polytope of any
+dimension ranging between zero and $n$. Define the restriction of
+$f$ to $\tau$ as $f^\tau = \sum_{V_j\in \tau} a_j x^{V_j}$. Using
+the operator $E_i := x_i \frac{\partial}{\partial x_i}$, define
+$f_i := E_i f$ for each $i=1, \cdots, n$.
+
+\begin{Defn}
+$f$ is called \emph{$\Delta$-regular} if for each face $\tau \in
+\Delta$ of any dimension, the system
+\[
+f^\tau = f_1^\tau = \cdots = f_n^\tau = 0
+\]
+has no common solutions in $\mathbb{G}_m^n(K^{\text{alg.
+clos.}})$.
+\end{Defn}
+
+We may reformulate the definition of $\Delta$-regularity as follows.
+Define $F := x_0 f - 1 \in S_\Delta$. Notice that
+\[
+F_i := E_i F = x_i \frac{\partial F}{\partial x_i} =
+\begin{cases}
+x_0f, & i=0\\
+x_0f_i & i=1,\cdots,n
+\end{cases}
+\]
+and $F_i \in (S_\Delta)_1$. For each $i$, define $U_{F_i}=
+\text{Proj} S_\Delta /(F_i)$.
+
+\begin{Prop}
+$f$ is $\Delta$-regular if and only if $\bigcap_{i=0}^n
+U_{F_i}=\emptyset.$
+\end{Prop}
+
+\subsection{Homological formulation of $\Delta$-regularity}
+\vskip 3mm Each $F_i\in S_\Delta$ acts on $S_\Delta$ by
+multiplication:
+$$\aligned F_i:\, S_\Delta&\rightarrow S_\Delta\\ g&\mapsto
+F_ig\endaligned$$
+
+$F_iF_j=F_jF_i$.
+
+Let $K.(S_\Delta, F_0,\cdots, F_n)$ be the Koszul complex
+$$0\longrightarrow S_\Delta\, e_0\wedge\cdots\wedge e_n {\stackrel{\partial}
+  {\longrightarrow}}\cdots {\stackrel{\partial}
+{\longrightarrow}}\bigoplus_{i=0}^nS_\Delta\, e_i{\stackrel{\partial}
+{\longrightarrow}}S_\Delta\longrightarrow 0 $$
+$$\partial (a\,e_{i_1}\wedge \cdots \wedge e_{i_j})=\sum_{k=1}^j (-1)^k
+F_{i_k}(a)\,e_{i_1}\wedge \cdots \wedge
+\widehat{e_{i_k}}\wedge\cdots \wedge e_{i_j}$$
+
+\qquad $\h_0(K.)=S_\Delta/(F_0,F_1,\cdots F_n)=R_f$, the Jacobian ring
+of $f$.
+
+\begin{Prop} \quad  TFAE (the following are equivalent):
+\begin{enumerate}\item[1)]  $f$ is $\Delta$-regular.
+\item[2)] $\{F_0,F_1,\cdots, F_n\}$ forms a regular sequence of
+$S_\Delta$. \item[3)] $\h_i(K.)=0,\forall\, i\ge 1$.
+\item[4)]$\dim_{K}\h_0(K.)<\infty $. \item[5)]$\dim_K
+\h_0(K.)=d(\Delta)=n!\vol(\Delta)\in
+\Z_{>0}$.\end{enumerate}\end{Prop}
+
+\subsection{Hodge numbers}\vskip 3mm
+\begin{Defn} Let $\Delta\subseteq\R^n$ be
+$n$-dimensional integral convex in $\R^n$. Let
+$$W_\Delta(k)=\#(\Z^n\cap k\Delta)=\dim_K(S_\Delta)_k.$$
+and $$\sum_{k=0}^\infty W_\Delta(k)T^k,\quad \text{the Poincare
+series of } S_\Delta.$$\end{Defn}
+
+\begin{Defn}
+Define$$h_\Delta(k)=\dim_K(R_f)_k$$ and $$\sum_{k\ge
+0}h_\Delta(k)T^k,\quad \text{the Poincare series of $R_f$},$$
+where $f$ is $\Delta$-regular and
+$$R_f=S_\Delta\big/(F_0,F_1,\cdots,F_n), \dim
+R_f=\text{d}(\Delta)=n!\vol(\Delta).$$\end{Defn}
+
+$$\aligned\Rightarrow\quad &(1-T)^{n+1}\sum_{k\ge 0} W_\Delta(k)T^k=\sum_{k\ge
+0}h_\Delta(k)T^k,\quad \text{ of degree }\le n.\\ &
+h_\Delta(k)=W_\Delta(k)-{ n+1 \choose 1}W_\Delta(k-1)+{n+1\choose
+2}W_\Delta(k-2)+\cdots\endaligned$$
+
+\begin{Thm}[Ehrhart] There exists a polynomial $\Lambda(t)$ of
+degree $n$ such that \begin{enumerate}\item[1)] for $k\in \Z_{\ge
+0}$, $W_\Delta(k)=\Lambda(k)$;  \item[2)] for $k\in \Z_{>0}$,
+$W_\Delta(k)^*:=\#\{ {\rm interior\ lattice\ points\ in\ }
+k\Delta\}=(-1)^n\Lambda(k)$ $$(\Rightarrow
+(1-T)^{n+1}\sum_{k=0}^\infty W_\Delta^*(k)T^k=\sum_{k\ge
+0}h_\Delta^*(k)T^k,\quad \text{a polynomial of degree} \leq n+1);$$
+\item[3)]duality: $h_\Delta^*(k)=h_\Delta(n+1-k),
+k=0,1,\cdots,n+1$.\end{enumerate}
+\end{Thm}
+\begin{Prop} $$f, \Delta\text{-regular over }
+\C\Rightarrow h^k(P\h_c^{n-1}(U_f))=h_\Delta(k+1).$$
+\end{Prop}
+\begin{Defn} Let $HP(\Delta)$ denote the Hodge polygon in $\R^2$ with
+vertices $(0,0)$ and $
+(\sum_{k=0}^mh_\Delta(k),\sum_{k=0}^mkh_\Delta(k)),m=0,1,\cdots,n$.
+\end{Defn}
+
+\subsection{Reflexive $\Delta$ and Calabi-Yau hypersurface}
+
+\begin{Defn}Let $\Delta\subseteq\R^n$, convex, integral, $n$-dimensional.
+Assume $O$ is in the interior of $\Delta$. Define
+$$\Delta^*=\left\{(x_1,\cdots,x_n)\in \R^n \,\Big|\, \sum_{i=1}^n x_iy_i\ge -1,
+\forall\, (y_1,\cdots, y_n)\in \Delta\right\}.$$
+\end{Defn}
+
+$\Delta^*$ is also an $n$-dimensional convex polytope, not necessarily
+integral. Clearly, $(\Delta^*)^*=\Delta$.
+\begin{Defn} $\Delta$ is called  reflexive if $\Delta^*$ is also
+integral.
+\end{Defn}
+
+$\underline{\bf Example}$\quad  $\Delta_{a,b}$:\quad
+\setlength{\unitlength}{1cm}
+\begin{picture}(5,1)
+\put(0,0){\line(1,0){4}} \put(0.5,0){\circle*{0.06}}
+\put(0.35,-0.5){$-b$} \put(2.3,0){\circle*{0.06}}
+\put(2.25,-0.5){0} \put(3.2,0){\circle*{0.06}}
+\put(3.15,-0.5){$a$}
+\end{picture}
+
+$\hskip 1.3cm\Longrightarrow\, \Delta_{a,b}^*$:\quad
+\setlength{\unitlength}{1cm}\begin{picture}(5,1)
+\put(0,0){\line(1,0){4}} \put(0.5,0){\circle*{0.06}}
+\put(0.35,-0.5){$-\frac{1}{a}$} \put(2.3,0){\circle*{0.06}}
+\put(2.25,-0.5){0} \put(3.2,0){\circle*{0.06}}
+\put(3.15,-0.5){$\frac{1}{b}$}
+\end{picture}\vskip 8mm
+
+$\Delta_{a,b}$ is reflexive iff $a,b=1$.
+\begin{Defn}
+Let $W$ be an irreducible normal $n$-dimensional projective
+variety with Gorenstein canonical singularities. Then $W$ is
+called a \emph{Calabi-Yau variety} if
+\begin{enumerate}\item[1)] the dualizing sheaf 
+$\hat{\Omega}_W^n=O_W$ is trivial; \item[2)] $\h^i(W,O_W)=0, \forall
+\ 0<i<n$.\end{enumerate}\end{Defn}
+
+Elliptic curves and $K3$-surfaces are CY.
+\begin{Thm}[Hibi, Batyrev] TFAE:
+\begin{enumerate}\item[1)] $\Delta$ is reflexive. \item[2)] For
+any hyperplane $H=\{(x_1,\cdots,x_n)\in\R^n\mid
+\sum_{i=1}^na_ix_i=1\}$ such that $H\cap\Delta$ is a codimension 1
+face of $\Delta$, we have $a_i\in\Z$. \item[3)] Hodge numbers are
+symmetric: $h_\Delta(k)=h_\Delta(n-k), 0\le k\le n$. \item[4)] The
+closure $\overline{U_f}$ of $U_f$ ($f$ is $\Delta$-regular) in
+$\mathbb{P}_\Delta$ is a CY variety with canonical singularities.
+\end{enumerate}
+\end{Thm}
+\begin{Defn} For $\Delta$ reflexive; $f$ $\Delta$-regular, $U_f$
+is called an affine toric CY hypersurface.\end{Defn}
+\begin{Defn}
+Denote
+$$M_p(\Delta)=\{f/\overline{\f}_p\mid\Delta(f)=\Delta,\,
+f\text{ is $\Delta$-regular}\}.$$ Let $\Delta$ be reflexive.
+The family $\{f\in M_p(\Delta)\}$ is called the mirror family of $\{g\in
+M_p(\Delta^*)\}$ over $\f_p$.
+\end{Defn}
+
+\underline{Question}: If $g$ is the ``mirror'' of $f$,
+\quad $Z(f/\f_q,T)\,\leftrightsquigarrow\, Z(g/\f_q,T)?$
+
+\begin{Defn} A reflexive $\Delta$ in $\R^n$ is called \emph{Fano},
+if \begin{enumerate}\item[1)] $\Delta$ is simplicial, i.e., each
+codimension 1 face of $\Delta$ is a simplex. And \item[2)] The
+vertices of each codimension 1 face of $\Delta$ form a $\Z$-basis
+of $\Z^n$ in $\R^n$.\end{enumerate}
+\end{Defn} \begin{Prop}Reflexive $\Delta$ is Fano $ \Longleftrightarrow $
+$\mathbb{P}_{\Delta^*}$ is smooth.
+\end{Prop}
+
+\subsection{A basic example}
+Take $$\Delta=\langle e_1,e_2,\cdots,e_n,-(e_1+\cdots+e_n)\rangle,
+$$
+where $e_i$'s are the standard unit vectors in $\R^n$. Then
+$$\Delta^*=\langle (n,-1,\cdots,-1),(-1,n,\cdots,-1),\cdots,
+(-1,\cdots,-1,n),(-1,-1,\cdots,-1)\rangle.$$
+$\Delta$ is
+reflexive, $\Delta$ Fano, but $\Delta^*$ NOT Fano if $n>1$. For $n=2$,
+
+\begin{center} \setlength{\unitlength}{1cm}
+\begin{picture}(4,2)
+\put(0,0){\vector(1,0){4}}\put(2,-2){\vector(0,1){4}}
+\put(2,1){\line(1,-1){1}}
+\put(1,-1){\line(1,2){1}}\put(1,-1){\line(2,1){2}}\put(0.1,-1.3){${-(e_1+e_2)}$}
+\put(2.15,1){${e_2}$}\put(2.95,-0.3){${e_1}$}\put(3.6,0.5){$\Delta$}
+\end{picture}$\quad\Longrightarrow\quad$\setlength{\unitlength}{1cm}
+\begin{picture}(4,2.5)
+\put(0,0){\vector(1,0){4}}\put(2,-2){\vector(0,1){4}}%%axic
+\put(1,1.9){\line(1,-1){2.91}}\put(1,-1){\line(0,1){2.9}}
+\put(1,-1){\line(1,0){2.9}}
+\put(0.5,0.1){$-1$}\put(-0.2,0.5){$\Delta^*$}
+\put(2.05,-1.35){$-1$}\put(2.5,0.5){$x_1+x_2=1$}
+\end{picture}\end{center}
+\vskip 3cm Let
+$$f(\lambda,x)=x_1+x_2+\cdots+x_n+\frac{1}{x_1x_2\cdots
+x_n}-\lambda.$$ It's clear that $\Delta(f)=\Delta$.
+
+$f(\lambda,x)$ is $\Delta $-regular $ \Longleftrightarrow $
+$\lambda\not\not= (n+1)\alpha, \alpha^{n+1}=1$.
+
+Mirror family:
+$$\aligned g(\lambda,x)=&\frac{x_1^{n+1}}{x_1x_2\cdots x_n}+\cdots+
+\frac{x_n^{n+1}}{x_1x_2\cdots x_n}+\frac{1}{x_1x_2\cdots
+x_n}-\lambda\\ =&\frac{1}{x_1x_2\cdots
+x_n}(x_1^{n+1}+\cdots+x_n^{n+1}+1-\lambda x_1x_2\cdots x_n)\\
+\stackrel{x_i\ne 0}{\leftrightsquigarrow}& 1+
+x_1^{n+1}+\cdots+x_n^{n+1}-\lambda x_1x_2\cdots x_n\endaligned$$
+
+Projective closure in $\mathbb{P}^n$:
+$$x_0^{n+1}+ x_1^{n+1}+\cdots+x_n^{n+1}-\lambda x_0x_1x_2\cdots x_n=0$$
+(the well known family of CY hypersurfaces in $\mathbb{P}^n$.)
+
+\vskip 1cm Let
+$$G=\left(\Z/(n+1)\Z\right)^{n-1}=\left\{(\zeta^{(1)},\cdots,\zeta^{(n)})
+\,\Big|\,(\zeta^{(i)})^{n+1}=1,\, \prod_{i=1}^n \zeta^{(i)}=1
+\right\}.$$ Then $G$ acts on $U_{g(\lambda,x)}$:
+$$(\zeta^{(1)},\cdots,\zeta^{(n)})(x_1,\cdots,x_n)=
+(\zeta^{(1)}x_1,\cdots,\zeta^{(n)}x_n).$$
+
+\begin{Prop} $U_{f(\lambda,x)}=U_{g(\lambda,x)}/G$.
+\end{Prop}
+\begin{pf} If $g(\lambda,x)=0$ for some $x, x_i\ne 0$, let
+$$\aligned \begin{cases} y_1=&x_1^{n+1}/x_1\cdots x_n\\ &\vdots\\
+y_n=&x_n^{n+1}/x_1\cdots
+x_n\end{cases}\Rightarrow&\begin{cases}  x_1\cdots x_n=y_1\cdots y_n\\
+ \hskip 6mm x_i^{n+1}=y_iy_1\cdots y_n\end{cases}\\ \Rightarrow&\
+ y_1+\cdots +y_n+\frac{1}{y_1\cdots y_n}-\lambda=0.\endaligned$$\end{pf}
+
+ \underline{\bf Exercise}:
+
+ $\Delta=\Delta(x_1+\cdots+x_n+\frac{1}{x_1\cdots x_n}-\lambda)$
+$\Rightarrow h_\Delta(0)=h_\Delta(1)=\cdots= h_\Delta(n)=1$.
+ (Betti number $d(\Delta)=n+1$.)
+
+ \section{Zeta Functions}
+
+\subsection{L-functions of exponential sums}
+
+ For $f\in \f_q[x_1^{\pm},\cdots,x_n^{\pm}]$,
+ $U_f=\{f=0\}\hookrightarrow \mathbb{G}_m^n$, we have
+ $$Z(U_f,T)=\exp(\sum_{k=1}^\infty \#U_f(\f_{q^k})
+ \frac{T^k}{k}).$$
+
+ Let $$\aligned \Psi: \f_p&\rightarrow\C^*\\ x&\mapsto\psi(x)=
+ \exp(\frac{2\pi ix}{p})\endaligned$$
+ be a nontrivial character of $\f_p$. Then $$\Psi\circ
+ \text{Tr}_{\f_{q^k}/{\f_p}}:\, \f_{q^k}\rightarrow\C^*$$ induces a
+ nontrivial character of $\f_{q^k}$.
+
+ The exponential sum
+ $$S_k(x_0f)=\sum_{x_i\in \f_q^*} \Psi\circ
+ \text{Tr}_{\f_{q^k}/{\f_p}}(x_0f).$$
+
+ It's easy to compute $$\aligned q^k\#U_f(\f_{q^k})=
+ &\sum_{{x_i\in \f_{q^k}^*}\atop {1\le i\le n}}\sum_{x_0\in\f_q}\Psi\circ
+ \text{Tr}_{\f_{q^k}/{\f_p}}(x_0f)\\
+ =&(q^k-1)^n+S_k(x_0f)\\ =&
+ \#\mathbb{G}_m^n(\f_{q^k})+S_k(x_0f).\endaligned$$
+ Then $$Z(U_f,qT)=Z(\mathbb{G}_m^n,T)L(x_0f,T),$$
+ where
+ $$L(x_0f,T)=\exp(\sum_{k=1}^\infty\#S_k(x_0f)\frac{T^k}{k}).$$
+
+ $\Rightarrow $It is enough to study $L(x_0f,T)$.
+
+\subsection{Dwork's $p$-adic analytic character}
+Consider the Artin-Hasse series
+\[
+t + \frac{t^p}{p} + \frac{t^{p^2}}{p^2} + \cdots.
+\]
+The Newton polygon of this tells us that there are exactly $p-1$
+roots of this series of slope $\frac{1}{p-1}$. Let $\pi$ be one of
+these roots, and so $ord_p(\pi) = \frac{1}{p-1}$. Using this, we
+may define a \emph{splitting function}
+\[
+\theta(t):=\exp\left((\pi t) + \frac{(\pi t)^p}{p} + \cdots
+\right) \in \bb Q_p(\pi)[[T]].
+\]
+Since
+\[
+\exp\left(t + \frac{t^p}{p} + \cdots\right) =
+\prod_{(k,p)=1}(1-t^k)^{-\frac{\mu(k)}{k}},
+\]
+it follows that $\theta(t)$ converges on $|t|_p <
+p^{\frac{1}{p-1}}$. In particular, $\theta$ is defined at the
+Teichm\"uller points in $\bb C_p$. Splitting functions have the
+following remarkable properties:
+
+{\bf Property 1.} $\theta(1)$ is a primitive $p$-th root of unity.
+
+{\bf Property 2.} We may define a nontrivial additive character
+\[
+\psi_k: \bb F_{p^k} \rightarrow \bb C_p^* \quad \text{by} \quad
+\psi_k(\bar x) := \theta(x) \theta(x^p) \cdots
+\theta(x^{p^{k-1}}) = \psi_1 ({\rm Tr}_{\bb F_{p^k}/\bb F_p}(\bar x)).
+\]
+where $x$ is the Teichm\"uller representative of $\bar x$.
+
+\subsection{Analytic representation of $S_k(x_0 f)$} 
+Write $x_0 \bar f(x) = \sum_{j=1}^J \bar a_j x_0 x^{v_j} \in \bb F_q[x_0^{\pm
+1}, \ldots, x_n^{\pm 1}]$. Then, with $q = p^a$, we have
+\begin{align}
+S_k(x_0f) &= \sum_{\bar x_i \in \bb F_{q^k}^*} \psi_k (x_0 \bar f(\bar
+x)) \notag \\ &= \sum_{\bar x_i \in \bb F_{q^k}^*} \prod_{j=1}^J
+\psi_k(\bar a_j x_0 x^{v_j}) \notag \\
+&= \sum_{x_i^{q^k - 1} = 1, x_i \in \bar{\bb Q_p}} \prod_{j=1}^J
+\prod_{i = 0}^{ak-1} \theta( (a_j x_0 x^{v_j} )^{p^i} ) \label{E:
+theta} \\
+&= \sum_{x_i^{q^k - 1} = 1} F_a(f, x) F_a(f, x^q) \cdots F_a(f,
+x^{q^{k-1}})
+\end{align}
+where we have lifted the coefficients of $f$ to $\bb C_p$, that
+is, $a_j = Teich(\bar a_j)$, and,
+\[
+F_a(f, x) := \prod_{i = 0}^{a-1} \prod_{j=1}^J \theta(a_j x_0
+x^{v_j})^{p^i}.
+\]
+This is the $p$-adic analytic representation of $S_k(x_0 f)$
+that we will use.
+
+\subsection{Frobenius endmorphism}
+Recall $S_\Delta$ from section \ref{Ss: toric}, with $K$ replaced by ${\bb Z}_p$. Now, define
+\[
+\sd := \{ \sum_{u \in L(\bar \Delta)} A_u \pi^{u_0} x^u | A_u \in \bb
+Z_p, A_u \rightarrow 0 \}.
+\]
+Note, $\sd$ is isomorphic to the $p$-adic completion of $S_\Delta$
+at $p$. Now, with a norm defined by $\| \sum A_u \pi^{u_0} x^u \|
+:= \sup_u | A_u |_{p}$, we see that $\sd$ is a Banach $\bb
+Z_p$-module. By construction, we see that $\Gamma := \{ \pi^{u_0}
+x^{u} | u \in L(\bar \Delta) \}$ is an orthonormal basis for
+$\sd$, that is, the coefficients tend to zero.
+
+Consider the field $\bb Q_q(\pi)$ and its Galois group over $\bb
+Q_p(\pi)$, which is cyclic of order $a$ generated by $\tau$. By
+definition, $\tau$ sends Teichm\"uller representatives to their
+$p$-th power.
+
+Using notation from the last section, define
+\[
+F(f,x) := \prod_{j=1}^J \theta( a_j x_0 x^{v_j})
+\]
+and
+\[
+G(x) := F(f,x) F^\tau(f, x^p) F^{\tau^2}(f, x^{p^2}) \cdots.
+\]
+
+On the space $\sd \otimes \bb Z_q[\pi]$, define the compact
+operators
+\[
+\phi_1 := \psi_p \circ F(f,x)
+\]
+and
+\[
+\phi_a := \psi_q \circ F_a(f, x)
+\]
+where, $q = p^a$, and
+\[
+\psi_p( \sum A_u x^u ) := \sum A_{pu}^{\tau^{-1}} x^u.
+\]
+Note, we may formally write
+\[
+\phi_1 = G(x)^{-1} \circ \psi_p \circ G(x) \qquad \text{and}
+\qquad \phi_a = G(x)^{-1} \circ \psi_q \circ G(x),
+\]
+where 
+\[
+\psi_q( \sum A_u x^u ) := \sum A_{qu} x^u.
+\]
+
+\subsection{Rationality of $L(x_0f,T)$ and $Z(U_f/\bb F_q,
+T)$} \label{Ss: rationality} Now $\phi_a$ has the following
+amazing property called the \emph{Dwork trace tormula}:
+\[
+S_k(x_0 f) = (q^k - 1)^{n+1} Tr(\phi_a^k)
+\]
+where $Tr$ denotes the trace of the operator. Recall the relation
+\[
+\frac{1}{det(I - \phi_a T)} = \exp \sum_{k \geq 1} \frac{
+Tr(\phi_a^k)}{k}{T^k}.
+\]
+Combining these with the binomial theorem, we see that
+\begin{align*}
+L(x_0 f, T) &= \exp \sum_{k \geq 1} \frac{S_k(x_0 f)}{k} T^k
+\\
+&= \prod_{i=0}^{n+1} \left[ det(I - q^i \phi_a T)
+\right]^{(-1)^{n-i} \binom{n+1}{i}}.
+\end{align*}
+This looks like rationality, however, remember that the operator
+$\phi_a$ acts on $\sd \otimes \bb Z_q[\pi]$, an infinite
+dimensional space and so the characteristic polynomials are
+actually power series. However, since this operator is compact,
+$\det(I - q^i \phi_a T)$ is a $p$-adic entire function. Therefore,
+the $L$-function is $p$-adic meromorphic.
+
+To prove rationality, we need to use an extension of a theorem of
+Borel proven by Dwork.
+\begin{Thm}[Borel]
+Let $g(T) \in \bb Z[[T]]$. Then $g(T) \in \bb Q(T)$ if and only if
+$g(T)$ satisfies both
+\begin{enumerate}
+\item $g(T)$ converges in some neighborhood of the origin in
+${\bb C}$. \item $g(T)$ is $p$-adic meromorphic.
+\end{enumerate}
+\end{Thm}
+
+We obtain
+\begin{Thm}[Dwork]
+$L(x_0 f, T) \in \bb Q(T)$ and so $Z(U_f / \bb F_q, T) \in \bb
+Q(T)$.
+\end{Thm}
+To prove this, we need only show that $L(x_0 f)$ converges in
+some neighbourhood of the origin in ${\bb C}$. Now,
+\[
+|S_k(x_0 f)|_{\bb C} \leq (q^k - 1)^{n+1} \leq q^{k(n+1)}
+\]
+and since
+\[
+\sum_{k \geq 1} \frac{q^{k(n+1)}}{k} T^k
+\]
+converges for $|T|_{\bb C} < 1/q^{n+1}$, we see that $L(x_0 f,
+T)$ converges for any $|T|_{\bb C} < 1/q^{n+1}$. This proves the
+theorem.
+
+
+\subsection{$p$-adic Cohomological formula for
+$L(x_0f,T)$}\label{Ss: Cohom Form} As mentioned in section
+\ref{Ss: rationality}, we may define a compact operator $\phi_a$
+on a $p$-adic Banach module $B := \sd \otimes \bb Z_q[\pi]$. We
+may also define differential operators
+\[
+D_i := G(x)^{-1} \circ x_i \frac{\partial}{\partial x_i} \circ
+G(x)
+\]
+for each $i=0, 1, \ldots, n$ acting on $B$. Since these commute,
+we may create a Koszul complex $K_\bullet(B, D_0, \ldots, D_n)$,
+the top line of the commutative diagram below. Also, since $\phi_a
+\circ D_i = q D_i \circ \phi_a$, we may define a chain map between
+complexes:
+\[
+\begin{CD}
+0 @>>> B^{\binom{n+1}{n+1}} @>d>> B^{\binom{n+1}{n}} @>d>> \cdots
+@>d>> B^{\binom{n+1}{0}} @>>> 0 \\
+@VVV @Vq^{n+1}\phi_aVV @Vq^n \phi_aVV @VVV @VV\phi_aV @VVV \\
+0 @>>> B^{\binom{n+1}{n+1}} @>d>> B^{\binom{n+1}{n}} @>d>> \cdots
+@>d>> B^{\binom{n+1}{0}} @>>> 0
+\end{CD}
+\]
+where
+\[
+B^{\binom{n+1}{i}} := B \otimes \Lambda^i (\oplus_{j=0}^n \bb Z e_j)
+\]
+and $d: B^{\binom{n+1}{i}} \rightarrow B^{\binom{n+1}{i-1}}$ is
+defined by
+\[
+d(a e_{j_1} \wedge \cdots \wedge e_{j_i}) := \sum_{k=0}^i (-1)^k
+D_{j_k}(a) e_{j_1} \wedge \cdots \wedge \hat e_{j_k} \wedge \cdots
+\wedge e_{j_i}.
+\]
+We may rewrite the $L$-function as follows.
+\begin{align*}
+L(x_0 f, T)^{(-1)^n} &= \prod_{i=0}^{n+1} det(I - T q^i \phi_a |
+B)^{(-1)^i \binom{n+1}{i}} \\
+&= \prod_{i=0}^{n+1} det(I - T q^i \phi_a |
+B^{\binom{n+1}{i}})^{(-1)^i} \\
+&= \prod_{i=0}^{n+1} det(I - T q^i \phi_a | H_i( K_\bullet(B, D_0,
+\ldots, D_n)))^{(-1)^i}.
+\end{align*}
+
+Now, if $f$ is $\Delta$-regular, then all the
+homology spaces are trivial except for $i=0$, in which case 
+$$H_0( K_\bullet(B, D_0, \ldots, D_n)) = B/\sum_{i=0}^n D_i(B)$$
+is a free $\bb Z_q[\pi]$-module of rank $d(\Delta)$. 
+That is the essence of the next two theorems.
+
+\begin{Thm}[Adolphson-Sperber]
+If $f$ is $\Delta$-regular, then $L(x_0f,T)^{(-1)^n}$ is a
+polynomial of degree $d(\Delta)=n!\vol(\Delta)$.
+\end{Thm}
+
+ \begin{Thm}[Denef-Loeser] If $f$ is $\Delta$-regular, then
+ $L(x_0f,T)^{(-1)^n}$ is mixed of weight $\le n+1$. That is, if
+ $$L(x_0f,T)^{(-1)^n}=\prod_{i=1}^{d(\Delta)}(1-\alpha_iT),$$ then
+ $$|\alpha_i|=\sqrt{q}^{w_i},\, w_i\in \Z\cap[0, n+1].$$ \end{Thm}
+\vskip 3mm
+ Let $$e_j=\#\{1\le i\le d(\Delta)\mid w_i=j\},\quad 0\le j\le
+ n+1.$$There exists a very complicated combinatorial formula for
+ $e_j$.
+
+ \underline{\bf Example}:\quad Let $\Delta$ be a simplex and
+ $$c_0=1, c_i=\sum_{\tau\subset\Delta, \text{face}\atop {\dim\tau=i-1}}
+ \vol(\tau),\quad i\ge 1.$$ Then
+ $$e_0=1, e_j=\sum_{i=0}^j (-1)^{j-i}i!{n+1-i\choose n+1-j}c_i,\quad
+ j\ge 1.$$
+ \underline{\bf Exercise}:\quad $f(\lambda,x)=x_1+\cdots+x_n+
+ \frac{1}{x_1\cdots x_n}-\lambda$, $\Delta$-regular. Compute
+ $e_j$.
+
+ \subsection{Newton polygon for $L(x_0f,T)^{(-1)^n}$}
+ Let $f$ be $\Delta$-regular over $\f_q$. Write
+ $$L(x_0f,T)^{(-1)^n}=\sum_{m=0}^{d(\Delta)}A_mT^m,\quad A_0=1, A_m\in\Z.$$
+ Define the $q$-adic Newton polygon of $L(x_0f,T)^{(-1)^n}$ to be the lower
+ convex closure in $\R^2$ of the points
+ $(m,\text{ord}_q(A_m)),\, m=0,1,\cdots,d(\Delta)$. Denote this
+ polygon by $NP(f)$.
+
+\begin{center}
+ \setlength{\unitlength}{1cm}
+\begin{picture}(10,4)
+\put(0,-0.5){\circle*{0.1}}\put(0,-0.5){\line(5,1){2.5}}
+\put(2.5,0){\circle*{0.1}}\put(2.5,0){\line(4,1){1}}
+\put(3.5,0.25){\circle*{0.1}}\put(3.5,0.25){\line(3,1){2}}
+\put(5.5,0.92){\circle*{0.1}} \put(5.5,0.92){\line(2,1){2}}
+\put(7.5,1.92){\circle*{0.1}}\put(7.5,1.92){\line(1,1){0.5}}%%other points
+\put(1,2){\circle*{0.1}}\put(2,3){\circle*{0.1}}
+\put(8.5,1.5){$NP(f)$} \put(7,3){\circle*{0.1}}
+\put(4.35,0.7){$s$}  \put(3.5,0){$\underbrace{\hskip
+2cm}$}\put(4.4,-0.6){\text{$h_s=$\small{horizontal length of the
+slope $s$ side}}} \put(3,-1.5){\text{Newton polygon of $f$}}
+\end{picture}\end{center}\vskip 2cm
+\begin{Thm} $NP(f)$ has a side of slope $s$ with horizontal length
+$h_s$ iff there are exactly $h_s$ reciprocal zeros $\alpha_i$'s
+such that
+$$\text{ord}_q(\alpha_i)=s,\quad\text{i.e.}, |\alpha_i|=q^{-s}.$$
+
+\underline{\bf Question}. For $s\in \Q\cap [0, n+1]$, $h_s=?$
+\end{Thm}
+
+\begin{Thm}[Adolphson-Sperber]
+$f$ is $\Delta$-regular $\Rightarrow$ $NP(f)\ge HP(\Delta)$, with
+endpoints coincide, where $HP(\Delta)$ is the Hodge polygon of
+$\Delta$.
+\end{Thm}
+
+An outline of the proof is as follows. See section \ref{Ss: Cohom
+Form} for some relevant notions. We define an operator $\phi_1$ on
+our Banach module $B := \sd \otimes \bb Z_q[\pi]$. This induces an
+operator on the finite dimensional homology space 
+$$H_0 := H_0(K_\bullet(B, D_0, \ldots, D_n)) = B/\sum_{i=0}^n D_i(B)$$ 
+and so may be represented by a
+matrix if we provide a basis. Choosing a monomial basis $\Gamma_I
+:= \{ \pi^{u_0} x^u | u \in I \}$, we may explicitly estimate the
+$p$-adic order of the entries of the matrix $A_1$ representing
+$\phi_1$ to get a (Hodge) filtration: $\phi_1(\Gamma_I) = \Gamma_I A_1$, where 
+\[
+A_1 = \left(\begin{array}{rrrr}
+M_{00} &  M_{01} & M_{02} & \cdots \\
+pM_{10} & pM_{11} & pM_{12} & \cdots \\
+p^2M_{20} & p^2 M_{21} & p^2 M_{22} & \cdots \\
+\vdots & \vdots & \vdots & \ddots
+\end{array}
+\right)
+\]
+where $M_{ij}$ is a matrix with $h_\Delta(i)$ rows and
+$h_\Delta(j)$ columns. Further, the entries of $M_{ij}$ have
+$ord_p \geq 0$. Relating this to our operator $\phi_a$ via the
+relation $\phi_1^a = \phi_a$ and using an argument of Dwork's, we
+may show the $q$-adic Newton polygon of $det(I - T \phi_a | H_0)$
+lies above the Hodge polygon, which is defined as the lower convex
+hull of the points
+\[
+\left( \sum_{i=0}^m h_\Delta(i), \sum_{i=0}^m i \cdot h_\Delta(i)
+\right)_{m=0, 1, \ldots, n}.
+\]
+
+\underline{\bf Definition}. If $NP(f)=HP(\Delta)$, then $f$ is called ordinary.
+In this case, $L(x_0f, T)^{(-1)^n}$ has exactly $h_{\Delta}(k)$ reciprocal zeros
+$\alpha_i$'s such that ord$_q(\alpha_i)=k$ for all $0\leq k\leq n$.
+
+\subsection{Variation of $NP(f)$ with $p$}
+
+{\bf Conjecture}: Let $f\in\Z[x_1^{\pm},\cdots,x_n^{\pm}]$
+be $\Delta$-regular. Then there exist infinitely many primes $p$
+such that $NP(f \Mod p )=HP(\Delta)$ ($p$ is then called ordinary).
+One further conjectures that the density $\delta(f)$ of ordinary primes
+exists and is positive.
+
+\underline{\bf Example}. If $f=x_1+x_2+\frac{1}{x_1x_2}-\lambda$ is $\Delta$-regular
+and hence defines an elliptic curve over $\Q$, the density $\delta(f)$ is
+either $1/2$ if $f$ has CM (Deuring) or $1$ if $f$ has no CM (Serre).
+
+
+
+
+ \subsection{Variation of $NP(f)$ with $f$ ($p$ fixed)}
+
+ Let $$M_p(\Delta)(\overline{\f}_p)=\{f\in
+ \overline{\f}_p[x_1^{\pm},\cdots,x_n^{\pm}]
+ \mid \Delta(f)=\Delta,\, f \text{ is $\Delta$-regular}\}.$$
+This set is non-empty if $p>d(\Delta)$.
+
+ $f\in
+ M_p(\Delta)(\overline{\f}_p)\Rightarrow f\in M_p(\Delta)(\f_q)$ for some $q$.
+
+ \hskip 2.7cm $\Rightarrow$ $q$-adic $NP(f)$ is defined, independent of
+
+ \hskip 2.7cm the choice of the defining field $\f_q$.
+
+The relatively cohomology is locally free and thus forms an overconvergent 
+$\sigma$-module and in fact an overconvergent $F$-crystal on $M_p(\Delta)$. 
+We obtain
+
+ \begin{Thm}[Grothendieck-Katz]
+The global minimun
+$$GNP(\Delta, p)=\inf_{f\in M_p(\Delta)}NP(f)$$
+exists and is precisely attained for all $f$
+in a Zariski open dense subset $U_p(\Delta)\hookrightarrow M_p(\Delta)$.
+This minimun polygon
+$GNP(\Delta,p)$ is called the generic Newton polygon of the family $M_p(\Delta)$.
+\end{Thm}
+
+Thus, Newton polygon goes up under specialization, that is, for $f\in M_p(\Delta)$, 
+$$NP(f)\ge GNP(\Delta, p)\ge HP(\Delta).$$
+The first equality holds for all $f\in U_p(\Delta)$.
+
+
+\underline{\bf Definition}: \quad If $GNP(\Delta,p)=HP(\Delta)$, $\Delta$ is called ordinary at $p$ or
+ generically ordinary at $p$.
+
+\underline{\bf Question}: Which primes $p$ are ordinary for $\Delta$?
+
+
+\subsection{Generically ordinary primes}
+
+{\bf Conjecture} (Adolphson-Sperber):\quad $\Delta$ is ordinary for $p\gg0$.
+
+
+
+\begin{Prop} Let $\Delta$ be minimal (i.e., no lattice points on 
+$\Delta$ other than vertices). If $p \equiv 1 (~{\rm mod} d(\Delta))$, 
+then $\Delta$ is ordinary at $p$
+\end{Prop}
+
+For minimal $\Delta$, $x_0f$ becomes a diagonal, 
+the L-function can be computed directly using Gauss sums 
+and the slopes can be found using the Stickelberger theorem. 
+This is the local case. Note also for minimal $\Delta$, 
+one has $d(\Delta)=1$ if $n\leq 2$. 
+
+
+\begin{Thm}[Wan] \begin{enumerate}\item[1)] If $n\le 3$,
+$\Delta$ is ordinary for $p>d(\Delta)$. \item[2)]If $n\ge
+4$, there exists $n$-dimensional $\Delta$ which is NOT ordinary for all primes
+$p$ in a certain congruence class.
+\item[3)]There exists $D^*(\Delta)>0$ such that $\Delta$ is
+ordinary for $p\equiv 1(\Mod D^*(\Delta))$.
+\end{enumerate}
+\end{Thm}
+
+
+Part 1) and part 3) follow from the 
+collapsing decomposition (to be explained in the lectures) and a finer form of 
+the above local proposition. 
+
+
+{\bf Conjecture}. There is a positive integer $\mu(\Delta)$ such that the set
+of almost all (except for finitely many) ordinary primes for $\Delta$
+consists of the primes in certain congruence classes modulo $\mu(\Delta)$.
+
+
+
+\subsection{Generically ordinary Calabi-Yau hypersurfaces}
+
+\begin{Thm}[Wan] Let $\Delta$ be reflexive.
+\begin{enumerate}\item[1)]If $n=\dim(\Delta)\le 4$, then $\Delta$ is
+ordinary for $p>d(\Delta)$.\item[2)]If $\Delta$ is Fano, then
+$\Delta$ is always ordinary for every $p$.\end{enumerate}
+\end{Thm}
+
+Part 2) follows from the star decomposition theorem. The case $n=4$ of 
+Part 1) follows from a combination of the star decomposition and the 
+collapsing decomposition (to be explained in the lectures). 
+
+\underline{\bf Questions}:\begin{enumerate}\item[1)]For reflexive
+$\Delta$ with $n=\dim(\Delta)\ge 5$, is $\Delta$ ordinary for
+$p>d(\Delta)$?\item[2)]If $\Delta$ is reflexive and ordinary at
+$p>d(\Delta)$, is $\Delta^*$ ordinary at $p$?\end{enumerate}
+(already yes if $n\leq 4$ or $\Delta$ is Fano)
+
+\subsection{Basic example}
+Take$$f(\lambda,x)=x_1+\cdots+x_n+\frac{1}{x_1\cdots
+x_n}-\lambda.$$ Then
+$$\aligned
+\Delta=&\Delta(f)=\langle e_1,e_2,\cdots,e_n,-(e_1+e_2+\cdots+e_n)\rangle,\\
+\Delta^*=&\langle(n,-1,\cdots,-1),\cdots,(-1,-1,\cdots,n),(-1,-1,\cdots,-1)\rangle.\endaligned$$
+
+\begin{Thm} Both $\Delta$ and $\Delta^*$ are ordinary for all primes $p$.
+\end{Thm}
+
+
+\begin{Thm}\begin{enumerate}\item[1)] Let $f(\lambda,x)$ be
+$\Delta$-regular over $\f_q$. Then
+$$L(x_0f,T)^{(-1)^n}=\prod_{i=0}^n(1-\alpha_i(\lambda)T),\quad
+d(\Delta)=n+1.$$ \item[2)] $\alpha_0(\lambda)=1,\,
+|\alpha_i(\lambda)|=\sqrt{q}^{n+1}$.\item[3)] $\Delta$ is ordinary
+at $p$. That is, except for finitely many $\lambda$, we have
+ord$_q(\alpha_i(\lambda))=i, 1\le i\le n$.
+\end{enumerate}
+\end{Thm}
+\noindent\emph{Proof of 2)}. \quad Since endpoints for $NP(f)$ and
+$HP(\Delta)$ coincide, we have
+$$\text{ord}(\alpha_0\alpha_1\cdots \alpha_n)=
+\text{ord}(\alpha_1\cdots
+\alpha_n)=\sum_{k=0}^nkh_\Delta(k)=\frac{n(n+1)}{2}.$$ By
+Denef-Loeser (Theorem 2.2), $|\alpha_i|\le q^{\frac{n+1}{2}}$. Now
+$\alpha_1\cdots \alpha_n\in\Z$ implies that $(\alpha_1\cdots
+\alpha_n)^2=\alpha_1\cdots \alpha_n\overline{\alpha}_1\cdots
+\overline{\alpha}_n\le q^{n(n+1)}$.
+
+But ord$(\alpha_1\cdots \alpha_n)^2=n(n+1)$, then $(\alpha_1\cdots
+\alpha_n)^2=q^{n(n+1)}$. Hence $|\alpha_i|=q^{\frac{n+1}{2}}$ for
+all $1\le i\le n$.\vskip 5mm
+
+Let
+$g(\lambda,x)=x_0^{n+1}+\cdots+x_n^{n+1}-\lambda x_0x_1\cdots
+x_n$. For almost all $\lambda$,  it defines a smooth projective hypersurface in ${\mathbb{P}}^n$.
+Then
+$$Z(g(\lambda,x),T)=\frac{P(T)^{(-1)^n}}{(1-T)(1-qT)\cdots(1-q^{n-1}T)},$$
+where $P(T)$ is a polynomial of degree ${\frac{n(n^n-(-1)^n)}{n+1}}$,
+pure of weight $n-1$. The Newton polygon of $P(T)\ge
+HP$ (Dwork).
+
+\underline{\bf Question}:\quad Is this family $g(\lambda, x)$ of projective hypersurfaces
+in ${\mathbb{P}}^n$
+generically ordinary for all $p>n+1$? (yes for $n\le 3$.)
+
+\subsection{Zeta functions of affine toric hypersurfaces}
+
+Let $f\in \f_q[x_1^{\pm},\cdots,x_n^{\pm}], \Delta=\Delta(f), f$ is
+$\Delta$-regular. Then trivially $T=1$ is a root of
+$L(x_0f,T)^{(-1)^n}$. And
+$$\frac{L(x_0f,T)^{(-1)^n}}{1-T}=P(f,qT)$$ is a polynomial in
+$1+T\Z[T]$ of degree $d(\Delta)-1$ (with slope $\ge 1$), where
+$P(f,T)$ is a polynomial in $\Z[T]$. We have
+$$\aligned Z(U_f,qT)=&\prod_{i=0}^n(1-q^iT)^{(-1)^{n-i-1} {n\choose
+i}}L(x_0f,T)\\ =&\prod_{i=1}^n(1-q^iT)^{(-1)^{n-i-1} {n\choose
+i}}(\frac{L(x_0f,T)^{(-1)^n}}{1-T})^{(-1)^n}\\
+=&\prod_{i=1}^n(1-q^iT)^{(-1)^{n-i-1} {n\choose
+i}}P(f,qT)^{(-1)^n},\\
+Z(U_f,T)=&\prod_{i=0}^{n-1}(1-q^iT)^{(-1)^{n-i} {n\choose
+i+1}}P(f,T)^{(-1)^n},\endaligned$$
+where$$P(f,T)=\prod_{i=0}^{d(\Delta)-2}(1-\beta_i T)$$ and
+the $\beta_i$'s are algebraic numbers.
+
+\begin{Defn}The primitive Hodge
+polygon $PHP(\Delta)$ is the polygon in $\R^2$ with vertices
+$(0,0)$ and $(\sum_{k=0}^m h_\Delta(k),\sum_{k=0}^m
+(k-1)h_\Delta(k)), 1\le m\le n$.
+\end{Defn}
+\begin{center}
+ \setlength{\unitlength}{1cm}
+\begin{picture}(5,4)
+\put(0,0){\circle*{0.1}}\put(0,0){\line(1,0){2}}
+\put(2,0){\circle*{0.1}}\put(2,0){\line(1,1){1}}
+\put(3,1){\circle*{0.1}}\put(3,1){\line(1,2){0.5}}
+\put(3.5,2){\circle*{0.1}} \put(3.5,2){\line(1,3){0.7}}
+%%other points
+\put(0.9,0.1){0}\put(2.3,0.5){1}\put(4,1.5){$PHP(\Delta)$}
+\put(0,-0.1){$\underbrace{\hskip
+2cm}$}\put(2,-0.1){$\underbrace{\hskip 1cm}$}
+\put(0.7,-0.5){$_{h_\Delta(1)}$}\put(2.2,-0.5){$_{h_\Delta(2)}$}
+ \put(0.3,-1.3){\text{Primitive Hodge polygon of $\Delta$}}
+\end{picture}\end{center}\vskip 1.3cm
+
+\hskip 7mm$P(f,T)=\det(I-Frob_q T\mid \text{PH}_c^{n-1}(U_f\otimes \overline{\f}_q,\Q_\ell))$
+\vskip 1mm $\Longrightarrow$ All results on $L(x_0f,T)^{(-1)^n}$
+carry over to $P(f,T)$.
+\begin{Cor}If $f$ is $\Delta$-regular over $\f_q$, then $$
+\#U_f(\f_{q^k})=\frac{(q^k-1)^n+(-1)^{n+1}}{q^k}+(-1)^{n+1}(\beta_0^k
++\beta_1^k+\cdots+\beta_{d(\Delta)-2}^k),$$where $|\beta_i|\le
+q^{\frac{n-1}{2}}$.\end{Cor}
+
+\section{$p$-adic Variation}
+
+\subsection{$p$-adic Analytic formula for the Frobenius matrix}
+
+Let $f(\overline{\lambda},x)$ be the universal family of $f\in
+M_p(\Delta)$. For $f(\overline{\lambda},x)\in M_p(\Delta)(\f_q)$,
+$$P({f(\overline{\lambda},x)}, T)=\det (I-Frob_qT\mid
+\text{PH}_c^{n-1})=\det(I-F(\lambda)T).$$ Here $F(\lambda$ is a matrix of size
+$(d(\Delta)-1)\times (d(\Delta)-1)$. Is there any $p$-adic analytic formula for
+$F(\lambda)$? Since the relative cohomology forms a locally free overconvergent 
+$\sigma$-module, one obtains 
+
+\begin{Thm} Zariski locally on $M_p(\Delta)$, there
+exists an overconvergent 
+matrix $A(\lambda)$ of size $(d(\Delta)-1)\times (d(\Delta)-1)$ of the form
+$$A(\lambda)=\begin{pmatrix}A_{00}(\lambda)&A_{00}(\lambda)&\cdots\\
+pA_{10}(\lambda)&pA_{11}(\lambda)&\cdots\\
+\vdots&\vdots& \\
+p^{n-1}A_{n-1,0}(\lambda)&p^{n-1}A_{n-1,1}(\lambda)&\cdots\end{pmatrix},$$
+where  $A_{ij}(\lambda)$ has $h_\Delta(i+1)$ rows and
+$h_\Delta(j+1)$ columns, whose entries are overconvergent functions
+on the lifting of $M_p(\Delta)$ with norm $\le 1$, satisfies the
+following property:
+
+\begin{enumerate}\item[]if $f(\overline{\lambda},x)\in
+M_p(\Delta)(\f_{p^a})$ and
+$\lambda=\text{Teich}(\overline{\lambda})$, then one can take
+$$F(\lambda)=A(\lambda^{p^{a-1}})\cdots A(\lambda^p)A(\lambda).$$
+\end{enumerate}
+That is,
+$P(f(\overline{\lambda},x),T)=\det(I-A(\lambda^{p^{a-1}})\cdots
+A(\lambda^p)A(\lambda)T)$.\end{Thm}
+
+\subsection{Deformation theory and Picard-Fuch equation}
+
+Let $p>2$. Since the relatively cohomology forms an overconvergent $F$-crystal 
+whose underlying differential equation is the Picard-Fuch equation, we deduce that 
+the matrix $A(\lambda)$ as above can be expressed in terms of a fundamental solution
+matrix $C(\lambda)$ of the Picard-Fuch equation:
+
+$$A(\lambda)=C(\lambda^p)^{-1}A(\lambda_0)C(\lambda),$$
+where $\lambda_0$ is a regular point.
+
+
+\underline{\bf Remark}:\quad $C(\lambda)$ is NOT analytic on the
+closed unit disk near $\lambda_0$.
+
+
+\underline{\bf Example}:\quad Let $$\pi^{p-1}=-p,
+\lambda^{p^a}=\lambda, \theta(\lambda)=\exp(-\pi
+\lambda^p)\cdot\exp(\pi\lambda) \rightsquigarrow A(\lambda),$$
+$$\Psi\circ
+\text{Tr}_{\f_{q^k}/{\f_p}}(\overline{\lambda})=\theta(\lambda^{p^{a-1}})
+\cdots\theta(\lambda^p)\theta(\lambda).\hskip 2.6cm$$ If
+$P(f(\overline{\lambda},x),T)=\prod_{i=0}^{d(\Delta)-2}(1-\alpha_i(\lambda) T)\in \Z[T]$ has
+$h_\Delta(k+1)$ reciprocal roots with slope $k$, $k=0,1,\cdots, n-1$,
+then $$\aligned P(f(\overline{\lambda},x),T)=&\prod_{i=0}^{n-1}P_i(\lambda, T),\quad P_i(\lambda, T)\in \Z_p[T],\\
+\deg P_i(\lambda, T)=&h_\Delta(i+1)\\ i=&\text{ slope of } P_i(\lambda, T).\endaligned$$
+
+\underline{\bf Question}: Any $p$-adic analytic formula for $P_i(\lambda, T)$?
+
+\subsection{Hodge-Newton decomposition and unit root formula}
+
+Let $\Delta$ be ordinary at $p>2$ and $H_p(\Delta)$ be the ordinary
+locus of $M_p(\Delta)$. One wishes to find a new basis such that 
+the new matrix 
+$$\begin{pmatrix}I_{00} && -E_{01}(\lambda^p) \\
+0 && I_1\end{pmatrix} 
+A(\lambda)
+\begin{pmatrix}I_{00} && E_{01}(\lambda) \\
+0 && I_1\end{pmatrix}
+=\begin{pmatrix}
+B_{00}(\lambda)&&*\\ 0&&pA'(\lambda) \end{pmatrix}.$$ 
+This defines a $p$-adic contraction map and thus 
+it has a unique solution matrix $E_{01}(\lambda)$ which is a 
+convergent matrix of $h_{\Delta}(0)$ rows and $\sum_{i=1}^n h_{\Delta}(i)$ columns. 
+By induction, one then shows that there exists a convergent matrix
+$D(\lambda)$ on the lifting of $H_p(\Delta)$ such that
+$$D(\lambda^p)^{-1}A(\lambda)D(\lambda)=\begin{pmatrix}
+B_{00}(\lambda)&&*&*\\ 0&&pB_{11}(\lambda)&*\\
+0&&0&\ddots\end{pmatrix}.$$ 
+Then
+$$P(f(\overline{\lambda},x),T)
+=\prod_{i=0}^{n-1}\det\left(I-p^{ai}B_{ii}(\lambda^{p^{a-1}})\cdots
+B_{ii}(\lambda^p)B_{ii}(\lambda)T\right),$$ where
+$f(\overline{\lambda}, x)\in H_p(\Delta)(\f_{p^a})$,
+$B_{ii}(\lambda)$ is convergent (not overconvergent) on the closed unit disk,
+$$B_{ii}(\lambda)=C_{ii}(\lambda^p)^{-1}B_{ii}(0)C_{ii}(\lambda),$$
+where $C_{ii}(\lambda)$ is a fundamental solution matrix of a
+piece of the Picard-Fuch equation. The $p$-adic analytic formula for $P_i(\lambda, T)$ is then
+$$P_i(\lambda,T)= \det\left(I-p^{ai}B_{ii}(\lambda^{p^{a-1}})\cdots
+B_{ii}(\lambda^p)B_{ii}(\lambda)T\right).$$
+
+
+\subsection{Unit root $L$-function and $p$-adic Galois representation}
+
+Let $\Delta$ be ordinary at $p$. As above,
+$$A(\lambda)\sim\begin{pmatrix}
+B_{00}(\lambda)&&*&*&*\\
+0&&pB_{11}(\lambda)&*&*\\ 0&&0&\ddots&*\\
+0&&0&0&p^{n-1}B_{n-1, n-1}(\lambda)\end{pmatrix}.$$ Each
+$B_{ii}(\lambda)$ is invertible on the lifting of $H_p(\Delta)$ and hence 
+it defined a unit root F-crystal on $H_p(\Delta)$. Alternatively, we have 
+
+\begin{Thm}[Katz] Each $B_{ii}$ defines a continuous $p$-adic representation
+$$\rho_i:\, \pi_1^{\text{arith}}(H_p(\Delta)/\f_p)\longrightarrow
+GL_{h_{\Delta}(i+1)}(\Z_p),$$
+such that 
+$$\rho_i(\text{Frob}_\lambda)=B_{ii}(\lambda^{p^{a-1}})\cdots
+B_{ii}(\lambda^p)B_{ii}(\lambda).$$ 
+\end{Thm}
+It is clear that the L-function 
+$$L(\rho_i, T)=\prod_{\overline{\lambda}\in
+H_p(\Delta)\atop{\text{closed
+point}}}\frac{1}{\det\left(I-T^{\deg(\lambda)}
+\rho_i(\text{Frob}_\lambda)\right)}\in
+1+T(\overline{\Q}\cap\Z_p)[[T]]$$ is analytic in $|T|_p<1$.
+
+\subsection{Dwork's unit root conjecture}
+
+\begin{Thm}[Wan] $L(\rho_i, T)$ is $p$-adic meromorphic everywhere.
+\end{Thm}
+
+Let $\rho=\rho_i$. Write the $p$-adic Weierstrass factorization
+$$ L(\rho_i,
+T)=\frac{\prod_{j=1}^\infty(1-z_j^{(1)}T)}
+{\prod_{j=1}^\infty(1-z_j^{(2)}T)},\quad z_j^{(1)}\rightarrow
+0,z_j^{(2)}\rightarrow 0.$$
+
+\underline{\bf Question}:\quad Let $K_p=\Q_p(z_j^{(1)},
+z_j^{(2)} | 1\leq j <\infty)$.  Is $[K_p: \Q_p]<\infty$? ($p$-adic RH for $L(\rho_i,
+T)$).
+
+\begin{Defn} Let $$r_\rho^+=\limsup_{x\rightarrow\infty}
+\frac{\log(1+ \#\{i\mid\text{ord}_q(z_i^{(1)})\le
+x\}+\#\{j\mid\text{ord}_q(z_j^{(2)})\le x\})}{\log x}$$
+\end{Defn}
+
+This is called the order of the $p$-adic meromorphic function $L(\rho, T)$.
+It measures the size of $L(\rho, T)$. Clearly, we have $0\le r_\rho^+\le +\infty$.
+
+\medskip
+\underline{\bf Question}:\quad $r_\rho^+< +\infty$?
+
+
+\begin{Thm}[Wan] If rank$(\rho)=1\Rightarrow r_{\rho}^+< +\infty$.
+\end{Thm}
+(true for the family $x_1+\cdots +x_n +\frac{1}{x_1\cdots x_n} -\lambda$)
+
+\begin{Defn} Let $$r_\rho^-=\limsup_{x\rightarrow\infty}
+\frac{ \log(1+ |\#\{i\mid\text{ord}_q(z_i^{(1)})\le
+x\}-\#\{j\mid\text{ord}_q(z_j^{(2)})\le x\}|)}{\log x}$$
+\end{Defn}
+
+Clearly, $0\leq r_\rho^- \leq r_\rho^+ \leq +\infty$.
+
+\medskip
+\underline{\bf Question}:\quad $r_\rho^-< +\infty$? (yes if rank$(\rho)=1$)
+
+
+
+\subsection{$p$-adic Monodromy group}
+
+Let $\Delta$ be ordinary at $p$. Let
+$$\rho=\rho_i:\, \pi_1^{\text{arith}}(H_p(\Delta)/\f_p)\longrightarrow
+GL_{h_{\Delta}(i+1)}(\Z_p).$$
+Then $G_p(\Delta, i)=\rho_i(\pi_1^{\text{arith}})$ is a $p$-adic
+Lie-group.
+
+\bigskip
+\underline{\bf Question}:\quad $G_p(\Delta, i)=?$
+
+\bigskip
+\underline{\bf Example} (Igusa). For the elliptic family $x_1+x_2+\frac{1}{x_1x_2}-\lambda$,
+one has
+$$G_p(\Delta, 0)=G_p(\Delta, 1) =\Z_p^* =GL_1(\Z_p).$$
+
+
+\end{document}

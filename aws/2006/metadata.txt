@@ -1,0 +1,3 @@
+year: 2006
+title: Computational and Algorithmic Aspects of Algebra and Arithmetic
+htmltitle: Computational and Algorithmic Aspects of Algebra and Arithmetic

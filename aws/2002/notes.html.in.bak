@@ -1,0 +1,81 @@
+<html>
+<include src="/head.html.in" {'PAGE':'AWS 2002: Courses and Notes'}>
+<body>
+<include src="/topbar.html.in">
+<include src="/navcol.html.in"  {'nav_prev':'navsel'}>
+<div class="page">
+<H1>Arizona Winter School 2002
+				<BR>
+				Course Descriptions and Notes</H1>
+		Links on this page open in a new window for easy printing.
+		
+			<H2><A NAME="deJong">Johan de Jong: &#147;Variation of Hodge Structures: some examples&#148;</A></H2> 
+			<UL COMPACT>
+				<LI>
+					de Jong's course and project description in <a href="/aws/2002/02deJongCD.html" target="_blank">html</a>
+				</LI>
+				<LI> deJong's notes for his course:
+				<ul>
+	     			<li>Lecture 1 in <a href="/aws/2002/02deJongLN1.pdf">pdf</a></li>
+					<li>Lecture 2 in <a href="/aws/2002/02deJongLN2.pdf">pdf</a></li>
+					<li>Lecture 3 in <a href="/aws/2002/02deJongLN3.pdf">pdf</a></li>
+					<li>Lecture 4 in <a href="/aws/2002/02deJongLN4.pdf">pdf</a></li>
+				</ul>
+				</LI>
+				<li> The students' write up of deJong's project, in <a href="/aws/2002/02deJongPN.dvi">dvi</a>, <a href="/aws/2002/02deJongPN.ps">ps</a>, <a href="/aws/2002/02deJongPN.pdf">pdf</a>.  The participants on the
+project were Jim Brown, Kirsten Eisentrager, Krzysztof Klosin, Jorge
+Pineiro, Mak Trifkovic, and Oliver Watson.  The write up was done by
+Jim, Kirsten, Krzysztof, Jorge, and Oliver.
+</li>
+			</UL>
+			<H2><A NAME="Deligne">Pierre Deligne: &#147;Periods for the Fundamental Group&#148;</A></H2> 
+			<UL COMPACT>
+				<LI>
+					Deligne's course description in <A HREF="/aws/2002/02DeligneCD.dvi">dvi</A>, <A HREF="/aws/2002/02DeligneCD.ps">ps</A>, <A HREF="/aws/2002/02DeligneCD.pdf">pdf</A>
+				</LI>
+				<LI>
+					Deligne's project description in <A HREF="/aws/2002/02DelignePD.dvi">dvi</A>, <A HREF="/aws/2002/02DelignePD.ps">ps</A>, <A HREF="/aws/2002/02DelignePD.pdf">pdf</A>
+				</LI>
+				<LI>
+					Preliminary notes by Kiran Kedlaya on Deligne's lectures, in <a href="/aws/2002/02DeligneKedlayaCN.pdf">pdf</a>.  A final version may eventually appear on <a href="http://www-math.mit.edu/~kedlaya/" target="_blank">Kedlaya's site</a>.
+				</LI>	
+			</UL>
+			<H2><A NAME="FRV">Fernando Rodriguez Villegas: &#147;Periods and special values of L-functions&#148;</A></H2> 
+			<UL COMPACT>
+				<LI>
+				Rodriguez Villegas' course and project description in <A HREF="/aws/2002/02FRVCD.dvi">dvi</A>, <A HREF="/aws/2002/02FRVCD.ps">ps</A>, <A HREF="/aws/2002/02FRVCD.pdf">pdf</A>
+				</LI>
+			</UL>
+			<H2><A NAME="Voisin">Claire Voisin: &#147;Hodge theory and filtrations on Chow groups&#148;</A></H2> 
+			<UL COMPACT>
+				<LI>
+				Voisin's course and project description in <a href="/aws/2002/02VoisinCD.html" target="_blank">html</a>
+				</LI>
+				<li>Two document relevant to Voisin's project: an extract from her book on Hodge theory (in french) in <a href="/aws/2002/02VoisinExt.ps">ps</a> and a paper of Kimura in <a href="/aws/2002/02VoisinKimura.ps">ps</a>.
+				</li>
+			</UL>
+			<H2>Professional Development Component:
+				<BR>
+				<A NAME="PDComp">&#147;Using technology in the undergraduate classroom&#148;</A></H2> 
+			<UL COMPACT>
+				<LI>
+					A description of the professional development component in <A HREF="/aws/2002/02PDComp.html" TARGET="_blank">html</A>.
+				</LI>
+				<LI> Documents on Deborah Hughes Hallet's lecture on &#147;Mathematics for the Reluctant&#148;:
+<UL><LI>Powerpoint <a href="/aws/2002/02DHHHIV.ppt">slides</a> on HIV testing.</LI>
+<LI>An Excel <a href="/aws/2002/02DHHBayes.xls">spreadsheet</a> on medical test and Bayes' theorem.</LI>
+<LI>An <a href="http://www.sciencemag.org/cgi/content/full/290/5500/2261" target="_blank">article</a> in Science magazine on &#147;Communicating Statistical Information.&#148;</LI></UL></LI>
+				<LI> Documents on Shuzo Takahashi's lecture on &#147;Spreadsheet Software as a Teaching Tool for Introductory 
+Mathematics Courses&#148;:<UL><LI>Powerpoint <a href="/aws/2002/02Takahashi.ppt">slides</a> from his lecture.</LI>
+<LI>A zip <a href="/aws/2002/02Takahashi.zip">archive</a> (2.6MB!) with 7 spreadsheets and a Powerpoint file from the business Math course.</LI></UL></LI>
+				<LI> Documents on Bill Velez's lecture on &#147;The Calculator Based Laboratory&#148;:<UL><LI>The Texas Instruments <a href="http://education.ti.com/educator/product/datac/cbl2.html" target="_blank">web page</a> on the Calculator Based Laboratory.</LI></UL></LI>
+				<LI> Documents on Doug Ulmer's lecture on &#147;A simple simulation to value stock options&#148;:<UL><LI>Powerpoint <a href="/aws/2002/02UlmerOptions.ppt">slides</a> on a model to value options.</LI>
+<LI>A zip <a href="/aws/2002/02Ulmer.zip">archive</a> of 3 Excel spreadsheets with simulations illustrating the model.  (There are links to these spreadsheets in the slide show.  These links will most likely not work on your computer, but you can manually open the spreadsheets.)</LI>
+<LI>A one-page <a href="/aws/2002/02UlmerRN.pdf">note (in pdf)</a> on risk-neutral valuation (also linked to in the slides).</LI>
+</UL></LI>
+
+			</UL>
+		
+</div>
+</body>
+</html>

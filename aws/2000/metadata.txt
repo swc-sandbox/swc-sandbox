@@ -1,0 +1,3 @@
+year: 2000
+title: Topics in the Arithmetic of Function Fields
+htmltitle: Topics in the Arithmetic of Function Fields

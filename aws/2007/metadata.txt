@@ -1,0 +1,3 @@
+year: 2007
+title: p-adic Geometry
+htmltitle: <i>p</i>-adic Geometry

@@ -1,0 +1,85 @@
+
+<html>
+<include src="/head.html.in" {'PAGE':'AWS 2004: Courses and Notes'}>
+<body>
+<include src="/topbar.html.in">
+<include src="/navcol.html.in"  {'nav_prev':'navsel'}>
+<div class="page">
+<H1>Arizona Winter School 2004
+				<BR>
+				Course Descriptions and Notes</H1>
+		For hints on using the videos, have a look at our <a href="/notes/VideoHints.html">video hints</a> page.
+		
+			<H2><A NAME="Batyrev">Victor Batyrev: &#147;Cohomology, periods, and the Hodge structure of toric hypersurfaces&#148;</A></H2> 
+			<UL COMPACT>
+				<LI>
+					Batyrev's course and project description in <a href="/aws/2004/04BatyrevCD.pdf">pdf</a>
+				</LI>
+				<LI>
+				    Notes for Batyrev's course in <a href="/aws/2004/04BatyrevNotes.pdf">pdf</a>
+				</LI>   
+								<li>Streaming video:
+							<ul>
+	<li>Lecture 1: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/batyrev/batyrev1.rm">video</a>, <a href="/video/aws2004/batyrev/batyrev-3-13-1.pdf">pdf slides</a>.</li>
+	<li>Lecture 2: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/batyrev/batyrev2.rm">video</a>, <a href="/video/aws2004/batyrev/batyrev-3-13-2.pdf">pdf slides</a>.</li>
+	<li>Lecture 3: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/batyrev/batyrev3.rm">video</a>, <a href="/video/aws2004/batyrev/batyrev-3-14.pdf">pdf slides</a>.</li>
+	<li>Lecture 4: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/batyrev/batyrev4.rm">video</a>, <a href="/video/aws2004/batyrev/batyrev-3-15.pdf">pdf slides</a>.</li>
+	<li>Lecture 5: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/batyrev/batyrev5.rm">video</a>, <a href="/video/aws2004/batyrev/batyrev-3-16.pdf">pdf slides</a>.</li>
+</ul>
+</li>
+<li>A pdf scan of <a href="/video/aws2004/batyrev/batyrev-scan.pdf">notes written during the lecture</a>.</li>
+			</UL>
+			<H2><A NAME="Candelas">Philip Candelas: &#147;Periods and zeta functions&#148;</A></H2> 
+			<UL COMPACT>
+				<LI>			
+					Candelas' course and project description in <a href="/aws/2004/04CandelasCD.pdf">pdf</a>
+				</LI>
+												<li>Streaming video:
+							<ul>
+	<li>Lecture 1: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/candelas/candelas1.rm">video</a>, <a href="/video/aws2004/candelas/candelas-3-13.pdf">pdf slides</a>.</li>
+	<li>Lecture 2: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/candelas/candelas2.rm">video</a>, <a href="/video/aws2004/candelas/candelas-3-14-1.pdf">pdf slides</a>.</li>
+	<li>Lecture 3: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/candelas/candelas3.rm">video</a>, <a href="/video/aws2004/candelas/candelas-3-14-2.pdf">pdf slides</a>.</li>
+	<li>Lecture 4: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/candelas/candelas4.rm">video</a>, <a href="/video/aws2004/candelas/candelas-3-15.pdf">pdf slides</a>.</li>
+	<li>Lecture 5: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/candelas/candelas5.rm">video</a>, <a href="/video/aws2004/candelas/candelas-3-16.pdf">pdf slides</a>.</li>
+</ul>
+</li>
+<li>A pdf scan of <a href="/video/aws2004/candelas/candelas-scan.pdf">notes written during the lecture</a>.</li>
+			</UL>
+			<H2><A NAME="Morrison">David Morrison: &#147;Instanton sums and monodromy&#148;</A></H2> 
+			<UL COMPACT>
+				<LI>
+				Morrison's course and project description in <a href="/aws/2004/04MorrisonCD.pdf">pdf</A>
+				</LI>
+																<li>Streaming video:
+							<ul>
+	<li>Lecture 1: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/morrison/morrison1.rm">video</a>, <a href="/video/aws2004/Morrison/Morrison_1.pdf">pdf slides</a>.</li>
+	<li>Lecture 2: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/morrison/morrison2.rm">video</a>, <a href="/video/aws2004/Morrison/Morrison_2.pdf">pdf slides</a>.</li>
+	<li>Lecture 3: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/morrison/morrison3.rm">video</a>, <a href="/video/aws2004/Morrison/Morrison_3.pdf">pdf slides</a>.</li>
+	<li>Lecture 4: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/morrison/morrison4.rm">video</a>, <a href="/video/aws2004/Morrison/Morrison_4.pdf">pdf slides</a>.</li>
+	<li>Lecture 5: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/morrison/morrison5.rm">video</a>, <a href="/video/aws2004/Morrison/Morrison_5.pdf">pdf slides</a>.</li>
+</ul>
+</li>
+<li>A pdf scan of <a href="/video/aws2004/Morrison/morrison-scan.pdf">notes written during the lecture</a>.</li>
+			</UL>
+			<H2><A NAME="Wan">Daqing Wan: &#147;Zeta Functions of Toric Calabi-Yau Hypersurfaces&#148;</A></H2> 
+			<UL COMPACT>
+				<LI>
+				    Wan's course and project description in <a href="/aws/2004/04WanCD.pdf">pdf</a>
+				</LI>
+				<LI>
+				    Notes for Wan's course in <a href="/aws/2004/04WanNotes.pdf">pdf</a>
+				</LI>													<li>Streaming video:
+<ul>
+	<li>Lecture 1: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/wan/wan1.rm">video</a>, <a href="/video/aws2004/wan/wan1.pdf">pdf slides</a>.</li>
+	<li>Lecture 2: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/wan/wan2.rm">video</a>, <a href="/video/aws2004/wan/wan2.pdf">pdf slides</a>.</li>
+	<li>Lecture 3: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/wan/wan3.rm">video</a>, <a href="/video/aws2004/wan/wan3.pdf">pdf slides</a>.</li>
+	<li>Lecture 4: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/wan/wan4.rm">video</a>, <a href="/video/aws2004/wan/wan4.pdf">pdf slides</a>.</li>
+	<li>Lecture 5: <a href="http://redstar.faccenter.arizona.edu:8080/ramgen/ulmer_math/wan/wan5.rm">video</a>, <a href="/video/aws2004/wan/wan5.pdf">pdf slides</a>.</li>
+</ul>
+</li>
+<li>A pdf scan of <a href="/video/aws2004/wan/wan-scan.pdf">notes written during the lecture</a>.</li>
+			</UL>
+		
+</div>
+</body>
+</html>

@@ -1,0 +1,327 @@
+<html>
+  <include src="/head.html.in" {'PAGE':'Previous Winter Schools'}>
+  <body vlink="blue";>
+    <include src="/topbar.html.in" >
+    <include src="/navcol.html.in"  {'nav_prev':'navsel'}>
+    <div class="page">
+      <h1 class="header">Index of Winter Schools</h1>
+
+     <H2>AWS 2020: Nonabelian Chabauty</H2>
+        <UL COMPACT>
+	<LI>
+	<A HREF="2020/index.html">General information, course descriptions, video
+		                and notes</A>
+	</LI>
+	<LI>
+	<A HREF="2020/schedule.html">Schedule</A>
+	</LI>
+	<li>
+	<A HREF="2020/directions.html">Local directions</A>
+	</li>
+	</UL>
+      
+      <H2>AWS 2019: Topology and Arithmetic</H2>
+        <UL COMPACT>
+	<LI>
+	<A HREF="2019/index.html">General information, course descriptions, video
+		                and notes</A>
+	</LI>
+	<LI>
+	<A HREF="2019/schedule.html">Schedule</A>
+	</LI>
+	<li>
+	<A HREF="2019/directions.html">Local directions</A>
+	</li>
+	</UL>
+      
+      <H2>AWS 2018: Iwasawa Theory</H2>
+        <UL COMPACT>
+	<LI>
+	<A HREF="2018/index.html">General information, course descriptions, video
+		                and notes</A>
+	</LI>
+	<LI>
+	<A HREF="2018/schedule.html">Schedule</A>
+	</LI>
+	<li>
+	<A HREF="2018/directions.html">Local directions</A>
+	</li>
+	</UL>
+
+
+      <H2>AWS 2017: Perfectoid Spaces</H2>
+        <UL COMPACT>
+	<LI>
+	<A HREF="2017/index.html">General information, course descriptions, video
+		                and notes</A>
+	</LI>
+	<LI>
+	<A HREF="2017/schedule.html">Schedule</A>
+	</LI>
+	<li>
+	<A HREF="2017/directions.html">Local directions</A>
+	</li>
+	</UL>
+
+      <H2>AWS 2016: Analytic Methods in Arithmetic Geometry</H2>
+        <UL COMPACT>
+	<LI>
+	<A HREF="2016/index.html">General information, course descriptions, video
+		                and notes</A>
+	</LI>
+	<LI>
+	<A HREF="2016/schedule.html">Schedule</A>
+	</LI>
+	<li>
+	<A HREF="2016/directions.html">Local directions</A>
+	</li>
+	</UL>
+
+
+      <H2>AWS 2015: Arithmetic and Higher-Dimensional Varieties</H2>
+        <UL COMPACT>
+	<LI>
+	<A HREF="2015/index.html">General information, course descriptions, video
+		                and notes</A>
+	</LI>
+	<LI>
+	<A HREF="2015/schedule.html">Schedule</A>
+	</LI>
+	<li>
+	<A HREF="2015/directions.html">Local directions</A>
+	</li>
+	</UL>
+	<H2>AWS 2014: Arithmetic Statistics</H2>
+        <UL COMPACT>
+        <LI>
+	    <A HREF="2014/index.html">General information, course descriptions, video
+		and notes</A>
+        </LI>
+  	<LI>
+	    <A HREF="2014/schedule.html">Schedule</A>
+	  </LI>
+	<li>
+	    <A HREF="2014/directions.html">Local directions</A>
+	</li>
+        </UL>
+        <H2>AWS 2013: Modular Forms and Modular Curves</H2>
+        <UL COMPACT>
+        <LI>
+	    <A HREF="2013/index.html">General information, course descriptions, video 
+		and notes</A>
+        </LI>
+  	<LI>
+	    <A HREF="2013/schedule.html">Schedule</A>
+	  </LI>
+	<li>
+	    <A HREF="2013/directions.html">Local directions</A>
+	</li>
+        </UL>
+        <H2>AWS 2012: Ramification and Geometry</H2>
+	<UL COMPACT>
+	  <LI>
+	    <A HREF="2012/index.html">General information, course descriptions, video and notes</A>
+	  </LI>
+	  <LI>
+	    <A HREF="2012/schedule.html">Schedule</A>
+	  </LI>
+	</UL>
+        <H2>AWS 2011: Stark-Heegner Points</H2>
+	<UL COMPACT>
+	  <LI>
+	    <A HREF="2011/index.html">General information, course descriptions, video and notes</A>
+	  </LI>
+	  <LI>
+	    <A HREF="2011/schedule.html">Schedule</A>
+	  </LI>
+	</UL>
+
+	<H2>AWS 2010: Number theory and Dynamics</H2>
+	<UL COMPACT>
+	  <LI>
+	    <A HREF="2010/index.html">General information, course descriptions, video and notes</A>
+	  </LI>
+	  <LI>
+	    <A HREF="2010/schedule.html">Schedule</A>
+	  </LI>
+	</UL>
+
+	<H2>AWS 2009: Quadratic Forms</H2>
+	<UL COMPACT>
+	  <LI>
+	    <A HREF="2009/index.html">General information, course descriptions, video and notes</A>
+	  </LI>
+	  <LI>
+	    <A HREF="2009/schedule.html">Schedule</A>
+	  </LI>
+	</UL>
+
+	<H2>AWS 2008: Special Functions and Transcendence</H2> 
+	<UL COMPACT>
+	  <LI>
+	    <A HREF="2008/index.html">General information, course descriptions, video and notes</A>
+	  </LI>
+	  <LI>
+	    <A HREF="2008/schedule.html">Schedule</A>
+	  </LI>
+	</UL>
+
+	<H2>AWS 2007: <i>p</i>-adic Geometry</H2> 
+	<UL COMPACT>
+	  <LI>
+	    <A HREF="2007/index.html">General information</A>
+	  </LI>
+	  <LI>
+	    <A HREF="2007/notes.html">Course descriptions and notes</A>
+	  </LI>
+	  <LI>
+	    <A HREF="2007/schedule.html">Schedule</A>
+	  </LI>
+	</UL>
+
+	<H2>AWS 2006: Computational and Algorithmic Aspects of Algebra and Arithmetic</H2> 
+	<UL COMPACT>
+	  <LI>
+	    <A HREF="2006/index.html">General information</A>
+	  </LI>
+	  <LI>
+	    <A HREF="2006/notes.html">Course descriptions and notes</A>
+	  </LI>
+	  <LI>
+	    <A HREF="2006/schedule.html">Schedule</A>
+	  </LI>
+	  <LI>
+	    <A HREF="2006/participants.html">Participants</A>
+	  </LI>
+	</UL>
+
+	<H2>AWS 2005: Fundamental Groups in Arithmetic</H2> 
+	<UL COMPACT>
+	  <LI>
+	    <A HREF="2005/index.html">General information</A>
+	  </LI>
+	  <LI>
+	    <A HREF="2005/notes.html">Course descriptions and notes</A>
+	  </LI>
+	  <LI>
+	    <A HREF="2005/schedule.html">Schedule</A>
+	  </LI>
+	  <LI>
+	    <A HREF="2005/participants.html">Participants</A>
+	  </LI>
+	</UL>
+
+	<H2>AWS 2004: Number Theory and Physics</H2> 
+	<UL COMPACT>
+	  <LI>
+	    <A HREF="2004/index.html">General information</A>
+	  </LI>
+	  <LI>
+	    <A HREF="2004/notes.html">Course descriptions and notes</A>
+	  </LI>
+	  <LI>
+	    <A HREF="2004/schedule.html">Schedule</A>
+	  </LI>
+	  <LI>
+	    <A HREF="2004/participants.html">Participants</A>
+	  </LI>
+	</UL>
+
+	<H2>AWS 2003: Logic and Number Theory</H2> 
+	<UL COMPACT>
+	  <LI>
+	    <A HREF="2003/index.html">General information</A>
+	  </LI>
+	  <LI>
+	    <A HREF="2003/notes.html">Course descriptions and notes</A>
+	  </LI>
+	  <LI>
+	    <A HREF="2003/schedule.html">Schedule</A>
+	  </LI>
+	  <LI>
+	    <A HREF="2003/participants.html">Participants</A>
+	  </LI>
+	</UL>
+
+	<H2>AWS 2002: Periods</H2> 
+	<UL COMPACT>
+	  <LI>
+	    <A HREF="2002/index.html">General information</A>
+	  </LI>
+	  <LI>
+	    <A HREF="2002/notes.html">Course descriptions and notes</A>
+	  </LI>
+	  <LI>
+	    <A HREF="2002/schedule.html">Schedule</A>
+	  </LI>
+	  <LI>
+	    <A HREF="2002/participants.html">Participants</A>
+	  </LI>
+	</UL>
+
+	<H2>AWS 2001: Modular Forms</H2> 
+	<UL COMPACT>
+	  <LI>
+	    <A HREF="2001/index.html">General information</A>
+	  </LI>
+	  <LI>
+	    <A HREF="2001/notes.html">Course descriptions and notes</A>
+	  </LI>
+	  <LI>
+	    <A HREF="2001/schedule.html">Schedule</A>
+	  </LI>
+	  <LI>
+	    <A HREF="2001/participants.html">Participants</A>
+	  </LI>
+	</UL>
+
+	<H2>AWS 2000: Topics in the Arithmetic of Function Fields</H2> 
+	<UL COMPACT>
+	  <LI>
+	    <A HREF="2000/index.html">General information</A>
+	  </LI>
+	  <LI>
+	    <A HREF="2000/notes.html">Course descriptions and notes</A>
+	  </LI>
+	  <LI>
+	    <A HREF="2000/schedule.html">Schedule</A>
+	  </LI>
+	  <LI>
+	    <A HREF="2000/participants.html">Participants</A>
+	  </LI>
+	</UL>
+
+	<H2>AWS 1999: Local-to-Global Principles in Arithmetic Geometry</H2> 
+	<UL COMPACT>
+	  <LI>
+	    <A HREF="1999/index.html">General information</A>
+	  </LI>
+	  <LI>
+	    <A HREF="1999/notes.html">Course descriptions and notes</A>
+	  </LI>
+	  <LI>
+	    <A HREF="1999/schedule.html">Schedule</A>
+	  </LI>
+	  <LI>
+	    <A HREF="1999/participants.html">Participants</A>
+	  </LI>
+	</UL>
+
+	<H2>AWS 1998: Workshop on Diophantine Geometry Related to the ABC Conjecture</H2> 
+	<UL COMPACT>
+	  <LI>
+	    <A HREF="1998/index.html">General information</A>
+	  </LI>
+	  <LI>
+	    <A HREF="1998/notes.html">Course descriptions and notes</A>
+	  </LI>
+	  <LI>
+	    <A HREF="1998/schedule.html">Schedule</A>
+	  </LI>
+	  <LI>
+	    <A HREF="1998/participants.html">Participants</A>
+	  </LI>
+	</UL>
+      </div>
+  </body>
+</html>

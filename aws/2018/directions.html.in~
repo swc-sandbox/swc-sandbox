@@ -1,0 +1,68 @@
+<html>
+
+<include src="/head.html.in" {'PAGE':'Directions for AWS 2018'}>
+<body vlink="blue";>
+<include src="/topbar.html.in" >
+<include src="/navcol.html.in"  {'nav_last':'navsel'}>
+
+<div class="page">
+
+	<h1 class="header">Local Directions for AWS 2018</h1>
+	  <h2>Locations</h2>
+	  
+	  <p>
+	    <b><a href="http://www.tucsonuniversityhotel.com/">Tucson University Park Hotel</a></b>: 880 E. Second St., Tucson AZ 85719. Phone: (520) 792-4100.<br>
+	The Tucson University Park is located one block north and one block west of the west entrance to the University of Arizona campus at University Blvd. & Park Ave.
+	  </p>
+  	  <p>
+	    <b><a href="http://www.alofttucsonuniversity.com/">Aloft Tucson University</a></b>: 1900 East Speedway Boulevard, Tucson AZ 85719.  Phone: (520) 908-6800.<br>
+	The Aloft is located a quarter mile due north of the east entrance to the University of Arizona campus at East University Blvd. & Campbell Ave.
+	  </p>
+	  
+	  <p>
+	    <b>Environment and Natural Reources 2 (ENR2) Building</b>: 1064 E Lowell St., Tucson AZ 85721.<br> 
+  Lectures will be held in auditorium N120, located on the ground floor of the ENR2 building.
+  ENR2 is located on the north side of Sixth St., just east of Park Ave. 
+	  </p>
+
+	  <h2>Walking to the lectures</h2>
+	  <p>
+	    Here are walking directions between the Tucson University Park and ENR2 from Google Maps:
+        <ul><iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d1687.512344662341!2d-110.95796299169136!3d32.230501695285135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x86d671044652f031%3A0x7ba85bd0004029d0!2sTucson+University+Park+Hotel%2C+880+E+2nd+St%2C+Tucson%2C+AZ+85719!3m2!1d32.2323991!2d-110.95832519999999!4m5!1s0x86d67101744a05dd%3A0xd83a65c45dc91119!2sEnvironment+and+Natural+Resources+2+Building%2C+East+Lowell+Street%2C+Tucson%2C+AZ!3m2!1d32.2286043!2d-110.95541209999999!5e0!3m2!1sen!2sus!4v1517672017267" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></ul>
+
+	  </p>
+	<p>Here are walking directions between the Aloft and ENR2 from Google Maps:
+	<ul><iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d6749.916307952527!2d-110.953676855171!3d32.23229319965638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x86d671aede13ed41%3A0xe4cf1bd9ca40cf82!2s1900+E+Speedway+Blvd%2C+Tucson%2C+AZ+85719!3m2!1d32.2356593!2d-110.9432221!4m5!1s0x86d67101744a05dd%3A0xd83a65c45dc91119!2sENR2+(Environment+and+Natural+Resources+2+Building)%2C+East+Lowell+Street%2C+Tucson%2C+AZ!3m2!1d32.2286043!2d-110.95541209999999!5e0!3m2!1sen!2sus!4v1486158602432" width="640" height="480" frameborder="0" style="border:0" allowfullscreen></iframe></ul>
+
+
+	
+
+      <h2>Parking</h2>
+      <p>
+        Self-parking at the Tucson University Park is available at $13/day.  The Main Gate Garage
+        is right next to the Tucson University Park and is free on weekends and $8/day on weekdays.
+	There is complimentary self-parking available at the Aloft.
+      </p>
+
+	  <p>
+	    For the lectures, participants with cars may park in the Sixth Street Garage
+	    immediately to the east of ENR2.  Its rates are the same as the Main Gate Garage.
+      </p>
+
+
+	<h2>Meals</h2>
+	<p>The most convenient location for meals is the area around University Blvd.
+	and Park Ave., near the Tucson University Park.  There are also some restaurants along
+    Speedway Blvd.  The plaza immediately to the south of the Aloft has
+	a good Vietnamese restaurant as well as a Bruegger's Bagels.
+	</p>
+
+    <p>Fourth Avenue and downtown can be easily reached by the new
+    <a href="http://www.sunlinkstreetcar.com">Sun Link Streetcar.</a>
+    The streetcar picks up on Second St. on
+    campus and on University Blvd. just south of the Tucson University Park.  You can take it west and then
+    south down Fourth Ave. to downtown Tucson, which has many nice restaurants.
+    For a map, see <a href="http://www.sunlinkstreetcar.com/schedule/route">here</a>.</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,358 @@
+%%  Daqin Wan's course description
+
+\documentclass[10XSpt]{article}
+%\usepackage{amsfonts}
+%\usepackage{amsmath,amssymb}
+
+%\renewcommand{\theequation}{\thesection.\arabic{equation}}
+%\setcounter{equations}{section}
+\newfont{\Bb}{msbm10 scaled\magstep1}
+\newfont{\Bbs}{msbm10 scaled\magstep0}
+
+\newcommand{\fq}{\mbox{\Bb F}_{q}}
+\newcommand{\fqk}{\mbox{\Bb F}_{q^{k}}}
+\newcommand{\fpk}{\mbox{\Bb F}_{p^{k}}}
+\newcommand{\fqr}{\mbox{\Bb F}_{q^{k-1}}}
+\newcommand{\sfqk}{\mbox{\Bbs F}_{q^{k}}}
+\newcommand{\fp}{\mbox{\Bb F}_{p}}
+\newcommand{\fqbar}{\bar{\mbox{\Bb F}}_{q}}
+\newcommand{\ftwoa}{\mbox{\Bb F}_{2^{a}}}
+\newcommand{\Tr}{\mbox{\rm Tr}}
+\newcommand{\sTr}{\mbox{\rm \scriptsize Tr}}
+\newcommand{\Teich}{\mbox{\rm Teich}}
+\newcommand{\unram}{\mbox{\rm \scriptsize unram}}
+
+\newcommand{\Qbar}{\bar{\mbox{\Bb Q}}}
+\newcommand{\Qp}{\mbox{\Bb Q}_{p}}
+\newcommand{\K}{K} %% ramified extension of degree m
+\newcommand{\Zp}{\mbox{\Bb Z}_{p}}
+\newcommand{\Z}{\mbox{\Bb Z}}
+\newcommand{\C}{\mbox{\Bb C}}
+\newcommand{\Zl}{\mbox{\Bb Z}_{\ell}}
+\newcommand{\ord}{\mbox{\rm ord}}
+\newcommand{\sord}{\mbox{\rm \scriptsize ord}} %% small version for
+\newcommand{\degp}{\mbox{\rm deg}_{+}}
+\newcommand{\degm}{\mbox{\rm deg}_{-}}
+\newcommand{\NP}{\mbox{\rm NP}}
+\newcommand{\HP}{\mbox{\rm HP}}
+\newcommand{\GNP}{\mbox{\rm GNP}}                          %% exponent
+
+\newcommand{\ring}{R} %% ring of integers of Omega_{0}
+\newcommand{\Oh}{{\cal O}}
+\newcommand{\SoftOh}{\tilde{{\cal O}}} %% Change this
+
+%% Miscellaneous
+
+\newcommand{\wt}{\mbox{\rm wt}}
+\newcommand{\swt}{\mbox{\rm \scriptsize wt}}
+\newcommand{\wttil}{\tilde{\mbox{\rm wt}}}
+\newcommand{\swttil}{\tilde{\mbox{\rm \scriptsize wt}}}
+\newcommand{\Gal}{\mbox{\rm Gal}} %% ditto
+\newcommand{\Norm}{\mbox{\rm Norm}}
+\newcommand{\Ker}{\mbox{\rm Ker}}
+
+%% Other fields etc
+
+\newcommand{\N}{\mbox{\Bb N}}
+\newcommand{\sN}{\mbox{\Bbs N}}
+\newcommand{\Q}{\mbox{\Bb Q}}
+%\newcommand{\Z}{\mbox{\Bb Z}}
+\newcommand{\Znn}{\mbox{\Bb Z}_{\geq 0}}
+\newcommand{\sZ}{\mbox{\Bbs Z}}
+\newcommand{\sZnn}{\mbox{\Bbs Z}_{\geq 0}}
+\newcommand{\R}{\mbox{\Bb R}}
+\newcommand{\LA}{L} %% the banach space
+\newcommand{\LAtil}{\tilde{L}}
+\newcommand{\A}{A} %% the ring zp[pi,epsilon]
+\newcommand{\Atil}{\tilde{A}} %% the ring zp[pi,epsilon,gamma]
+\newcommand{\M}{M} %% the matrix M
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{maintheorem}{Main Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{question}[theorem]{Question}
+
+
+%% \newtheorem{algorithm}[theorem]{Algorithm}
+
+%% Environments
+
+%\newenvironment{proof}{{\it Proof:}}{\hfill $\Box$ \newline}
+
+\newenvironment{exafont}{\begin{bf}}{\end{bf}}
+\newenvironment{example}{\vspace{0.3cm}\par\noindent\refstepcounter{theorem}\begin{exafont}Example \thetheorem\end{exafont}\hspace{\labelsep}}{\vspace{0.3cm}\par}
+\newenvironment{algorithm}{\vspace{0.3cm}\par\noindent\refstepcounter{theorem}\begin{exafont}Algorithm \thetheorem\end{exafont}\hspace{\labelsep}}{\vspace{0.3cm}\par}
+\newenvironment{note}{\vspace{0.3cm}\par\noindent\refstepcounter{theorem}\begin{exafont}Note
+\thetheorem\end{exafont}\hspace{\labelsep}}{\vspace{0.3cm}\par}
+\newenvironment{observation}{\vspace{0.3cm}\par\noindent\refstepcounter{theorem}\begin{exafont}Observation \thetheorem\end{exafont}\hspace{\labelsep}}{\vspace{0.3cm}\par}
+
+%\setcounter{equation}{section}
+
+\def\V{{\mathcal V}}
+\def\U{{\mathcal U}}
+\def\F{{\bf F}_q}
+
+
+\title{{Zeta Functions of Toric Calabi-Yau Hypersurfaces}\\ 
+(Course and Project Description)}
+
+\begin{document}
+
+\author{Daqing Wan}
+
+
+\maketitle
+
+The aim of this course is to apply certain recent developments in 
+Dwork's $p$-adic theory to study the $p$-adic variation of the 
+zeta function attached to a family of affine toric Calabi-Yau hypersurfaces 
+over finite fields, leading up to Dwork's unit root conjecture. 
+
+\section{The basic example}
+
+An important example is the following family of 
+$(n-1)$-dimensional affine toric Calabi-Yau hypersurfaces 
+$$ X_{\lambda}: X_1 +\cdots +X_n + {1\over X_1\cdots X_n} + \lambda =0, \ X_i \not=0,$$
+parametrized by $\lambda$. This is the mirror family (actually an affine open piece 
+of it) of the standard Calabi-Yau family in the projective $n$-space defined by 
+$$Y_{\lambda}: X_0^{n+1}+X_1^{n+1} +\cdots + X_n^{n+1} + \lambda X_0X_1\cdots X_n=0.$$
+The zeta function of this mirror pair of families over finite fields have 
+been studied in great detail by Dwork \cite{D1} for $n=2, 3$ and more recently 
+by Candelas, de la Ossa and Rodriguez Villegas \cite{COR} for $n=4$. 
+The zeta function 
+and its roots are closely related to the solutions of the Picard-Fuch 
+differential equations. 
+In this course, we study the zeta function of the family $X_{\lambda}$ 
+for all $n$ and its $p$-adic variation when the parameter $\lambda$ 
+varies. 
+
+
+
+Let $\F$ be the finite field of $q$ elements, where $q=p^a$ and $p$ is a 
+prime number. Removing a finite number of the values for $\lambda$, we 
+assume that the toric hypersurface $X_{\lambda}$ is $\Delta$-regular. 
+Let $\lambda \in \F$. For a positive integer $k$, let $N_k(\lambda)$ denote the 
+number of ${\bf F}_{q^k}$-rational points on $X_{\lambda}$. 
+We shall explain how to prove the following results. 
+
+1. There are $n$ algebraic integers $\alpha_0(\lambda), \cdots, 
+\alpha_{n-1}(\lambda)$ 
+such that for each positive integer $k$, one has the formula 
+$$N_k(\lambda) = {{(q^k-1)^n +(-1)^{n+1}}\over q^k} + 
+(-1)^{n+1}\sum_{i=0}^{n-1} \alpha_i(\lambda)^k,$$
+where the $\alpha_i(\lambda)$ are the Frobenius eigenvalues acting 
+on the primitive part of the cohomology. 
+Furthermore, each $\alpha_i(\lambda)$ has complex absolute value $\sqrt{q}^{n-1}$. 
+
+2. The family $X_{\lambda}$ is generically ordinary for every $p$, that is, 
+the generic Newton polygon coincides with the Hodge polygon.  
+This means that there is a non-zero Hasse polynomial $H_p(\lambda)$ over ${\bf F}_p$ 
+for each prime number $p$, 
+such that for all $a$ and all $\lambda \in {\bf F}_{p^a}$  
+with $H_p(\lambda)\not=0$, we have 
+$$\alpha_i(\lambda) = p^{ai}u_i(\lambda), (0\leq i\leq n-1),$$
+where each $u_i(\lambda)$ is a $p$-adic unit.  
+
+3. For each $p$, there are $p$-adic ``analytic" 
+functions $f_{i,p}(x)$ ($0\leq i \leq n-1)$  
+such that for each ordinary $\bar{\lambda} \in {\bf F}_{p^a}$, one has the 
+$p$-adic analytic formula for each unit $u_i(\bar{\lambda})$:  
+$$u_i(\bar{\lambda}) = f_{i,p}(\lambda) f_{i,p}(\lambda^p)\cdots 
+f_{i,p}(\lambda^{p^{a-1}}),$$
+where $\lambda$ denotes the Teichmuller lifting of $\bar{\lambda}$. 
+Each $f_{i,p}(x)$ is formally of the form $g_{i,p}(x)/g_{i,p}(x^p)$, 
+where $g_{i,p}(x)$ is a solution of the Picard-Fuch equation. 
+
+4. Each $f_{i,p}(x)$ defines the Frobenius matrix of 
+a rank one unit root F-crystal, or equivalently, 
+a rank one $p$-adic Galois representation for the arithmetic fundamental 
+group of the ordinary parameter space over ${\bf F}_p$. For each integer $k$, 
+the $k$-th power unit root L-function 
+is defined to be 
+$$L(u_i^k, T) =\prod_{\bar{\lambda}}{1\over 1-u_i(\lambda)^k T^{{\rm deg}(\lambda)}},
+$$
+where $\bar{\lambda}$ runs over the closed points of the ordinary parameter space 
+over ${\bf F}_p$. Each of these unit root L-functions is a $p$-adic 
+meromorphic function as conjectured by Dwork. Furthermore, for this example, 
+they are $p$-adic meromorphic function of finite order!    
+
+\section{Course content}
+
+
+We hope to summarize the essence of some of the following materials 
+in the setting of toric hypersurfaces and explain how to apply them 
+to study the above basic example. 
+
+1. Dwork's trace formula, $p$-adic meromorphic continuation 
+of the zeta function via $p$-adic Fredholm determinant of 
+a compact operator, see \cite{W2} for an elementary exposition.  
+Cohomological formulas.  The results of 
+Adolphson-Sperber \cite{AS} and Denef-Loeser \cite{DL} as applied 
+to toric hypersurfaces.  
+
+
+2. The Katz type conjecture. Newton polygon and its relation to Hodge polygon 
+\cite{Ma}\cite{AS2}.  
+Generic Newton polygon, generic ordinary primes, 
+star decomposition theorem \cite{W1} 
+and collapsing decomposition theorem \cite{W5}.   
+
+3. Deformation theory \cite{D0}, 
+Newton-Hodge decomposition and unit root formula \cite{Ka}\cite{D2}. 
+
+4. Dwork's unit root conjecture \cite{D2}, 
+the speaker's work \cite{W3}\cite{W4} and Grosse-Kl\"onne's 
+rank one generalization \cite{GK}.  
+
+
+\section{Student project} 
+
+
+Take your favorite universal family (other than the above basic example) 
+of toric Calabi-Yau hypersurfaces of dimension at least $4$, say, 
+arising from other applications. 
+That is, take your favorite reflexive 
+integral polyhedron $\Delta$ in ${\bf R}^n$ containing the origin as an 
+interior point, where $n\geq 5$. 
+Determine if this family is generically ordinary 
+for every prime number $p$, using possibly a combination of the star 
+decomposition theorem and the collapsing decomposition 
+theorem \cite{W5} (the first part of this article explains how to 
+use the decomposition theorems to determine if a family is generically 
+ordinary at $p$).  If you cannot find such a family, 
+ask someone in mirror symmetry 
+(or at the winter school) to give you a nice family of toric CY hypersurfaces 
+to play with. Another possibility is to explore the link between the 
+unit root formula and mirror symmetry.  
+
+\section{Prerequisites}
+
+The minimal background is Koblitz's book \cite{Ko}, which 
+contains basic properties of $p$-adic numbers, $p$-adic 
+analytic functions, Newton polygon, and Dwork's rationality proof.  
+The last part will be reviewed in the course. 
+A further reading in this direction is Monsky's book \cite{Mo}, which 
+explains Dwork's $p$-adic cohomological formula and how to 
+calculate it in the setting of smooth projective hypersurface case. 
+For a classical motivation on the relation between Newton polygon 
+and Hodge polygon, see Mazur's expository article \cite{Ma}.  
+For Hodge numbers and Picard-Fuch equation of affine 
+toric Calabi-Yau hypersurfaces, we refer to Batyrev's paper \cite{Ba}. 
+For a nice and self-contained exposition on the link between 
+zeta functions and periods for the quintic Calabi-Yau hypersurfaces, 
+see paper \cite{COR}.  
+Attendee interested in 
+algorithms for computing the zeta function is referred to the 
+expository article \cite{W6}. 
+
+
+
+
+
+\begin{thebibliography}{[MT1]}
+
+%
+\bibitem{AS} A. Adolphson and S. Sperber, Exponential sums and Newton polyhedra: 
+cohomology and estimates, Ann. Math., 130(1989), 367-406. 
+
+%
+\bibitem{AS2}A. Adolphson and S. Sperber, 
+On the zeta function of a complete intersection,  Ann. Sci. \'Ecole Norm. Sup. 
+(4) 29 (1996), no. 3, 287-328.
+
+%
+\bibitem{Ba} V.V. Batyrev, Variation of the mixed Hodge structure of affine hypersurfaces 
+in algebraic tori, Duke Math. J., 69(1993), 349-409.  
+
+%
+\bibitem{DL}J. Denef and F. Loeser, Weights of exponential sums, intersection cohomology, 
+and Newton polyhedra, Invent. Math., 106(1991), 275-294. 
+
+
+%
+\bibitem{D0}D. Dwork, On the zeta functions of a hypersurface II, 
+Ann. Math., 80(1964), 227-299. 
+
+%
+\bibitem{D1}
+B. Dwork, $p$-adic Cycles, Publ Math., IHES., 37(1969), 27-115. 
+
+%
+\bibitem{D2} B. Dwork,
+Normalized period matrices II, Ann. Math., 98(1973), 1-57.
+
+
+%
+\bibitem{COR} P. Candelas, X. de la Ossa and F. Rodriguez Villegas, 
+Calabi-Yau manifolds over finite fields, I, preprint. 
+``http://xxx.lanl.gov/abs/hep-th/0012233".  
+
+
+%
+\bibitem{GK} E. Grosse-Kl\"onne, On families of pure slope L-functions, Documenta Math., 
+8(2003), 1-42. 
+%
+\bibitem{Ka1}N. Katz, On the differential equation satisfied by period matrices, 
+Publ. Math., IHES., 35(1968), 71-106. 
+
+%
+\bibitem{Ka}N. Katz, Travaux de Dwork,
+S\'eminaire Bourbaki, expos\'e 409 (1971/72),
+Lecture Notes in Math., No. 317, 1973, 167-2000.
+
+%
+\bibitem{Ko}N. Koblitz, $p$-adic Numbers, $p$-adic Analysis and Zeta Functions, 
+GTM, Vol 58, Springer-Verlag, 1996. 
+
+%
+\bibitem{Ma}B. Mazur, Frobenius and the Hodge filtration, Bull. AMS., 78(1972), 
+653-667. 
+
+%
+\bibitem{Mo}P. Monsky, $p$-adic Analysis and Zeta Functions, Lectures in Math., 
+Kyoto Univ., Kinokuniya Bookstore, Tokyo. 
+
+%
+\bibitem{W1} D. Wan, Newton polygons of zeta functions and L-functions, 
+Ann. Math., 137(1993), 247-293.
+
+
+%
+\bibitem{W2} D. Wan, Meromorphic continuation of L-functions of $p$-adic
+representations, Ann. Math., 143(1996), 469-498.
+
+
+%
+\bibitem{W3} D. Wan, Higher rank case of Dwork's conjecture, J. Amer. Math. Soc.,
+13(2000), 807-852.
+
+%
+\bibitem{W4} D. Wan, Rank one case of Dwork's conjecture,
+J. Amer. Math. Soc., 13(2000), 853-908.
+
+
+%
+\bibitem{W5} D. Wan, Variation of $p$-adic Newton polygon for L-functions 
+of exponential sums, ``http://www.math.uci.edu/{$\sim$}dwan/preprint.html". 
+
+%
+\bibitem{W6} D. Wan, Algorithmic theory of zeta functions over finite fields, 
+to appear in MSRI Algorithmic Number Theory Proceedings, 
+``http://www.math.uci.edu/{$\sim$}dwan/preprint.html". 
+
+
+
+
+\end{thebibliography}
+
+
+
+
+
+\end{document}
+
+

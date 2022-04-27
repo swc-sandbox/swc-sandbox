@@ -1,0 +1,61 @@
+<html>
+
+<include src="/head.html.in" {'PAGE':'AWS 2000: Courses and Notes'}>
+<body>
+<include src="/topbar.html.in" >
+<include src="/navcol.html.in"  {'nav_prev':'navsel'}>
+<div class="page">
+			<H1 CLASS="header">Arizona Winter School 2000 
+				Course Descriptions and Notes</H1> 
+			<H2><A NAME="Anderson">Greg Anderson: Introduction to fermionic Fock space for number theorists</A></H2> 
+			<UL COMPACT>
+				<LI>
+					Anderson's course description in <A HREF="00AndersonCD.html" TARGET="_blank">html</A>. 
+				</LI>
+				<LI>
+					Greg Anderson's &#147;Notes on fermionic Fock space for number theorists&#148; (snapshot at the time of the Winter School) are available in <A HREF="00AndersonN.dvi">dvi</A>, <A HREF="00AndersonN.ps">ps</A>, and <A HREF="00AndersonN.pdf">pdf</A> formats. Later versions may appear on <A HREF="http://www.math.umn.edu/%7Egwanders/" TARGET="_blank">Greg's web site</A>. 
+				</LI>
+				<LI>
+					Greg Anderson's project is &#147;A determinantal procedure for calculating Jacobians of genus 1 curves.&#148; A detailed description is available in <A HREF="00AndersonPD.dvi">dvi</A>, <A HREF="00AndersonPD.ps">ps</A>, and <A HREF="00AndersonPD.pdf">pdf</A> formats. 
+				</LI>
+				<LI>
+					Here is a fragment of Maple code for calculating the tau functions appearing in his lectures, in a <A HREF="00AndersonMaple.txt" TARGET="_blank">text</A> file.
+				</LI>
+			</UL>
+			<H2><A NAME="Katz">Nicholas Katz: Four lectures on Weil II</A></H2> 
+			<UL COMPACT>
+				<LI>
+					Nick Katz has provided a polished write-up of his course, entitled &#147;L-functions and monodromy: four lectures on Weil II.&#148; (The file is in <A HREF="00KatzN.pdf">pdf</A> format.) 
+				</LI>
+				<LI>
+					Nick Katz proposes a project concering &#147;Mysterious formulae involving the numbers of points in some families of elliptic curves.&#148; Here is the description in <A HREF="00KatzPD.html" TARGET="_blank">html</A>. 
+				</LI>
+			</UL>
+			<H2><A NAME="LSZ">Kristin Lauter, Ren&eacute; Schoof, and Michael Zieve: The number of points on a curve over a finite field</A></H2> 
+			<UL COMPACT>
+				<LI>
+					The points course description in <A HREF="00LSZCD.html" TARGET="_blank">html</A>. 
+				</LI>
+				<LI>
+					Schoof's Abuja notes are a good reference for this course: <A HREF="00SchoofN.dvi">dvi</A>, <A HREF="00SchoofN.ps">ps</A>, <A HREF="00SchoofN.pdf">pdf</A>. 
+				</LI>
+				<LI>
+					Kristin Lauter and Michael Zieve have a three-part project entitled &#147;Using class field theory to construct curves with many points.&#148; (Kristin will supervise Parts 1 and 2 and Michael will supervise Part 3.) A detailed description is available in <A HREF="00LZPD.dvi">dvi</A>, <A HREF="00LZPD.ps">ps</A>, and <A HREF="00LZPD.pdf">pdf</A> formats. Also, references [6] and [7] in their bibliography are available here. ([6] in <A HREF="00LauterMPI-1997-63.ps">ps</A> and <A HREF="00LauterMPI-1997-63.pdf">pdf</A>, [7] in <A HREF="00LauterJNT.ps">ps</A> and <A HREF="00LauterJNT.pdf">pdf</A>.) 
+				</LI>
+			</UL>
+			<H2><A NAME="Sarnak">Peter Sarnak: Zeta functions and symmetry</A></H2> <H2><A NAME="Ulmer">Douglas Ulmer: Elliptic curves over function fields and a Gross-Zagier theorem</A></H2> 
+			<UL COMPACT>
+				<LI>
+					Ulmer's course description in <A HREF="00UlmerCD.html" TARGET="_blank">html</A>. 
+				</LI>
+				<LI>
+					Here is an outline of Doug Ulmer's course: <A HREF="00UlmerLO.dvi">dvi</A>, <A HREF="00UlmerLO.ps">ps</A>, <A HREF="00UlmerLO.pdf">pdf</A>. 
+				</LI>
+				<LI>
+					Doug Ulmer's project is &#147;Explicit calculations with elliptic curves over function fields.&#148; A detailed description is available in <A HREF="00UlmerPD.dvi">dvi</A>, <A HREF="00UlmerPD.ps">ps</A>, and <A HREF="00UlmerPD.pdf">pdf</A> formats. 
+				</LI>
+				<LI>A very nice write-up of the project by Mihran Papikian: <A HREF="00Papikian.ps">ps</A>, <A HREF="00Papikian.pdf">pdf</A></LI>
+				<LI>A related paper: &#147;Elliptic curves with large rank over function fields.&#148; Here is a <A HREF="http://arXiv.org/abs/math.NT/0109163" TARGET="_blank">link</A> to the arXiv version of the paper.</LI>
+			</UL>
+</BODY>
+</HTML>
